@@ -1,0 +1,93 @@
+{
+  "last_updated": "2026-06-01T20:15:00Z",
+  "world": [
+    {
+      "id": "iran-negotiations-hormuz",
+      "headline": "Iran ends negotiations with US and vows to \"completely\" block Strait of Hormuz",
+      "main_post": {
+        "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
+        "handle": "@KobeissiLetter",
+        "body": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC. Iran also threatens to block the Bab el-Mandeb Strait.",
+        "views": "2.77M",
+        "posted": "2026-06-01T13:39:55Z"
+      },
+      "perspectives": [
+        {
+          "label": "Conservative",
+          "url": "https://x.com/EricLDaugh/status/2061438168449130827",
+          "handle": "@EricLDaugh",
+          "body": "🚨 IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran, pummeling Iranian capabilities that threatened American forces and shipping in the Strait. The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way.",
+          "views": "276K",
+          "posted": "2026-06-01T13:22:13Z",
+          "honesty": 9,
+          "notes": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine. Matches multiple corroborating posts (GuntherEagleman 73k views)."
+        },
+        {
+          "label": "Independent",
+          "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
+          "handle": "@KobeissiLetter",
+          "body": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC. Iran says it is ending negotiations due to repeated ceasefire violations including Israeli strikes in Lebanon. Oil already reacting.",
+          "views": "2.77M",
+          "posted": "2026-06-01T13:39:55Z",
+          "honesty": 8.5,
+          "notes": "Highest-fidelity market + timeline signal on the platform. Minimal partisan overlay. Accurately captures Iranian stated rationale and immediate energy market reaction."
+        },
+        {
+          "label": "Democrat",
+          "url": "https://x.com/SocialistMMA/status/2061472385073594477",
+          "handle": "@SocialistMMA",
+          "body": "Give them hell Iran. I’m willing to pay a lot more in gas if it means Tel Aviv being wiped off the map. Other reactions in the cluster highlight costs to global south populations via energy prices.",
+          "views": "12.5K",
+          "posted": "2026-06-01T16:17:57Z",
+          "honesty": 6.5,
+          "notes": "Captures real critical/anti-escalation sentiment that gained traction in the quote cluster. Strong on downstream costs to global south. Weaker on full context of Iranian proxy actions."
+        }
+      ]
+    }
+  ],
+  "usa": [
+    {
+      "id": "ice-enforcement",
+      "headline": "ICE operations face resistance as threats to officers are arrested",
+      "main_post": {
+        "url": "https://x.com/WhiteHouse/status/2061474808441815402",
+        "handle": "@WhiteHouse",
+        "body": "Newark or anywhere in America, the message doesn’t change: @ICEgov operations will NOT be deterred. Riot, obstruct, or assault an officer and you will be arrested and prosecuted to the fullest extent of the law.",
+        "views": "233K",
+        "posted": "2026-06-01T15:47:49Z"
+      },
+      "perspectives": [
+        {
+          "label": "Conservative",
+          "url": "https://x.com/libsoftiktok/status/2061529095867973703",
+          "handle": "@libsoftiktok",
+          "body": "Nicholas Matthew Scelfo, the radical anti-ICE protestor who threatened to K*LL an ICE officer and his family outside the Delaney Hall immigration facility in NJ, has been ARRESTED by the FBI. Facing up to 10 years.",
+          "views": "96K",
+          "posted": "2026-06-01T19:23:32Z",
+          "honesty": 8.5,
+          "notes": "High-engagement post celebrating enforcement against direct threats to officers. Strong alignment with law-and-order framing."
+        },
+        {
+          "label": "Independent",
+          "url": "https://x.com/WhiteHouse/status/2061474808441815402",
+          "handle": "@WhiteHouse",
+          "body": "The message is clear: ICE operations will not be deterred. Resistance and obstruction will lead to arrests.",
+          "views": "233K",
+          "posted": "2026-06-01T15:47:49Z",
+          "honesty": 8,
+          "notes": "Official statement with clear policy position. Good signal on enforcement priority."
+        },
+        {
+          "label": "Democrat",
+          "url": "https://x.com/JudiciaryDems/status/2061450082650632228",
+          "handle": "@JudiciaryDems",
+          "body": "BREAKING: New reporting shows ICE detainees attacked by guards in Trump-Mullin DHS facilities, using fists, batons, and chemical irritants. The cruelty is the point.",
+          "views": "25K",
+          "posted": "2026-06-01T14:09:34Z",
+          "honesty": 7,
+          "notes": "Reflects Democratic committee reporting on conditions. Real engagement in critical circles. Needs verification on specific incidents."
+        }
+      ]
+    }
+  ]
+}
