@@ -77,20 +77,45 @@
   .post-foot a { font-size: 0.74rem; color: #8a7e72; text-decoration: none; }
   .post-foot a:hover { color: #1c1410; text-decoration: underline; }
 
-  /* Perspective tile color tags */
-  .perspective { border-left: 3px solid; padding: 10px 12px; }
-  .perspective-conservative { background: #fbe9e9; border-color: #c45a4a; }
-  .perspective-independent  { background: #f5f0e7; border-color: #b8860b; }
-  .perspective-democrat     { background: #e7f0fa; border-color: #3d80c2; }
+  /* Perspectives in a 3-column row (side-by-side like the prototype).
+     Falls back to 2-up on tight containers, 1-up on phones.
+     Newspaper-tight text density: clamp body to 5 lines + small font. */
+  .perspectives-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .perspectives-row .perspective { margin-bottom: 0; }
+
+  /* Per-side colors: red Conservative, white Independent, blue Democrat */
+  .perspective { border-top: 3px solid; padding: 9px 11px; font-size: 0.8rem; line-height: 1.42; }
+  .perspective-conservative { background: #fbe4e0; border-color: #c0392b; }
+  .perspective-independent  { background: #ffffff; border-color: #5a4a30; }
+  .perspective-democrat     { background: #e0eaf8; border-color: #2a6db8; }
   .perspective-bullish      { background: #e7f5e9; border-color: #4a9d57; }
   .perspective-cautious     { background: #fdf0d6; border-color: #d49b3e; }
   .perspective-opposing     { background: #f0eaf7; border-color: #7a5fa5; }
-  .perspective .label.cons { color: #a63d2f; }
-  .perspective .label.ind  { color: #8b6e1e; }
-  .perspective .label.dem  { color: #2b6ea3; }
+  .perspective .label.cons { color: #a02e21; }
+  .perspective .label.ind  { color: #5a4a30; }
+  .perspective .label.dem  { color: #1b5a99; }
   .perspective .label.bul  { color: #2a6f33; }
   .perspective .label.cau  { color: #8a5e1a; }
   .perspective .label.opp  { color: #5a3f80; }
+  .perspective .label { margin-bottom: 5px; font-size: 0.6rem; }
+  .perspective .meta-line { font-size: 0.66rem; margin-bottom: 5px; color: #5a4a30; }
+  .perspective .post-body {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .perspective .post-foot { font-size: 0.7rem; }
+  .perspective .honesty-fold { margin-top: 6px; padding-top: 4px; }
+  .perspective .honesty-fold-head { font-size: 0.66rem; }
+  .perspective .honesty-fold-body { font-size: 0.7rem; }
+  .perspective .tweet-embed-container { margin-top: 6px; }
 
   /* Honesty — subtle collapsible footnote */
   .honesty-fold { margin-top: 7px; border-top: 1px dashed #d4b896; padding-top: 5px; }
@@ -324,7 +349,8 @@ function renderPerspectiveTile(p) {
   );
 }
 
-// Generic story block with main_post + perspectives
+// Generic story block with main_post + perspectives (perspectives sit
+// side-by-side in a .perspectives-row grid below the source tile).
 function renderStoryBlock(s) {
   var sid = 's' + Math.random().toString(36).substr(2, 9);
   var mp = s.main || s.main_post || {};
@@ -334,14 +360,18 @@ function renderStoryBlock(s) {
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
     (mp.time ? ' · ' + timeAgo(mp.time) : '') +
     '</span>';
-  var tiles = renderSourceTile(mp) + (s.perspectives || []).map(renderPerspectiveTile).join('');
+  var sourceTile = renderSourceTile(mp);
+  var perspectives = (s.perspectives || []);
+  var perspectivesRow = perspectives.length
+    ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
+    : '';
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + tiles + '</div>' +
+      '<div class="story-body">' + sourceTile + perspectivesRow + '</div>' +
     '</div>'
   );
 }
