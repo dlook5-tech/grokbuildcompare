@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-02T12:00:00Z",
+  "last_updated": "2026-06-02T16:45:00Z",
   "main": {
     "world": {
       "top": {
@@ -47,8 +47,18 @@
         ]
       },
       "more": [
-        {"headline": "Iran vows to completely block the Strait of Hormuz", "url": "https://x.com/KobeissiLetter/status/2061566677758685314", "views": "648K", "time": "2h ago"},
-        {"headline": "Zelenskyy: Ukrainian forces struck 15 Russian oil refineries", "url": "https://x.com/ZelenskyyUa/status/2061514553163161924", "views": "181K", "time": "5h ago"}
+        {
+          "headline": "Iran vows to completely block the Strait of Hormuz",
+          "url": "https://x.com/KobeissiLetter/status/2061566677758685314",
+          "views": "648K",
+          "time": "2h ago"
+        },
+        {
+          "headline": "Zelenskyy: Ukrainian forces struck 15 Russian oil refineries",
+          "url": "https://x.com/ZelenskyyUa/status/2061514553163161924",
+          "views": "181K",
+          "time": "5h ago"
+        }
       ]
     },
     "nation": {
@@ -56,7 +66,7 @@
         "headline": "ICE operations at Delaney Hall face protests as authorities arrest violators",
         "main": {
           "url": "https://x.com/EricLDaugh/status/2061266478159081848",
-          "text": "🚨 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second 🤣 FAFO!",
+          "text": "\ud83d\udea8 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second \ud83e\udd23 FAFO!",
           "views": "633K",
           "time": "21h ago"
         },
@@ -77,7 +87,7 @@
             "color": "#facc15",
             "handle": "@elaadeliahu",
             "url": "https://x.com/elaadeliahu/status/2060021602985660899",
-            "text": "ICE agent standing guard at Delaney Hall sports a Hulk green Rolex Submariner over his “We The People” tattoo",
+            "text": "ICE agent standing guard at Delaney Hall sports a Hulk green Rolex Submariner over his \u201cWe The People\u201d tattoo",
             "views": "7.3M",
             "time": "recent",
             "honesty": "8/10",
@@ -97,8 +107,18 @@
         ]
       },
       "more": [
-        {"headline": "Trump administration restores Washington D.C.", "url": "https://x.com/WhiteHouse/status/2061541902151774640", "views": "114K", "time": "3h ago"},
-        {"headline": "Historical deportation numbers show previous administrations removed millions", "url": "https://x.com/C_3C_3/status/2061426647878787405", "views": "345K", "time": "11h ago"}
+        {
+          "headline": "Trump administration restores Washington D.C.",
+          "url": "https://x.com/WhiteHouse/status/2061541902151774640",
+          "views": "114K",
+          "time": "3h ago"
+        },
+        {
+          "headline": "Historical deportation numbers show previous administrations removed millions",
+          "url": "https://x.com/C_3C_3/status/2061426647878787405",
+          "views": "345K",
+          "time": "11h ago"
+        }
       ]
     },
     "business": {
@@ -106,7 +126,7 @@
         "headline": "Stock Market Surpasses Dot-Com Bubble Valuation",
         "main": {
           "url": "https://x.com/Kalshi/status/2061431352759632146",
-          "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever — surpassing dot com bubble.",
+          "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
           "views": "1.07M",
           "time": "11h ago"
         },
@@ -116,7 +136,7 @@
             "color": "#60a5fa",
             "handle": "@Kalshi",
             "url": "https://x.com/Kalshi/status/2061431352759632146",
-            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever — surpassing dot com bubble.",
+            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
             "views": "1.07M",
             "time": "11h ago",
             "honesty": "9/10",
@@ -136,8 +156,18 @@
         ]
       },
       "more": [
-        {"headline": "Anthropic files for IPO, targets fall debut", "url": "https://x.com/WSJ/status/2061480751405703291", "views": "72K", "time": "5h ago"},
-        {"headline": "Taiwan's market cap rises to $4.95 trillion, overtaking India", "url": "https://x.com/zerohedge/status/2059087510043582586", "views": "693K", "time": "1d ago"}
+        {
+          "headline": "Anthropic files for IPO, targets fall debut",
+          "url": "https://x.com/WSJ/status/2061480751405703291",
+          "views": "72K",
+          "time": "5h ago"
+        },
+        {
+          "headline": "Taiwan's market cap rises to $4.95 trillion, overtaking India",
+          "url": "https://x.com/zerohedge/status/2059087510043582586",
+          "views": "693K",
+          "time": "1d ago"
+        }
       ]
     }
   },
@@ -174,15 +204,46 @@
     }
   ],
   "sports": [
-    {"headline": "NBA Finals set: New York Knicks vs San Antonio Spurs", "url": "https://x.com/NBA/status/2061493512617521544", "views": "1.96M", "time": "6h ago"},
-    {"headline": "San Antonio Spurs headed to NBA Finals for first time since 2014", "url": "https://x.com/NBA/status/2060916671951327243", "views": "1.64M", "time": "21h ago"},
-    {"headline": "Stephon Castle's one-handed slam voted top dunk of Conference Finals", "url": "https://x.com/NBA/status/2061470576020226312", "views": "275K", "time": "8h ago"}
+    {
+      "headline": "NBA Finals set: New York Knicks vs San Antonio Spurs",
+      "url": "https://x.com/NBA/status/2061493512617521544",
+      "views": "1.96M",
+      "time": "6h ago"
+    },
+    {
+      "headline": "San Antonio Spurs headed to NBA Finals for first time since 2014",
+      "url": "https://x.com/NBA/status/2060916671951327243",
+      "views": "1.64M",
+      "time": "21h ago"
+    },
+    {
+      "headline": "Stephon Castle's one-handed slam voted top dunk of Conference Finals",
+      "url": "https://x.com/NBA/status/2061470576020226312",
+      "views": "275K",
+      "time": "8h ago"
+    }
   ],
   "ifollow": [
-    {"handle": "@EricLDaugh", "justification": "High velocity on enforcement and conservative takes; consistent primary sourcing on breaking events.", "honesty": "8.5/10"},
-    {"handle": "@KobeissiLetter", "justification": "Best market/geopolitics velocity and factual breakdowns.", "honesty": "9/10"},
-    {"handle": "@GuntherEagleman", "justification": "Strong America First framing with good engagement on policy.", "honesty": "8/10"},
-    {"handle": "@BernieSanders", "justification": "Clear opposing Democrat perspective for balance.", "honesty": "7.5/10"}
+    {
+      "handle": "@EricLDaugh",
+      "justification": "High velocity on enforcement and conservative takes; consistent primary sourcing on breaking events.",
+      "honesty": "8.5/10"
+    },
+    {
+      "handle": "@KobeissiLetter",
+      "justification": "Best market/geopolitics velocity and factual breakdowns.",
+      "honesty": "9/10"
+    },
+    {
+      "handle": "@GuntherEagleman",
+      "justification": "Strong America First framing with good engagement on policy.",
+      "honesty": "8/10"
+    },
+    {
+      "handle": "@BernieSanders",
+      "justification": "Clear opposing Democrat perspective for balance.",
+      "honesty": "7.5/10"
+    }
   ],
   "free": [
     {
@@ -203,6 +264,52 @@
       "time": "recent",
       "honesty": "9/10",
       "note": "Direct on media bias and suppression - strong free speech angle."
+    }
+  ],
+  "msm": [
+    {
+      "headline": "Henry Nowak stabbing: UK man stabbed 5 times, police filmed dying moments instead of helping, murderer got knife from mother",
+      "main": {
+        "url": "https://x.com/elonmusk/status/2061809366546997488",
+        "text": "Send the video to everyone you know showing how heinously Nowak was treated by the police in his dying moments and how the police cravenly kowtowed to his murderer. Legacy mainstream media, same ones who wrote about George Floyd millions of times, are dead silent about Nowak.",
+        "views": "422K",
+        "time": "recent"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "color": "#60a5fa",
+          "handle": "@elonmusk",
+          "url": "https://x.com/elonmusk/status/2061809366546997488",
+          "text": "Send the video to everyone you know showing how heinously Nowak was treated by the police in his dying moments and how the police cravenly kowtowed to his murderer. Legacy mainstream media... are dead silent about Nowak.",
+          "views": "422K",
+          "time": "recent",
+          "honesty": "9/10",
+          "note": "Direct call to action on media double standard. Highlights two-tier policing and coverage."
+        },
+        {
+          "side": "Independent",
+          "color": "#facc15",
+          "handle": "@KonstantinKisin",
+          "url": "https://x.com/KonstantinKisin/status/2061706577090838978",
+          "text": "Britain had a moment of silence for George Floyd... Henry Nowak *was* British and his treatment by the police was shocking... Yet there is no minute of silence... And we all know why.",
+          "views": "136K",
+          "time": "recent",
+          "honesty": "8.5/10",
+          "note": "Strong analysis of racial hierarchy in victimhood and media/elite response."
+        },
+        {
+          "side": "Democrat",
+          "color": "#f87171",
+          "handle": "@C_3C_3",
+          "url": "https://x.com/C_3C_3/status/2061665904610382006",
+          "text": "Did they show or even mention the Henry Nowak footage? Legacy Media\u2026 CNN: No MSNBC: No ABC News: No CBS News: No NBC News: No USA Today: No New York Times: No Washington Post: No",
+          "views": "379K",
+          "time": "recent",
+          "honesty": "10/10",
+          "note": "Documented omission across all major outlets. X is the only place this is being amplified."
+        }
+      ]
     }
   ]
 }
