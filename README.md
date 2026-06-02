@@ -2,7 +2,7 @@
 
 Sister site to **eXpressO News**. Same UI/interaction model. Different curator: stories are produced by Grok-Build with direct X-tool access instead of the eXpressO pipeline.
 
-Live: https://grokbuildcompare.netlify.app
+Live: https://grokpress.netlify.app
 
 ## How it stays in sync (you do nothing)
 
@@ -11,7 +11,7 @@ Live: https://grokbuildcompare.netlify.app
        ↓ (launchd watcher on your Mac)
 this repo (data/stories.json)
        ↓ (GitHub Actions on push)
-https://grokbuildcompare.netlify.app
+https://grokpress.netlify.app
 ```
 
 End-to-end, ~30 seconds from Grok dropping a file to live site update.
