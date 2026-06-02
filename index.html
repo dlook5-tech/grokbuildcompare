@@ -45,11 +45,28 @@
 
   /* 3-column layout for the World/Nation/Business tab */
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-  .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; transition: grid-column 0s; }
-  /* When a story inside a column is opened, that whole column section
-     breaks out to span all 3 grid columns. Other columns reflow below it,
-     so the perspectives + embeds have full-viewport width to breathe. */
-  .col-section.expanded-col { grid-column: 1 / -1; }
+  .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
+
+  /* Main tab card (compact summary; click to load detail panel below) */
+  .main-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.12s; }
+  .main-card:hover { background: #f4ede0; border-color: #b8860b; transform: translateY(-1px); box-shadow: 0 3px 10px rgba(184,134,11,0.18); }
+  .main-card.selected { background: #fffdf0; border-color: #b8860b; border-left: 4px solid #b8860b; box-shadow: 0 3px 10px rgba(184,134,11,0.28); }
+  .main-card-headline { font-size: 0.92rem; font-weight: 600; line-height: 1.32; color: #1a1a1a; margin-bottom: 4px; }
+  .main-card-meta { font-size: 0.7rem; color: #8a7e72; font-weight: 500; }
+  .main-card-meta .views { color: #b8860b; font-weight: 700; }
+  .main-card-meta .handle { color: #2a2218; font-weight: 700; }
+
+  /* Detail panel that sits below the 3-column overview */
+  #mainDetailPanel { margin-top: 26px; background: #faf6f0; border: 2px solid #b8860b; border-radius: 12px; padding: 20px 22px; box-shadow: 0 8px 24px rgba(80,50,20,0.22); animation: detail-pop 0.18s ease-out; }
+  @keyframes detail-pop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+  .main-detail-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.45rem; font-weight: 800; line-height: 1.25; color: #1c1410; margin-bottom: 6px; }
+  .main-detail-cat { display: inline-block; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.3px; color: #fff; background: #b8860b; padding: 3px 9px; border-radius: 10px; font-weight: 700; margin-bottom: 10px; }
+  .main-detail-close { float: right; background: transparent; border: 0; font-size: 1.5rem; color: #8a7e72; cursor: pointer; line-height: 1; padding: 0; margin-left: 12px; }
+  .main-detail-close:hover { color: #1c1410; }
+  #mainDetailPanel .perspectives-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #mainDetailPanel .perspective { font-size: 0.86rem; padding: 12px 14px; }
+  #mainDetailPanel .perspective .post-body { -webkit-line-clamp: unset; }
+  @media (max-width: 750px) { #mainDetailPanel .perspectives-row { grid-template-columns: 1fr; } }
   .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid #b8860b; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
   .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
 
@@ -296,22 +313,12 @@ function todayLabel() {
 }
 
 // Auto-load all embeds inside the block on expand (one-click behavior).
-// Also bubbles "open" state to the parent .col-section in the Main tab so
-// it can take full width while expanded — fixes the cramped 1/3-column
-// perspectives problem.
+// Used by Elon / Sports / Free / iFollow / MSM blocks. The Main tab uses
+// the card+detail-panel pattern below instead — no accordion needed.
 function toggleStory(sid) {
   var s = document.getElementById(sid);
   if (!s) return;
   s.classList.toggle('open');
-
-  // Bubble to parent .col-section: expand to full grid width when any
-  // story inside is open, collapse back when none are.
-  var col = s.closest && s.closest('.col-section');
-  if (col) {
-    var anyOpen = col.querySelector('.story.open');
-    col.classList.toggle('expanded-col', !!anyOpen);
-  }
-
   if (!s.classList.contains('open')) return;
   var pending = s.querySelectorAll('.tweet-embed-container[data-tweet-url]');
   for (var i = 0; i < pending.length; i++) {
@@ -320,6 +327,39 @@ function toggleStory(sid) {
       toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
     }
   }
+}
+
+// Main tab uses a "compact cards + expanded detail panel" layout so all 3
+// columns stay visible AT ALL TIMES while the expanded content has full
+// viewport width below. mainSelection tracks which card is open.
+var mainSelection = null; // { cat: 'world'|'nation'|'business', idx: 0 }
+
+function selectMainStory(cat, idx) {
+  if (mainSelection && mainSelection.cat === cat && mainSelection.idx === idx) {
+    mainSelection = null;  // toggle off
+  } else {
+    mainSelection = { cat: cat, idx: idx };
+  }
+  renderContent();
+  // After re-render, load embeds in the detail panel + scroll to it.
+  setTimeout(function() {
+    var panel = document.getElementById('mainDetailPanel');
+    if (!panel) return;
+    panel.querySelectorAll('.tweet-embed-container[data-tweet-url]').forEach(function(c) {
+      if (c.style.display === 'none' && !c.innerHTML) {
+        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
+      }
+    });
+    // Smooth scroll the top of the panel into view
+    var rect = panel.getBoundingClientRect();
+    if (rect.top < 0 || rect.top > window.innerHeight * 0.6) {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 80);
+}
+function closeMainDetail() {
+  mainSelection = null;
+  renderContent();
 }
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);
@@ -540,6 +580,38 @@ function renderHero(tab) {
          '</div>';
 }
 
+// Render a compact card for one Main-tab story (headline + meta only).
+function renderMainCard(catKey, idx, story, isSelected) {
+  var mp = story.main || story.main_post || {};
+  var headline = esc(story.headline || mp.text || '(no headline)');
+  var ago = timeAgo(mp.time, mp.url);
+  var metaParts = [];
+  if (mp.handle) metaParts.push('<span class="handle">' + esc(mp.handle) + '</span>');
+  if (mp.views)  metaParts.push('<span class="views">' + esc(mp.views) + ' views</span>');
+  if (ago)       metaParts.push(ago);
+  var cls = 'main-card' + (isSelected ? ' selected' : '');
+  return '<div class="' + cls + '" onclick="selectMainStory(\'' + catKey + '\',' + idx + ')">' +
+           '<div class="main-card-headline">' + headline + '</div>' +
+           '<div class="main-card-meta">' + metaParts.join(' · ') + '</div>' +
+         '</div>';
+}
+
+// Render the full detail panel for the currently-selected Main story.
+function renderMainDetail(story, catLabel) {
+  var mp = story.main || story.main_post || {};
+  var sourceTile = renderSourceTile(mp);
+  var perspectivesRow = (story.perspectives && story.perspectives.length)
+    ? '<div class="perspectives-row">' + story.perspectives.map(renderPerspectiveTile).join('') + '</div>'
+    : '';
+  return '<div id="mainDetailPanel">' +
+           '<button class="main-detail-close" onclick="closeMainDetail();" title="Close">×</button>' +
+           '<div class="main-detail-cat">' + esc(catLabel) + '</div>' +
+           '<div class="main-detail-headline">' + esc(story.headline || '(no headline)') + '</div>' +
+           sourceTile +
+           perspectivesRow +
+         '</div>';
+}
+
 function renderTabMain() {
   var main = (NEWS_DATA && NEWS_DATA.main) || {};
   var sections = [
@@ -548,27 +620,42 @@ function renderTabMain() {
     { key: 'business', title: 'Business' }
   ];
   var h = renderHero('main');
+
+  // ---- 3-column overview row (compact cards, always visible) ----
   h += '<div class="columns">';
   sections.forEach(function(sec) {
     var data = main[sec.key] || {};
-    // Schema is permissive: Grok can supply ANY of these:
-    //   data.tops:    [story1, story2, story3]   ← preferred
-    //   data.stories: [story1, story2, story3]   ← alias
-    //   data.top:     story1                     ← legacy single-story shape
-    // All forms get normalized to an array. Each rendered as a full story
-    // block (headline + source post + 3 perspectives + honesty fold).
     var tops = [];
-    if (Array.isArray(data.tops))    tops = data.tops;
+    if (Array.isArray(data.tops))         tops = data.tops;
     else if (Array.isArray(data.stories)) tops = data.stories;
-    else if (data.top)               tops = [data.top];
-    var blocks = tops.map(renderStoryBlock).join('');
+    else if (data.top)                    tops = [data.top];
     h += '<div class="col-section">' +
-           '<div class="col-title">' + sec.title + '</div>' +
-           (blocks || '<div class="empty-msg" style="padding:10px;">No top stories yet.</div>') +
-           renderMoreList(data.more) +
-         '</div>';
+           '<div class="col-title">' + sec.title + '</div>';
+    if (tops.length) {
+      tops.forEach(function(t, idx) {
+        var isSel = mainSelection && mainSelection.cat === sec.key && mainSelection.idx === idx;
+        h += renderMainCard(sec.key, idx, t, isSel);
+      });
+    } else {
+      h += '<div class="empty-msg" style="padding:10px;">No stories yet.</div>';
+    }
+    h += renderMoreList(data.more);
+    h += '</div>';
   });
   h += '</div>';
+
+  // ---- Full-width detail panel below the row ----
+  if (mainSelection) {
+    var d = main[mainSelection.cat] || {};
+    var t = [];
+    if (Array.isArray(d.tops))         t = d.tops;
+    else if (Array.isArray(d.stories)) t = d.stories;
+    else if (d.top)                    t = [d.top];
+    var story = t[mainSelection.idx];
+    var catLabel = (sections.find(function(s) { return s.key === mainSelection.cat; }) || {}).title || mainSelection.cat;
+    if (story) h += renderMainDetail(story, catLabel);
+  }
+
   return h;
 }
 
