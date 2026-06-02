@@ -154,6 +154,26 @@ function persClass(label) {
   return 'perspective-independent';
 }
 
+// Open the story block AND auto-load every embedded post inside it.
+// The user mandate: "more compelling when the post is embedded right when you
+// hit the down arrow on the block." So we trigger all embeds in one click.
+function toggleStory(sid) {
+  var s = document.getElementById(sid);
+  if (!s) return;
+  s.classList.toggle('open');
+  if (!s.classList.contains('open')) return;
+  // Find every embed container that hasn't been hydrated yet, fire them all.
+  // toggleEmbed is idempotent — calling it on an already-loaded container
+  // would toggle visibility off, so we guard with display === 'none'.
+  var pending = s.querySelectorAll('.tweet-embed-container[data-tweet-url]');
+  for (var i = 0; i < pending.length; i++) {
+    var c = pending[i];
+    if (c.style.display === 'none' && !c.innerHTML) {
+      toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
+    }
+  }
+}
+
 // Same X-widget mechanism Expresso uses. Loads platform.twitter.com/widgets.js
 // the first time a tweet expands, then renders subsequent embeds without re-fetching.
 function toggleEmbed(containerId, tweetUrl) {
@@ -207,13 +227,13 @@ function renderPerspective(p, isMainPost) {
       '</div>';
   }
 
-  // Click-to-expand X embed (avoids the always-on iframe load eating the page)
+  // Embed auto-loads when the parent story block opens. data-tweet-url is
+  // the trigger; the story-header onclick handler scans for any uninitialized
+  // embed containers inside and fires toggleEmbed on each.
   var embedSlot = hasXPost
-    ? '<div id="' + embedId + '" class="tweet-embed-container" style="display:none;"></div>'
+    ? '<div id="' + embedId + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>'
     : '';
-  var showPostLink = hasXPost
-    ? '<a href="javascript:void(0)" onclick="event.stopPropagation();toggleEmbed(\'' + embedId + '\',\'' + url.replace(/'/g, "\\'") + '\')" style="font-size:0.78rem; color:#2980b9; text-decoration:none; font-weight:600; margin-left:8px;">▾ show post</a>'
-    : (url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.78rem; color:#2980b9; font-weight:600; margin-left:8px;">view ↗</a>' : '');
+  var openX = url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem; color:#8a7e72; margin-left:8px;">open on X ↗</a>' : '';
 
   return (
     '<div class="perspective ' + persClass(p.label) + '">' +
@@ -222,7 +242,7 @@ function renderPerspective(p, isMainPost) {
         '<div class="persp-meta">' + (views ? views + ' views · ' : '') + ago + '</div>' +
       '</div>' +
       '<div class="persp-body">' + body + '</div>' +
-      '<div class="persp-handle">— <a href="' + (url || '#') + '" target="_blank" rel="noopener">' + handle + '</a>' + showPostLink + '</div>' +
+      '<div class="persp-handle">— <a href="' + (url || '#') + '" target="_blank" rel="noopener">' + handle + '</a>' + openX + '</div>' +
       embedSlot +
       honestyBlock +
     '</div>'
@@ -238,16 +258,15 @@ function renderSourceTile(mp) {
   var ago = timeAgo(mp.posted);
   var hasXPost = url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
   var embedId = 'emS' + Math.random().toString(36).substr(2, 9);
-  var embedSlot = hasXPost ? '<div id="' + embedId + '" class="tweet-embed-container" style="display:none;"></div>' : '';
-  var showPostLink = hasXPost
-    ? '<a href="javascript:void(0)" onclick="event.stopPropagation();toggleEmbed(\'' + embedId + '\',\'' + url.replace(/'/g, "\\'") + '\')" style="font-size:0.78rem; color:#2980b9; text-decoration:none; font-weight:600;">▾ show post</a>'
+  var embedSlot = hasXPost
+    ? '<div id="' + embedId + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>'
     : '';
   return (
     '<div class="source-tile">' +
       '<div class="source-label">Source post</div>' +
       '<div class="source-meta"><strong>' + handle + '</strong>' + (views ? ' · ' + views + ' views' : '') + (ago ? ' · ' + ago : '') + '</div>' +
       '<div class="source-body">' + body + '</div>' +
-      '<div>' + showPostLink + (url ? ' <a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem;color:#8a7e72;margin-left:10px;">open on X ↗</a>' : '') + '</div>' +
+      '<div>' + (url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem;color:#8a7e72;">open on X ↗</a>' : '') + '</div>' +
       embedSlot +
     '</div>'
   );
@@ -266,7 +285,7 @@ function renderStory(s) {
   var perspectives = (s.perspectives || []).map(function(p){ return renderPerspective(p, false); }).join('');
   return (
     '<div class="story" id="' + sid + '">' +
-      '<div class="story-header" onclick="document.getElementById(\'' + sid + '\').classList.toggle(\'open\');">' +
+      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
