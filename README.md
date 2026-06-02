@@ -61,9 +61,25 @@ snowflake, so the `time` field is optional.
 ### `elon` — flat array of Elon posts (top 3 rendered)
 ```json
 "elon": [
-  { "headline": "…", "text": "…", "url": "…", "views": "251K", "opposing": "Optional one-line summary of opposing view.", "honesty": "8/10", "note": "…" }
+  {
+    "headline": "…", "text": "…", "url": "…", "views": "251K",
+    "honesty": "8/10", "note": "…",
+    "counter": {                                ⟵ OPTIONAL counter-post tile.
+      "side": "Critic",                         ⟵ NO URL = NO TILE. Hand-written
+      "handle": "@…",                           ⟵ summaries are dropped on render.
+      "text": "…",                              ⟵ Must be a real X post URL.
+      "url": "https://x.com/.../status/<id>",
+      "views": "…",
+      "honesty": "…", "note": "…"
+    }
+  }
 ]
 ```
+**Hard rule:** the `opposing` string field is DEAD. Counter views are only
+rendered when `counter` (or `opposing_post`) is a real X post object whose
+`url` matches `x.com|twitter.com/.../status/<id>`. Anything else: nothing
+shows. This applies to every perspective tile across every tab — no URL,
+no tile, no exceptions.
 
 ### `sports` — flat array (top 3; no perspectives, no honesty)
 ```json

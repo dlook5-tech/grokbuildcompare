@@ -369,8 +369,7 @@ function persClassForSide(side) {
 }
 
 function renderEmbedSlot(url) {
-  var hasXPost = url && url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
-  if (!hasXPost) return '';
+  if (!isXStatusUrl(url)) return '';
   var id = 'em' + Math.random().toString(36).substr(2, 9);
   return '<div id="' + id + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>';
 }
@@ -410,11 +409,13 @@ function renderSourceTile(mp) {
 
 function renderPerspectiveTile(p) {
   if (!p) return '';
-  var pc = persClassForSide(p.side);
+  // HARD RULE: every perspective tile MUST be backed by a real X post URL.
+  // No URL with /status/ → drop the tile entirely. We do NOT render
+  // hand-written editorial summaries dressed up as perspectives.
   var url = p.url || '';
+  if (!isXStatusUrl(url)) return '';
+  var pc = persClassForSide(p.side);
   var ago = timeAgo(p.time, url);
-  // No "open on X" on perspectives — the embedded post IS the click target.
-  // (The widget itself includes a "View on X" affordance.)
   return (
     '<div class="tile perspective ' + pc.box + '">' +
       '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
@@ -428,6 +429,13 @@ function renderPerspectiveTile(p) {
       renderHonestyFold(p.honesty, p.note) +
     '</div>'
   );
+}
+
+// Single source of truth for "is this a real X post URL?"
+function isXStatusUrl(u) {
+  if (!u) return false;
+  if (u.indexOf('/status/') === -1) return false;
+  return u.indexOf('x.com') !== -1 || u.indexOf('twitter.com') !== -1;
 }
 
 // Generic story block with main_post + perspectives (perspectives sit
@@ -458,7 +466,9 @@ function renderStoryBlock(s) {
   );
 }
 
-// Block for a single Elon post (no source/perspective split — one main post + optional opposing summary)
+// Block for a single Elon post — one main post + optional counter-post
+// (item.counter must be a real X post object with a URL; text-only
+// summaries are NOT rendered. No URL → no counter tile.)
 function renderElonBlock(item) {
   var sid = 'e' + Math.random().toString(36).substr(2, 9);
   var headline = esc(item.headline || item.text || '(no headline)');
@@ -475,13 +485,23 @@ function renderElonBlock(item) {
     time: item.time,
     url: item.url
   });
-  var opposingTile = '';
-  if (item.opposing) {
-    opposingTile =
-      '<div class="tile perspective perspective-opposing">' +
-        '<div class="label opp">Opposing view</div>' +
-        '<div class="post-body">' + esc(item.opposing) + '</div>' +
-      '</div>';
+  // Optional counter-post: render only when backed by a real X URL.
+  // Accepts either a perspective-shaped object (handle/text/url/views/honesty/note)
+  // or a bare URL string. Free-text editorial summaries are dropped.
+  var counterTile = '';
+  var c = item.counter || item.opposing_post || null;
+  if (typeof c === 'string') c = { url: c };
+  if (c && isXStatusUrl(c.url)) {
+    counterTile = renderPerspectiveTile({
+      side: c.side || 'Counter view',
+      handle: c.handle,
+      text: c.text,
+      views: c.views,
+      time: c.time,
+      url: c.url,
+      honesty: c.honesty,
+      note: c.note
+    });
   }
   var honestyBlock = renderHonestyFold(item.honesty, item.note);
   return (
@@ -490,7 +510,7 @@ function renderElonBlock(item) {
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + opposingTile + honestyBlock + '</div>' +
+      '<div class="story-body">' + sourceTile + counterTile + honestyBlock + '</div>' +
     '</div>'
   );
 }
@@ -542,7 +562,7 @@ function renderMoreList(items) {
 function renderHero(tab) {
   var heros = {
     main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty + notes folded in. <strong>&lt;24h only.</strong> Scroll for more in each category.' },
-    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Top 3 Elon posts of the cycle plus opposing-view summary when present. Click any block to load the actual post.' },
+    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Top 3 Elon posts of the cycle. Counter view tile appears only when there\'s a real X post to embed — no editorial summaries.' },
     sports:  { h: 'Sports — what\'s<br>moving the needle.', p: 'Top 3 stories by velocity. No perspectives, no honesty score — just what people are watching.' },
     ifollow: { h: 'People worth<br>following on X.', p: 'Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.' },
     free:    { h: 'Free speech<br>front and center.', p: 'Marc Andreessen always leads. Then 0–10 free-speech-themed posts from today. Honesty fold only when opinion content.' },
