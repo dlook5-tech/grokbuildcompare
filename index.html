@@ -47,24 +47,30 @@
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
 
-  /* Main tab — every story rendered fully inline inside its category column.
-     Source post tile (column width) on top, perspectives below at HALF the
-     column width (2 fit side-by-side; a 3rd wraps below spanning both). */
-  .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(80,50,20,0.10); }
-  .main-story-rank { display: inline-block; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.4px; color: #8a7e72; font-weight: 800; margin-bottom: 5px; }
-  .main-story-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.04rem; line-height: 1.28; font-weight: 800; color: #1c1410; margin-bottom: 8px; }
-  .main-story-block .source-tile { margin-bottom: 8px; padding: 9px 11px; font-size: 0.78rem; }
+  /* Main tab — Expresso-style accordion. Closed: ▶ + Story #N + tight
+     headline + small meta. Open: source post embed + perspectives sub-grid
+     at HALF column width (3rd perspective wraps under spanning both cols).
+     Reuses .story / .story-header / .story-body from the shared accordion
+     CSS; only the perspectives sub-grid, padding, and the rank chip are
+     overridden here. */
+  .main-story-block { margin-bottom: 12px; }
+  .main-story-block .story-header { padding: 10px 12px; }
+  .main-story-block .story-headline-text { font-size: 0.88rem; line-height: 1.32; }
+  .main-story-block .story-body { padding: 11px 12px 12px; padding-top: 12px; }
+  .main-story-block .main-story-rank { display: inline-block; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.4px; color: #b8860b; font-weight: 800; margin-bottom: 4px; }
+  .main-story-block .source-tile { padding: 9px 11px; font-size: 0.78rem; margin-bottom: 8px; }
   .main-story-block .source-tile .source-label { font-size: 0.56rem; margin-bottom: 3px; }
   .main-story-block .source-tile .meta-line { font-size: 0.66rem; margin-bottom: 5px; }
   .main-story-block .source-tile .post-body { font-size: 0.78rem; margin-bottom: 6px; }
-  .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 6px; }
+  .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .main-story-block .perspective { font-size: 0.74rem; padding: 7px 9px; line-height: 1.36; }
-  .main-story-block .perspective .label { font-size: 0.55rem; margin-bottom: 3px; }
+  .main-story-block .perspective { font-size: 0.76rem; padding: 8px 10px; line-height: 1.38; }
+  .main-story-block .perspective .label { font-size: 0.56rem; margin-bottom: 3px; }
   .main-story-block .perspective .meta-line { font-size: 0.62rem; margin-bottom: 4px; }
   .main-story-block .perspective .post-body { -webkit-line-clamp: 4; font-size: 0.74rem; margin-bottom: 4px; }
   .main-story-block .perspective .tweet-embed-container { margin-top: 4px; }
-  /* Narrow viewports: collapse perspectives sub-grid to one column */
+  /* Narrow viewports: collapse perspectives sub-grid to one column so
+     Twitter embeds don't go below their ~220px minimum width. */
   @media (max-width: 1100px) {
     .main-story-block .perspectives-row { grid-template-columns: 1fr; }
     .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: auto; }
@@ -100,9 +106,9 @@
   .post-foot a { font-size: 0.74rem; color: #8a7e72; text-decoration: none; }
   .post-foot a:hover { color: #1c1410; text-decoration: underline; }
 
-  /* Perspectives in a 3-column row (side-by-side like the prototype).
-     Default: auto-fit 220px so embeds always have room to render.
-     When parent .col-section has expanded-col, force 3-up. */
+  /* Perspectives sub-grid base. Default: auto-fit 220px so embeds always
+     have room to render (used by Elon, MSM, etc.). Main tab overrides this
+     to force a 2-col half-width layout — see .main-story-block above. */
   .perspectives-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -110,11 +116,6 @@
     margin-top: 10px;
   }
   .perspectives-row .perspective { margin-bottom: 0; }
-  .col-section.expanded-col .perspectives-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .col-section.expanded-col .perspective .post-body { -webkit-line-clamp: unset; }
-  .col-section.expanded-col .perspective { font-size: 0.85rem; padding: 12px 14px; }
 
   /* Per-side colors: red Conservative, white Independent, blue Democrat */
   .perspective { border-top: 3px solid; padding: 9px 11px; font-size: 0.8rem; line-height: 1.42; }
@@ -331,9 +332,10 @@ function toggleStory(sid) {
   }
 }
 
-// Main tab renders every story fully inline — no selection state, no
-// click-to-expand. Source post tiles + perspective embeds auto-load via
-// IntersectionObserver as the user scrolls.
+// Main tab uses the shared .story accordion: each block is collapsed by
+// default (▶ + tight headline + small meta line). Clicking the header fires
+// toggleStory(sid) which adds the .open class AND auto-loads any embed
+// containers inside the body — exact same flow as Elon / Sports / MSM.
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);
   if (!container) return;
@@ -553,23 +555,35 @@ function renderHero(tab) {
          '</div>';
 }
 
-// Render a single Main-tab story fully inline: rank chip + headline +
-// source post (column width) + perspectives subgrid (half-width tiles;
-// the 3rd perspective wraps below spanning both columns).
+// Main-tab story as an accordion: collapsed shows the triangle + rank +
+// AI-tight headline + meta. Click expands to source post embed + 3
+// perspective embeds in a half-width sub-grid (3rd wraps full-width).
+// toggleStory() auto-loads all embed containers inside the body on open.
 function renderMainStoryBlock(story, rank) {
+  var sid = 'm' + Math.random().toString(36).substr(2, 9);
   var mp = story.main || story.main_post || {};
   var headline = esc(story.headline || mp.text || '(no headline)');
+  var hdrAgo = timeAgo(mp.time, mp.url);
+  var metaBits = [];
+  if (mp.handle) metaBits.push(esc(mp.handle));
+  if (mp.views)  metaBits.push('<span class="views">' + esc(mp.views) + ' views</span>');
+  if (hdrAgo)    metaBits.push(hdrAgo);
+  var meta = metaBits.length ? '<span class="post-meta">' + metaBits.join(' · ') + '</span>' : '';
   var sourceTile = renderSourceTile(mp);
   var perspectives = (story.perspectives || []);
   var perspectivesRow = perspectives.length
     ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
     : '';
   return (
-    '<div class="main-story-block">' +
-      '<div class="main-story-rank">Story #' + rank + '</div>' +
-      '<div class="main-story-headline">' + headline + '</div>' +
-      sourceTile +
-      perspectivesRow +
+    '<div class="story main-story-block" id="' + sid + '">' +
+      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
+        '<span class="arrow">▶</span>' +
+        '<span class="story-headline-text">' +
+          '<span class="main-story-rank">Story #' + rank + '</span><br/>' +
+          headline + meta +
+        '</span>' +
+      '</div>' +
+      '<div class="story-body">' + sourceTile + perspectivesRow + '</div>' +
     '</div>'
   );
 }
@@ -792,32 +806,6 @@ function renderContent() {
     }
   }
   el.innerHTML = html;
-  // Main tab renders all source + perspective embeds inline. Lazy-load via
-  // IntersectionObserver to avoid creating 36 iframes at once.
-  if (activeTab === 'main') autoLoadMainEmbeds(el);
-}
-
-function autoLoadMainEmbeds(root) {
-  if (!root) return;
-  var slots = root.querySelectorAll('.main-story-block .tweet-embed-container[data-tweet-url]');
-  if (!slots.length) return;
-  if (!('IntersectionObserver' in window)) {
-    slots.forEach(function(c) {
-      if (c.style.display === 'none' && !c.innerHTML) toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
-    });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (!e.isIntersecting) return;
-      var c = e.target;
-      if (c.style.display === 'none' && !c.innerHTML) {
-        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
-      }
-      io.unobserve(c);
-    });
-  }, { rootMargin: '400px 0px' });
-  slots.forEach(function(c) { io.observe(c); });
 }
 
 function renderNav() {
