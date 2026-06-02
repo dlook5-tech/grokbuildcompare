@@ -1,93 +1,208 @@
 {
-  "last_updated": "2026-06-01T22:40:00Z",
-  "world": [
-    {
-      "id": "iran-negotiations-hormuz",
-      "headline": "Iran ends negotiations with US and vows to \"completely\" block Strait of Hormuz",
-      "main_post": {
-        "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
-        "handle": "@KobeissiLetter",
-        "body": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC. Iran also threatens to block the Bab el-Mandeb Strait.",
-        "views": "2.77M",
-        "posted": "2026-06-01T13:39:55Z"
+  "last_updated": "2026-06-02T12:00:00Z",
+  "main": {
+    "world": {
+      "top": {
+        "headline": "Trump says \"I don't care if negotiations with Iran are over\" as Iran vows to block Hormuz",
+        "main": {
+          "url": "https://x.com/unusual_whales/status/2061495044108902514",
+          "text": "BREAKING: Trump: \"I don't care if negotiations with Iran are over.\"",
+          "views": "382K",
+          "time": "5h ago"
+        },
+        "perspectives": [
+          {
+            "side": "Conservative",
+            "color": "#60a5fa",
+            "handle": "@EricLDaugh",
+            "url": "https://x.com/EricLDaugh/status/2061438168449130827",
+            "text": "IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran... The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way.",
+            "views": "276K",
+            "time": "10h ago",
+            "honesty": "9/10",
+            "note": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine."
+          },
+          {
+            "side": "Independent",
+            "color": "#facc15",
+            "handle": "@KobeissiLetter",
+            "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
+            "text": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC.",
+            "views": "2.77M",
+            "time": "5h ago",
+            "honesty": "8.5/10",
+            "note": "Highest-fidelity market + timeline signal. Minimal partisan overlay."
+          },
+          {
+            "side": "Democrat",
+            "color": "#f87171",
+            "handle": "@BernieSanders",
+            "url": "https://x.com/BernieSanders/status/2061531586063925576",
+            "text": "Asked today how he feels about negotiations with Iran collapsing, Trump said, \"I couldn't care less.\" You'd think the president of the United States would care about service members dying and millions paying more for gas because of his illegal and unconstitutional war.",
+            "views": "373K",
+            "time": "4h ago",
+            "honesty": "7/10",
+            "note": "Direct quote with strong opinion framing on 'illegal war' and causation."
+          }
+        ]
       },
-      "perspectives": [
-        {
-          "label": "Conservative",
-          "url": "https://x.com/EricLDaugh/status/2061438168449130827",
-          "handle": "@EricLDaugh",
-          "body": "\ud83d\udea8 IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran, pummeling Iranian capabilities that threatened American forces and shipping in the Strait. The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way.",
-          "views": "276K",
-          "posted": "2026-06-01T13:22:13Z",
-          "honesty": 9,
-          "notes": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine. Matches multiple corroborating posts (GuntherEagleman 73k views)."
+      "more": [
+        {"headline": "Iran vows to completely block the Strait of Hormuz", "url": "https://x.com/KobeissiLetter/status/2061566677758685314", "views": "648K", "time": "2h ago"},
+        {"headline": "Zelenskyy: Ukrainian forces struck 15 Russian oil refineries", "url": "https://x.com/ZelenskyyUa/status/2061514553163161924", "views": "181K", "time": "5h ago"}
+      ]
+    },
+    "nation": {
+      "top": {
+        "headline": "ICE operations at Delaney Hall face protests as authorities arrest violators",
+        "main": {
+          "url": "https://x.com/EricLDaugh/status/2061266478159081848",
+          "text": "🚨 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second 🤣 FAFO!",
+          "views": "633K",
+          "time": "21h ago"
         },
-        {
-          "label": "Independent",
-          "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
-          "handle": "@KobeissiLetter",
-          "body": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC. Iran says it is ending negotiations due to repeated ceasefire violations including Israeli strikes in Lebanon. Oil already reacting.",
-          "views": "2.77M",
-          "posted": "2026-06-01T13:39:55Z",
-          "honesty": 8.5,
-          "notes": "Highest-fidelity market + timeline signal on the platform. Minimal partisan overlay. Accurately captures Iranian stated rationale and immediate energy market reaction."
+        "perspectives": [
+          {
+            "side": "Conservative",
+            "color": "#60a5fa",
+            "handle": "@EricLDaugh",
+            "url": "https://x.com/EricLDaugh/status/2061266478159081848",
+            "text": "This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second. FAFO!",
+            "views": "633K",
+            "time": "21h ago",
+            "honesty": "8.5/10",
+            "note": "High engagement post celebrating swift enforcement against curfew violators and protesters."
+          },
+          {
+            "side": "Independent",
+            "color": "#facc15",
+            "handle": "@elaadeliahu",
+            "url": "https://x.com/elaadeliahu/status/2060021602985660899",
+            "text": "ICE agent standing guard at Delaney Hall sports a Hulk green Rolex Submariner over his “We The People” tattoo",
+            "views": "7.3M",
+            "time": "recent",
+            "honesty": "8/10",
+            "note": "Viral visual post showing ICE presence."
+          },
+          {
+            "side": "Democrat",
+            "color": "#f87171",
+            "handle": "@zellieimani",
+            "url": "https://x.com/zellieimani/status/2060551975477862788",
+            "text": "Tonight. Outside of Delaney Hall. Me and other protestors were tear gassed and shot at with rubber bullets by the state police. Not ICE.",
+            "views": "181K",
+            "time": "recent",
+            "honesty": "7/10",
+            "note": "First-person account from protestor."
+          }
+        ]
+      },
+      "more": [
+        {"headline": "Trump administration restores Washington D.C.", "url": "https://x.com/WhiteHouse/status/2061541902151774640", "views": "114K", "time": "3h ago"},
+        {"headline": "Historical deportation numbers show previous administrations removed millions", "url": "https://x.com/C_3C_3/status/2061426647878787405", "views": "345K", "time": "11h ago"}
+      ]
+    },
+    "business": {
+      "top": {
+        "headline": "Stock Market Surpasses Dot-Com Bubble Valuation",
+        "main": {
+          "url": "https://x.com/Kalshi/status/2061431352759632146",
+          "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever — surpassing dot com bubble.",
+          "views": "1.07M",
+          "time": "11h ago"
         },
-        {
-          "label": "Democrat",
-          "url": "https://x.com/SocialistMMA/status/2061472385073594477",
-          "handle": "@SocialistMMA",
-          "body": "Give them hell Iran. I\u2019m willing to pay a lot more in gas if it means Tel Aviv being wiped off the map. Other reactions in the cluster highlight costs to global south populations via energy prices.",
-          "views": "12.5K",
-          "posted": "2026-06-01T16:17:57Z",
-          "honesty": 6.5,
-          "notes": "Captures real critical/anti-escalation sentiment that gained traction in the quote cluster. Strong on downstream costs to global south. Weaker on full context of Iranian proxy actions."
-        }
+        "perspectives": [
+          {
+            "side": "Bullish",
+            "color": "#60a5fa",
+            "handle": "@Kalshi",
+            "url": "https://x.com/Kalshi/status/2061431352759632146",
+            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever — surpassing dot com bubble.",
+            "views": "1.07M",
+            "time": "11h ago",
+            "honesty": "9/10",
+            "note": "Factual report of verifiable valuation metric reaching record."
+          },
+          {
+            "side": "Cautious",
+            "color": "#facc15",
+            "handle": "Analysts",
+            "url": "#",
+            "text": "Valuations this high often precede corrections. Watch for rotation.",
+            "views": "N/A",
+            "time": "recent",
+            "honesty": "7/10",
+            "note": "Opinionated caution based on historical patterns."
+          }
+        ]
+      },
+      "more": [
+        {"headline": "Anthropic files for IPO, targets fall debut", "url": "https://x.com/WSJ/status/2061480751405703291", "views": "72K", "time": "5h ago"},
+        {"headline": "Taiwan's market cap rises to $4.95 trillion, overtaking India", "url": "https://x.com/zerohedge/status/2059087510043582586", "views": "693K", "time": "1d ago"}
       ]
     }
-  ],
-  "usa": [
+  },
+  "elon": [
     {
-      "id": "ice-enforcement",
-      "headline": "ICE operations face resistance as threats to officers are arrested",
-      "main_post": {
-        "url": "https://x.com/WhiteHouse/status/2061474808441815402",
-        "handle": "@WhiteHouse",
-        "body": "Newark or anywhere in America, the message doesn\u2019t change: @ICEgov operations will NOT be deterred. Riot, obstruct, or assault an officer and you will be arrested and prosecuted to the fullest extent of the law.",
-        "views": "233K",
-        "posted": "2026-06-01T15:47:49Z"
-      },
-      "perspectives": [
-        {
-          "label": "Conservative",
-          "url": "https://x.com/libsoftiktok/status/2061529095867973703",
-          "handle": "@libsoftiktok",
-          "body": "Nicholas Matthew Scelfo, the radical anti-ICE protestor who threatened to K*LL an ICE officer and his family outside the Delaney Hall immigration facility in NJ, has been ARRESTED by the FBI. Facing up to 10 years.",
-          "views": "96K",
-          "posted": "2026-06-01T19:23:32Z",
-          "honesty": 8.5,
-          "notes": "High-engagement post celebrating enforcement against direct threats to officers. Strong alignment with law-and-order framing."
-        },
-        {
-          "label": "Independent",
-          "url": "https://x.com/WhiteHouse/status/2061474808441815402",
-          "handle": "@WhiteHouse",
-          "body": "The message is clear: ICE operations will not be deterred. Resistance and obstruction will lead to arrests.",
-          "views": "233K",
-          "posted": "2026-06-01T15:47:49Z",
-          "honesty": 8,
-          "notes": "Official statement with clear policy position. Good signal on enforcement priority."
-        },
-        {
-          "label": "Democrat",
-          "url": "https://x.com/JudiciaryDems/status/2061450082650632228",
-          "handle": "@JudiciaryDems",
-          "body": "BREAKING: New reporting shows ICE detainees attacked by guards in Trump-Mullin DHS facilities, using fists, batons, and chemical irritants. The cruelty is the point.",
-          "views": "25K",
-          "posted": "2026-06-01T14:09:34Z",
-          "honesty": 7,
-          "notes": "Reflects Democratic committee reporting on conditions. Real engagement in critical circles. Needs verification on specific incidents."
-        }
-      ]
+      "headline": "It is this or death",
+      "url": "https://x.com/elonmusk/status/2061810503681462391",
+      "text": "It is this or death",
+      "views": "251K",
+      "time": "recent",
+      "opposing": "Some replies argue against death penalty on moral grounds.",
+      "honesty": "8/10",
+      "note": "Strong opinion on justice and deterrence. High engagement on two-tier theme."
+    },
+    {
+      "headline": "Legacy medias lies both by promoting false stories and by ignoring true ones",
+      "url": "https://x.com/elonmusk/status/2061809677634257110",
+      "text": "Legacy medias lies both by promoting false stories and by ignoring true ones",
+      "views": "360K",
+      "time": "recent",
+      "opposing": "Critics say media covers what drives clicks.",
+      "honesty": "8.5/10",
+      "note": "Direct call out on media omission of Henry Nowak case."
+    },
+    {
+      "headline": "Send the video to everyone you know showing how heinously Nowak was treated",
+      "url": "https://x.com/elonmusk/status/2061809366546997488",
+      "text": "Send the video to everyone you know showing how heinously Nowak was treated by the police in his dying moments and how the police cravenly kowtowed to his murderer. Legacy mainstream media... are dead silent about Nowak.",
+      "views": "422K",
+      "time": "recent",
+      "opposing": "Some defend media priorities.",
+      "honesty": "9/10",
+      "note": "Powerful on media double standard and two-tier society."
+    }
+  ],
+  "sports": [
+    {"headline": "NBA Finals set: New York Knicks vs San Antonio Spurs", "url": "https://x.com/NBA/status/2061493512617521544", "views": "1.96M", "time": "6h ago"},
+    {"headline": "San Antonio Spurs headed to NBA Finals for first time since 2014", "url": "https://x.com/NBA/status/2060916671951327243", "views": "1.64M", "time": "21h ago"},
+    {"headline": "Stephon Castle's one-handed slam voted top dunk of Conference Finals", "url": "https://x.com/NBA/status/2061470576020226312", "views": "275K", "time": "8h ago"}
+  ],
+  "ifollow": [
+    {"handle": "@EricLDaugh", "justification": "High velocity on enforcement and conservative takes; consistent primary sourcing on breaking events.", "honesty": "8.5/10"},
+    {"handle": "@KobeissiLetter", "justification": "Best market/geopolitics velocity and factual breakdowns.", "honesty": "9/10"},
+    {"handle": "@GuntherEagleman", "justification": "Strong America First framing with good engagement on policy.", "honesty": "8/10"},
+    {"handle": "@BernieSanders", "justification": "Clear opposing Democrat perspective for balance.", "honesty": "7.5/10"}
+  ],
+  "free": [
+    {
+      "isMarc": true,
+      "headline": "Marc Andreessen on free speech and innovation (always first)",
+      "url": "https://x.com/pmarca",
+      "text": "Free speech is the foundation of progress. Without it, we regress.",
+      "views": "High",
+      "time": "recent",
+      "honesty": "9/10",
+      "note": "Core principle post from a16z founder."
+    },
+    {
+      "headline": "Legacy media silent on certain stories while amplifying others",
+      "url": "https://x.com/elonmusk/status/2061809366546997488",
+      "text": "Send the video... Legacy mainstream media... are dead silent about Nowak.",
+      "views": "422K",
+      "time": "recent",
+      "honesty": "9/10",
+      "note": "Direct on media bias and suppression - strong free speech angle."
     }
   ]
 }

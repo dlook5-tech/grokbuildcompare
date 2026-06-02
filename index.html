@@ -8,88 +8,130 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #c9a67a; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; }
-  header { background: #f7f2ea; color: #1c1410; padding: 20px 32px 0; border-bottom: 3px solid #d4b896; }
-  .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
-  .logo { font-family: "Playfair Display", Georgia, serif; font-size: 2.2rem; font-weight: 900; letter-spacing: -1px; color: #1c1410; }
-  .logo small { font-family: "Inter", sans-serif; font-size: 0.6rem; letter-spacing: 2.5px; text-transform: uppercase; color: #b8860b; font-weight: 600; display: block; margin-top: 4px; }
-  .tagline { font-size: 0.65rem; letter-spacing: 2.5px; text-transform: uppercase; color: #8a7e72; margin-bottom: 14px; font-weight: 500; }
-  .date { font-size: 0.8rem; color: #6b5d4f; font-weight: 500; }
-  .freshness-badge { display: inline-block; margin-left: 12px; padding: 4px 10px; background: #ede8e0; color: #6b5d4f; font-size: 0.7rem; font-weight: 600; border-radius: 12px; cursor: pointer; user-select: none; border: 1px solid #d4b896; }
+  header { background: #f7f2ea; color: #1c1410; padding: 18px 28px 0; border-bottom: 3px solid #d4b896; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; }
+  .logo { font-family: "Playfair Display", Georgia, serif; font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; color: #1c1410; }
+  .build-tag { display: inline-block; margin-left: 8px; padding: 2px 8px; background: #b8860b; color: #fff; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; border-radius: 8px; vertical-align: middle; }
+  .tagline { font-size: 0.62rem; letter-spacing: 2.2px; text-transform: uppercase; color: #8a7e72; margin-bottom: 10px; font-weight: 500; }
+  .date { font-size: 0.78rem; color: #6b5d4f; font-weight: 500; }
+  .freshness-badge { display: inline-block; margin-left: 10px; padding: 4px 10px; background: #ede8e0; color: #6b5d4f; font-size: 0.7rem; font-weight: 600; border-radius: 12px; cursor: pointer; user-select: none; border: 1px solid #d4b896; }
   .freshness-badge:hover { background: #e0d8cb; color: #1c1410; }
-  nav { display: flex; gap: 4px; margin-top: 14px; border-top: 1px solid #e5dcc8; padding-top: 8px; }
-  nav a { color: #8a7e72; text-decoration: none; padding: 9px 14px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+  nav { display: flex; gap: 2px; margin-top: 12px; border-top: 1px solid #e5dcc8; padding-top: 6px; flex-wrap: wrap; }
+  nav a { color: #8a7e72; text-decoration: none; padding: 9px 14px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
   nav a:hover { color: #3a2a18; }
   nav a.active { color: #b8860b; border-bottom: 2px solid #b8860b; font-weight: 700; }
-  main { flex: 1; padding: 24px 32px; max-width: 920px; margin: 0 auto; width: 100%; }
-  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #f0e6d6; margin-bottom: 6px; font-weight: 600; }
-  h1 { font-family: "Playfair Display", Georgia, serif; font-size: 1.85rem; font-weight: 800; margin-bottom: 6px; line-height: 1.2; color: #fff8ee; text-shadow: 0 1px 3px rgba(80,40,0,0.3); }
-  .subtitle { color: #f0e6d6; font-size: 0.9rem; margin-bottom: 24px; line-height: 1.5; }
+  main { flex: 1; padding: 22px 28px 32px; max-width: 1280px; margin: 0 auto; width: 100%; }
+  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #f0e6d6; margin-bottom: 4px; font-weight: 600; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; line-height: 1.2; color: #fff8ee; text-shadow: 0 1px 3px rgba(80,40,0,0.3); }
+  .subtitle { color: #f0e6d6; font-size: 0.88rem; margin-bottom: 22px; line-height: 1.5; }
   .subtitle .label-conservative { color: #c45a4a; font-weight: 700; }
   .subtitle .label-independent { color: #ffffff; font-weight: 700; }
   .subtitle .label-democrat { color: #3d80c2; font-weight: 700; }
 
-  /* Story block */
-  .story { border: 1px solid #d4b896; border-radius: 6px; margin-bottom: 12px; background: #faf6f0; overflow: hidden; box-shadow: 0 2px 8px rgba(80,50,20,0.15); }
-  .story-header { padding: 14px 18px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; font-weight: 600; color: #1a1a1a; transition: background 0.15s; }
-  .story-header:hover { background: #f4ede0; }
-  .arrow { color: #b8860b; font-size: 0.85rem; flex-shrink: 0; transition: transform 0.2s; margin-top: 2px; }
-  .story.open > .story-header .arrow { transform: rotate(90deg); }
-  .story-headline-text { flex: 1; line-height: 1.35; font-size: 0.98rem; }
-  .post-meta { font-size: 0.7rem; color: #8a7e72; font-weight: 500; margin-top: 4px; display: block; }
-  .post-meta .views { color: #b8860b; font-weight: 700; }
+  /* 3-column layout for the World/Nation/Business tab */
+  .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .col-section { background: rgba(247,242,234,0.18); border: 1px solid #d4b896; border-radius: 8px; padding: 12px 14px; }
+  .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; font-weight: 800; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #b8860b; letter-spacing: 0.5px; }
 
-  .story-body { display: none; padding: 0 18px 18px 40px; border-top: 1px solid #ede4cf; padding-top: 16px; }
+  /* 3-up grid for Elon + Sports tabs */
+  .three-up { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+
+  /* Story block — same accordion mechanics as Expresso */
+  .story { border: 1px solid #d4b896; border-radius: 6px; margin-bottom: 10px; background: #faf6f0; overflow: hidden; box-shadow: 0 2px 8px rgba(80,50,20,0.15); }
+  .story-header { padding: 12px 14px; cursor: pointer; display: flex; align-items: flex-start; gap: 9px; font-weight: 600; color: #1a1a1a; transition: background 0.15s; }
+  .story-header:hover { background: #f4ede0; }
+  .arrow { color: #b8860b; font-size: 0.8rem; flex-shrink: 0; transition: transform 0.2s; margin-top: 2px; }
+  .story.open > .story-header .arrow { transform: rotate(90deg); }
+  .story-headline-text { flex: 1; line-height: 1.32; font-size: 0.95rem; }
+  .post-meta { font-size: 0.68rem; color: #8a7e72; font-weight: 500; margin-top: 3px; display: block; }
+  .post-meta .views { color: #b8860b; font-weight: 700; }
+  .story-body { display: none; padding: 0 14px 14px; border-top: 1px solid #ede4cf; padding-top: 12px; }
   .story.open > .story-body { display: block; }
 
-  /* Perspective */
-  .perspective { border-left: 3px solid; padding: 12px 14px; margin-bottom: 12px; border-radius: 4px; font-size: 0.88rem; line-height: 1.55; }
+  /* Source post tile and perspective tile share base */
+  .tile { background: #ffffff; border: 1px solid #e5dcc8; border-radius: 5px; padding: 10px 12px; margin-bottom: 9px; font-size: 0.85rem; line-height: 1.5; }
+  .source-tile { background: #fffdf7; border-left: 3px solid #b8860b; }
+  .source-label, .perspective .label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.1px; font-weight: 800; color: #8a7e72; margin-bottom: 4px; }
+  .meta-line { font-size: 0.7rem; color: #6b5d4f; font-weight: 500; margin-bottom: 6px; }
+  .meta-line .views { color: #b8860b; font-weight: 700; }
+  .meta-line .handle { font-weight: 700; color: #2a2218; }
+  .post-body { color: #2a2218; margin-bottom: 8px; white-space: pre-wrap; word-wrap: break-word; }
+  .post-foot a { font-size: 0.74rem; color: #8a7e72; text-decoration: none; }
+  .post-foot a:hover { color: #1c1410; text-decoration: underline; }
+
+  /* Perspective tile color tags */
+  .perspective { border-left: 3px solid; padding: 10px 12px; }
   .perspective-conservative { background: #fbe9e9; border-color: #c45a4a; }
-  .perspective-independent { background: #f5f0e7; border-color: #b8860b; }
-  .perspective-democrat   { background: #e7f0fa; border-color: #3d80c2; }
-  .source-tile { background: #fdf6e3; border: 1px solid #d4b896; border-left: 3px solid #8b6e1e; padding: 12px 14px; margin-bottom: 14px; border-radius: 4px; font-size: 0.88rem; line-height: 1.55; }
-  .source-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 800; color: #8b6e1e; margin-bottom: 6px; }
-  .source-body { color: #2a2218; margin-bottom: 10px; white-space: pre-wrap; word-wrap: break-word; }
-  .source-meta { font-size: 0.72rem; color: #6b5d4f; margin-bottom: 8px; }
-  .source-meta strong { color: #1c1410; }
-  .persp-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-  .persp-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
-  .label-cons { color: #a63d2f; }
-  .label-ind  { color: #8b6e1e; }
-  .label-dem  { color: #2b6ea3; }
-  .persp-meta { font-size: 0.7rem; color: #6b5d4f; font-weight: 500; }
-  .persp-body { color: #2a2218; margin-bottom: 10px; white-space: pre-wrap; word-wrap: break-word; }
-  .persp-handle { font-size: 0.78rem; color: #6b5d4f; }
-  .persp-handle a { color: #2980b9; text-decoration: none; font-weight: 600; }
-  .persp-handle a:hover { text-decoration: underline; }
+  .perspective-independent  { background: #f5f0e7; border-color: #b8860b; }
+  .perspective-democrat     { background: #e7f0fa; border-color: #3d80c2; }
+  .perspective-bullish      { background: #e7f5e9; border-color: #4a9d57; }
+  .perspective-cautious     { background: #fdf0d6; border-color: #d49b3e; }
+  .perspective-opposing     { background: #f0eaf7; border-color: #7a5fa5; }
+  .perspective .label.cons { color: #a63d2f; }
+  .perspective .label.ind  { color: #8b6e1e; }
+  .perspective .label.dem  { color: #2b6ea3; }
+  .perspective .label.bul  { color: #2a6f33; }
+  .perspective .label.cau  { color: #8a5e1a; }
+  .perspective .label.opp  { color: #5a3f80; }
 
-  /* Honesty */
-  /* Tweet embed (lazy-loaded via X widgets.js when user clicks to expand) */
-  .tweet-embed-container { margin-top: 10px; }
-  .tweet-embed-container iframe { max-width: 100% !important; }
-
-  /* Honesty — subtle collapsible footnote, like Expresso */
-  .honesty-fold { margin-top: 10px; border-top: 1px dashed rgba(0,0,0,0.10); padding-top: 8px; }
-  .honesty-fold-head { cursor: pointer; font-size: 0.72rem; color: #6b5d4f; font-weight: 600; user-select: none; display: flex; align-items: center; gap: 6px; }
+  /* Honesty — subtle collapsible footnote */
+  .honesty-fold { margin-top: 7px; border-top: 1px dashed #d4b896; padding-top: 5px; }
+  .honesty-fold-head { font-size: 0.7rem; color: #8a7e72; cursor: pointer; display: flex; align-items: center; gap: 5px; user-select: none; font-weight: 600; }
   .honesty-fold-head:hover { color: #1c1410; }
-  .honesty-fold-head .arrow-mini { font-size: 0.7rem; transition: transform 0.15s; color: #b8860b; }
-  .honesty-fold.open .honesty-fold-head .arrow-mini { transform: rotate(90deg); }
-  .honesty-fold-body { display: none; margin-top: 6px; padding: 8px 10px; background: rgba(0,0,0,0.03); border-radius: 4px; font-size: 0.74rem; color: #5a4a30; line-height: 1.5; }
+  .arrow-mini { font-size: 0.65rem; transition: transform 0.2s; color: #b8860b; }
+  .honesty-fold.open .arrow-mini { transform: rotate(90deg); }
+  .honesty-fold-body { display: none; padding: 5px 0 0 11px; font-size: 0.74rem; color: #6b5d4f; line-height: 1.45; }
   .honesty-fold.open .honesty-fold-body { display: block; }
-  .h-good  { color: #2f7a3a; }
-  .h-mid   { color: #8a6a18; }
-  .h-poor  { color: #9a3a2a; }
+  .honesty-score { font-weight: 700; padding: 0px 5px; border-radius: 7px; font-size: 0.7rem; }
+  .h-good { background: #d6ebd8; color: #1f5a23; }
+  .h-mid  { background: #f3e6c3; color: #6e5018; }
+  .h-poor { background: #f4d2cd; color: #7a2a20; }
 
-  footer { background: #1c1410; color: #d4b896; padding: 18px 32px; text-align: center; font-size: 0.75rem; }
+  /* Tweet embed container */
+  .tweet-embed-container { margin-top: 8px; }
+  .tweet-embed-container twitter-widget { margin: 0 !important; }
+
+  /* "Next most viewed" list inside a column section */
+  .more-list { margin-top: 10px; }
+  .more-list-head { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.1px; color: #f0e6d6; font-weight: 700; margin: 8px 0 6px; }
+  .more-item { background: #faf6f0; border: 1px solid #ede4cf; border-radius: 5px; padding: 8px 11px; margin-bottom: 6px; font-size: 0.82rem; line-height: 1.35; }
+  .more-item a { color: #2a2218; text-decoration: none; font-weight: 600; }
+  .more-item a:hover { color: #b8860b; }
+  .more-item .meta { display: block; font-size: 0.66rem; color: #8a7e72; margin-top: 3px; }
+  .more-item .views { color: #b8860b; font-weight: 700; }
+
+  /* iFollow card list */
+  .ifollow-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 12px 14px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); }
+  .ifollow-handle { font-weight: 800; color: #2a2218; font-size: 1rem; margin-bottom: 4px; }
+  .ifollow-handle a { color: #2a2218; text-decoration: none; }
+  .ifollow-handle a:hover { color: #b8860b; }
+  .ifollow-just { font-size: 0.83rem; color: #4a3a25; line-height: 1.45; margin-bottom: 7px; }
+
+  /* Form (iFollow + Free Speech submission) */
+  .submit-form { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 14px 16px; margin-top: 16px; max-width: 540px; }
+  .submit-form label { display: block; font-size: 0.72rem; font-weight: 700; color: #6b5d4f; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; margin-top: 10px; }
+  .submit-form label:first-of-type { margin-top: 0; }
+  .submit-form input, .submit-form textarea { width: 100%; padding: 8px 10px; border: 1px solid #d4b896; border-radius: 4px; font-family: inherit; font-size: 0.9rem; background: #fffdf7; }
+  .submit-form input:focus, .submit-form textarea:focus { outline: none; border-color: #b8860b; }
+  .submit-form button { margin-top: 12px; background: #b8860b; color: #fff; border: 0; padding: 9px 18px; border-radius: 5px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; cursor: pointer; text-transform: uppercase; }
+  .submit-form button:hover { background: #976d09; }
+
+  /* Marc Andreessen always-first card */
+  .marc-card { background: linear-gradient(135deg, #fffdf7 0%, #f4e8c8 100%); border: 2px solid #b8860b; border-radius: 6px; padding: 14px 16px; margin-bottom: 16px; box-shadow: 0 3px 12px rgba(184,134,11,0.18); }
+  .marc-tag { display: inline-block; background: #b8860b; color: #fff; font-size: 0.6rem; padding: 2px 8px; border-radius: 7px; letter-spacing: 1px; margin-bottom: 6px; font-weight: 700; }
+
+  footer { background: #1c1410; color: #d4b896; padding: 16px 28px; text-align: center; font-size: 0.74rem; }
   footer strong { color: #f0e6d6; }
-  .empty-msg { color: #f0e6d6; font-size: 0.9rem; margin-top: 20px; }
-  .build-tag { display: inline-block; margin-left: 8px; padding: 2px 8px; background: #b8860b; color: #fff; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; border-radius: 8px; vertical-align: middle; }
+  .empty-msg { color: #f0e6d6; font-size: 0.88rem; margin-top: 16px; }
 
-  @media (max-width: 600px) {
-    header { padding: 16px 18px 0; }
-    main { padding: 18px 16px; }
-    .logo { font-size: 1.7rem; }
-    h1 { font-size: 1.4rem; }
-    .story-body { padding-left: 16px; }
+  /* Mobile: stack columns vertically */
+  @media (max-width: 850px) {
+    .columns, .three-up { grid-template-columns: 1fr; }
+    main { padding: 16px 12px 24px; }
+    header { padding: 14px 14px 0; }
+    .logo { font-size: 1.55rem; }
+    h1 { font-size: 1.5rem; }
   }
 </style>
 </head>
@@ -98,7 +140,7 @@
   <div class="header-top">
     <div>
       <div class="logo">grokbuildcompare<span class="build-tag">Grok-Build</span></div>
-      <div class="tagline">X-NATIVE CURATION · &lt; 24H · 3 PERSPECTIVES + HONESTY</div>
+      <div class="tagline">X-NATIVE CURATION · ALL POSTS &lt; 24H</div>
     </div>
     <div style="text-align:right;">
       <span class="date" id="currentDate"></span>
@@ -106,17 +148,45 @@
     </div>
   </div>
   <nav id="nav">
-    <a data-tab="world" class="active">World</a>
-    <a data-tab="usa">USA</a>
+    <a data-tab="main" class="active">World · Nation · Business</a>
+    <a data-tab="elon">Elon</a>
+    <a data-tab="sports">Sports</a>
+    <a data-tab="ifollow">i follow</a>
+    <a data-tab="free">free</a>
   </nav>
 </header>
 <main id="content"><div class="empty-msg">Loading stories…</div></main>
-<footer>&copy; 2026 <strong>grokbuildcompare</strong> · Companion to eXpressO News for A/B curation comparison</footer>
+<footer>&copy; 2026 <strong>grokbuildcompare</strong> · Companion to <a href="https://expresso-news.netlify.app" style="color:#f0e6d6;">eXpressO News</a> for A/B curation comparison</footer>
 
 <script>
 var NEWS_DATA = null;
-var activeTab = 'world';
+var activeTab = 'main';
 
+function esc(s) {
+  return (s || '').replace(/[&<>"]/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});
+}
+function timeAgo(s) {
+  if (!s) return '';
+  if (/ago|recent|now/i.test(s)) return s;  // already human-readable
+  var d = new Date(s); if (isNaN(d)) return s;
+  var diff = (Date.now() - d.getTime()) / 1000;
+  if (diff < 60) return 'just now';
+  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+  return Math.floor(diff / 86400) + 'd ago';
+}
+function honestyParse(h) {
+  if (h == null) return null;
+  if (typeof h === 'number') return h;
+  var m = String(h).match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : null;
+}
+function honestyClass(v) {
+  if (v == null) return '';
+  if (v >= 8) return 'h-good';
+  if (v >= 6.5) return 'h-mid';
+  return 'h-poor';
+}
 function formatDate() {
   var d = new Date(), days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   return days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
@@ -125,46 +195,13 @@ function todayLabel() {
   var d = new Date(), months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
 }
-function timeAgo(iso) {
-  if (!iso) return '';
-  var d = new Date(iso);
-  if (isNaN(d.getTime())) return '';
-  var diff = (Date.now() - d.getTime()) / 1000;
-  if (diff < 60) return 'just now';
-  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-  return Math.floor(diff / 86400) + 'd ago';
-}
-function honestyClass(h) {
-  if (h >= 8) return 'h-good';
-  if (h >= 6.5) return 'h-mid';
-  return 'h-poor';
-}
-function esc(s) {
-  return (s || '').replace(/[&<>"]/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});
-}
-function labelClass(label) {
-  if (label === 'Conservative') return 'label-cons';
-  if (label === 'Democrat') return 'label-dem';
-  return 'label-ind';
-}
-function persClass(label) {
-  if (label === 'Conservative') return 'perspective-conservative';
-  if (label === 'Democrat') return 'perspective-democrat';
-  return 'perspective-independent';
-}
 
-// Open the story block AND auto-load every embedded post inside it.
-// The user mandate: "more compelling when the post is embedded right when you
-// hit the down arrow on the block." So we trigger all embeds in one click.
+// Auto-load all embeds inside the block on expand (one-click behavior)
 function toggleStory(sid) {
   var s = document.getElementById(sid);
   if (!s) return;
   s.classList.toggle('open');
   if (!s.classList.contains('open')) return;
-  // Find every embed container that hasn't been hydrated yet, fire them all.
-  // toggleEmbed is idempotent — calling it on an already-loaded container
-  // would toggle visibility off, so we guard with display === 'none'.
   var pending = s.querySelectorAll('.tweet-embed-container[data-tweet-url]');
   for (var i = 0; i < pending.length; i++) {
     var c = pending[i];
@@ -173,148 +210,369 @@ function toggleStory(sid) {
     }
   }
 }
-
-// Same X-widget mechanism Expresso uses. Loads platform.twitter.com/widgets.js
-// the first time a tweet expands, then renders subsequent embeds without re-fetching.
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);
   if (!container) return;
   if (container.style.display !== 'none' && container.innerHTML) {
-    container.style.display = 'none';
-    return;
+    container.style.display = 'none'; return;
   }
   container.style.display = 'block';
-  container.innerHTML = '<div style="color:#8a7e72;font-size:0.78rem;padding:8px;">Loading post…</div>';
-  var m = tweetUrl.match(/status\/(\d+)/);
-  if (!m) { container.innerHTML = '<div style="color:#c0392b;font-size:0.78rem;padding:8px;">Could not load embed.</div>'; return; }
+  container.innerHTML = '<div style="color:#8a7e72;font-size:0.78rem;padding:6px;">Loading post…</div>';
+  var m = (tweetUrl || '').match(/status\/(\d+)/);
+  if (!m) { container.innerHTML = '<div style="color:#c0392b;font-size:0.78rem;padding:6px;">Could not load embed.</div>'; return; }
   var tweetId = m[1];
   function render() {
     container.innerHTML = '';
     window.twttr.widgets.createTweet(tweetId, container, { theme: 'light', dnt: true, conversation: 'none' });
   }
   if (window.twttr && window.twttr.widgets) { render(); return; }
-  var s = document.createElement('script');
-  s.src = 'https://platform.twitter.com/widgets.js';
-  s.async = true;
-  s.onload = render;
-  document.head.appendChild(s);
+  var sc = document.createElement('script');
+  sc.src = 'https://platform.twitter.com/widgets.js'; sc.async = true; sc.onload = render;
+  document.head.appendChild(sc);
 }
 
-function renderPerspective(p, isMainPost) {
-  if (!p) return '';
-  var handle = esc(p.handle || '@?');
-  var url = p.url || '';
-  var body = esc(p.body || '').replace(/\n/g, '<br/>');
-  var ago = timeAgo(p.posted);
-  var views = esc(p.views || '');
-  var honesty = (typeof p.honesty === 'number') ? p.honesty : (parseFloat(p.honesty) || null);
+// Map perspective side → CSS class + label tag class
+function persClassForSide(side) {
+  var k = (side || '').toLowerCase();
+  if (k === 'conservative') return { box: 'perspective-conservative', lab: 'cons' };
+  if (k === 'democrat')     return { box: 'perspective-democrat',     lab: 'dem'  };
+  if (k === 'independent')  return { box: 'perspective-independent',  lab: 'ind'  };
+  if (k === 'bullish')      return { box: 'perspective-bullish',      lab: 'bul'  };
+  if (k === 'cautious')     return { box: 'perspective-cautious',     lab: 'cau'  };
+  return { box: 'perspective-opposing', lab: 'opp' };
+}
 
-  // Lazy X embed wired the same way Expresso does — click block-header (or "Show post" link) to load.
-  var embedId = 'em' + Math.random().toString(36).substr(2, 9);
+function renderEmbedSlot(url) {
   var hasXPost = url && url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
+  if (!hasXPost) return '';
+  var id = 'em' + Math.random().toString(36).substr(2, 9);
+  return '<div id="' + id + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>';
+}
 
-  // Honesty as a subtle collapsible footnote — only renders if we have a score
-  var honestyBlock = '';
-  if (honesty !== null && !isNaN(honesty)) {
-    var hid = 'h' + Math.random().toString(36).substr(2, 9);
-    honestyBlock =
-      '<div class="honesty-fold" id="' + hid + '">' +
-        '<div class="honesty-fold-head" onclick="event.stopPropagation();document.getElementById(\'' + hid + '\').classList.toggle(\'open\');">' +
-          '<span class="arrow-mini">▶</span>' +
-          '<span>Honesty <span class="' + honestyClass(honesty) + '">' + honesty + '/10</span></span>' +
-        '</div>' +
-        '<div class="honesty-fold-body">' + (p.notes ? esc(p.notes) : 'No notes provided.') + '</div>' +
-      '</div>';
-  }
-
-  // Embed auto-loads when the parent story block opens. data-tweet-url is
-  // the trigger; the story-header onclick handler scans for any uninitialized
-  // embed containers inside and fires toggleEmbed on each.
-  var embedSlot = hasXPost
-    ? '<div id="' + embedId + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>'
-    : '';
-  var openX = url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem; color:#8a7e72; margin-left:8px;">open on X ↗</a>' : '';
-
+function renderHonestyFold(honesty, note) {
+  var v = honestyParse(honesty);
+  if (v == null) return '';
+  var hid = 'h' + Math.random().toString(36).substr(2, 9);
   return (
-    '<div class="perspective ' + persClass(p.label) + '">' +
-      '<div class="persp-head">' +
-        '<div class="persp-label ' + labelClass(p.label) + '">' + esc(p.label || '?') + '</div>' +
-        '<div class="persp-meta">' + (views ? views + ' views · ' : '') + ago + '</div>' +
+    '<div class="honesty-fold" id="' + hid + '">' +
+      '<div class="honesty-fold-head" onclick="event.stopPropagation();document.getElementById(\'' + hid + '\').classList.toggle(\'open\');">' +
+        '<span class="arrow-mini">▶</span>' +
+        '<span>Honesty <span class="honesty-score ' + honestyClass(v) + '">' + (typeof honesty === 'string' ? honesty : (v + '/10')) + '</span></span>' +
       '</div>' +
-      '<div class="persp-body">' + body + '</div>' +
-      '<div class="persp-handle">— <a href="' + (url || '#') + '" target="_blank" rel="noopener">' + handle + '</a>' + openX + '</div>' +
-      embedSlot +
-      honestyBlock +
+      '<div class="honesty-fold-body">' + (note ? esc(note) : 'No notes provided.') + '</div>' +
     '</div>'
   );
 }
 
 function renderSourceTile(mp) {
-  if (!mp || !mp.url) return '';
-  var handle = esc(mp.handle || '');
-  var url = mp.url;
-  var body = esc(mp.body || '').replace(/\n/g, '<br/>');
-  var views = esc(mp.views || '');
-  var ago = timeAgo(mp.posted);
-  var hasXPost = url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
-  var embedId = 'emS' + Math.random().toString(36).substr(2, 9);
-  var embedSlot = hasXPost
-    ? '<div id="' + embedId + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>'
-    : '';
+  if (!mp) return '';
+  var url = mp.url || '';
   return (
-    '<div class="source-tile">' +
+    '<div class="tile source-tile">' +
       '<div class="source-label">Source post</div>' +
-      '<div class="source-meta"><strong>' + handle + '</strong>' + (views ? ' · ' + views + ' views' : '') + (ago ? ' · ' + ago : '') + '</div>' +
-      '<div class="source-body">' + body + '</div>' +
-      '<div>' + (url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem;color:#8a7e72;">open on X ↗</a>' : '') + '</div>' +
-      embedSlot +
+      '<div class="meta-line">' +
+        (mp.handle ? '<span class="handle">' + esc(mp.handle) + '</span>' : '') +
+        (mp.views ? ' · <span class="views">' + esc(mp.views) + ' views</span>' : '') +
+        (mp.time ? ' · ' + timeAgo(mp.time) : '') +
+      '</div>' +
+      '<div class="post-body">' + esc(mp.text || mp.body || '').replace(/\n/g, '<br/>') + '</div>' +
+      '<div class="post-foot">' + (url ? '<a href="' + url + '" target="_blank" rel="noopener">open on X ↗</a>' : '') + '</div>' +
+      renderEmbedSlot(url) +
     '</div>'
   );
 }
 
-function renderStory(s) {
+function renderPerspectiveTile(p) {
+  if (!p) return '';
+  var pc = persClassForSide(p.side);
+  var url = p.url || '';
+  return (
+    '<div class="tile perspective ' + pc.box + '">' +
+      '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
+      '<div class="meta-line">' +
+        (p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') +
+        (p.views ? ' · <span class="views">' + esc(p.views) + ' views</span>' : '') +
+        (p.time ? ' · ' + timeAgo(p.time) : '') +
+      '</div>' +
+      '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
+      '<div class="post-foot">' + (url && url !== '#' ? '<a href="' + url + '" target="_blank" rel="noopener">open on X ↗</a>' : '') + '</div>' +
+      renderEmbedSlot(url) +
+      renderHonestyFold(p.honesty, p.note) +
+    '</div>'
+  );
+}
+
+// Generic story block with main_post + perspectives
+function renderStoryBlock(s) {
   var sid = 's' + Math.random().toString(36).substr(2, 9);
-  var mp = s.main_post || {};
-  var headline = esc(s.headline || mp.body || '(no headline)');
+  var mp = s.main || s.main_post || {};
+  var headline = esc(s.headline || mp.text || '(no headline)');
   var meta = '<span class="post-meta">' +
     (mp.handle ? esc(mp.handle) + ' · ' : '') +
-    (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span> · ' : '') +
-    timeAgo(mp.posted) +
+    (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
+    (mp.time ? ' · ' + timeAgo(mp.time) : '') +
     '</span>';
-  var sourceTile = renderSourceTile(mp);
-  var perspectives = (s.perspectives || []).map(function(p){ return renderPerspective(p, false); }).join('');
+  var tiles = renderSourceTile(mp) + (s.perspectives || []).map(renderPerspectiveTile).join('');
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + perspectives + '</div>' +
+      '<div class="story-body">' + tiles + '</div>' +
     '</div>'
   );
 }
 
+// Block for a single Elon post (no source/perspective split — one main post + optional opposing summary)
+function renderElonBlock(item) {
+  var sid = 'e' + Math.random().toString(36).substr(2, 9);
+  var headline = esc(item.headline || item.text || '(no headline)');
+  var meta = '<span class="post-meta">' +
+    '@elonmusk' +
+    (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
+    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    '</span>';
+  var sourceTile = renderSourceTile({
+    handle: '@elonmusk',
+    text: item.text,
+    views: item.views,
+    time: item.time,
+    url: item.url
+  });
+  var opposingTile = '';
+  if (item.opposing) {
+    opposingTile =
+      '<div class="tile perspective perspective-opposing">' +
+        '<div class="label opp">Opposing view</div>' +
+        '<div class="post-body">' + esc(item.opposing) + '</div>' +
+      '</div>';
+  }
+  var honestyBlock = renderHonestyFold(item.honesty, item.note);
+  return (
+    '<div class="story" id="' + sid + '">' +
+      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
+        '<span class="arrow">▶</span>' +
+        '<span class="story-headline-text">' + headline + meta + '</span>' +
+      '</div>' +
+      '<div class="story-body">' + sourceTile + opposingTile + honestyBlock + '</div>' +
+    '</div>'
+  );
+}
+
+// Sports block — main post embed only, no perspectives, no honesty
+function renderSportsBlock(item) {
+  var sid = 'sp' + Math.random().toString(36).substr(2, 9);
+  var headline = esc(item.headline || '(no headline)');
+  var url = item.url || '';
+  var meta = '<span class="post-meta">' +
+    (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
+    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    '</span>';
+  var sourceTile = renderSourceTile({ text: item.headline, views: item.views, time: item.time, url: url });
+  return (
+    '<div class="story" id="' + sid + '">' +
+      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
+        '<span class="arrow">▶</span>' +
+        '<span class="story-headline-text">' + headline + meta + '</span>' +
+      '</div>' +
+      '<div class="story-body">' + sourceTile + '</div>' +
+    '</div>'
+  );
+}
+
+// "Next most viewed" list inside a column
+function renderMoreList(items) {
+  if (!items || !items.length) return '';
+  return '<div class="more-list">' +
+    '<div class="more-list-head">Next most viewed</div>' +
+    items.map(function(m) {
+      var url = m.url || '#';
+      return '<div class="more-item">' +
+        '<a href="' + url + '" target="_blank" rel="noopener">' + esc(m.headline || m.text || '?') + '</a>' +
+        '<span class="meta">' +
+          (m.views ? '<span class="views">' + esc(m.views) + ' views</span>' : '') +
+          (m.time ? ' · ' + timeAgo(m.time) : '') +
+        '</span>' +
+      '</div>';
+    }).join('') +
+  '</div>';
+}
+
+// ---------- Tab renderers ----------
+
+function renderTabMain() {
+  var main = (NEWS_DATA && NEWS_DATA.main) || {};
+  var sections = [
+    { key: 'world',    title: 'World'    },
+    { key: 'nation',   title: 'Nation'   },
+    { key: 'business', title: 'Business' }
+  ];
+  var subtitle = '<span class="label-conservative">Conservative</span>, <span class="label-independent">Independent</span>, <span class="label-democrat">Democrat</span> perspectives — click any block to expand and load the actual posts. Honesty is a fold-out note.';
+  var h = '<div class="section-label">World · Nation · Business — ' + todayLabel() + '</div>' +
+          '<h1>Top of the Cycle</h1>' +
+          '<p class="subtitle">' + subtitle + '</p>';
+  h += '<div class="columns">';
+  sections.forEach(function(sec) {
+    var data = main[sec.key] || {};
+    h += '<div class="col-section">' +
+           '<div class="col-title">' + sec.title + '</div>' +
+           (data.top ? renderStoryBlock(data.top) : '<div class="empty-msg">No top story yet.</div>') +
+           renderMoreList(data.more) +
+         '</div>';
+  });
+  h += '</div>';
+  return h;
+}
+
+function renderTabElon() {
+  var elon = (NEWS_DATA && NEWS_DATA.elon) || [];
+  var h = '<div class="section-label">Elon — ' + todayLabel() + '</div>' +
+          '<h1>Elon\'s Latest</h1>' +
+          '<p class="subtitle">Top 3 posts. Opposing views when present. Honesty as a fold-out note on each.</p>';
+  if (!elon.length) {
+    h += '<div class="empty-msg">No Elon posts in this cycle.</div>';
+    return h;
+  }
+  h += '<div class="three-up">';
+  elon.slice(0, 3).forEach(function(item) {
+    h += '<div>' + renderElonBlock(item) + '</div>';
+  });
+  h += '</div>';
+  return h;
+}
+
+function renderTabSports() {
+  var sports = (NEWS_DATA && NEWS_DATA.sports) || [];
+  var h = '<div class="section-label">Sports — ' + todayLabel() + '</div>' +
+          '<h1>Top Sports</h1>' +
+          '<p class="subtitle">Top 3 stories. No perspectives. No honesty.</p>';
+  if (!sports.length) {
+    h += '<div class="empty-msg">No sports stories in this cycle.</div>';
+    return h;
+  }
+  h += '<div class="three-up">';
+  sports.slice(0, 3).forEach(function(item) {
+    h += '<div>' + renderSportsBlock(item) + '</div>';
+  });
+  h += '</div>';
+  return h;
+}
+
+function renderTabIFollow() {
+  var list = (NEWS_DATA && NEWS_DATA.ifollow) || [];
+  var h = '<div class="section-label">i follow — ' + todayLabel() + '</div>' +
+          '<h1>People I Follow</h1>' +
+          '<p class="subtitle">Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.</p>';
+  if (!list.length) {
+    h += '<div class="empty-msg">No follows configured yet.</div>';
+  } else {
+    h += '<div class="ifollow-list">';
+    list.forEach(function(f) {
+      var v = honestyParse(f.honesty);
+      var url = 'https://x.com/' + (f.handle || '').replace(/^@/, '');
+      h += '<div class="ifollow-card">' +
+             '<div class="ifollow-handle"><a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(f.handle || '?') + '</a></div>' +
+             '<div class="ifollow-just">' + esc(f.justification || '') + '</div>' +
+             (v != null ? '<div><span class="honesty-score ' + honestyClass(v) + '">Honesty ' + (typeof f.honesty === 'string' ? f.honesty : (v + '/10')) + '</span></div>' : '') +
+           '</div>';
+    });
+    h += '</div>';
+  }
+
+  // Submission form
+  h += '<div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:#f0e6d6; font-weight:700; margin:24px 0 8px;">Suggest someone</div>';
+  h += '<form class="submit-form" id="ifollowForm" name="ifollow-suggest" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleIFollowSubmit(event)">' +
+         '<input type="hidden" name="form-name" value="ifollow-suggest" />' +
+         '<p style="display:none;"><label>Don\'t fill: <input name="bot-field" /></label></p>' +
+         '<label for="ifH">X handle</label>' +
+         '<input type="text" id="ifH" name="handle" placeholder="@someone (or https://x.com/someone)" required />' +
+         '<label for="ifJ">Why they should be followed</label>' +
+         '<textarea id="ifJ" name="justification" rows="3" placeholder="One or two lines on what perspective this account adds (left/right/independent/expert)..."></textarea>' +
+         '<button type="submit">Suggest handle</button>' +
+         '<div id="ifMsg" style="display:none; margin-top:10px; padding:8px 12px; background:#e8f5e9; border-radius:5px; color:#2e7d32; font-size:0.85rem; font-weight:500;"></div>' +
+       '</form>';
+  return h;
+}
+
+function renderFreeItem(item) {
+  var sid = 'fr' + Math.random().toString(36).substr(2, 9);
+  var url = item.url || '';
+  var headline = esc(item.headline || item.text || '(no headline)');
+  var meta = '<span class="post-meta">' +
+    (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
+    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    '</span>';
+  var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
+  var honestyBlock = renderHonestyFold(item.honesty, item.note);
+  return (
+    '<div class="story" id="' + sid + '">' +
+      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
+        '<span class="arrow">▶</span>' +
+        '<span class="story-headline-text">' + headline + meta + '</span>' +
+      '</div>' +
+      '<div class="story-body">' + sourceTile + honestyBlock + '</div>' +
+    '</div>'
+  );
+}
+
+function renderTabFree() {
+  var free = (NEWS_DATA && NEWS_DATA.free) || [];
+  var h = '<div class="section-label">free — ' + todayLabel() + '</div>' +
+          '<h1>Free Speech</h1>' +
+          '<p class="subtitle">Marc Andreessen always first. Then any free-speech-themed posts today (0–10). Honesty only when opinion content.</p>';
+  if (!free.length) {
+    h += '<div class="empty-msg">Nothing yet today.</div>';
+    return h;
+  }
+  // Marc card first
+  free.forEach(function(item) {
+    if (item.isMarc) {
+      var sid = 'fm' + Math.random().toString(36).substr(2, 9);
+      var url = item.url || '';
+      var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url, handle: '@pmarca' });
+      var honestyBlock = renderHonestyFold(item.honesty, item.note);
+      h += '<div class="marc-card">' +
+             '<div class="marc-tag">ALWAYS FIRST</div>' +
+             '<div style="font-family:Playfair Display,Georgia,serif; font-size:1.15rem; font-weight:800; line-height:1.3; margin-bottom:8px;">' + esc(item.headline || item.text || '(no headline)') + '</div>' +
+             '<div class="story" id="' + sid + '" style="margin-bottom:0;">' +
+               '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
+                 '<span class="arrow">▶</span>' +
+                 '<span class="story-headline-text">Open Marc\'s post' +
+                   (item.views ? '<span class="post-meta"><span class="views">' + esc(item.views) + ' views</span>' + (item.time ? ' · ' + timeAgo(item.time) : '') + '</span>' : '') +
+                 '</span>' +
+               '</div>' +
+               '<div class="story-body">' + sourceTile + honestyBlock + '</div>' +
+             '</div>' +
+           '</div>';
+    }
+  });
+  // Then the rest
+  var others = free.filter(function(it) { return !it.isMarc; });
+  if (others.length) {
+    h += '<div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:#f0e6d6; font-weight:700; margin:18px 0 8px;">Today\'s posts</div>';
+    h += others.map(renderFreeItem).join('');
+  }
+  return h;
+}
+
 function renderContent() {
   var el = document.getElementById('content');
-  var today = todayLabel();
-  var sectionName = activeTab === 'usa' ? 'USA' : 'World';
-  var stories = NEWS_DATA ? (NEWS_DATA[activeTab] || []) : [];
-  var subtitle = '<span class="label-conservative">Conservative</span>, <span class="label-independent">Independent</span>, <span class="label-democrat">Democrat</span> posts. Click block to view. Honesty 1–10.';
-  var h = '<div class="section-label">' + sectionName + ' — ' + today + '</div>' +
-          '<h1>Top ' + sectionName + ' Story' + (stories.length === 1 ? '' : 's') + ' of the Day</h1>' +
-          '<p class="subtitle">' + subtitle + '</p>';
-  if (!stories.length) {
-    h += '<div class="empty-msg">Stories will appear here after the next refresh.</div>';
-  } else {
-    h += stories.map(renderStory).join('');
-  }
-  // Last updated
+  var html = '';
+  if      (activeTab === 'main')    html = renderTabMain();
+  else if (activeTab === 'elon')    html = renderTabElon();
+  else if (activeTab === 'sports')  html = renderTabSports();
+  else if (activeTab === 'ifollow') html = renderTabIFollow();
+  else if (activeTab === 'free')    html = renderTabFree();
+  // Last-updated footer
   if (NEWS_DATA && NEWS_DATA.last_updated) {
     var ts = new Date(NEWS_DATA.last_updated);
-    h += '<div style="text-align:center; color:#f0e6d6; font-size:0.78rem; margin-top:24px;">Last updated: ' +
-         ts.toLocaleString([], { dateStyle: 'short', timeStyle: 'short' }) + '</div>';
+    if (!isNaN(ts.getTime())) {
+      html += '<div style="text-align:center; color:#f0e6d6; font-size:0.76rem; margin-top:24px;">Last updated: ' +
+              ts.toLocaleString([], { dateStyle: 'short', timeStyle: 'short' }) + '</div>';
+    }
   }
-  el.innerHTML = h;
+  el.innerHTML = html;
 }
 
 function renderNav() {
@@ -329,6 +587,7 @@ function updateFreshness() {
   if (!b) return;
   if (!NEWS_DATA || !NEWS_DATA.last_updated) { b.textContent = 'no data'; return; }
   var diffMin = Math.floor((Date.now() - new Date(NEWS_DATA.last_updated).getTime()) / 60000);
+  if (diffMin < 0) diffMin = 0;
   if (diffMin < 60) b.textContent = diffMin + 'm ago · tap to refresh';
   else b.textContent = Math.floor(diffMin / 60) + 'h ago · tap to refresh';
 }
@@ -339,11 +598,38 @@ function hardRefresh() {
   window.location.replace(u.toString());
 }
 
+// iFollow submission — Netlify Forms
+function handleIFollowSubmit(e) {
+  e.preventDefault();
+  var handle = (document.getElementById('ifH').value || '').trim();
+  var just = (document.getElementById('ifJ').value || '').trim();
+  if (!handle) return;
+  var msg = document.getElementById('ifMsg');
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      'form-name': 'ifollow-suggest',
+      'bot-field': '',
+      'handle': handle,
+      'justification': just
+    }).toString()
+  }).then(function(r) {
+    if (msg) {
+      msg.style.display = 'block';
+      msg.textContent = r.ok ? ('Suggested ' + handle + '. The owner reviews suggestions for the next pool reshuffle.') : ('Submission failed: HTTP ' + r.status);
+    }
+  }).catch(function(err) {
+    if (msg) { msg.style.display = 'block'; msg.textContent = 'Submission error: ' + err; }
+  });
+  document.getElementById('ifollowForm').reset();
+}
+
 function loadData() {
   fetch('data/stories.json?_=' + Date.now())
     .then(function(r) { return r.ok ? r.json() : null; })
     .then(function(d) {
-      NEWS_DATA = d || { last_updated: null, world: [], usa: [] };
+      NEWS_DATA = d || { last_updated: null };
       document.getElementById('currentDate').textContent = formatDate();
       updateFreshness();
       renderNav();
@@ -356,5 +642,13 @@ function loadData() {
 
 window.addEventListener('DOMContentLoaded', loadData);
 </script>
+
+<!-- Static Netlify Forms declaration for ifollow-suggest -->
+<form name="ifollow-suggest" data-netlify="true" netlify-honeypot="bot-field" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;">
+  <input type="hidden" name="form-name" value="ifollow-suggest" />
+  <input type="text" name="bot-field" />
+  <input type="text" name="handle" />
+  <input type="text" name="justification" />
+</form>
 </body>
 </html>
