@@ -530,9 +530,20 @@ function renderTabMain() {
   h += '<div class="columns">';
   sections.forEach(function(sec) {
     var data = main[sec.key] || {};
+    // Schema is permissive: Grok can supply ANY of these:
+    //   data.tops:    [story1, story2, story3]   ← preferred
+    //   data.stories: [story1, story2, story3]   ← alias
+    //   data.top:     story1                     ← legacy single-story shape
+    // All forms get normalized to an array. Each rendered as a full story
+    // block (headline + source post + 3 perspectives + honesty fold).
+    var tops = [];
+    if (Array.isArray(data.tops))    tops = data.tops;
+    else if (Array.isArray(data.stories)) tops = data.stories;
+    else if (data.top)               tops = [data.top];
+    var blocks = tops.map(renderStoryBlock).join('');
     h += '<div class="col-section">' +
            '<div class="col-title">' + sec.title + '</div>' +
-           (data.top ? renderStoryBlock(data.top) : '<div class="empty-msg" style="padding:10px;">No top story yet.</div>') +
+           (blocks || '<div class="empty-msg" style="padding:10px;">No top stories yet.</div>') +
            renderMoreList(data.more) +
          '</div>';
   });
