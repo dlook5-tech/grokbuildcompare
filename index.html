@@ -145,11 +145,23 @@
 
   /* iFollow card list */
   .ifollow-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 12px 14px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); }
+  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 12px 14px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); transition: transform 0.18s, box-shadow 0.18s; }
+  .ifollow-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(80,50,20,0.18); }
+  .ifollow-card.story.open { transform: none; }
+  .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
   .ifollow-handle { font-weight: 800; color: #2a2218; font-size: 1rem; margin-bottom: 4px; }
   .ifollow-handle a { color: #2a2218; text-decoration: none; }
   .ifollow-handle a:hover { color: #b8860b; }
   .ifollow-just { font-size: 0.83rem; color: #4a3a25; line-height: 1.45; margin-bottom: 7px; }
+  .ifollow-toppost-meta { font-size: 0.72rem; color: #8a7e72; font-weight: 600; margin-bottom: 6px; }
+  .ifollow-toppost-meta .views { color: #b8860b; font-weight: 800; }
+
+  /* Tweet embed sizing — twitter widget renders at min 220px wide. In a
+     narrow World/Nation column the tile is ~180px so the widget would
+     overflow. Allow horizontal scroll on the embed slot only, so the rest
+     of the card stays clean. */
+  .tweet-embed-container { min-height: 0; overflow-x: auto; }
+  .tweet-embed-container > iframe, .tweet-embed-container > twitter-widget { max-width: 100% !important; }
 
   /* Form (iFollow + Free Speech submission) */
   .submit-form { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 14px 16px; margin-top: 16px; max-width: 540px; }
@@ -212,15 +224,46 @@ var activeTab = 'main';
 function esc(s) {
   return (s || '').replace(/[&<>"]/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});
 }
-function timeAgo(s) {
+// X (Twitter) snowflake → posted-at Date. The status ID encodes the post
+// timestamp: ts_ms = (id >> 22) + 1288834974657. Used as the source-of-truth
+// when Grok provided no time or vague text like "recent".
+function ageFromXUrl(url) {
+  var m = (url || '').match(/\/status\/(\d+)/);
+  if (!m) return null;
+  try {
+    var id = BigInt(m[1]);
+    var tsMs = Number((id >> 22n) + 1288834974657n);
+    return new Date(tsMs);
+  } catch (e) { return null; }
+}
+function formatAgo(date) {
+  if (!date || isNaN(date.getTime())) return '';
+  var diffSec = (Date.now() - date.getTime()) / 1000;
+  if (diffSec < 0) return 'just now';
+  if (diffSec < 60) return 'just now';
+  if (diffSec < 3600) return Math.floor(diffSec / 60) + 'm ago';
+  if (diffSec < 86400) return Math.floor(diffSec / 3600) + 'h ago';
+  return Math.floor(diffSec / 86400) + 'd ago';
+}
+// Smart "how long ago" — accepts Grok's string AND a fallback URL.
+// Always prefers a real timestamp over a vague label like "recent".
+function timeAgo(s, urlForFallback) {
+  // 1. If we have a URL, the snowflake is the truth — use it.
+  if (urlForFallback) {
+    var d = ageFromXUrl(urlForFallback);
+    if (d) return formatAgo(d);
+  }
   if (!s) return '';
-  if (/ago|recent|now/i.test(s)) return s;  // already human-readable
-  var d = new Date(s); if (isNaN(d)) return s;
-  var diff = (Date.now() - d.getTime()) / 1000;
-  if (diff < 60) return 'just now';
-  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-  return Math.floor(diff / 86400) + 'd ago';
+  var sTrim = String(s).trim();
+  // 2. If Grok already wrote something like "5h ago" / "1d ago", keep it.
+  if (/^\d+\s*(h|m|d|hr|hrs|min|day|days|hours|minutes)\s*ago$/i.test(sTrim)) return sTrim;
+  // 3. If it's a parseable ISO/Date, format it.
+  var parsed = new Date(sTrim);
+  if (!isNaN(parsed.getTime())) return formatAgo(parsed);
+  // 4. If Grok said "recent" / "now" / "just now", drop the vagueness — show "?".
+  if (/^(recent|now|just now|today)$/i.test(sTrim)) return '';
+  // 5. Last resort: pass it through (may be something like "this morning").
+  return sTrim;
 }
 function honestyParse(h) {
   if (h == null) return null;
@@ -314,16 +357,16 @@ function renderHonestyFold(honesty, note) {
 function renderSourceTile(mp) {
   if (!mp) return '';
   var url = mp.url || '';
+  var ago = timeAgo(mp.time, url);
   return (
     '<div class="tile source-tile">' +
       '<div class="source-label">Source post</div>' +
       '<div class="meta-line">' +
         (mp.handle ? '<span class="handle">' + esc(mp.handle) + '</span>' : '') +
         (mp.views ? ' · <span class="views">' + esc(mp.views) + ' views</span>' : '') +
-        (mp.time ? ' · ' + timeAgo(mp.time) : '') +
+        (ago ? ' · ' + ago : '') +
       '</div>' +
       '<div class="post-body">' + esc(mp.text || mp.body || '').replace(/\n/g, '<br/>') + '</div>' +
-      '<div class="post-foot">' + (url ? '<a href="' + url + '" target="_blank" rel="noopener">open on X ↗</a>' : '') + '</div>' +
       renderEmbedSlot(url) +
     '</div>'
   );
@@ -333,16 +376,18 @@ function renderPerspectiveTile(p) {
   if (!p) return '';
   var pc = persClassForSide(p.side);
   var url = p.url || '';
+  var ago = timeAgo(p.time, url);
+  // No "open on X" on perspectives — the embedded post IS the click target.
+  // (The widget itself includes a "View on X" affordance.)
   return (
     '<div class="tile perspective ' + pc.box + '">' +
       '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
       '<div class="meta-line">' +
         (p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') +
         (p.views ? ' · <span class="views">' + esc(p.views) + ' views</span>' : '') +
-        (p.time ? ' · ' + timeAgo(p.time) : '') +
+        (ago ? ' · ' + ago : '') +
       '</div>' +
       '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
-      '<div class="post-foot">' + (url && url !== '#' ? '<a href="' + url + '" target="_blank" rel="noopener">open on X ↗</a>' : '') + '</div>' +
       renderEmbedSlot(url) +
       renderHonestyFold(p.honesty, p.note) +
     '</div>'
@@ -355,10 +400,11 @@ function renderStoryBlock(s) {
   var sid = 's' + Math.random().toString(36).substr(2, 9);
   var mp = s.main || s.main_post || {};
   var headline = esc(s.headline || mp.text || '(no headline)');
+  var hdrAgo = timeAgo(mp.time, mp.url);
   var meta = '<span class="post-meta">' +
     (mp.handle ? esc(mp.handle) + ' · ' : '') +
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
-    (mp.time ? ' · ' + timeAgo(mp.time) : '') +
+    (hdrAgo ? ' · ' + hdrAgo : '') +
     '</span>';
   var sourceTile = renderSourceTile(mp);
   var perspectives = (s.perspectives || []);
@@ -380,10 +426,11 @@ function renderStoryBlock(s) {
 function renderElonBlock(item) {
   var sid = 'e' + Math.random().toString(36).substr(2, 9);
   var headline = esc(item.headline || item.text || '(no headline)');
+  var hdrAgo = timeAgo(item.time, item.url);
   var meta = '<span class="post-meta">' +
     '@elonmusk' +
     (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
-    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    (hdrAgo ? ' · ' + hdrAgo : '') +
     '</span>';
   var sourceTile = renderSourceTile({
     handle: '@elonmusk',
@@ -417,9 +464,10 @@ function renderSportsBlock(item) {
   var sid = 'sp' + Math.random().toString(36).substr(2, 9);
   var headline = esc(item.headline || '(no headline)');
   var url = item.url || '';
+  var hdrAgo = timeAgo(item.time, url);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
-    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    (hdrAgo ? ' · ' + hdrAgo : '') +
     '</span>';
   var sourceTile = renderSourceTile({ text: item.headline, views: item.views, time: item.time, url: url });
   return (
@@ -440,11 +488,12 @@ function renderMoreList(items) {
     '<div class="more-list-head">Next most viewed</div>' +
     items.map(function(m) {
       var url = m.url || '#';
+      var ago = timeAgo(m.time, m.url);
       return '<div class="more-item">' +
         '<a href="' + url + '" target="_blank" rel="noopener">' + esc(m.headline || m.text || '?') + '</a>' +
         '<span class="meta">' +
           (m.views ? '<span class="views">' + esc(m.views) + ' views</span>' : '') +
-          (m.time ? ' · ' + timeAgo(m.time) : '') +
+          (ago ? ' · ' + ago : '') +
         '</span>' +
       '</div>';
     }).join('') +
@@ -530,12 +579,41 @@ function renderTabIFollow() {
     h += '<div class="ifollow-list">';
     list.forEach(function(f) {
       var v = honestyParse(f.honesty);
-      var url = 'https://x.com/' + (f.handle || '').replace(/^@/, '');
-      h += '<div class="ifollow-card">' +
-             '<div class="ifollow-handle"><a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(f.handle || '?') + '</a></div>' +
+      var profileUrl = 'https://x.com/' + (f.handle || '').replace(/^@/, '');
+      // Optional top-post fields Grok can populate per handle:
+      //   topPost: { url, views, time, text }
+      // Renders meta line (views · age) and an embedded post (if URL given).
+      var tp = f.topPost || f.top_post || null;
+      var topMeta = '';
+      var topEmbed = '';
+      if (tp) {
+        var topAgo = timeAgo(tp.time, tp.url);
+        var bits = [];
+        if (tp.views) bits.push('<span class="views">' + esc(tp.views) + ' views</span>');
+        if (topAgo)   bits.push(topAgo);
+        if (bits.length) {
+          topMeta = '<div class="ifollow-toppost-meta">Top post · ' + bits.join(' · ') + '</div>';
+        }
+        if (tp.url) topEmbed = renderEmbedSlot(tp.url);
+      }
+      var sid = 'if' + Math.random().toString(36).substr(2, 9);
+      // Wrap each card in a story-like accordion so the embed loads on expand.
+      // (Cards without a top-post URL skip the accordion and stay flat.)
+      var wrapStart = topEmbed
+        ? '<div class="ifollow-card story" id="' + sid + '">' +
+            '<div class="story-header" onclick="toggleStory(\'' + sid + '\');" style="padding:0;background:transparent;">' +
+              '<span class="arrow" style="margin-top:4px;">▶</span>' +
+              '<span style="flex:1;">'
+        : '<div class="ifollow-card">';
+      var wrapEnd = topEmbed
+        ? '</span></div><div class="story-body" style="padding-top:10px;border-top:1px solid #ede4cf;">' + topEmbed + '</div></div>'
+        : '</div>';
+      h += wrapStart +
+             '<div class="ifollow-handle"><a href="' + esc(profileUrl) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">' + esc(f.handle || '?') + '</a></div>' +
              '<div class="ifollow-just">' + esc(f.justification || '') + '</div>' +
+             topMeta +
              (v != null ? '<div><span class="honesty-score ' + honestyClass(v) + '">Honesty ' + (typeof f.honesty === 'string' ? f.honesty : (v + '/10')) + '</span></div>' : '') +
-           '</div>';
+           wrapEnd;
     });
     h += '</div>';
   }
@@ -559,9 +637,10 @@ function renderFreeItem(item) {
   var sid = 'fr' + Math.random().toString(36).substr(2, 9);
   var url = item.url || '';
   var headline = esc(item.headline || item.text || '(no headline)');
+  var hdrAgo = timeAgo(item.time, url);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
-    (item.time ? ' · ' + timeAgo(item.time) : '') +
+    (hdrAgo ? ' · ' + hdrAgo : '') +
     '</span>';
   var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
   var honestyBlock = renderHonestyFold(item.honesty, item.note);
@@ -597,7 +676,7 @@ function renderTabFree() {
                '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
                  '<span class="arrow">▶</span>' +
                  '<span class="story-headline-text">Open Marc\'s post' +
-                   (item.views ? '<span class="post-meta"><span class="views">' + esc(item.views) + ' views</span>' + (item.time ? ' · ' + timeAgo(item.time) : '') + '</span>' : '') +
+                   ((function(){ var ag = timeAgo(item.time, url); var v = item.views; return (v || ag) ? '<span class="post-meta">' + (v ? '<span class="views">' + esc(v) + ' views</span>' : '') + (ag ? (v ? ' · ' : '') + ag : '') + '</span>' : ''; })()) +
                  '</span>' +
                '</div>' +
                '<div class="story-body">' + sourceTile + honestyBlock + '</div>' +
