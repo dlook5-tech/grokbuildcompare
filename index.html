@@ -16,36 +16,54 @@
   .date { font-size: 0.78rem; color: #6b5d4f; font-weight: 500; }
   .freshness-badge { display: inline-block; margin-left: 10px; padding: 4px 10px; background: #ede8e0; color: #6b5d4f; font-size: 0.7rem; font-weight: 600; border-radius: 12px; cursor: pointer; user-select: none; border: 1px solid #d4b896; }
   .freshness-badge:hover { background: #e0d8cb; color: #1c1410; }
-  nav { display: flex; gap: 2px; margin-top: 12px; border-top: 1px solid #e5dcc8; padding-top: 6px; flex-wrap: wrap; }
-  nav a { color: #8a7e72; text-decoration: none; padding: 9px 14px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
-  nav a:hover { color: #3a2a18; }
-  nav a.active { color: #b8860b; border-bottom: 2px solid #b8860b; font-weight: 700; }
-  main { flex: 1; padding: 22px 28px 32px; max-width: 1280px; margin: 0 auto; width: 100%; }
-  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #f0e6d6; margin-bottom: 4px; font-weight: 600; }
-  h1 { font-family: "Playfair Display", Georgia, serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; line-height: 1.2; color: #fff8ee; text-shadow: 0 1px 3px rgba(80,40,0,0.3); }
+  /* Pill-style nav (polish: rounded, hover lift, active filled with cream-gold) */
+  nav { display: flex; gap: 4px; margin-top: 10px; border-top: 1px solid #e5dcc8; padding-top: 8px; flex-wrap: wrap; }
+  nav a { color: #8a7e72; text-decoration: none; padding: 7px 14px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; cursor: pointer; border-radius: 9999px; transition: background 0.2s, color 0.2s, transform 0.1s; }
+  nav a:hover { color: #3a2a18; background: #ede4cf; }
+  nav a:active { transform: translateY(1px); }
+  nav a.active { color: #fff8ee; background: #b8860b; font-weight: 700; box-shadow: 0 1px 4px rgba(184,134,11,0.35); }
+  /* MSM tab — strikethrough red, gets an X badge */
+  nav a.msm-tab { color: #c0392b; text-decoration: line-through; position: relative; padding-right: 22px; }
+  nav a.msm-tab::after { content: "✕"; position: absolute; right: 8px; top: 5px; font-size: 0.65rem; color: #c0392b; font-weight: 800; text-decoration: none; }
+  nav a.msm-tab:hover { background: #fbe9e9; color: #a02e21; }
+  nav a.msm-tab.active { background: #c0392b; color: #fff; text-decoration: line-through; }
+  nav a.msm-tab.active::after { color: #fff8ee; }
+  main { flex: 1; padding: 24px 28px 36px; max-width: 1280px; margin: 0 auto; width: 100%; }
+
+  /* Hero — big newspaper-style headline at top of every tab */
+  .hero { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px dashed rgba(247,242,234,0.35); }
+  .hero h1 { font-family: "Playfair Display", Georgia, serif; font-size: 2.6rem; font-weight: 900; line-height: 1.05; color: #fff8ee; letter-spacing: -1px; text-shadow: 0 2px 4px rgba(60,30,0,0.35); margin-bottom: 12px; }
+  .hero p { color: #f0e6d6; font-size: 1.02rem; line-height: 1.55; max-width: 660px; font-weight: 400; }
+  .hero .accent-word { color: #ffd479; font-style: italic; font-weight: 800; }
+
+  .section-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.6px; color: #f0e6d6; margin-bottom: 6px; font-weight: 700; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; line-height: 1.2; color: #fff8ee; text-shadow: 0 1px 3px rgba(80,40,0,0.3); }
   .subtitle { color: #f0e6d6; font-size: 0.88rem; margin-bottom: 22px; line-height: 1.5; }
   .subtitle .label-conservative { color: #c45a4a; font-weight: 700; }
   .subtitle .label-independent { color: #ffffff; font-weight: 700; }
   .subtitle .label-democrat { color: #3d80c2; font-weight: 700; }
 
   /* 3-column layout for the World/Nation/Business tab */
-  .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .col-section { background: rgba(247,242,234,0.18); border: 1px solid #d4b896; border-radius: 8px; padding: 12px 14px; }
-  .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; font-weight: 800; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #b8860b; letter-spacing: 0.5px; }
+  .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
+  .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid #b8860b; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
+  .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
 
   /* 3-up grid for Elon + Sports tabs */
-  .three-up { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .three-up { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 
-  /* Story block — same accordion mechanics as Expresso */
-  .story { border: 1px solid #d4b896; border-radius: 6px; margin-bottom: 10px; background: #faf6f0; overflow: hidden; box-shadow: 0 2px 8px rgba(80,50,20,0.15); }
-  .story-header { padding: 12px 14px; cursor: pointer; display: flex; align-items: flex-start; gap: 9px; font-weight: 600; color: #1a1a1a; transition: background 0.15s; }
+  /* Story block — accordion mechanics with hover lift */
+  .story { border: 1px solid #d4b896; border-radius: 8px; margin-bottom: 12px; background: #faf6f0; overflow: hidden; box-shadow: 0 2px 8px rgba(80,50,20,0.15); transition: transform 0.18s, box-shadow 0.18s; }
+  .story:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
+  .story.open { transform: none; }
+  .story-header { padding: 13px 15px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; font-weight: 600; color: #1a1a1a; transition: background 0.15s; }
   .story-header:hover { background: #f4ede0; }
-  .arrow { color: #b8860b; font-size: 0.8rem; flex-shrink: 0; transition: transform 0.2s; margin-top: 2px; }
+  .arrow { color: #b8860b; font-size: 0.85rem; flex-shrink: 0; transition: transform 0.2s; margin-top: 2px; }
   .story.open > .story-header .arrow { transform: rotate(90deg); }
-  .story-headline-text { flex: 1; line-height: 1.32; font-size: 0.95rem; }
-  .post-meta { font-size: 0.68rem; color: #8a7e72; font-weight: 500; margin-top: 3px; display: block; }
+  .story-headline-text { flex: 1; line-height: 1.32; font-size: 0.97rem; }
+  .post-meta { font-size: 0.69rem; color: #8a7e72; font-weight: 500; margin-top: 4px; display: block; }
   .post-meta .views { color: #b8860b; font-weight: 700; }
-  .story-body { display: none; padding: 0 14px 14px; border-top: 1px solid #ede4cf; padding-top: 12px; }
+  .story-body { display: none; padding: 0 15px 15px; border-top: 1px solid #ede4cf; padding-top: 13px; }
   .story.open > .story-body { display: block; }
 
   /* Source post tile and perspective tile share base */
@@ -132,6 +150,9 @@
     header { padding: 14px 14px 0; }
     .logo { font-size: 1.55rem; }
     h1 { font-size: 1.5rem; }
+    .hero h1 { font-size: 1.85rem; line-height: 1.1; }
+    .hero p  { font-size: 0.92rem; }
+    nav a { padding: 6px 10px; font-size: 0.66rem; }
   }
 </style>
 </head>
@@ -153,6 +174,7 @@
     <a data-tab="sports">Sports</a>
     <a data-tab="ifollow">i follow</a>
     <a data-tab="free">free</a>
+    <a data-tab="msm" class="msm-tab">MSM</a>
   </nav>
 </header>
 <main id="content"><div class="empty-msg">Loading stories…</div></main>
@@ -401,6 +423,23 @@ function renderMoreList(items) {
 
 // ---------- Tab renderers ----------
 
+// Shared hero block — different copy per tab but same visual style
+function renderHero(tab) {
+  var heros = {
+    main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty + notes folded in. <strong>&lt;24h only.</strong> Scroll for more in each category.' },
+    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Top 3 Elon posts of the cycle plus opposing-view summary when present. Click any block to load the actual post.' },
+    sports:  { h: 'Sports — what\'s<br>moving the needle.', p: 'Top 3 stories by velocity. No perspectives, no honesty score — just what people are watching.' },
+    ifollow: { h: 'People worth<br>following on X.', p: 'Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.' },
+    free:    { h: 'Free speech<br>front and center.', p: 'Marc Andreessen always leads. Then 0–10 free-speech-themed posts from today. Honesty fold only when opinion content.' },
+    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.', p: 'High-velocity X stories that mainstream media is systematically ignoring or downplaying. Henry-Nowak-style cases. Perspectives + honesty when relevant.' }
+  };
+  var hero = heros[tab] || heros.main;
+  return '<div class="hero">' +
+           '<h1>' + hero.h + '</h1>' +
+           '<p>' + hero.p + '</p>' +
+         '</div>';
+}
+
 function renderTabMain() {
   var main = (NEWS_DATA && NEWS_DATA.main) || {};
   var sections = [
@@ -408,16 +447,13 @@ function renderTabMain() {
     { key: 'nation',   title: 'Nation'   },
     { key: 'business', title: 'Business' }
   ];
-  var subtitle = '<span class="label-conservative">Conservative</span>, <span class="label-independent">Independent</span>, <span class="label-democrat">Democrat</span> perspectives — click any block to expand and load the actual posts. Honesty is a fold-out note.';
-  var h = '<div class="section-label">World · Nation · Business — ' + todayLabel() + '</div>' +
-          '<h1>Top of the Cycle</h1>' +
-          '<p class="subtitle">' + subtitle + '</p>';
+  var h = renderHero('main');
   h += '<div class="columns">';
   sections.forEach(function(sec) {
     var data = main[sec.key] || {};
     h += '<div class="col-section">' +
            '<div class="col-title">' + sec.title + '</div>' +
-           (data.top ? renderStoryBlock(data.top) : '<div class="empty-msg">No top story yet.</div>') +
+           (data.top ? renderStoryBlock(data.top) : '<div class="empty-msg" style="padding:10px;">No top story yet.</div>') +
            renderMoreList(data.more) +
          '</div>';
   });
@@ -427,9 +463,7 @@ function renderTabMain() {
 
 function renderTabElon() {
   var elon = (NEWS_DATA && NEWS_DATA.elon) || [];
-  var h = '<div class="section-label">Elon — ' + todayLabel() + '</div>' +
-          '<h1>Elon\'s Latest</h1>' +
-          '<p class="subtitle">Top 3 posts. Opposing views when present. Honesty as a fold-out note on each.</p>';
+  var h = renderHero('elon');
   if (!elon.length) {
     h += '<div class="empty-msg">No Elon posts in this cycle.</div>';
     return h;
@@ -444,9 +478,7 @@ function renderTabElon() {
 
 function renderTabSports() {
   var sports = (NEWS_DATA && NEWS_DATA.sports) || [];
-  var h = '<div class="section-label">Sports — ' + todayLabel() + '</div>' +
-          '<h1>Top Sports</h1>' +
-          '<p class="subtitle">Top 3 stories. No perspectives. No honesty.</p>';
+  var h = renderHero('sports');
   if (!sports.length) {
     h += '<div class="empty-msg">No sports stories in this cycle.</div>';
     return h;
@@ -461,9 +493,7 @@ function renderTabSports() {
 
 function renderTabIFollow() {
   var list = (NEWS_DATA && NEWS_DATA.ifollow) || [];
-  var h = '<div class="section-label">i follow — ' + todayLabel() + '</div>' +
-          '<h1>People I Follow</h1>' +
-          '<p class="subtitle">Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.</p>';
+  var h = renderHero('ifollow');
   if (!list.length) {
     h += '<div class="empty-msg">No follows configured yet.</div>';
   } else {
@@ -518,9 +548,7 @@ function renderFreeItem(item) {
 
 function renderTabFree() {
   var free = (NEWS_DATA && NEWS_DATA.free) || [];
-  var h = '<div class="section-label">free — ' + todayLabel() + '</div>' +
-          '<h1>Free Speech</h1>' +
-          '<p class="subtitle">Marc Andreessen always first. Then any free-speech-themed posts today (0–10). Honesty only when opinion content.</p>';
+  var h = renderHero('free');
   if (!free.length) {
     h += '<div class="empty-msg">Nothing yet today.</div>';
     return h;
@@ -556,6 +584,22 @@ function renderTabFree() {
   return h;
 }
 
+// MSM tab — stories legacy outlets won't touch
+function renderTabMSM() {
+  var msm = (NEWS_DATA && NEWS_DATA.msm) || [];
+  var h = renderHero('msm');
+  if (!msm.length) {
+    h += '<div class="empty-msg" style="border-left: 4px solid #c0392b; padding: 14px 18px; background: rgba(192,57,43,0.12); border-radius: 6px;">' +
+           '<strong style="color:#fff8ee;">Nothing flagged yet this cycle.</strong><br/>' +
+           '<span style="color:#f0e6d6;font-size:0.85rem;">When Grok identifies high-velocity X stories that MSM is ignoring (Henry-Nowak-style cases), they appear here. Updated each cron.</span>' +
+         '</div>';
+    return h;
+  }
+  // MSM items reuse the story-block renderer; schema like main but flat array
+  h += msm.map(renderStoryBlock).join('');
+  return h;
+}
+
 function renderContent() {
   var el = document.getElementById('content');
   var html = '';
@@ -564,6 +608,7 @@ function renderContent() {
   else if (activeTab === 'sports')  html = renderTabSports();
   else if (activeTab === 'ifollow') html = renderTabIFollow();
   else if (activeTab === 'free')    html = renderTabFree();
+  else if (activeTab === 'msm')     html = renderTabMSM();
   // Last-updated footer
   if (NEWS_DATA && NEWS_DATA.last_updated) {
     var ts = new Date(NEWS_DATA.last_updated);
