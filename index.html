@@ -46,6 +46,11 @@
   .perspective-conservative { background: #fbe9e9; border-color: #c45a4a; }
   .perspective-independent { background: #f5f0e7; border-color: #b8860b; }
   .perspective-democrat   { background: #e7f0fa; border-color: #3d80c2; }
+  .source-tile { background: #fdf6e3; border: 1px solid #d4b896; border-left: 3px solid #8b6e1e; padding: 12px 14px; margin-bottom: 14px; border-radius: 4px; font-size: 0.88rem; line-height: 1.55; }
+  .source-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 800; color: #8b6e1e; margin-bottom: 6px; }
+  .source-body { color: #2a2218; margin-bottom: 10px; white-space: pre-wrap; word-wrap: break-word; }
+  .source-meta { font-size: 0.72rem; color: #6b5d4f; margin-bottom: 8px; }
+  .source-meta strong { color: #1c1410; }
   .persp-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
   .persp-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
   .label-cons { color: #a63d2f; }
@@ -58,13 +63,21 @@
   .persp-handle a:hover { text-decoration: underline; }
 
   /* Honesty */
-  .honesty-card { margin-top: 10px; padding: 9px 12px; background: rgba(255,255,255,0.55); border: 1px solid rgba(0,0,0,0.08); border-radius: 5px; }
-  .honesty-line { font-size: 0.75rem; color: #4a3a25; font-weight: 600; }
-  .honesty-score { font-size: 1rem; font-weight: 900; padding: 1px 8px; border-radius: 10px; margin-left: 4px; }
-  .h-good  { background: #c6e6c8; color: #1f5a23; }
-  .h-mid   { background: #f5e3b6; color: #6e5018; }
-  .h-poor  { background: #f5c8c2; color: #7a2a20; }
-  .honesty-notes { font-size: 0.76rem; color: #5a4a30; line-height: 1.45; margin-top: 6px; }
+  /* Tweet embed (lazy-loaded via X widgets.js when user clicks to expand) */
+  .tweet-embed-container { margin-top: 10px; }
+  .tweet-embed-container iframe { max-width: 100% !important; }
+
+  /* Honesty — subtle collapsible footnote, like Expresso */
+  .honesty-fold { margin-top: 10px; border-top: 1px dashed rgba(0,0,0,0.10); padding-top: 8px; }
+  .honesty-fold-head { cursor: pointer; font-size: 0.72rem; color: #6b5d4f; font-weight: 600; user-select: none; display: flex; align-items: center; gap: 6px; }
+  .honesty-fold-head:hover { color: #1c1410; }
+  .honesty-fold-head .arrow-mini { font-size: 0.7rem; transition: transform 0.15s; color: #b8860b; }
+  .honesty-fold.open .honesty-fold-head .arrow-mini { transform: rotate(90deg); }
+  .honesty-fold-body { display: none; margin-top: 6px; padding: 8px 10px; background: rgba(0,0,0,0.03); border-radius: 4px; font-size: 0.74rem; color: #5a4a30; line-height: 1.5; }
+  .honesty-fold.open .honesty-fold-body { display: block; }
+  .h-good  { color: #2f7a3a; }
+  .h-mid   { color: #8a6a18; }
+  .h-poor  { color: #9a3a2a; }
 
   footer { background: #1c1410; color: #d4b896; padding: 18px 32px; text-align: center; font-size: 0.75rem; }
   footer strong { color: #f0e6d6; }
@@ -141,22 +154,67 @@ function persClass(label) {
   return 'perspective-independent';
 }
 
-function renderPerspective(p) {
+// Same X-widget mechanism Expresso uses. Loads platform.twitter.com/widgets.js
+// the first time a tweet expands, then renders subsequent embeds without re-fetching.
+function toggleEmbed(containerId, tweetUrl) {
+  var container = document.getElementById(containerId);
+  if (!container) return;
+  if (container.style.display !== 'none' && container.innerHTML) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'block';
+  container.innerHTML = '<div style="color:#8a7e72;font-size:0.78rem;padding:8px;">Loading post…</div>';
+  var m = tweetUrl.match(/status\/(\d+)/);
+  if (!m) { container.innerHTML = '<div style="color:#c0392b;font-size:0.78rem;padding:8px;">Could not load embed.</div>'; return; }
+  var tweetId = m[1];
+  function render() {
+    container.innerHTML = '';
+    window.twttr.widgets.createTweet(tweetId, container, { theme: 'light', dnt: true, conversation: 'none' });
+  }
+  if (window.twttr && window.twttr.widgets) { render(); return; }
+  var s = document.createElement('script');
+  s.src = 'https://platform.twitter.com/widgets.js';
+  s.async = true;
+  s.onload = render;
+  document.head.appendChild(s);
+}
+
+function renderPerspective(p, isMainPost) {
   if (!p) return '';
   var handle = esc(p.handle || '@?');
-  var url = p.url || '#';
+  var url = p.url || '';
   var body = esc(p.body || '').replace(/\n/g, '<br/>');
   var ago = timeAgo(p.posted);
   var views = esc(p.views || '');
   var honesty = (typeof p.honesty === 'number') ? p.honesty : (parseFloat(p.honesty) || null);
+
+  // Lazy X embed wired the same way Expresso does — click block-header (or "Show post" link) to load.
+  var embedId = 'em' + Math.random().toString(36).substr(2, 9);
+  var hasXPost = url && url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
+
+  // Honesty as a subtle collapsible footnote — only renders if we have a score
   var honestyBlock = '';
   if (honesty !== null && !isNaN(honesty)) {
+    var hid = 'h' + Math.random().toString(36).substr(2, 9);
     honestyBlock =
-      '<div class="honesty-card">' +
-        '<div class="honesty-line">Honesty<span class="honesty-score ' + honestyClass(honesty) + '">' + honesty + '/10</span></div>' +
-        (p.notes ? '<div class="honesty-notes">' + esc(p.notes) + '</div>' : '') +
+      '<div class="honesty-fold" id="' + hid + '">' +
+        '<div class="honesty-fold-head" onclick="event.stopPropagation();document.getElementById(\'' + hid + '\').classList.toggle(\'open\');">' +
+          '<span class="arrow-mini">▶</span>' +
+          '<span>Honesty <span class="' + honestyClass(honesty) + '">' + honesty + '/10</span></span>' +
+        '</div>' +
+        '<div class="honesty-fold-body">' + (p.notes ? esc(p.notes) : 'No notes provided.') + '</div>' +
       '</div>';
   }
+
+  // Click-to-expand X embed (avoids the always-on iframe load eating the page)
+  var embedSlot = hasXPost
+    ? '<div id="' + embedId + '" class="tweet-embed-container" style="display:none;"></div>'
+    : '';
+  var showPostLink = hasXPost
+    ? '<a href="javascript:void(0)" onclick="event.stopPropagation();toggleEmbed(\'' + embedId + '\',\'' + url.replace(/'/g, "\\'") + '\')" style="font-size:0.78rem; color:#2980b9; text-decoration:none; font-weight:600; margin-left:8px;">▾ show post</a>'
+    : (url ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.78rem; color:#2980b9; font-weight:600; margin-left:8px;">view ↗</a>' : '');
+
   return (
     '<div class="perspective ' + persClass(p.label) + '">' +
       '<div class="persp-head">' +
@@ -164,8 +222,33 @@ function renderPerspective(p) {
         '<div class="persp-meta">' + (views ? views + ' views · ' : '') + ago + '</div>' +
       '</div>' +
       '<div class="persp-body">' + body + '</div>' +
-      '<div class="persp-handle">— <a href="' + url + '" target="_blank" rel="noopener">' + handle + ' →</a></div>' +
+      '<div class="persp-handle">— <a href="' + (url || '#') + '" target="_blank" rel="noopener">' + handle + '</a>' + showPostLink + '</div>' +
+      embedSlot +
       honestyBlock +
+    '</div>'
+  );
+}
+
+function renderSourceTile(mp) {
+  if (!mp || !mp.url) return '';
+  var handle = esc(mp.handle || '');
+  var url = mp.url;
+  var body = esc(mp.body || '').replace(/\n/g, '<br/>');
+  var views = esc(mp.views || '');
+  var ago = timeAgo(mp.posted);
+  var hasXPost = url.indexOf('/status/') !== -1 && (url.indexOf('x.com') !== -1 || url.indexOf('twitter.com') !== -1);
+  var embedId = 'emS' + Math.random().toString(36).substr(2, 9);
+  var embedSlot = hasXPost ? '<div id="' + embedId + '" class="tweet-embed-container" style="display:none;"></div>' : '';
+  var showPostLink = hasXPost
+    ? '<a href="javascript:void(0)" onclick="event.stopPropagation();toggleEmbed(\'' + embedId + '\',\'' + url.replace(/'/g, "\\'") + '\')" style="font-size:0.78rem; color:#2980b9; text-decoration:none; font-weight:600;">▾ show post</a>'
+    : '';
+  return (
+    '<div class="source-tile">' +
+      '<div class="source-label">Source post</div>' +
+      '<div class="source-meta"><strong>' + handle + '</strong>' + (views ? ' · ' + views + ' views' : '') + (ago ? ' · ' + ago : '') + '</div>' +
+      '<div class="source-body">' + body + '</div>' +
+      '<div>' + showPostLink + (url ? ' <a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.76rem;color:#8a7e72;margin-left:10px;">open on X ↗</a>' : '') + '</div>' +
+      embedSlot +
     '</div>'
   );
 }
@@ -179,14 +262,15 @@ function renderStory(s) {
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span> · ' : '') +
     timeAgo(mp.posted) +
     '</span>';
-  var perspectives = (s.perspectives || []).map(renderPerspective).join('');
+  var sourceTile = renderSourceTile(mp);
+  var perspectives = (s.perspectives || []).map(function(p){ return renderPerspective(p, false); }).join('');
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="document.getElementById(\'' + sid + '\').classList.toggle(\'open\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + perspectives + '</div>' +
+      '<div class="story-body">' + sourceTile + perspectives + '</div>' +
     '</div>'
   );
 }
