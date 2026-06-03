@@ -63,12 +63,15 @@
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
 
-  /* Main tab — flat card matching Expresso-Real-Data prototype.
-     No accordion, no triangle. Always-open structure:
+  /* Main tab — Grok's "3 stories on top / 6 perspectives below" config.
+     Card layout:
        Headline (Playfair, prominent)
        Meta row: views · ↑ velocity badge · age
-       2 perspectives side-by-side (half-width each; 3rd wraps full)
-       Honesty score INLINE + note INLINE at bottom (no fold). */
+       2 perspective TEASER boxes side-by-side (label + truncated text)
+       ONE shared .perspective-details panel below the teasers — hidden
+         by default; clicking a teaser populates it with full post text,
+         "View on X" link, per-perspective honesty score, and note.
+         Click same teaser again to close. */
   .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(80,50,20,0.12); transition: transform 0.18s, box-shadow 0.18s; }
   .main-story-block:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
   .main-story-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.12rem; line-height: 1.26; font-weight: 800; color: #1c1410; margin-bottom: 9px; }
@@ -77,21 +80,35 @@
   .main-story-meta .velocity { display: inline-flex; align-items: center; gap: 3px; padding: 2px 9px; background: rgba(184,134,11,0.18); border-radius: 11px; color: #8a5e1a; font-weight: 700; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.5px; }
   .main-story-meta .velocity::before { content: '↑'; font-size: 0.85rem; line-height: 1; }
   .main-story-meta .sep { color: #c5b59d; }
+  /* Perspective TEASERS — 2-up grid, half-width each. */
   .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0; margin-bottom: 0; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .main-story-block .perspective { font-size: 0.76rem; padding: 9px 11px; line-height: 1.4; }
+  .main-story-block .perspective.perspective-teaser { cursor: pointer; font-size: 0.76rem; padding: 9px 11px; line-height: 1.4; transition: transform 0.12s, box-shadow 0.12s; }
+  .main-story-block .perspective.perspective-teaser:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(80,50,20,0.18); }
+  .main-story-block .perspective.perspective-teaser.is-selected { outline: 2px solid #b8860b; outline-offset: 1px; }
   .main-story-block .perspective .label { font-size: 0.6rem; margin-bottom: 4px; font-weight: 800; }
   .main-story-block .perspective .meta-line { font-size: 0.63rem; margin-bottom: 4px; }
-  .main-story-block .perspective .post-body { -webkit-line-clamp: 5; font-size: 0.78rem; margin-bottom: 5px; }
-  .main-story-block .perspective .tweet-embed-container { margin-top: 5px; }
-  .main-story-block .perspective .honesty-fold { display: none; } /* main has inline honesty at block level */
-  /* Inline honesty + note at the bottom of the block — always visible */
-  .main-story-honesty { margin-top: 11px; padding-top: 10px; border-top: 1px dashed #d4b896; display: flex; align-items: baseline; gap: 8px; }
-  .main-story-honesty .honesty-score { font-weight: 800; padding: 2px 8px; border-radius: 9px; font-size: 0.88rem; }
-  .main-story-honesty .honesty-label { font-size: 0.7rem; color: #6b5d4f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px; }
-  .main-story-note { font-size: 0.78rem; color: #5a4a30; line-height: 1.45; margin-top: 7px; }
-  /* Narrow viewports: collapse perspectives to one column so Twitter
-     embeds stay above their ~220px minimum width. */
+  .main-story-block .perspective .post-body { -webkit-line-clamp: 4; font-size: 0.76rem; margin-bottom: 3px; }
+  .main-story-block .perspective .teaser-hint { font-size: 0.6rem; color: #8a7e72; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 4px; }
+  .main-story-block .perspective .teaser-hint::before { content: '▾ '; color: #b8860b; }
+  .main-story-block .perspective.is-selected .teaser-hint::before { content: '▴ '; }
+  .main-story-block .perspective .tweet-embed-container,
+  .main-story-block .perspective .honesty-fold { display: none; } /* Main: no embeds, honesty is in shared details panel */
+  /* Shared details panel — sits below the teasers row, spans full card width. */
+  .perspective-details { display: none; margin-top: 11px; padding: 11px 12px; background: #fffdf7; border: 1px solid #d4b896; border-radius: 7px; box-shadow: inset 0 1px 0 rgba(255,250,235,0.6); animation: persp-pop 0.16s ease-out; }
+  @keyframes persp-pop { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+  .perspective-details .pd-label { display: inline-block; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 800; padding: 2px 8px; border-radius: 9px; margin-bottom: 7px; }
+  .perspective-details .pd-meta { font-size: 0.66rem; color: #6b5d4f; margin-bottom: 6px; }
+  .perspective-details .pd-meta .views { color: #b8860b; font-weight: 700; }
+  .perspective-details .pd-meta .handle { font-weight: 700; color: #2a2218; }
+  .perspective-details .pd-body { font-size: 0.82rem; color: #2a2218; line-height: 1.5; margin-bottom: 9px; white-space: pre-wrap; word-wrap: break-word; }
+  .perspective-details .view-on-x { display: inline-block; font-size: 0.74rem; color: #b8860b; font-weight: 700; text-decoration: none; padding: 4px 11px; border: 1px solid #d4b896; border-radius: 6px; margin-bottom: 9px; transition: background 0.15s; }
+  .perspective-details .view-on-x:hover { background: #f4ede0; }
+  .perspective-details .pd-honesty { display: flex; align-items: baseline; gap: 8px; margin-top: 9px; padding-top: 9px; border-top: 1px dashed #d4b896; }
+  .perspective-details .pd-honesty .honesty-score { font-weight: 800; padding: 2px 8px; border-radius: 9px; font-size: 0.84rem; }
+  .perspective-details .pd-honesty .honesty-label { font-size: 0.66rem; color: #6b5d4f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+  .perspective-details .pd-note { font-size: 0.76rem; color: #5a4a30; line-height: 1.45; margin-top: 6px; }
+  /* Narrow viewports: collapse teasers to single column */
   @media (max-width: 1100px) {
     .main-story-block .perspectives-row { grid-template-columns: 1fr; }
     .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: auto; }
@@ -353,9 +370,65 @@ function toggleStory(sid) {
   }
 }
 
-// Main tab renders every story FLAT (no accordion). Perspective embeds
-// inside each block lazy-load via IntersectionObserver — see
-// autoLoadMainEmbeds() below, hooked into renderContent().
+// Main tab — Grok's "3 stories on top / 6 perspectives below" config.
+// Each card has 2 perspective TEASER boxes (label + truncated text) and
+// ONE shared .perspective-details panel below them. Clicking a teaser
+// populates the panel with full post text + "View on X" + per-perspective
+// honesty + note. Click same teaser again to close.
+//
+// MAIN_PDB maps a teaser's pid → its perspective object so the click
+// handler can look up the content without serialising JSON into HTML
+// attributes. Reset at the start of every renderTabMain.
+var MAIN_PDB = {};
+
+function selectMainPerspective(pid, panelId) {
+  var p = MAIN_PDB[pid];
+  var panel = document.getElementById(panelId);
+  if (!p || !panel) return;
+  var sameTeaserOpen = (panel.dataset.openPid === pid && panel.style.display !== 'none');
+  // Always deselect every teaser in this card first.
+  var openTeaser = document.querySelector('.perspective-teaser[data-pid="' + pid + '"]');
+  var block = openTeaser ? openTeaser.closest('.main-story-block') : null;
+  if (block) {
+    block.querySelectorAll('.perspective-teaser').forEach(function(t) {
+      t.classList.remove('is-selected');
+    });
+  }
+  if (sameTeaserOpen) {
+    // Toggle off
+    panel.style.display = 'none';
+    panel.innerHTML = '';
+    panel.dataset.openPid = '';
+    return;
+  }
+  // Build the panel content for the clicked perspective.
+  var pc = persClassForSide(p.side);
+  var ago = timeAgo(p.time, p.url);
+  var metaBits = [];
+  if (p.handle) metaBits.push('<span class="handle">' + esc(p.handle) + '</span>');
+  if (p.views)  metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
+  if (ago)      metaBits.push(ago);
+  var html = '';
+  html += '<div class="pd-label ' + pc.box + '"><span class="' + pc.lab + '">' + esc(p.side || '?') + '</span></div>';
+  if (metaBits.length) html += '<div class="pd-meta">' + metaBits.join(' · ') + '</div>';
+  html += '<div class="pd-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>';
+  if (isXStatusUrl(p.url)) {
+    html += '<a class="view-on-x" href="' + esc(p.url) + '" target="_blank" rel="noopener">View on X →</a>';
+  }
+  var v = honestyParse(p.honesty);
+  if (v != null) {
+    var label = (typeof p.honesty === 'string') ? p.honesty : (v + '/10');
+    html += '<div class="pd-honesty">' +
+      '<span class="honesty-score ' + honestyClass(v) + '">' + esc(label) + '</span>' +
+      '<span class="honesty-label">Honesty</span>' +
+    '</div>';
+  }
+  if (p.note) html += '<div class="pd-note">' + esc(p.note) + '</div>';
+  panel.innerHTML = html;
+  panel.style.display = 'block';
+  panel.dataset.openPid = pid;
+  if (openTeaser) openTeaser.classList.add('is-selected');
+}
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);
   if (!container) return;
@@ -610,21 +683,22 @@ function renderHero(tab) {
          '</div>';
 }
 
-// Main-tab story — FLAT block matching the Expresso-Real-Data prototype.
-// No accordion. Always visible:
+// Main-tab story — Grok's "teaser + click-to-reveal-details" config.
 //   Headline (tight, Playfair)
 //   Meta row: views · ↑ velocity badge · age
-//   2 perspectives side-by-side (half-width; 3rd wraps full)
-//   Honesty score INLINE + note INLINE at bottom (no fold)
-// Embeds inside perspectives lazy-load via IntersectionObserver
-// (autoLoadMainEmbeds hooked from renderContent).
+//   2 perspective TEASER boxes (label + truncated body, "tap to expand")
+//   Shared .perspective-details panel below — populated on teaser click
+//     with full body + "View on X" + per-perspective honesty + note.
+//
+// No widget iframes on Main tab. Perspective URLs power the "View on X"
+// link; honesty + note are revealed only after click.
 function renderMainStoryBlock(story, rank) {
+  var blockId = 'b' + Math.random().toString(36).substr(2, 9);
   var mp = story.main || story.main_post || {};
   var headline = esc(story.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
 
-  // Velocity badge — Grok can provide story.velocity explicitly; otherwise
-  // we infer a default based on rank within the category.
+  // Velocity badge — explicit story.velocity, or inferred from rank.
   var velocity = story.velocity ||
     (rank === 1 ? 'high velocity' : rank === 2 ? 'rising fast' : 'climbing');
 
@@ -635,36 +709,60 @@ function renderMainStoryBlock(story, rank) {
   var metaHtml = '<div class="main-story-meta">' +
     metaBits.join('<span class="sep">·</span>') + '</div>';
 
-  var perspectives = (story.perspectives || []);
-  var perspectivesRow = perspectives.length
-    ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
-    : '';
+  // Filter perspectives to those with real X URLs (no editorial-only tiles).
+  // Cap at 2 for Main tab to match "6 perspectives below" total (3 cards × 2).
+  var perspectives = (story.perspectives || [])
+    .filter(function(p) { return p && isXStatusUrl(p.url); })
+    .slice(0, 2);
 
-  // Inline honesty + note — always visible at the bottom of the block.
-  var honestyHtml = '';
-  var v = honestyParse(story.honesty);
-  if (v != null) {
-    var label = (typeof story.honesty === 'string') ? story.honesty : (v + '/10');
-    honestyHtml += '<div class="main-story-honesty">' +
-      '<span class="honesty-score ' + honestyClass(v) + '">' + esc(label) + '</span>' +
-      '<span class="honesty-label">Honesty</span>' +
-    '</div>';
-  }
-  if (story.note) {
-    honestyHtml += '<div class="main-story-note">' + esc(story.note) + '</div>';
+  var teasersHtml = '';
+  if (perspectives.length) {
+    var panelId = blockId + '-details';
+    teasersHtml = '<div class="perspectives-row">' +
+      perspectives.map(function(p, idx) {
+        return renderMainPerspectiveTeaser(p, blockId, idx, panelId);
+      }).join('') +
+      '</div>' +
+      '<div class="perspective-details" id="' + panelId + '"></div>';
   }
 
   return (
     '<div class="main-story-block">' +
       '<div class="main-story-headline">' + headline + '</div>' +
       metaHtml +
-      perspectivesRow +
-      honestyHtml +
+      teasersHtml +
+    '</div>'
+  );
+}
+
+// One Main-tab perspective teaser: label + meta + truncated body + hint.
+// Stashes the perspective object in MAIN_PDB so selectMainPerspective()
+// can hydrate the shared details panel without parsing data attributes.
+function renderMainPerspectiveTeaser(p, blockId, idx, panelId) {
+  var pid = blockId + '_p' + idx;
+  MAIN_PDB[pid] = p;
+  var pc = persClassForSide(p.side);
+  var ago = timeAgo(p.time, p.url);
+  var metaBits = [];
+  if (p.handle) metaBits.push('<span class="handle">' + esc(p.handle) + '</span>');
+  if (p.views)  metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
+  if (ago)      metaBits.push(ago);
+  return (
+    '<div class="tile perspective perspective-teaser ' + pc.box +
+      '" data-pid="' + pid +
+      '" onclick="selectMainPerspective(\'' + pid + '\',\'' + panelId + '\');">' +
+      '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
+      (metaBits.length ? '<div class="meta-line">' + metaBits.join(' · ') + '</div>' : '') +
+      '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
+      '<div class="teaser-hint">tap for full post + honesty</div>' +
     '</div>'
   );
 }
 
 function renderTabMain() {
+  // Reset the perspective DB — populated by renderMainPerspectiveTeaser
+  // calls below. selectMainPerspective() reads from it on click.
+  MAIN_PDB = {};
   var main = (NEWS_DATA && NEWS_DATA.main) || {};
   var sections = [
     { key: 'world',    title: 'World'    },
@@ -910,34 +1008,6 @@ function renderContent() {
     }
   }
   el.innerHTML = html;
-  // Main blocks are flat (no click-to-expand) — lazy-load perspective
-  // embeds via IntersectionObserver as the user scrolls.
-  if (activeTab === 'main') autoLoadMainEmbeds(el);
-}
-
-function autoLoadMainEmbeds(root) {
-  if (!root) return;
-  var slots = root.querySelectorAll('.main-story-block .tweet-embed-container[data-tweet-url]');
-  if (!slots.length) return;
-  if (!('IntersectionObserver' in window)) {
-    slots.forEach(function(c) {
-      if (c.style.display === 'none' && !c.innerHTML) {
-        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
-      }
-    });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (!e.isIntersecting) return;
-      var c = e.target;
-      if (c.style.display === 'none' && !c.innerHTML) {
-        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
-      }
-      io.unobserve(c);
-    });
-  }, { rootMargin: '400px 0px' });
-  slots.forEach(function(c) { io.observe(c); });
 }
 
 function renderNav() {

@@ -23,24 +23,36 @@ Top-level keys (any subset; missing ones render an empty state):
 
 ### `main` — World · Nation · Business tab
 
-Each section (`world`, `nation`, `business`) supports **3 stories** via
-`tops` array. Each story renders as a **flat** Expresso-style card —
-no accordion, no triangle, all content visible at once:
+**Config:** "3 stories on top / 6 perspectives below / honesty + post on
+click." Per cron run, Grok provides up to 3 stories per category. They
+render as a **row-major** grid (Row 1 = W#1·N#1·B#1, etc.); when only
+1 story per category is provided, you just see 1 row of 3 cards.
+
+**Per card:**
 
 ```
 ┌────────────────────────────────────────────┐
-│ Tight AI headline                          │  ← short, no paragraphs
+│ Tight AI headline                          │  ← Playfair, prominent
 │                                            │
-│ 828K views · ↑ high velocity · 1h ago      │  ← meta + velocity badge
+│ 828K views · ↑ HIGH VELOCITY · 1h ago      │  ← meta + velocity badge
 │                                            │
-│ ┌────────────┐ ┌────────────┐              │  ← 2 perspectives
-│ │ SUPPORTIVE │ │ SKEPTICAL  │              │     side-by-side at
-│ │ body text  │ │ body text  │              │     half-column width
-│ │ [embed]    │ │ [embed]    │              │     (lazy-loaded)
+│ ┌────────────┐ ┌────────────┐              │
+│ │ SUPPORTIVE │ │ SKEPTICAL  │              │  ← 2 perspective TEASERS
+│ │ truncated  │ │ truncated  │              │     (label + short body
+│ │ body text  │ │ body text  │              │      + tap hint)
+│ │ ▾ tap…     │ │ ▾ tap…     │              │
 │ └────────────┘ └────────────┘              │
 │                                            │
-│ 8.5/10  HONESTY                            │  ← inline at bottom
-│ Solid reporting from reliable NFL insider. │  ← note inline
+│  ── click a teaser ↓ to reveal ──          │
+│  ┌──────────────────────────────────────┐  │
+│  │ SUPPORTIVE                           │  │  ← shared details panel
+│  │ @handle · 276K views · 6h ago        │  │     opens INSIDE the card
+│  │ Full post text in full.              │  │     below the teasers.
+│  │ [ View on X → ]                      │  │     Click same teaser
+│  │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─        │  │     again to close.
+│  │ 8.5/10  HONESTY                      │  │
+│  │ Per-perspective note text.           │  │
+│  └──────────────────────────────────────┘  │
 └────────────────────────────────────────────┘
 ```
 
@@ -50,22 +62,29 @@ no accordion, no triangle, all content visible at once:
     "tops": [
       {
         "headline": "Tight newspaper headline (≤ ~75 chars)",
-        "velocity": "high velocity",            ⟵ OPTIONAL. Free-text badge.
+        "velocity": "high velocity",            ⟵ OPTIONAL free-text badge.
                                                   Inferred from rank if absent:
                                                   1st="high velocity",
                                                   2nd="rising fast",
                                                   3rd="climbing".
-        "honesty": "8.5/10",                    ⟵ shown INLINE at bottom of block
-        "note": "One-line justification.",      ⟵ shown INLINE below honesty
         "main": {
           "url": "https://x.com/handle/status/<id>",
           "handle": "@handle",
           "text": "Verbatim post body",
           "views": "382K"
         },
-        "perspectives": [
-          { "side": "Supportive", "handle": "@…", "url": "…", "text": "…", "views": "276K" },
-          { "side": "Skeptical",  "handle": "@…", "url": "…", "text": "…", "views": "373K" }
+        "perspectives": [                       ⟵ EXACTLY 2 rendered (cap is hard).
+          {                                       Honesty + note are per-perspective,
+            "side": "Supportive",                 hidden until the user clicks.
+            "handle": "@…",
+            "url": "https://x.com/.../status/…", ⟵ REQUIRED. No URL → tile dropped.
+            "text": "Full backing post text…",
+            "views": "276K",
+            "honesty": "8.5/10",                ⟵ shown only after click
+            "note": "Why this score."           ⟵ shown only after click
+          },
+          { "side": "Skeptical", "handle": "@…", "url": "…", "text": "…", "views": "373K",
+            "honesty": "7/10", "note": "…" }
         ]
       },
       { /* story 2, same shape */ },
@@ -80,8 +99,9 @@ no accordion, no triangle, all content visible at once:
 }
 ```
 
-**Compat:** legacy `top: {…}` (singular) still works; gets wrapped into a
-1-item array.
+**Compat:** legacy `top: {…}` (singular) still works; wraps into a 1-item
+array. Story-level `honesty` / `note` are accepted by the schema but
+ignored on Main tab (honesty is per-perspective by design).
 
 **Perspectives — labels are flexible:** `side` can be any of these and
 will color-map automatically:
@@ -92,12 +112,10 @@ will color-map automatically:
 - **Orange (caution):** `Cautious`, `Bearish`
 
 Anything else falls back to neutral purple. Pick the side label that fits
-the actual stance of the post you're embedding — don't force-fit
-political when the story is sports/markets/entertainment.
+the actual stance of the post — don't force-fit political when the story
+is sports/markets/entertainment.
 
-**Honesty + note** live at the story-block level on Main tab (one score
-per story, NOT per perspective). They render as a small score chip + a
-short paragraph below it, both always visible (no fold).
+**Hard rule:** every perspective MUST have a real `x.com|twitter.com/<handle>/status/<id>` URL. No URL → tile silently dropped. Editorialised text-only counter-views are NOT rendered anywhere.
 
 ### `elon` — flat array of Elon posts (top 3 rendered)
 ```json
