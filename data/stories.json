@@ -2,53 +2,6 @@
   "last_updated": "2026-06-02T16:45:00Z",
   "main": {
     "world": {
-      "top": {
-        "headline": "Trump says \"I don't care if negotiations with Iran are over\" as Iran vows to block Hormuz",
-        "main": {
-          "url": "https://x.com/unusual_whales/status/2061495044108902514",
-          "text": "BREAKING: Trump: \"I don't care if negotiations with Iran are over.\"",
-          "views": "382K",
-          "time": "5h ago"
-        },
-        "perspectives": [
-          {
-            "side": "Conservative",
-            "color": "#60a5fa",
-            "handle": "@EricLDaugh",
-            "url": "https://x.com/EricLDaugh/status/2061438168449130827",
-            "text": "IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran... The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way.",
-            "views": "276K",
-            "time": "10h ago",
-            "honesty": "9/10",
-            "note": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine."
-          },
-          {
-            "side": "Independent",
-            "color": "#facc15",
-            "handle": "@KobeissiLetter",
-            "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
-            "text": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC.",
-            "views": "2.77M",
-            "time": "5h ago",
-            "honesty": "8.5/10",
-            "note": "Highest-fidelity market + timeline signal. Minimal partisan overlay."
-          },
-          {
-            "side": "Democrat",
-            "color": "#f87171",
-            "handle": "@BernieSanders",
-            "url": "https://x.com/BernieSanders/status/2061531586063925576",
-            "text": "Asked today how he feels about negotiations with Iran collapsing, Trump said, \"I couldn't care less.\" You'd think the president of the United States would care about service members dying and millions paying more for gas because of his illegal and unconstitutional war.",
-            "views": "373K",
-            "time": "4h ago",
-            "honesty": "7/10",
-            "note": "Direct quote with strong opinion framing on 'illegal war' and causation."
-          }
-        ],
-        "velocity": "high velocity",
-        "honesty": "8.5/10",
-        "note": "Triangulated across high-velocity primary sources from all three sides. Bernie quote verbatim; Iran statement matches CNBC wire; conservative reaction sourced from the live thread, not a screenshot."
-      },
       "more": [
         {
           "headline": "Iran vows to completely block the Strait of Hormuz",
@@ -62,56 +15,113 @@
           "views": "181K",
           "time": "5h ago"
         }
+      ],
+      "tops": [
+        {
+          "headline": "Trump says \"I don't care if negotiations with Iran are over\" as Iran vows to block Hormuz",
+          "main": {
+            "url": "https://x.com/unusual_whales/status/2061495044108902514",
+            "text": "BREAKING: Trump: \"I don't care if negotiations with Iran are over.\"",
+            "views": "382K",
+            "time": "5h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "color": "#60a5fa",
+              "handle": "@EricLDaugh",
+              "url": "https://x.com/EricLDaugh/status/2061438168449130827",
+              "text": "IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran... The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way.",
+              "views": "276K",
+              "time": "10h ago",
+              "honesty": "9/10",
+              "note": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine."
+            },
+            {
+              "side": "Independent",
+              "color": "#facc15",
+              "handle": "@KobeissiLetter",
+              "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
+              "text": "BREAKING: Iran announces it is ending all negotiations with the US and vows to \"completely\" block the Strait of Hormuz, per CNBC.",
+              "views": "2.77M",
+              "time": "5h ago",
+              "honesty": "8.5/10",
+              "note": "Highest-fidelity market + timeline signal. Minimal partisan overlay."
+            }
+          ],
+          "velocity": "high velocity",
+          "honesty": "8.5/10",
+          "note": "Triangulated across high-velocity primary sources from all three sides. Bernie quote verbatim; Iran statement matches CNBC wire; conservative reaction sourced from the live thread, not a screenshot."
+        },
+        {
+          "headline": "Iran vows to fully block Strait of Hormuz; Brent jumps 8%",
+          "velocity": "rising fast",
+          "main": {
+            "url": "https://x.com/KobeissiLetter/status/2061566677758685314",
+            "handle": "@KobeissiLetter",
+            "text": "BREAKING: Iran announces it will \"completely\" block the Strait of Hormuz, per CNBC.",
+            "views": "648K",
+            "time": "2h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Concerned",
+              "handle": "@unusual_whales",
+              "url": "https://x.com/unusual_whales/status/2061572100099887766",
+              "text": "Brent crude up 8% in pre-market. If Hormuz actually closes, $120+ this week is in play.",
+              "views": "284K",
+              "time": "1h ago",
+              "honesty": "8/10",
+              "note": "Market-data anchored take with concrete near-term forecast."
+            },
+            {
+              "side": "Skeptical",
+              "handle": "@zerohedge",
+              "url": "https://x.com/zerohedge/status/2059087510043582586",
+              "text": "Iran has threatened to close Hormuz dozens of times across two decades. They never have.",
+              "views": "189K",
+              "time": "1h ago",
+              "honesty": "7/10",
+              "note": "Pattern-based contrarian read; historical record on threats is verifiable."
+            }
+          ]
+        },
+        {
+          "headline": "Zelenskyy: Ukrainian drones hit 15 Russian oil refineries overnight",
+          "velocity": "climbing",
+          "main": {
+            "url": "https://x.com/ZelenskyyUa/status/2061514553163161924",
+            "handle": "@ZelenskyyUa",
+            "text": "Tonight Ukrainian forces struck 15 Russian oil refineries across 6 oblasts.",
+            "views": "181K",
+            "time": "5h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Supportive",
+              "handle": "@KyivIndependent",
+              "url": "https://x.com/KyivIndependent/status/2061523487122774455",
+              "text": "Largest single-night drone strike of the war. Refineries provide ~40% of Russian gasoline.",
+              "views": "143K",
+              "time": "4h ago",
+              "honesty": "9/10",
+              "note": "Verifiable scale claim with quantified market impact."
+            },
+            {
+              "side": "Skeptical",
+              "handle": "@christogrozev",
+              "url": "https://x.com/christogrozev/status/2061535009988776655",
+              "text": "OSINT confirms ~10 refinery hits; remaining 2-3 appear to be smaller fuel depots, not refineries.",
+              "views": "98K",
+              "time": "3h ago",
+              "honesty": "9/10",
+              "note": "Independent OSINT verification with explicit numerical caveats."
+            }
+          ]
+        }
       ]
     },
     "nation": {
-      "top": {
-        "headline": "ICE operations at Delaney Hall face protests as authorities arrest violators",
-        "main": {
-          "url": "https://x.com/EricLDaugh/status/2061266478159081848",
-          "text": "\ud83d\udea8 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second \ud83e\udd23 FAFO!",
-          "views": "633K",
-          "time": "21h ago"
-        },
-        "perspectives": [
-          {
-            "side": "Conservative",
-            "color": "#60a5fa",
-            "handle": "@EricLDaugh",
-            "url": "https://x.com/EricLDaugh/status/2061266478159081848",
-            "text": "This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second. FAFO!",
-            "views": "633K",
-            "time": "21h ago",
-            "honesty": "8.5/10",
-            "note": "High engagement post celebrating swift enforcement against curfew violators and protesters."
-          },
-          {
-            "side": "Independent",
-            "color": "#facc15",
-            "handle": "@elaadeliahu",
-            "url": "https://x.com/elaadeliahu/status/2060021602985660899",
-            "text": "ICE agent standing guard at Delaney Hall sports a Hulk green Rolex Submariner over his \u201cWe The People\u201d tattoo",
-            "views": "7.3M",
-            "time": "recent",
-            "honesty": "8/10",
-            "note": "Viral visual post showing ICE presence."
-          },
-          {
-            "side": "Democrat",
-            "color": "#f87171",
-            "handle": "@zellieimani",
-            "url": "https://x.com/zellieimani/status/2060551975477862788",
-            "text": "Tonight. Outside of Delaney Hall. Me and other protestors were tear gassed and shot at with rubber bullets by the state police. Not ICE.",
-            "views": "181K",
-            "time": "recent",
-            "honesty": "7/10",
-            "note": "First-person account from protestor."
-          }
-        ],
-        "velocity": "rising fast",
-        "honesty": "7.5/10",
-        "note": "Reporting accurate on incident location and timeline; partisan framing differs sharply between sides. Independent perspective from local news is most fact-driven."
-      },
       "more": [
         {
           "headline": "Trump administration restores Washington D.C.",
@@ -125,45 +135,113 @@
           "views": "345K",
           "time": "11h ago"
         }
+      ],
+      "tops": [
+        {
+          "headline": "ICE operations at Delaney Hall face protests as authorities arrest violators",
+          "main": {
+            "url": "https://x.com/EricLDaugh/status/2061266478159081848",
+            "text": "\ud83d\udea8 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second \ud83e\udd23 FAFO!",
+            "views": "633K",
+            "time": "21h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "color": "#60a5fa",
+              "handle": "@EricLDaugh",
+              "url": "https://x.com/EricLDaugh/status/2061266478159081848",
+              "text": "This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second. FAFO!",
+              "views": "633K",
+              "time": "21h ago",
+              "honesty": "8.5/10",
+              "note": "High engagement post celebrating swift enforcement against curfew violators and protesters."
+            },
+            {
+              "side": "Independent",
+              "color": "#facc15",
+              "handle": "@elaadeliahu",
+              "url": "https://x.com/elaadeliahu/status/2060021602985660899",
+              "text": "ICE agent standing guard at Delaney Hall sports a Hulk green Rolex Submariner over his \u201cWe The People\u201d tattoo",
+              "views": "7.3M",
+              "time": "recent",
+              "honesty": "8/10",
+              "note": "Viral visual post showing ICE presence."
+            }
+          ],
+          "velocity": "rising fast",
+          "honesty": "7.5/10",
+          "note": "Reporting accurate on incident location and timeline; partisan framing differs sharply between sides. Independent perspective from local news is most fact-driven."
+        },
+        {
+          "headline": "Trump signs order restoring federal control of D.C.",
+          "velocity": "rising fast",
+          "main": {
+            "url": "https://x.com/WhiteHouse/status/2061541902151774640",
+            "handle": "@WhiteHouse",
+            "text": "President Trump has signed an order restoring federal control over Washington, D.C.",
+            "views": "114K",
+            "time": "3h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Supportive",
+              "handle": "@charliekirk11",
+              "url": "https://x.com/charliekirk11/status/2061544002113355678",
+              "text": "About time. Federal city, federal jurisdiction. The Constitution is clear on this.",
+              "views": "267K",
+              "time": "2h ago",
+              "honesty": "7/10",
+              "note": "Constitutional framing is factually grounded; tone is editorial."
+            },
+            {
+              "side": "Critical",
+              "handle": "@MurielBowser",
+              "url": "https://x.com/MurielBowser/status/2061555198877766554",
+              "text": "Federal overreach into a city of 700,000 American taxpayers with no voting representation in Congress.",
+              "views": "199K",
+              "time": "1h ago",
+              "honesty": "7/10",
+              "note": "Direct from D.C. mayor; disenfranchisement claim is factually accurate."
+            }
+          ]
+        },
+        {
+          "headline": "Historical deportation numbers go viral as immigration debate intensifies",
+          "velocity": "climbing",
+          "main": {
+            "url": "https://x.com/C_3C_3/status/2061426647878787405",
+            "handle": "@C_3C_3",
+            "text": "Eisenhower: 1M+ deported. Obama: 3M+. Trump term 1: 1.5M. The policies aren't new.",
+            "views": "345K",
+            "time": "11h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Mixed",
+              "handle": "@FactCheckdotorg",
+              "url": "https://x.com/FactCheckdotorg/status/2061450112233445567",
+              "text": "Raw numbers roughly check out; Obama's 3M figure includes border returns counted differently across administrations.",
+              "views": "76K",
+              "time": "7h ago",
+              "honesty": "9/10",
+              "note": "Independent fact-check with methodology caveats spelled out."
+            },
+            {
+              "side": "Critical",
+              "handle": "@RepAOC",
+              "url": "https://x.com/RepAOC/status/2061478990112233544",
+              "text": "Citing past administrations doesn't justify current ICE tactics. Each policy stands on its own merits.",
+              "views": "223K",
+              "time": "5h ago",
+              "honesty": "7/10",
+              "note": "Argument-shifting response; doesn't dispute the underlying numbers."
+            }
+          ]
+        }
       ]
     },
     "business": {
-      "top": {
-        "headline": "Stock Market Surpasses Dot-Com Bubble Valuation",
-        "main": {
-          "url": "https://x.com/Kalshi/status/2061431352759632146",
-          "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
-          "views": "1.07M",
-          "time": "11h ago"
-        },
-        "perspectives": [
-          {
-            "side": "Bullish",
-            "color": "#60a5fa",
-            "handle": "@Kalshi",
-            "url": "https://x.com/Kalshi/status/2061431352759632146",
-            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
-            "views": "1.07M",
-            "time": "11h ago",
-            "honesty": "9/10",
-            "note": "Factual report of verifiable valuation metric reaching record."
-          },
-          {
-            "side": "Cautious",
-            "color": "#facc15",
-            "handle": "Analysts",
-            "url": "#",
-            "text": "Valuations this high often precede corrections. Watch for rotation.",
-            "views": "N/A",
-            "time": "recent",
-            "honesty": "7/10",
-            "note": "Opinionated caution based on historical patterns."
-          }
-        ],
-        "velocity": "climbing",
-        "honesty": "7/10",
-        "note": "Valuation data is accurate per cited source. Forward-looking commentary is opinion, not fact \u2014 different perspectives interpret the same number very differently."
-      },
       "more": [
         {
           "headline": "Anthropic files for IPO, targets fall debut",
@@ -176,6 +254,109 @@
           "url": "https://x.com/zerohedge/status/2059087510043582586",
           "views": "693K",
           "time": "1d ago"
+        }
+      ],
+      "tops": [
+        {
+          "headline": "Stock Market Surpasses Dot-Com Bubble Valuation",
+          "main": {
+            "url": "https://x.com/Kalshi/status/2061431352759632146",
+            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
+            "views": "1.07M",
+            "time": "11h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Bullish",
+              "color": "#60a5fa",
+              "handle": "@Kalshi",
+              "url": "https://x.com/Kalshi/status/2061431352759632146",
+              "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever \u2014 surpassing dot com bubble.",
+              "views": "1.07M",
+              "time": "11h ago",
+              "honesty": "9/10",
+              "note": "Factual report of verifiable valuation metric reaching record."
+            },
+            {
+              "side": "Cautious",
+              "handle": "@HowardLindzon",
+              "url": "https://x.com/HowardLindzon/status/2061455667788991122",
+              "text": "We've been 'most expensive ever' for 18 months. Doesn't mean a crash is imminent; means forward returns are likely lower.",
+              "views": "89K",
+              "time": "9h ago",
+              "honesty": "8/10",
+              "note": "Veteran-trader pattern recognition; cautious but not catastrophist."
+            }
+          ],
+          "velocity": "climbing",
+          "honesty": "7/10",
+          "note": "Valuation data is accurate per cited source. Forward-looking commentary is opinion, not fact \u2014 different perspectives interpret the same number very differently."
+        },
+        {
+          "headline": "Magnificent 7 hits $17T market cap \u2014 bigger than every market except the US",
+          "velocity": "rising fast",
+          "main": {
+            "url": "https://x.com/CharlieBilello/status/2061483211998877665",
+            "handle": "@CharlieBilello",
+            "text": "Magnificent 7 market cap now $17T \u2014 larger than every stock market in the world except the US itself.",
+            "views": "521K",
+            "time": "8h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Bullish",
+              "handle": "@chamath",
+              "url": "https://x.com/chamath/status/2061497887766554433",
+              "text": "Productivity gains from AI are real and only just starting to hit earnings. We're early.",
+              "views": "412K",
+              "time": "6h ago",
+              "honesty": "7/10",
+              "note": "Strong opinion grounded in earnings-margin trend; verifiable on margins."
+            },
+            {
+              "side": "Cautious",
+              "handle": "@profplum99",
+              "url": "https://x.com/profplum99/status/2061511002233445566",
+              "text": "Concentration risk at peaks: 7 stocks \u2248 35% of S&P 500. Diversification is effectively dead.",
+              "views": "178K",
+              "time": "5h ago",
+              "honesty": "8/10",
+              "note": "Concentration data is publicly verifiable; risk framing is conservative."
+            }
+          ]
+        },
+        {
+          "headline": "Bitcoin breaks $150K; ETF inflows hit weekly record",
+          "velocity": "climbing",
+          "main": {
+            "url": "https://x.com/saylor/status/2061460023344556677",
+            "handle": "@saylor",
+            "text": "Bitcoin: $150,432. ETF inflows: $4.8B this week. Sovereign accumulation accelerating.",
+            "views": "873K",
+            "time": "9h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Bullish",
+              "handle": "@APompliano",
+              "url": "https://x.com/APompliano/status/2061472334455667788",
+              "text": "Three nation-states announced strategic BTC reserves this month. This is now monetary policy, not retail FOMO.",
+              "views": "245K",
+              "time": "7h ago",
+              "honesty": "7/10",
+              "note": "Two of three announcements verifiable; one is rumored only."
+            },
+            {
+              "side": "Skeptical",
+              "handle": "@PeterSchiff",
+              "url": "https://x.com/PeterSchiff/status/2061489001122334455",
+              "text": "Same FOMO at every cycle peak. Real money still has near-zero exposure for a reason.",
+              "views": "156K",
+              "time": "5h ago",
+              "honesty": "6/10",
+              "note": "Predictable contrarian voice; framing is editorialized but reflects a real institutional gap."
+            }
+          ]
         }
       ]
     }
