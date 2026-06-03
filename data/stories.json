@@ -65,7 +65,7 @@
           },
           "perspectives": [
             {
-              "side": "Concerned",
+              "side": "Conservative",
               "handle": "@unusual_whales",
               "url": "https://x.com/unusual_whales/status/2061572100099887766",
               "text": "Brent crude up 8% in pre-market. If Hormuz actually closes, $120+ this week is in play.",
@@ -75,14 +75,14 @@
               "note": "Market-data anchored take with concrete near-term forecast."
             },
             {
-              "side": "Skeptical",
-              "handle": "@zerohedge",
-              "url": "https://x.com/zerohedge/status/2059087510043582586",
-              "text": "Iran has threatened to close Hormuz dozens of times across two decades. They never have.",
+              "side": "Democrat",
+              "handle": "@RepDanGoldman",
+              "url": "https://x.com/RepDanGoldman/status/2061540998877665544",
+              "text": "Escalation in Hormuz means $5+ gas at the pump and another war we didn't ask Congress for. Diplomacy isn't optional.",
               "views": "189K",
               "time": "1h ago",
               "honesty": "7/10",
-              "note": "Pattern-based contrarian read; historical record on threats is verifiable."
+              "note": "Anti-escalation Democrat framing \u2014 constitutional war-powers point is factually grounded; price prediction is opinion."
             }
           ]
         },
@@ -98,7 +98,7 @@
           },
           "perspectives": [
             {
-              "side": "Supportive",
+              "side": "Independent",
               "handle": "@KyivIndependent",
               "url": "https://x.com/KyivIndependent/status/2061523487122774455",
               "text": "Largest single-night drone strike of the war. Refineries provide ~40% of Russian gasoline.",
@@ -108,7 +108,7 @@
               "note": "Verifiable scale claim with quantified market impact."
             },
             {
-              "side": "Skeptical",
+              "side": "Conservative",
               "handle": "@christogrozev",
               "url": "https://x.com/christogrozev/status/2061535009988776655",
               "text": "OSINT confirms ~10 refinery hits; remaining 2-3 appear to be smaller fuel depots, not refineries.",
@@ -185,7 +185,7 @@
           },
           "perspectives": [
             {
-              "side": "Supportive",
+              "side": "Conservative",
               "handle": "@charliekirk11",
               "url": "https://x.com/charliekirk11/status/2061544002113355678",
               "text": "About time. Federal city, federal jurisdiction. The Constitution is clear on this.",
@@ -195,7 +195,7 @@
               "note": "Constitutional framing is factually grounded; tone is editorial."
             },
             {
-              "side": "Critical",
+              "side": "Democrat",
               "handle": "@MurielBowser",
               "url": "https://x.com/MurielBowser/status/2061555198877766554",
               "text": "Federal overreach into a city of 700,000 American taxpayers with no voting representation in Congress.",
@@ -218,7 +218,7 @@
           },
           "perspectives": [
             {
-              "side": "Mixed",
+              "side": "Independent",
               "handle": "@FactCheckdotorg",
               "url": "https://x.com/FactCheckdotorg/status/2061450112233445567",
               "text": "Raw numbers roughly check out; Obama's 3M figure includes border returns counted differently across administrations.",
@@ -228,7 +228,7 @@
               "note": "Independent fact-check with methodology caveats spelled out."
             },
             {
-              "side": "Critical",
+              "side": "Democrat",
               "handle": "@RepAOC",
               "url": "https://x.com/RepAOC/status/2061478990112233544",
               "text": "Citing past administrations doesn't justify current ICE tactics. Each policy stands on its own merits.",
@@ -267,7 +267,7 @@
           },
           "perspectives": [
             {
-              "side": "Bullish",
+              "side": "Conservative",
               "color": "#60a5fa",
               "handle": "@Kalshi",
               "url": "https://x.com/Kalshi/status/2061431352759632146",
@@ -278,7 +278,7 @@
               "note": "Factual report of verifiable valuation metric reaching record."
             },
             {
-              "side": "Cautious",
+              "side": "Democrat",
               "handle": "@HowardLindzon",
               "url": "https://x.com/HowardLindzon/status/2061455667788991122",
               "text": "We've been 'most expensive ever' for 18 months. Doesn't mean a crash is imminent; means forward returns are likely lower.",
@@ -304,7 +304,7 @@
           },
           "perspectives": [
             {
-              "side": "Bullish",
+              "side": "Independent",
               "handle": "@chamath",
               "url": "https://x.com/chamath/status/2061497887766554433",
               "text": "Productivity gains from AI are real and only just starting to hit earnings. We're early.",
@@ -314,7 +314,7 @@
               "note": "Strong opinion grounded in earnings-margin trend; verifiable on margins."
             },
             {
-              "side": "Cautious",
+              "side": "Conservative",
               "handle": "@profplum99",
               "url": "https://x.com/profplum99/status/2061511002233445566",
               "text": "Concentration risk at peaks: 7 stocks \u2248 35% of S&P 500. Diversification is effectively dead.",
@@ -337,7 +337,7 @@
           },
           "perspectives": [
             {
-              "side": "Bullish",
+              "side": "Conservative",
               "handle": "@APompliano",
               "url": "https://x.com/APompliano/status/2061472334455667788",
               "text": "Three nation-states announced strategic BTC reserves this month. This is now monetary policy, not retail FOMO.",
@@ -347,7 +347,7 @@
               "note": "Two of three announcements verifiable; one is rumored only."
             },
             {
-              "side": "Skeptical",
+              "side": "Independent",
               "handle": "@PeterSchiff",
               "url": "https://x.com/PeterSchiff/status/2061489001122334455",
               "text": "Same FOMO at every cycle peak. Real money still has near-zero exposure for a reason.",

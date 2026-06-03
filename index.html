@@ -156,20 +156,16 @@
   }
   .perspectives-row .perspective { margin-bottom: 0; }
 
-  /* Per-side colors: red Conservative, white Independent, blue Democrat */
+  /* Per-side colors — ONLY red (Conservative), white (Independent),
+     blue (Democrat). Any other side label coerces to one of these three
+     via persClassForSide(). */
   .perspective { border-top: 3px solid; padding: 9px 11px; font-size: 0.8rem; line-height: 1.42; }
   .perspective-conservative { background: #fbe4e0; border-color: #c0392b; }
   .perspective-independent  { background: #ffffff; border-color: #5a4a30; }
   .perspective-democrat     { background: #e0eaf8; border-color: #2a6db8; }
-  .perspective-bullish      { background: #e7f5e9; border-color: #4a9d57; }
-  .perspective-cautious     { background: #fdf0d6; border-color: #d49b3e; }
-  .perspective-opposing     { background: #f0eaf7; border-color: #7a5fa5; }
   .perspective .label.cons { color: #a02e21; }
   .perspective .label.ind  { color: #5a4a30; }
   .perspective .label.dem  { color: #1b5a99; }
-  .perspective .label.bul  { color: #2a6f33; }
-  .perspective .label.cau  { color: #8a5e1a; }
-  .perspective .label.opp  { color: #5a3f80; }
   .perspective .label { margin-bottom: 5px; font-size: 0.6rem; }
   .perspective .meta-line { font-size: 0.66rem; margin-bottom: 5px; color: #5a4a30; }
   .perspective .post-body {
@@ -412,7 +408,7 @@ function selectMainPerspective(pid, panelId) {
   if (p.views)  metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
   if (ago)      metaBits.push(ago);
   var html = '';
-  html += '<div class="pd-label ' + pc.box + '"><span class="' + pc.lab + '">' + esc(p.side || '?') + '</span></div>';
+  html += '<div class="pd-label ' + pc.box + '"><span class="' + pc.lab + '">' + esc(pc.display) + '</span></div>';
   if (metaBits.length) html += '<div class="pd-meta">' + metaBits.join(' · ') + '</div>';
   html += '<div class="pd-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>';
   // Embed slot — Twitter widget loads inline. The widget itself carries
@@ -458,30 +454,25 @@ function toggleEmbed(containerId, tweetUrl) {
   document.head.appendChild(sc);
 }
 
-// Map perspective side → CSS class + label tag class. Supports political
-// (Conservative/Democrat/Independent), market (Bullish/Cautious), and
-// contextual prototype labels (Supportive/Skeptical/Excited/Mixed/fans/etc.).
+// Perspective sides are RED / WHITE / BLUE only.
+// Three valid pairings per story: C+I, I+D, C+D.
+// Any non-canonical side label (Skeptical, Bullish, etc.) is coerced
+// to one of {Conservative, Independent, Democrat} via aliases below.
+// Display label is normalised to match the color so users never see
+// e.g. a red tile labeled "Skeptical" — it just says "Conservative".
 function persClassForSide(side) {
   var k = (side || '').toLowerCase();
-  // Red — pushback / concern / pessimism
   if (k === 'conservative' || k === 'skeptical' || k === 'concerned' ||
-      k === 'critical' || k === 'worried')
-    return { box: 'perspective-conservative', lab: 'cons' };
-  // Blue — democrat / progressive
-  if (k === 'democrat' || k === 'progressive' || k === 'left')
-    return { box: 'perspective-democrat', lab: 'dem' };
-  // White — neutral / independent / mixed
-  if (k === 'independent' || k === 'neutral' || k === 'mixed' ||
-      k === 'uncertain' || k === 'balanced')
-    return { box: 'perspective-independent', lab: 'ind' };
-  // Green — supportive / bullish / excited
-  if (k === 'bullish' || k === 'supportive' || k === 'excited' ||
+      k === 'critical' || k === 'worried' || k === 'cautious' ||
+      k === 'bearish' || k === 'right')
+    return { box: 'perspective-conservative', lab: 'cons', display: 'Conservative' };
+  if (k === 'democrat' || k === 'progressive' || k === 'left' ||
+      k === 'supportive' || k === 'bullish' || k === 'excited' ||
       k === 'optimistic' || k === 'positive' || k.indexOf('fan') !== -1)
-    return { box: 'perspective-bullish', lab: 'bul' };
-  // Orange — cautious / bearish
-  if (k === 'cautious' || k === 'bearish')
-    return { box: 'perspective-cautious', lab: 'cau' };
-  return { box: 'perspective-opposing', lab: 'opp' };
+    return { box: 'perspective-democrat', lab: 'dem', display: 'Democrat' };
+  // Default: Independent / white. Catches Mixed, Neutral, Balanced,
+  // Uncertain, and anything else.
+  return { box: 'perspective-independent', lab: 'ind', display: 'Independent' };
 }
 
 function renderEmbedSlot(url) {
@@ -534,7 +525,7 @@ function renderPerspectiveTile(p) {
   var ago = timeAgo(p.time, url);
   return (
     '<div class="tile perspective ' + pc.box + '">' +
-      '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
+      '<div class="label ' + pc.lab + '">' + esc(pc.display) + '</div>' +
       '<div class="meta-line">' +
         (p.handle ? '<span class="handle">' + esc(p.handle) + '</span>' : '') +
         (p.views ? ' · <span class="views">' + esc(p.views) + ' views</span>' : '') +
@@ -761,7 +752,7 @@ function renderMainPerspectiveTeaser(p, blockId, idx, panelId) {
     '<div class="tile perspective perspective-teaser ' + pc.box +
       '" data-pid="' + pid +
       '" onclick="selectMainPerspective(\'' + pid + '\',\'' + panelId + '\');">' +
-      '<div class="label ' + pc.lab + '">' + esc(p.side || '?') + '</div>' +
+      '<div class="label ' + pc.lab + '">' + esc(pc.display) + '</div>' +
       (metaBits.length ? '<div class="meta-line">' + metaBits.join(' · ') + '</div>' : '') +
       '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
       '<div class="teaser-hint">tap for full post + honesty</div>' +

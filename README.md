@@ -103,17 +103,24 @@ render as a **row-major** grid (Row 1 = W#1·N#1·B#1, etc.); when only
 array. Story-level `honesty` / `note` are accepted by the schema but
 ignored on Main tab (honesty is per-perspective by design).
 
-**Perspectives — labels are flexible:** `side` can be any of these and
-will color-map automatically:
-- **Red (pushback):** `Conservative`, `Skeptical`, `Concerned`, `Critical`, `Worried`
-- **Blue (left):** `Democrat`, `Progressive`, `Left`
-- **White (neutral):** `Independent`, `Neutral`, `Mixed`, `Uncertain`, `Balanced`
-- **Green (support):** `Bullish`, `Supportive`, `Excited`, `Optimistic`, `Positive`, anything ending in `fans` (e.g. `"Giants fans"`)
-- **Orange (caution):** `Cautious`, `Bearish`
+**Perspectives — only three labels, only three colors:**
 
-Anything else falls back to neutral purple. Pick the side label that fits
-the actual stance of the post — don't force-fit political when the story
-is sports/markets/entertainment.
+| `side` | Color | Meaning |
+|---|---|---|
+| `Conservative` | RED | right-leaning / hawkish / pro-enforcement / market-cautious |
+| `Independent` | WHITE | neutral / fact-reporting / market-data / OSINT |
+| `Democrat` | BLUE | left-leaning / pro-aid / anti-escalation / regulatory |
+
+Every story has **exactly 2** of these. The three valid pairings are
+**Conservative + Independent**, **Independent + Democrat**, and
+**Conservative + Democrat** — no two-of-the-same-side and no third side.
+
+Any non-canonical label (Skeptical, Bullish, Supportive, etc.) gets
+coerced to one of the three on render via aliases — a label of
+`"Skeptical"` will render as a red **Conservative** tile, `"Bullish"`
+as a blue **Democrat** tile, `"Neutral"` as a white **Independent**
+tile. Best practice: just use the three canonical labels in the JSON
+so the data file matches what's displayed.
 
 **Hard rule:** every perspective MUST have a real `x.com|twitter.com/<handle>/status/<id>` URL. No URL → tile silently dropped. Editorialised text-only counter-views are NOT rendered anywhere.
 
