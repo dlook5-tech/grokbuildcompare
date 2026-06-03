@@ -43,7 +43,23 @@
   .subtitle .label-independent { color: #ffffff; font-weight: 700; }
   .subtitle .label-democrat { color: #3d80c2; font-weight: 700; }
 
-  /* 3-column layout for the World/Nation/Business tab */
+  /* World / Nation / Business tab — ROW-MAJOR 3×3 grid. Per cron run Grok
+     supplies up to 3 stories per category; rendered as 3 rows × 3 cols
+     (Row 1 = W#1·N#1·B#1, etc.). Each row's height = tallest card in the
+     row, so row boundaries stay aligned even when cards differ in height. */
+  .main-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+  .main-grid > .col-title { margin-bottom: 0; }
+  .main-grid > .main-story-block { margin-bottom: 0; height: 100%; box-sizing: border-box; }
+  .main-grid > .more-list { margin-top: 0; }
+  .main-story-empty { /* invisible placeholder keeps row alignment */ min-height: 1px; }
+  @media (max-width: 750px) {
+    .main-grid { grid-template-columns: 1fr; }
+    /* Hide column titles on mobile — rows of 3 collapse to a single
+       interleaved stack (W#1, N#1, B#1, W#2, N#2, B#2, …). */
+    .main-grid > .col-title { display: none; }
+    .main-story-empty { display: none; }
+  }
+  /* (Legacy alias — kept for any non-Main usage of these classes) */
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
 
@@ -656,25 +672,53 @@ function renderTabMain() {
     { key: 'business', title: 'Business' }
   ];
   var h = renderHero('main');
-  h += '<div class="columns">';
-  sections.forEach(function(sec) {
+
+  // Resolve each category's story array (supports tops[] / stories[] / legacy top{}).
+  var byCat = sections.map(function(sec) {
     var data = main[sec.key] || {};
     var tops = [];
     if (Array.isArray(data.tops))         tops = data.tops;
     else if (Array.isArray(data.stories)) tops = data.stories;
     else if (data.top)                    tops = [data.top];
-    h += '<div class="col-section">' +
-           '<div class="col-title">' + sec.title + '</div>';
-    if (tops.length) {
-      tops.forEach(function(t, i) {
-        h += renderMainStoryBlock(t, i + 1);
-      });
-    } else {
-      h += '<div class="empty-msg" style="padding:10px;">No stories yet.</div>';
-    }
-    h += renderMoreList(data.more);
-    h += '</div>';
+    return { sec: sec, tops: tops, more: data.more };
   });
+
+  // Row-major 3×3 grid: ROW r = [World#r, Nation#r, Business#r] across.
+  // Each row's height = max of its 3 cards → alignment preserved even
+  // when one card is taller than the others. Empty cells reserve their
+  // slot so the next row doesn't shift left.
+  var rowCount = Math.max(0,
+    byCat[0].tops.length, byCat[1].tops.length, byCat[2].tops.length);
+
+  h += '<div class="main-grid">';
+
+  // Header row — World / Nation / Business titles, one per column.
+  byCat.forEach(function(x) {
+    h += '<div class="col-title">' + x.sec.title + '</div>';
+  });
+
+  if (rowCount === 0) {
+    h += '<div class="empty-msg" style="grid-column:1/-1;padding:14px;">No stories yet.</div>';
+  } else {
+    for (var r = 0; r < rowCount; r++) {
+      byCat.forEach(function(x) {
+        var t = x.tops[r];
+        if (t) h += renderMainStoryBlock(t, r + 1);
+        else   h += '<div class="main-story-empty" aria-hidden="true"></div>';
+      });
+    }
+  }
+
+  // Trailing row — "Next most viewed" per category (placeholder if absent
+  // so the 3-column rhythm holds).
+  var anyMore = byCat.some(function(x) { return x.more && x.more.length; });
+  if (anyMore) {
+    byCat.forEach(function(x) {
+      var ml = renderMoreList(x.more);
+      h += ml || '<div class="main-story-empty" aria-hidden="true"></div>';
+    });
+  }
+
   h += '</div>';
   return h;
 }
