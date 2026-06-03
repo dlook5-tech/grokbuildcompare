@@ -63,14 +63,16 @@
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
 
-  /* Main tab — Grok's "3 stories on top / 6 perspectives below" config.
+  /* Main tab — "3 stories on top / 6 perspectives below" config, eXpressO-styled.
      Card layout:
        Headline (Playfair, prominent)
        Meta row: views · ↑ velocity badge · age
        2 perspective TEASER boxes side-by-side (label + truncated text)
        ONE shared .perspective-details panel below the teasers — hidden
-         by default; clicking a teaser populates it with full post text,
-         "View on X" link, per-perspective honesty score, and note.
+         by default; clicking a teaser populates it with the full post
+         text, the inline X widget embed (eXpressO-style — the widget
+         itself carries the native view-on-X affordance), the
+         per-perspective honesty score, and the note.
          Click same teaser again to close. */
   .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(80,50,20,0.12); transition: transform 0.18s, box-shadow 0.18s; }
   .main-story-block:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
@@ -369,11 +371,13 @@ function toggleStory(sid) {
   }
 }
 
-// Main tab — Grok's "3 stories on top / 6 perspectives below" config.
+// Main tab — "3 stories on top / 6 perspectives below" config, eXpressO-styled.
 // Each card has 2 perspective TEASER boxes (label + truncated text) and
 // ONE shared .perspective-details panel below them. Clicking a teaser
-// populates the panel with full post text + "View on X" + per-perspective
-// honesty + note. Click same teaser again to close.
+// populates the panel with full post text + the inline X widget embed
+// (eXpressO pattern; the widget itself carries the native view-on-X
+// affordance) + per-perspective honesty + note. Click same teaser
+// again to close.
 //
 // MAIN_PDB maps a teaser's pid → its perspective object so the click
 // handler can look up the content without serialising JSON into HTML
@@ -687,15 +691,17 @@ function renderHero(tab) {
          '</div>';
 }
 
-// Main-tab story — Grok's "teaser + click-to-reveal-details" config.
+// Main-tab story — "teaser + click-to-reveal-details" config, eXpressO-styled.
 //   Headline (tight, Playfair)
 //   Meta row: views · ↑ velocity badge · age
 //   2 perspective TEASER boxes (label + truncated body, "tap to expand")
 //   Shared .perspective-details panel below — populated on teaser click
-//     with full body + "View on X" + per-perspective honesty + note.
+//     with full body + inline X widget embed (eXpressO pattern) +
+//     per-perspective honesty + note.
 //
-// No widget iframes on Main tab. Perspective URLs power the "View on X"
-// link; honesty + note are revealed only after click.
+// X widget embeds are lazy: only the currently-open perspective's widget
+// is loaded; closing the panel discards it. Honesty + note hidden until
+// the panel opens.
 function renderMainStoryBlock(story, rank) {
   var blockId = 'b' + Math.random().toString(36).substr(2, 9);
   var mp = story.main || story.main_post || {};
