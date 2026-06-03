@@ -22,9 +22,27 @@ Top-level keys (any subset; missing ones render an empty state):
 `main`, `elon`, `sports`, `ifollow`, `free`, `msm`, `last_updated`.
 
 ### `main` — World · Nation · Business tab
+
 Each section (`world`, `nation`, `business`) supports **3 stories** via
-`tops` array. The site auto-derives "X hours ago" from each post URL's
-snowflake, so the `time` field is optional.
+`tops` array. Each story renders as a **flat** Expresso-style card —
+no accordion, no triangle, all content visible at once:
+
+```
+┌────────────────────────────────────────────┐
+│ Tight AI headline                          │  ← short, no paragraphs
+│                                            │
+│ 828K views · ↑ high velocity · 1h ago      │  ← meta + velocity badge
+│                                            │
+│ ┌────────────┐ ┌────────────┐              │  ← 2 perspectives
+│ │ SUPPORTIVE │ │ SKEPTICAL  │              │     side-by-side at
+│ │ body text  │ │ body text  │              │     half-column width
+│ │ [embed]    │ │ [embed]    │              │     (lazy-loaded)
+│ └────────────┘ └────────────┘              │
+│                                            │
+│ 8.5/10  HONESTY                            │  ← inline at bottom
+│ Solid reporting from reliable NFL insider. │  ← note inline
+└────────────────────────────────────────────┘
+```
 
 ```json
 "main": {
@@ -32,6 +50,13 @@ snowflake, so the `time` field is optional.
     "tops": [
       {
         "headline": "Tight newspaper headline (≤ ~75 chars)",
+        "velocity": "high velocity",            ⟵ OPTIONAL. Free-text badge.
+                                                  Inferred from rank if absent:
+                                                  1st="high velocity",
+                                                  2nd="rising fast",
+                                                  3rd="climbing".
+        "honesty": "8.5/10",                    ⟵ shown INLINE at bottom of block
+        "note": "One-line justification.",      ⟵ shown INLINE below honesty
         "main": {
           "url": "https://x.com/handle/status/<id>",
           "handle": "@handle",
@@ -39,9 +64,8 @@ snowflake, so the `time` field is optional.
           "views": "382K"
         },
         "perspectives": [
-          { "side": "Conservative", "handle": "@…", "url": "…", "text": "…", "views": "276K", "honesty": "9/10",   "note": "One-line justification." },
-          { "side": "Independent",  "handle": "@…", "url": "…", "text": "…", "views": "2.77M","honesty": "8.5/10", "note": "…" },
-          { "side": "Democrat",     "handle": "@…", "url": "…", "text": "…", "views": "373K", "honesty": "7/10",   "note": "…" }
+          { "side": "Supportive", "handle": "@…", "url": "…", "text": "…", "views": "276K" },
+          { "side": "Skeptical",  "handle": "@…", "url": "…", "text": "…", "views": "373K" }
         ]
       },
       { /* story 2, same shape */ },
@@ -56,7 +80,24 @@ snowflake, so the `time` field is optional.
 }
 ```
 
-**Compat:** legacy `top: {…}` (singular) still works; gets wrapped into a 1-item array.
+**Compat:** legacy `top: {…}` (singular) still works; gets wrapped into a
+1-item array.
+
+**Perspectives — labels are flexible:** `side` can be any of these and
+will color-map automatically:
+- **Red (pushback):** `Conservative`, `Skeptical`, `Concerned`, `Critical`, `Worried`
+- **Blue (left):** `Democrat`, `Progressive`, `Left`
+- **White (neutral):** `Independent`, `Neutral`, `Mixed`, `Uncertain`, `Balanced`
+- **Green (support):** `Bullish`, `Supportive`, `Excited`, `Optimistic`, `Positive`, anything ending in `fans` (e.g. `"Giants fans"`)
+- **Orange (caution):** `Cautious`, `Bearish`
+
+Anything else falls back to neutral purple. Pick the side label that fits
+the actual stance of the post you're embedding — don't force-fit
+political when the story is sports/markets/entertainment.
+
+**Honesty + note** live at the story-block level on Main tab (one score
+per story, NOT per perspective). They render as a small score chip + a
+short paragraph below it, both always visible (no fold).
 
 ### `elon` — flat array of Elon posts (top 3 rendered)
 ```json

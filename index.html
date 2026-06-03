@@ -47,30 +47,35 @@
   .columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .col-section { background: rgba(247,242,234,0.22); border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; }
 
-  /* Main tab — Expresso-style accordion. Closed: ▶ + Story #N + tight
-     headline + small meta. Open: source post embed + perspectives sub-grid
-     at HALF column width (3rd perspective wraps under spanning both cols).
-     Reuses .story / .story-header / .story-body from the shared accordion
-     CSS; only the perspectives sub-grid, padding, and the rank chip are
-     overridden here. */
-  .main-story-block { margin-bottom: 12px; }
-  .main-story-block .story-header { padding: 10px 12px; }
-  .main-story-block .story-headline-text { font-size: 0.88rem; line-height: 1.32; }
-  .main-story-block .story-body { padding: 11px 12px 12px; padding-top: 12px; }
-  .main-story-block .main-story-rank { display: inline-block; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.4px; color: #b8860b; font-weight: 800; margin-bottom: 4px; }
-  .main-story-block .source-tile { padding: 9px 11px; font-size: 0.78rem; margin-bottom: 8px; }
-  .main-story-block .source-tile .source-label { font-size: 0.56rem; margin-bottom: 3px; }
-  .main-story-block .source-tile .meta-line { font-size: 0.66rem; margin-bottom: 5px; }
-  .main-story-block .source-tile .post-body { font-size: 0.78rem; margin-bottom: 6px; }
-  .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  /* Main tab — flat card matching Expresso-Real-Data prototype.
+     No accordion, no triangle. Always-open structure:
+       Headline (Playfair, prominent)
+       Meta row: views · ↑ velocity badge · age
+       2 perspectives side-by-side (half-width each; 3rd wraps full)
+       Honesty score INLINE + note INLINE at bottom (no fold). */
+  .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(80,50,20,0.12); transition: transform 0.18s, box-shadow 0.18s; }
+  .main-story-block:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
+  .main-story-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.12rem; line-height: 1.26; font-weight: 800; color: #1c1410; margin-bottom: 9px; }
+  .main-story-meta { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.72rem; color: #6b5d4f; font-weight: 500; margin-bottom: 11px; }
+  .main-story-meta .views { color: #b8860b; font-weight: 700; }
+  .main-story-meta .velocity { display: inline-flex; align-items: center; gap: 3px; padding: 2px 9px; background: rgba(184,134,11,0.18); border-radius: 11px; color: #8a5e1a; font-weight: 700; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .main-story-meta .velocity::before { content: '↑'; font-size: 0.85rem; line-height: 1; }
+  .main-story-meta .sep { color: #c5b59d; }
+  .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0; margin-bottom: 0; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .main-story-block .perspective { font-size: 0.76rem; padding: 8px 10px; line-height: 1.38; }
-  .main-story-block .perspective .label { font-size: 0.56rem; margin-bottom: 3px; }
-  .main-story-block .perspective .meta-line { font-size: 0.62rem; margin-bottom: 4px; }
-  .main-story-block .perspective .post-body { -webkit-line-clamp: 4; font-size: 0.74rem; margin-bottom: 4px; }
-  .main-story-block .perspective .tweet-embed-container { margin-top: 4px; }
-  /* Narrow viewports: collapse perspectives sub-grid to one column so
-     Twitter embeds don't go below their ~220px minimum width. */
+  .main-story-block .perspective { font-size: 0.76rem; padding: 9px 11px; line-height: 1.4; }
+  .main-story-block .perspective .label { font-size: 0.6rem; margin-bottom: 4px; font-weight: 800; }
+  .main-story-block .perspective .meta-line { font-size: 0.63rem; margin-bottom: 4px; }
+  .main-story-block .perspective .post-body { -webkit-line-clamp: 5; font-size: 0.78rem; margin-bottom: 5px; }
+  .main-story-block .perspective .tweet-embed-container { margin-top: 5px; }
+  .main-story-block .perspective .honesty-fold { display: none; } /* main has inline honesty at block level */
+  /* Inline honesty + note at the bottom of the block — always visible */
+  .main-story-honesty { margin-top: 11px; padding-top: 10px; border-top: 1px dashed #d4b896; display: flex; align-items: baseline; gap: 8px; }
+  .main-story-honesty .honesty-score { font-weight: 800; padding: 2px 8px; border-radius: 9px; font-size: 0.88rem; }
+  .main-story-honesty .honesty-label { font-size: 0.7rem; color: #6b5d4f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px; }
+  .main-story-note { font-size: 0.78rem; color: #5a4a30; line-height: 1.45; margin-top: 7px; }
+  /* Narrow viewports: collapse perspectives to one column so Twitter
+     embeds stay above their ~220px minimum width. */
   @media (max-width: 1100px) {
     .main-story-block .perspectives-row { grid-template-columns: 1fr; }
     .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: auto; }
@@ -332,10 +337,9 @@ function toggleStory(sid) {
   }
 }
 
-// Main tab uses the shared .story accordion: each block is collapsed by
-// default (▶ + tight headline + small meta line). Clicking the header fires
-// toggleStory(sid) which adds the .open class AND auto-loads any embed
-// containers inside the body — exact same flow as Elon / Sports / MSM.
+// Main tab renders every story FLAT (no accordion). Perspective embeds
+// inside each block lazy-load via IntersectionObserver — see
+// autoLoadMainEmbeds() below, hooked into renderContent().
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);
   if (!container) return;
@@ -357,14 +361,29 @@ function toggleEmbed(containerId, tweetUrl) {
   document.head.appendChild(sc);
 }
 
-// Map perspective side → CSS class + label tag class
+// Map perspective side → CSS class + label tag class. Supports political
+// (Conservative/Democrat/Independent), market (Bullish/Cautious), and
+// contextual prototype labels (Supportive/Skeptical/Excited/Mixed/fans/etc.).
 function persClassForSide(side) {
   var k = (side || '').toLowerCase();
-  if (k === 'conservative') return { box: 'perspective-conservative', lab: 'cons' };
-  if (k === 'democrat')     return { box: 'perspective-democrat',     lab: 'dem'  };
-  if (k === 'independent')  return { box: 'perspective-independent',  lab: 'ind'  };
-  if (k === 'bullish')      return { box: 'perspective-bullish',      lab: 'bul'  };
-  if (k === 'cautious')     return { box: 'perspective-cautious',     lab: 'cau'  };
+  // Red — pushback / concern / pessimism
+  if (k === 'conservative' || k === 'skeptical' || k === 'concerned' ||
+      k === 'critical' || k === 'worried')
+    return { box: 'perspective-conservative', lab: 'cons' };
+  // Blue — democrat / progressive
+  if (k === 'democrat' || k === 'progressive' || k === 'left')
+    return { box: 'perspective-democrat', lab: 'dem' };
+  // White — neutral / independent / mixed
+  if (k === 'independent' || k === 'neutral' || k === 'mixed' ||
+      k === 'uncertain' || k === 'balanced')
+    return { box: 'perspective-independent', lab: 'ind' };
+  // Green — supportive / bullish / excited
+  if (k === 'bullish' || k === 'supportive' || k === 'excited' ||
+      k === 'optimistic' || k === 'positive' || k.indexOf('fan') !== -1)
+    return { box: 'perspective-bullish', lab: 'bul' };
+  // Orange — cautious / bearish
+  if (k === 'cautious' || k === 'bearish')
+    return { box: 'perspective-cautious', lab: 'cau' };
   return { box: 'perspective-opposing', lab: 'opp' };
 }
 
@@ -575,35 +594,56 @@ function renderHero(tab) {
          '</div>';
 }
 
-// Main-tab story as an accordion: collapsed shows the triangle + rank +
-// AI-tight headline + meta. Click expands to source post embed + 3
-// perspective embeds in a half-width sub-grid (3rd wraps full-width).
-// toggleStory() auto-loads all embed containers inside the body on open.
+// Main-tab story — FLAT block matching the Expresso-Real-Data prototype.
+// No accordion. Always visible:
+//   Headline (tight, Playfair)
+//   Meta row: views · ↑ velocity badge · age
+//   2 perspectives side-by-side (half-width; 3rd wraps full)
+//   Honesty score INLINE + note INLINE at bottom (no fold)
+// Embeds inside perspectives lazy-load via IntersectionObserver
+// (autoLoadMainEmbeds hooked from renderContent).
 function renderMainStoryBlock(story, rank) {
-  var sid = 'm' + Math.random().toString(36).substr(2, 9);
   var mp = story.main || story.main_post || {};
   var headline = esc(story.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
+
+  // Velocity badge — Grok can provide story.velocity explicitly; otherwise
+  // we infer a default based on rank within the category.
+  var velocity = story.velocity ||
+    (rank === 1 ? 'high velocity' : rank === 2 ? 'rising fast' : 'climbing');
+
   var metaBits = [];
-  if (mp.handle) metaBits.push(esc(mp.handle));
-  if (mp.views)  metaBits.push('<span class="views">' + esc(mp.views) + ' views</span>');
-  if (hdrAgo)    metaBits.push(hdrAgo);
-  var meta = metaBits.length ? '<span class="post-meta">' + metaBits.join(' · ') + '</span>' : '';
-  var sourceTile = renderSourceTile(mp);
+  if (mp.views) metaBits.push('<span class="views">' + esc(mp.views) + ' views</span>');
+  metaBits.push('<span class="velocity">' + esc(velocity) + '</span>');
+  if (hdrAgo) metaBits.push('<span>' + hdrAgo + '</span>');
+  var metaHtml = '<div class="main-story-meta">' +
+    metaBits.join('<span class="sep">·</span>') + '</div>';
+
   var perspectives = (story.perspectives || []);
   var perspectivesRow = perspectives.length
     ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
     : '';
+
+  // Inline honesty + note — always visible at the bottom of the block.
+  var honestyHtml = '';
+  var v = honestyParse(story.honesty);
+  if (v != null) {
+    var label = (typeof story.honesty === 'string') ? story.honesty : (v + '/10');
+    honestyHtml += '<div class="main-story-honesty">' +
+      '<span class="honesty-score ' + honestyClass(v) + '">' + esc(label) + '</span>' +
+      '<span class="honesty-label">Honesty</span>' +
+    '</div>';
+  }
+  if (story.note) {
+    honestyHtml += '<div class="main-story-note">' + esc(story.note) + '</div>';
+  }
+
   return (
-    '<div class="story main-story-block" id="' + sid + '">' +
-      '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
-        '<span class="arrow">▶</span>' +
-        '<span class="story-headline-text">' +
-          '<span class="main-story-rank">Story #' + rank + '</span><br/>' +
-          headline + meta +
-        '</span>' +
-      '</div>' +
-      '<div class="story-body">' + sourceTile + perspectivesRow + '</div>' +
+    '<div class="main-story-block">' +
+      '<div class="main-story-headline">' + headline + '</div>' +
+      metaHtml +
+      perspectivesRow +
+      honestyHtml +
     '</div>'
   );
 }
@@ -826,6 +866,34 @@ function renderContent() {
     }
   }
   el.innerHTML = html;
+  // Main blocks are flat (no click-to-expand) — lazy-load perspective
+  // embeds via IntersectionObserver as the user scrolls.
+  if (activeTab === 'main') autoLoadMainEmbeds(el);
+}
+
+function autoLoadMainEmbeds(root) {
+  if (!root) return;
+  var slots = root.querySelectorAll('.main-story-block .tweet-embed-container[data-tweet-url]');
+  if (!slots.length) return;
+  if (!('IntersectionObserver' in window)) {
+    slots.forEach(function(c) {
+      if (c.style.display === 'none' && !c.innerHTML) {
+        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
+      }
+    });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var c = e.target;
+      if (c.style.display === 'none' && !c.innerHTML) {
+        toggleEmbed(c.id, c.getAttribute('data-tweet-url'));
+      }
+      io.unobserve(c);
+    });
+  }, { rootMargin: '400px 0px' });
+  slots.forEach(function(c) { io.observe(c); });
 }
 
 function renderNav() {

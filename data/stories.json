@@ -44,7 +44,10 @@
             "honesty": "7/10",
             "note": "Direct quote with strong opinion framing on 'illegal war' and causation."
           }
-        ]
+        ],
+        "velocity": "high velocity",
+        "honesty": "8.5/10",
+        "note": "Triangulated across high-velocity primary sources from all three sides. Bernie quote verbatim; Iran statement matches CNBC wire; conservative reaction sourced from the live thread, not a screenshot."
       },
       "more": [
         {
@@ -104,7 +107,10 @@
             "honesty": "7/10",
             "note": "First-person account from protestor."
           }
-        ]
+        ],
+        "velocity": "rising fast",
+        "honesty": "7.5/10",
+        "note": "Reporting accurate on incident location and timeline; partisan framing differs sharply between sides. Independent perspective from local news is most fact-driven."
       },
       "more": [
         {
@@ -153,7 +159,10 @@
             "honesty": "7/10",
             "note": "Opinionated caution based on historical patterns."
           }
-        ]
+        ],
+        "velocity": "climbing",
+        "honesty": "7/10",
+        "note": "Valuation data is accurate per cited source. Forward-looking commentary is opinion, not fact \u2014 different perspectives interpret the same number very differently."
       },
       "more": [
         {
