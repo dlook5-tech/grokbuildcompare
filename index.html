@@ -102,8 +102,7 @@
   .perspective-details .pd-meta .views { color: #b8860b; font-weight: 700; }
   .perspective-details .pd-meta .handle { font-weight: 700; color: #2a2218; }
   .perspective-details .pd-body { font-size: 0.82rem; color: #2a2218; line-height: 1.5; margin-bottom: 9px; white-space: pre-wrap; word-wrap: break-word; }
-  .perspective-details .view-on-x { display: inline-block; font-size: 0.74rem; color: #b8860b; font-weight: 700; text-decoration: none; padding: 4px 11px; border: 1px solid #d4b896; border-radius: 6px; margin-bottom: 9px; transition: background 0.15s; }
-  .perspective-details .view-on-x:hover { background: #f4ede0; }
+  .perspective-details .tweet-embed-container { margin: 0 0 10px; }
   .perspective-details .pd-honesty { display: flex; align-items: baseline; gap: 8px; margin-top: 9px; padding-top: 9px; border-top: 1px dashed #d4b896; }
   .perspective-details .pd-honesty .honesty-score { font-weight: 800; padding: 2px 8px; border-radius: 9px; font-size: 0.84rem; }
   .perspective-details .pd-honesty .honesty-label { font-size: 0.66rem; color: #6b5d4f; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
@@ -412,9 +411,10 @@ function selectMainPerspective(pid, panelId) {
   html += '<div class="pd-label ' + pc.box + '"><span class="' + pc.lab + '">' + esc(p.side || '?') + '</span></div>';
   if (metaBits.length) html += '<div class="pd-meta">' + metaBits.join(' · ') + '</div>';
   html += '<div class="pd-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>';
-  if (isXStatusUrl(p.url)) {
-    html += '<a class="view-on-x" href="' + esc(p.url) + '" target="_blank" rel="noopener">View on X →</a>';
-  }
+  // Embed slot — Twitter widget loads inline. The widget itself carries
+  // the native "view on X" affordance, so we don't add a separate link
+  // (eXpressO pattern: embed only).
+  html += renderEmbedSlot(p.url);
   var v = honestyParse(p.honesty);
   if (v != null) {
     var label = (typeof p.honesty === 'string') ? p.honesty : (v + '/10');
@@ -428,6 +428,10 @@ function selectMainPerspective(pid, panelId) {
   panel.style.display = 'block';
   panel.dataset.openPid = pid;
   if (openTeaser) openTeaser.classList.add('is-selected');
+  // Trigger the X embed widget to load (renderEmbedSlot stamps a hidden
+  // .tweet-embed-container; toggleEmbed populates it with the iframe).
+  var slot = panel.querySelector('.tweet-embed-container[data-tweet-url]');
+  if (slot) toggleEmbed(slot.id, slot.getAttribute('data-tweet-url'));
 }
 function toggleEmbed(containerId, tweetUrl) {
   var container = document.getElementById(containerId);

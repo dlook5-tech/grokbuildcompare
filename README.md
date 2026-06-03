@@ -48,7 +48,7 @@ render as a **row-major** grid (Row 1 = W#1·N#1·B#1, etc.); when only
 │  │ SUPPORTIVE                           │  │  ← shared details panel
 │  │ @handle · 276K views · 6h ago        │  │     opens INSIDE the card
 │  │ Full post text in full.              │  │     below the teasers.
-│  │ [ View on X → ]                      │  │     Click same teaser
+│  │ [embedded X widget — eXpressO-style] │  │     Click same teaser
 │  │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─        │  │     again to close.
 │  │ 8.5/10  HONESTY                      │  │
 │  │ Per-perspective note text.           │  │
