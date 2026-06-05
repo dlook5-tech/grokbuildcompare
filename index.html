@@ -96,8 +96,11 @@
      need to know; click to expand. */
   .main-story-block .perspective .label,
   .main-story-block .perspective .teaser-hint { display: none; }
-  .main-story-block .perspective .meta-line { font-size: 0.66rem; margin-bottom: 5px; }
-  .main-story-block .perspective .post-body { -webkit-line-clamp: 5; font-size: 0.78rem; margin-bottom: 0; }
+  /* Meta line sits at the BOTTOM of the perspective tile (below the body)
+     with views · age · honesty-score-chip on one row. */
+  .main-story-block .perspective .meta-line { font-size: 0.7rem; margin-top: 8px; margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
+  .main-story-block .perspective .meta-line .honesty-score { padding: 1px 6px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; }
+  .main-story-block .perspective .post-body { -webkit-line-clamp: 5; font-size: 0.8rem; margin-bottom: 0; }
   .main-story-block .perspective .tweet-embed-container,
   .main-story-block .perspective .honesty-fold { display: none; } /* Main: no embeds, honesty is in shared details panel */
   /* Shared details panel — sits below the teasers row, spans full card width. */
@@ -747,17 +750,25 @@ function renderMainPerspectiveTeaser(p, blockId, idx, panelId) {
   MAIN_PDB[pid] = p;
   var pc = persClassForSide(p.side);
   var ago = timeAgo(p.time, p.url);
+  // Bottom-row meta: views · age · honesty-score-chip — sits BELOW the body.
   var metaBits = [];
-  if (p.handle) metaBits.push('<span class="handle">' + esc(p.handle) + '</span>');
-  if (p.views)  metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
-  if (ago)      metaBits.push(ago);
+  if (p.views) metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
+  if (ago)     metaBits.push(ago);
+  var v = honestyParse(p.honesty);
+  if (v != null) {
+    var hLabel = (typeof p.honesty === 'string') ? p.honesty : (v + '/10');
+    metaBits.push('<span class="honesty-score ' + honestyClass(v) + '">' + esc(hLabel) + '</span>');
+  }
+  var metaLine = metaBits.length
+    ? '<div class="meta-line">' + metaBits.join(' · ') + '</div>'
+    : '';
   return (
     '<div class="tile perspective perspective-teaser ' + pc.box +
       '" data-pid="' + pid +
       '" onclick="selectMainPerspective(\'' + pid + '\',\'' + panelId + '\');">' +
       '<div class="label ' + pc.lab + '">' + esc(pc.display) + '</div>' +
-      (metaBits.length ? '<div class="meta-line">' + metaBits.join(' · ') + '</div>' : '') +
       '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
+      metaLine +
       '<div class="teaser-hint">tap for full post + honesty</div>' +
     '</div>'
   );
