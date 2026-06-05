@@ -76,7 +76,8 @@
          Click same teaser again to close. */
   .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(80,50,20,0.12); transition: transform 0.18s, box-shadow 0.18s; }
   .main-story-block:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
-  .main-story-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.12rem; line-height: 1.26; font-weight: 800; color: #1c1410; margin-bottom: 9px; }
+  .main-story-headline { font-family: "Playfair Display", Georgia, serif; font-size: 1.12rem; line-height: 1.26; font-weight: 800; color: #1c1410; margin-bottom: 9px; display: block; text-decoration: none; }
+  a.main-story-headline:hover { color: #b8860b; }
   .main-story-meta { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.72rem; color: #6b5d4f; font-weight: 500; margin-bottom: 11px; }
   .main-story-meta .views { color: #b8860b; font-weight: 700; }
   .main-story-meta .velocity { display: inline-flex; align-items: center; gap: 3px; padding: 2px 9px; background: rgba(184,134,11,0.18); border-radius: 11px; color: #8a5e1a; font-weight: 700; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -727,9 +728,14 @@ function renderMainStoryBlock(story, rank) {
       '<div class="perspective-details" id="' + panelId + '"></div>';
   }
 
+  // Headline is clickable — opens the main source X post in a new tab.
+  var headlineHtml = isXStatusUrl(mp.url)
+    ? '<a class="main-story-headline" href="' + esc(mp.url) + '" target="_blank" rel="noopener">' + headline + '</a>'
+    : '<div class="main-story-headline">' + headline + '</div>';
+
   return (
     '<div class="main-story-block">' +
-      '<div class="main-story-headline">' + headline + '</div>' +
+      headlineHtml +
       metaHtml +
       teasersHtml +
     '</div>'
@@ -764,7 +770,7 @@ function renderTabMain() {
   // Reset the perspective DB — populated by renderMainPerspectiveTeaser
   // calls below. selectMainPerspective() reads from it on click.
   MAIN_PDB = {};
-  var main = (NEWS_DATA && NEWS_DATA.main) || {};
+  var nd = NEWS_DATA || {};
   var sections = [
     { key: 'world',    title: 'World'    },
     { key: 'nation',   title: 'Nation'   },
@@ -772,14 +778,23 @@ function renderTabMain() {
   ];
   var h = renderHero('main');
 
-  // Resolve each category's story array (supports tops[] / stories[] / legacy top{}).
+  // Resolve each category's story array. Schemas supported:
+  //   FLAT (Grok's cron contract):   { world: [...], nation: [...], business: [...] }
+  //   LEGACY (early grokpress):       { main: { world: { tops:[...] } } }
+  //   ALIAS:                          tops[] / stories[] / top{}
   var byCat = sections.map(function(sec) {
-    var data = main[sec.key] || {};
+    var raw = nd[sec.key];                              // flat schema first
+    if (raw === undefined && nd.main) raw = nd.main[sec.key]; // legacy fall-back
     var tops = [];
-    if (Array.isArray(data.tops))         tops = data.tops;
-    else if (Array.isArray(data.stories)) tops = data.stories;
-    else if (data.top)                    tops = [data.top];
-    return { sec: sec, tops: tops, more: data.more };
+    var more = undefined;
+    if (Array.isArray(raw))                tops = raw;
+    else if (raw && typeof raw === 'object') {
+      if (Array.isArray(raw.tops))         tops = raw.tops;
+      else if (Array.isArray(raw.stories)) tops = raw.stories;
+      else if (raw.top)                    tops = [raw.top];
+      more = raw.more;
+    }
+    return { sec: sec, tops: tops, more: more };
   });
 
   // Row-major 3×3 grid: ROW r = [World#r, Nation#r, Business#r] across.
