@@ -50,6 +50,25 @@
   .main-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
   .main-grid > .col-title { margin-bottom: 0; }
   .main-grid > .main-story-block { margin-bottom: 0; box-sizing: border-box; }
+
+  /* Row tier: higher views = bigger block. Driven by the data-row
+     attribute (0 = top row, 2 = bottom). All three columns in the same
+     row stay the same tier so the row alignment holds. */
+  .main-story-block[data-row="0"] .main-story-header-block { padding: 18px 18px 16px; }
+  .main-story-block[data-row="0"] .main-story-headline { font-size: 1.22rem; line-height: 1.32; margin-bottom: 12px; letter-spacing: -0.2px; }
+  .main-story-block[data-row="0"] .main-story-meta { font-size: 0.76rem; }
+  .main-story-block[data-row="0"] .perspective.perspective-teaser { padding: 9px 11px; font-size: 0.78rem; line-height: 1.38; }
+  .main-story-block[data-row="0"] .perspective .post-body { -webkit-line-clamp: 4; font-size: 0.78rem; }
+
+  /* Row 1 (default tier, baseline) — already covered by the general
+     .main-story-block rules above; no override needed. */
+
+  .main-story-block[data-row="2"] .main-story-header-block { padding: 11px 13px 9px; }
+  .main-story-block[data-row="2"] .main-story-headline { font-size: 0.96rem; line-height: 1.28; margin-bottom: 7px; }
+  .main-story-block[data-row="2"] .main-story-meta { font-size: 0.68rem; }
+  .main-story-block[data-row="2"] .perspective.perspective-teaser { padding: 6px 9px; font-size: 0.73rem; line-height: 1.32; }
+  .main-story-block[data-row="2"] .perspective .post-body { -webkit-line-clamp: 2; font-size: 0.73rem; }
+  .main-story-block[data-row="2"] .perspective .meta-line { font-size: 0.58rem; margin-top: 4px; }
   .main-grid > .more-list { margin-top: 0; }
   .main-story-empty { /* invisible placeholder keeps row alignment */ min-height: 1px; }
   @media (max-width: 750px) {
@@ -510,6 +529,22 @@ function persClassForSide(side) {
   return { box: 'perspective-independent', lab: 'ind', display: 'Independent' };
 }
 
+// Parse Grok's view strings ("254K", "1.07M", "3K", "873", "1.5B") into
+// a comparable integer. Returns 0 on garbage / missing input so sorts
+// don't blow up when a story is missing its views field.
+function viewsNumber(views) {
+  if (!views) return 0;
+  var s = String(views).trim().toUpperCase().replace(/,/g, '');
+  var m = s.match(/^([\d.]+)\s*([KMB])?$/);
+  if (!m) return 0;
+  var n = parseFloat(m[1]);
+  if (isNaN(n)) return 0;
+  if (m[2] === 'K') n *= 1000;
+  else if (m[2] === 'M') n *= 1e6;
+  else if (m[2] === 'B') n *= 1e9;
+  return n;
+}
+
 // Canonical left-to-right ordering: red → white → blue.
 // Use the same alias coercion as persClassForSide so non-canonical
 // side labels still slot into the right rank.
@@ -812,8 +847,10 @@ function renderMainStoryBlock(story, rank) {
       metaHtml +
     '</div>';
 
+  // rank is 1-based (Row 1, Row 2, Row 3). data-row is 0-based for the
+  // CSS [data-row="0|1|2"] selectors that drive the height tiering.
   return (
-    '<div class="main-story-block">' +
+    '<div class="main-story-block" data-row="' + (rank - 1) + '">' +
       headerBlockHtml +
       teasersHtml +
       detailsPanelHtml +
@@ -886,6 +923,17 @@ function renderTabMain() {
       more = raw.more;
     }
     return { sec: sec, tops: tops, more: more };
+  });
+
+  // Sort each category by main-post views (descending) so the top row
+  // always holds the highest-velocity story per category. Row index
+  // then drives card-size tiering via the [data-row] attribute below.
+  byCat.forEach(function(x) {
+    x.tops = (x.tops || []).slice().sort(function(a, b) {
+      var av = viewsNumber((a && a.main && a.main.views) || (a && a.views));
+      var bv = viewsNumber((b && b.main && b.main.views) || (b && b.views));
+      return bv - av;
+    });
   });
 
   // Row-major 3×3 grid: ROW r = [World#r, Nation#r, Business#r] across.
