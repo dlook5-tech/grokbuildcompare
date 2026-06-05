@@ -76,15 +76,24 @@
          Click same teaser again to close. */
   .main-story-block { background: #faf6f0; border: 1px solid #d4b896; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(80,50,20,0.12); transition: transform 0.18s, box-shadow 0.18s; }
   .main-story-block:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(80,50,20,0.22); }
-  /* Headline + (views · age) live together in a subtle bordered inner
-     block (eXpressO-style "story header" — Inter body font, no Playfair
-     here; Playfair is reserved for the hero). */
-  .main-story-header-block { border: 1px solid #e5dcc8; border-radius: 7px; padding: 11px 13px; margin-bottom: 10px; background: #fffdf7; }
-  .main-story-headline { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1.04rem; line-height: 1.3; font-weight: 700; color: #1c1410; margin-bottom: 6px; display: block; text-decoration: none; letter-spacing: -0.1px; }
-  a.main-story-headline:hover { color: #b8860b; }
-  .main-story-meta { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.72rem; color: #6b5d4f; font-weight: 500; margin-bottom: 0; }
+  /* Headline + (views · age · honesty) live together in a subtle bordered
+     inner block. Click-to-expand like the perspective tiles — same shared
+     details panel, same ⊞/⊟ icon top-right. */
+  .main-story-header-block { position: relative; cursor: pointer; border: 1px solid #e5dcc8; border-radius: 7px; padding: 11px 30px 11px 13px; margin-bottom: 10px; background: #fffdf7; transition: transform 0.12s, box-shadow 0.12s; }
+  .main-story-header-block:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(80,50,20,0.18); }
+  .main-story-header-block.is-selected { outline: 2px solid #b8860b; outline-offset: 1px; }
+  .main-story-header-block .expand-toggle { position: absolute; top: 9px; right: 10px; font-size: 1rem; line-height: 1; color: #8a7e72; user-select: none; pointer-events: none; transition: color 0.12s, transform 0.15s; }
+  .main-story-header-block .expand-toggle::before { content: '⊞'; }
+  .main-story-header-block.is-selected .expand-toggle { color: #b8860b; transform: scale(1.05); }
+  .main-story-header-block.is-selected .expand-toggle::before { content: '⊟'; }
+  .main-story-headline { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1.04rem; line-height: 1.3; font-weight: 700; color: #1c1410; margin-bottom: 6px; display: block; letter-spacing: -0.1px; }
+  .main-story-meta { display: flex; flex-wrap: nowrap; gap: 4px 6px; align-items: baseline; font-size: 0.72rem; color: #6b5d4f; font-weight: 500; margin-bottom: 0; white-space: nowrap; overflow: hidden; }
+  .main-story-meta > * { flex-shrink: 0; white-space: nowrap; }
   .main-story-meta .views { color: #b8860b; font-weight: 700; }
   .main-story-meta .sep { color: #c5b59d; }
+  /* Main honesty score — plain bold text, no chip (same treatment as
+     perspective teaser meta). */
+  .main-story-meta .honesty-score { background: transparent; color: inherit; padding: 0; border-radius: 0; font-size: inherit; font-weight: 700; }
   /* Perspective TEASERS — 2-up grid, half-width each. */
   .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0; margin-bottom: 0; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -412,11 +421,13 @@ function selectMainPerspective(pid, panelId) {
   var panel = document.getElementById(panelId);
   if (!p || !panel) return;
   var sameTeaserOpen = (panel.dataset.openPid === pid && panel.style.display !== 'none');
-  // Always deselect every teaser in this card first.
-  var openTeaser = document.querySelector('.perspective-teaser[data-pid="' + pid + '"]');
-  var block = openTeaser ? openTeaser.closest('.main-story-block') : null;
+  // Find the clicked element — either a .perspective-teaser OR the
+  // .main-story-header-block (both carry data-pid and use the same panel).
+  var clicked = document.querySelector('[data-pid="' + pid + '"]');
+  var block = clicked ? clicked.closest('.main-story-block') : null;
+  // Deselect every selectable in this card (both perspectives + main header).
   if (block) {
-    block.querySelectorAll('.perspective-teaser').forEach(function(t) {
+    block.querySelectorAll('.is-selected').forEach(function(t) {
       t.classList.remove('is-selected');
     });
   }
@@ -448,7 +459,7 @@ function selectMainPerspective(pid, panelId) {
   panel.innerHTML = html;
   panel.style.display = 'block';
   panel.dataset.openPid = pid;
-  if (openTeaser) openTeaser.classList.add('is-selected');
+  if (clicked) clicked.classList.add('is-selected');
   // Trigger the X embed widget to load (renderEmbedSlot stamps a hidden
   // .tweet-embed-container; toggleEmbed populates it with the iframe).
   var slot = panel.querySelector('.tweet-embed-container[data-tweet-url]');
@@ -730,14 +741,36 @@ function renderHero(tab) {
 // the panel opens.
 function renderMainStoryBlock(story, rank) {
   var blockId = 'b' + Math.random().toString(36).substr(2, 9);
+  var panelId = blockId + '-details';
   var mp = story.main || story.main_post || {};
   var headline = esc(story.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
 
-  // Meta = just views + age. No velocity badge (user dropped it).
+  // Register the main post as a pseudo-perspective so the header block
+  // can use the same selectMainPerspective() handler + shared details
+  // panel as the two perspective teasers below it.
+  var mainPid = blockId + '_main';
+  MAIN_PDB[mainPid] = {
+    side: 'main',
+    handle: mp.handle,
+    text: mp.text,
+    url: mp.url,
+    views: mp.views,
+    time: mp.time,
+    honesty: mp.honesty,
+    note: mp.note
+  };
+
+  // Meta = views + age + honesty (when Grok provides main.honesty).
+  // No velocity badge. Honesty renders as plain bold text inline.
   var metaBits = [];
   if (mp.views) metaBits.push('<span class="views">' + esc(mp.views) + ' views</span>');
   if (hdrAgo) metaBits.push('<span>' + hdrAgo + '</span>');
+  var mainHonV = honestyParse(mp.honesty);
+  if (mainHonV != null) {
+    var mainHLabel = (typeof mp.honesty === 'string') ? mp.honesty : (mainHonV + '/10');
+    metaBits.push('<span class="honesty-score">' + esc(mainHLabel) + '</span>');
+  }
   var metaHtml = '<div class="main-story-meta">' +
     metaBits.join('<span class="sep">·</span>') + '</div>';
 
@@ -752,24 +785,26 @@ function renderMainStoryBlock(story, rank) {
 
   var teasersHtml = '';
   if (perspectives.length) {
-    var panelId = blockId + '-details';
     teasersHtml = '<div class="perspectives-row">' +
       perspectives.map(function(p, idx) {
         return renderMainPerspectiveTeaser(p, blockId, idx, panelId);
-      }).join('') +
-      '</div>' +
-      '<div class="perspective-details" id="' + panelId + '"></div>';
+      }).join('') + '</div>';
   }
+  // Shared details panel — used by BOTH the header block (mainPid) and
+  // each perspective teaser. Always emitted so the header block can
+  // populate it even when there are no perspectives.
+  var detailsPanelHtml = '<div class="perspective-details" id="' + panelId + '"></div>';
 
-  // Headline is clickable — opens the main source X post in a new tab.
-  var headlineHtml = isXStatusUrl(mp.url)
-    ? '<a class="main-story-headline" href="' + esc(mp.url) + '" target="_blank" rel="noopener">' + headline + '</a>'
-    : '<div class="main-story-headline">' + headline + '</div>';
-
-  // Headline + (views · age) sit together in a subtle bordered inner block.
+  // Header block is now a click-to-expand surface, just like the perspective
+  // teasers below it — same shared details panel, same ⊞/⊟ icon. Clicking
+  // the headline opens the main post's text + inline X embed (+ honesty +
+  // note when Grok provides main.honesty / main.note). No more external
+  // anchor — users never have to leave the page to read the source post.
   var headerBlockHtml =
-    '<div class="main-story-header-block">' +
-      headlineHtml +
+    '<div class="main-story-header-block" data-pid="' + mainPid +
+      '" onclick="selectMainPerspective(\'' + mainPid + '\',\'' + panelId + '\');">' +
+      '<div class="expand-toggle" aria-hidden="true"></div>' +
+      '<div class="main-story-headline">' + headline + '</div>' +
       metaHtml +
     '</div>';
 
@@ -777,6 +812,7 @@ function renderMainStoryBlock(story, rank) {
     '<div class="main-story-block">' +
       headerBlockHtml +
       teasersHtml +
+      detailsPanelHtml +
     '</div>'
   );
 }
