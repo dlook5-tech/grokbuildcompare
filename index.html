@@ -115,19 +115,49 @@
   .main-story-block .perspective.perspective-teaser { cursor: pointer; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.76rem; padding: 7px 10px 7px; line-height: 1.34; transition: transform 0.12s, box-shadow 0.12s; }
   .main-story-block .perspective.perspective-teaser:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(80,50,20,0.18); }
   .main-story-block .perspective.perspective-teaser.is-selected { outline: 2px solid #b8860b; outline-offset: 1px; }
-  /* Microsoft window maximize/restore glyphs — INLINE at the end of the
-     meta-line (behind honesty), not top-right. Same control everyone
-     recognises from Windows: 🗖 = maximize (click to expand) / 🗗 =
-     restore (click to contract). pointer-events:none — the tile / block
-     is still the click target. */
-  .expand-toggle { display: inline-block; user-select: none; pointer-events: none; color: #8a7e72; font-weight: 400; line-height: 1; transition: color 0.12s; vertical-align: -1px; }
-  .expand-toggle::before { content: '🗖'; }
-  .is-selected > .meta-line .expand-toggle,
-  .is-selected .main-story-meta .expand-toggle,
-  .is-selected.perspective .meta-line .expand-toggle { color: #b8860b; }
+  /* Maximize / Restore icons — drawn in pure CSS as box outlines so they
+     render identically on every platform (Mac/Windows/iOS/Android), not
+     dependent on glyph coverage of the Microsoft window-control
+     codepoints (those were falling back to a thin vertical bar on the
+     user's font).
+       Collapsed (maximize):  one square outline ▢
+       Expanded  (restore):   two overlapping square outlines ❐
+     pointer-events:none — the tile / block is still the click target. */
+  .expand-toggle { display: inline-block; position: relative; width: 11px; height: 11px; vertical-align: -1.5px; margin-left: 2px; color: #8a7e72; user-select: none; pointer-events: none; transition: color 0.12s; }
+  /* Front square (always shown) */
+  .expand-toggle::before {
+    content: '';
+    position: absolute;
+    top: 1px; left: 1px;
+    width: 9px; height: 9px;
+    border: 1.3px solid currentColor;
+    border-radius: 1.5px;
+    box-sizing: border-box;
+    background: transparent;
+    transition: top 0.12s, left 0.12s, width 0.12s, height 0.12s;
+  }
+  /* Selected: shift the front square down-left and draw a back square
+     up-right to form the classic two-overlap-squares restore icon. */
+  .is-selected .expand-toggle,
+  .is-selected.perspective .expand-toggle { color: #b8860b; }
   .is-selected > .meta-line .expand-toggle::before,
   .is-selected .main-story-meta .expand-toggle::before,
-  .is-selected.perspective .meta-line .expand-toggle::before { content: '🗗'; }
+  .is-selected.perspective .meta-line .expand-toggle::before {
+    top: 3px; left: 0;
+    width: 8px; height: 8px;
+  }
+  .is-selected > .meta-line .expand-toggle::after,
+  .is-selected .main-story-meta .expand-toggle::after,
+  .is-selected.perspective .meta-line .expand-toggle::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 8px; height: 8px;
+    border: 1.3px solid currentColor;
+    border-radius: 1.5px;
+    box-sizing: border-box;
+    background: transparent;
+  }
   /* Color of the tile IS the label — drop the textual side label and the
      "tap for full + honesty" hint. The colored border tells you all you
      need to know; click to expand. */
@@ -797,16 +827,30 @@ function renderMainStoryBlock(story, rank) {
     note: mp.note
   };
 
-  // Meta = views + age + honesty (when Grok provides main.honesty) + 🗖/🗗 icon.
-  // No velocity badge. Honesty renders as plain bold text inline.
-  // Icon sits AFTER honesty on the same line — the whole header block is
-  // the click target; the icon is just the affordance.
+  // Meta = views + age + honesty + box-line icon. No velocity badge.
+  // Icon sits AFTER honesty on the same line; whole header block is the
+  // click target. The expand-toggle is the maximize/restore affordance.
   var metaBits = [];
   if (mp.views) metaBits.push('<span class="views">' + esc(mp.views) + ' views</span>');
   if (hdrAgo) metaBits.push('<span>' + hdrAgo + '</span>');
+  // Honesty: use main.honesty if Grok provides it; otherwise derive as
+  // the average of the perspectives' honesty scores (rounded to nearest
+  // 0.5) so the top block always carries a score until Grok ships
+  // main.honesty to the schema.
   var mainHonV = honestyParse(mp.honesty);
+  if (mainHonV == null) {
+    var pScores = (story.perspectives || [])
+      .map(function(p) { return honestyParse(p && p.honesty); })
+      .filter(function(v) { return v != null; });
+    if (pScores.length) {
+      var avg = pScores.reduce(function(a, b) { return a + b; }, 0) / pScores.length;
+      mainHonV = Math.round(avg * 2) / 2;
+    }
+  }
   if (mainHonV != null) {
-    var mainHLabel = (typeof mp.honesty === 'string') ? mp.honesty : (mainHonV + '/10');
+    var mainHLabel = (typeof mp.honesty === 'string' && /^\d/.test(mp.honesty))
+      ? mp.honesty
+      : (mainHonV + '/10');
     metaBits.push('<span class="honesty-score">' + esc(mainHLabel) + '</span>');
   }
   metaBits.push('<span class="expand-toggle" aria-hidden="true"></span>');
