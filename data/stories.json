@@ -1,272 +1,283 @@
 {
   "last_updated": "2026-06-05T02:00:00Z",
-  "world": [
-    {
-      "headline": "Trump would be honored to meet Iran Supreme Leader for a deal",
-      "main": {
-        "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
-        "text": "BREAKING: President Trump says he would be honored to meet Iranian Supreme Leader Mojtaba Khamenei if it was to make a deal. First ever face-to-face.",
-        "views": "254K",
-        "time": "2h ago"
-      },
-      "perspectives": [
+  "main": {
+    "world": {
+      "tops": [
         {
-          "side": "Conservative",
-          "text": "Trump negotiating from strength. Pressure then deal. Honor to meet.",
-          "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
-          "views": "254K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "High velocity on de-escalation from position of power after strikes."
+          "headline": "Trump would be honored to meet Iran Supreme Leader for a deal",
+          "main": {
+            "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
+            "text": "BREAKING: President Trump says he would be honored to meet Iranian Supreme Leader Mojtaba Khamenei if it was to make a deal. First ever face-to-face.",
+            "views": "254K",
+            "time": "2h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "Trump negotiating from strength. Pressure then deal. Honor to meet.",
+              "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
+              "views": "254K",
+              "time": "2h ago",
+              "honesty": "8/10",
+              "note": "High velocity on de-escalation from position of power after strikes."
+            },
+            {
+              "side": "Democrat",
+              "text": "After bombing and killing family, now honored to meet - pure weakness.",
+              "url": "https://x.com/AntiTrumpWorld/status/2062648930496848102",
+              "views": "3K",
+              "time": "2h ago",
+              "honesty": "7/10",
+              "note": "Critical of flip from tough talk to appeasement after family deaths."
+            }
+          ]
         },
         {
-          "side": "Democrat",
-          "text": "After bombing and killing family, now honored to meet - pure weakness.",
-          "url": "https://x.com/AntiTrumpWorld/status/2062648930496848102",
-          "views": "3K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Critical of flip from tough talk to appeasement after family deaths."
+          "headline": "Dual citizen sent 250 tons tech to Iran nuclear from $35M mansion",
+          "main": {
+            "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+            "text": "BREAKING NEWS: Jamshid Ghomi. Dual citizen. $35M mansion. 250 tons of tech sent to Iran nuclear program. Claimed poverty on taxes. FBI taking the mansion.",
+            "views": "166K",
+            "time": "2h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "America gave him everything. He gave secrets to enemies. Take passport too.",
+              "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+              "views": "166K",
+              "time": "2h ago",
+              "honesty": "9/10",
+              "note": "High velocity on betrayal and FBI action against Iran tech transfer."
+            },
+            {
+              "side": "Independent",
+              "text": "Claimed poverty on taxes while sending tech to Iran nuclear program.",
+              "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+              "views": "166K",
+              "time": "2h ago",
+              "honesty": "8.5/10",
+              "note": "Factual on dual citizen and tech transfer details from primary report."
+            }
+          ]
+        },
+        {
+          "headline": "Trump: After Iran, US will take care of Cuba and remove regime",
+          "main": {
+            "url": "https://x.com/BRICSinfo/status/2062636809146732701",
+            "text": "JUST IN: President Trump says after dealing with Iran, the US will take care of Cuba and remove its regime.",
+            "views": "72K",
+            "time": "3h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "Strength: deal with Iran then next Cuba regime. America First.",
+              "url": "https://x.com/BRICSinfo/status/2062636809146732701",
+              "views": "72K",
+              "time": "3h ago",
+              "honesty": "8/10",
+              "note": "Direct on sequential pressure on adversaries."
+            },
+            {
+              "side": "Democrat",
+              "text": "Endless colonial expansion and insatiable hunger for Arab land.",
+              "url": "https://x.com/m7mdkurd/status/2062653405030494641",
+              "views": "31K",
+              "time": "2h ago",
+              "honesty": "7/10",
+              "note": "Critical of US/Israel expansionism in region."
+            }
+          ]
         }
-      ]
+      ],
+      "more": []
     },
-    {
-      "headline": "Dual citizen sent 250 tons tech to Iran nuclear from $35M mansion",
-      "main": {
-        "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
-        "text": "BREAKING NEWS: Jamshid Ghomi. Dual citizen. $35M mansion. 250 tons of tech sent to Iran nuclear program. Claimed poverty on taxes. FBI taking the mansion.",
-        "views": "166K",
-        "time": "2h ago"
-      },
-      "perspectives": [
+    "nation": {
+      "tops": [
         {
-          "side": "Conservative",
-          "text": "America gave him everything. He gave secrets to enemies. Take passport too.",
-          "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
-          "views": "166K",
-          "time": "2h ago",
-          "honesty": "9/10",
-          "note": "High velocity on betrayal and FBI action against Iran tech transfer."
+          "headline": "Iryna Zarutska I got that white bitch; Henry Nowak two-tier policing",
+          "main": {
+            "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+            "text": "I believe all lives matter. However What was done to Iryna Zarutska was beyond heartbreaking. Afterwards, the savage who stabbed her said I got that white bitch. What was done to Henry Nowak was legitimate injustice. The cops were way more afraid to be seen as racist than they were to enforce the law.",
+            "views": "81K",
+            "time": "1h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "Cops more afraid to be seen as racist than enforce law. Two tier killing people.",
+              "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+              "views": "81K",
+              "time": "1h ago",
+              "honesty": "8.5/10",
+              "note": "High engagement on two-tier policing and race fear in law enforcement."
+            },
+            {
+              "side": "Democrat",
+              "text": "The savage who stabbed her said I got that white bitch. People around did nothing.",
+              "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+              "views": "81K",
+              "time": "1h ago",
+              "honesty": "7/10",
+              "note": "Direct on the stabbing and bystander inaction in the incident."
+            }
+          ]
         },
         {
-          "side": "Independent",
-          "text": "Claimed poverty on taxes while sending tech to Iran nuclear program.",
-          "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
-          "views": "166K",
-          "time": "2h ago",
-          "honesty": "8.5/10",
-          "note": "Factual on dual citizen and tech transfer details from primary report."
+          "headline": "Dem measure to block Trump Pulte DNI fails 49-49; RINOs with Dems",
+          "main": {
+            "url": "https://x.com/EricLDaugh/status/2062672816974045416",
+            "text": "JUST NOW: A Democrat-led measure in the Senate just FAILED that would have BLOCKED President Trump from naming Bill Pulte as acting Director of National Intelligence, 49-49. TRUMP WINS! Republicans who supported it: Lisa Murkowski, Bill Cassidy, Susan Collins.",
+            "views": "58K",
+            "time": "1h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "Trump wins again. RINOs Murkowski, Cassidy, Collins voted with Dems.",
+              "url": "https://x.com/EricLDaugh/status/2062672816974045416",
+              "views": "58K",
+              "time": "1h ago",
+              "honesty": "9/10",
+              "note": "High velocity on Senate vote blocking intel pick failure."
+            },
+            {
+              "side": "Independent",
+              "text": "49-49 vote shows deep division on Trump intel pick Bill Pulte.",
+              "url": "https://x.com/GuntherEagleman/status/2062675952841175285",
+              "views": "22K",
+              "time": "1h ago",
+              "honesty": "8/10",
+              "note": "Factual on the 49-49 Senate outcome and RINO votes."
+            }
+          ]
+        },
+        {
+          "headline": "Starmer: Farage exploiting Henry Nowak family tragedy for grievance",
+          "main": {
+            "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
+            "text": "Henry Nowak family have lost their son and brother in the most appalling circumstances. Nigel Farage is exploiting this tragedy to create grievance and division. It is completely unforgivable.",
+            "views": "103K",
+            "time": "3h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "Starmer more angry at Farage video than bodycam of Henry Nowak last moments.",
+              "url": "https://x.com/danwootton/status/2062143002575769907",
+              "views": "15K",
+              "time": "3h ago",
+              "honesty": "8/10",
+              "note": "High anger on perceived misplaced priorities vs footage."
+            },
+            {
+              "side": "Democrat",
+              "text": "Nigel Farage is exploiting this tragedy to create grievance and division.",
+              "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
+              "views": "103K",
+              "time": "3h ago",
+              "honesty": "7/10",
+              "note": "Direct from PM on Farage politicizing the family tragedy."
+            }
+          ]
         }
-      ]
+      ],
+      "more": []
     },
-    {
-      "headline": "Trump: After Iran, US will take care of Cuba and remove regime",
-      "main": {
-        "url": "https://x.com/BRICSinfo/status/2062636809146732701",
-        "text": "JUST IN: President Trump says after dealing with Iran, the US will take care of Cuba and remove its regime.",
-        "views": "72K",
-        "time": "3h ago"
-      },
-      "perspectives": [
+    "business": {
+      "tops": [
         {
-          "side": "Conservative",
-          "text": "Strength: deal with Iran then next Cuba regime. America First.",
-          "url": "https://x.com/BRICSinfo/status/2062636809146732701",
-          "views": "72K",
-          "time": "3h ago",
-          "honesty": "8/10",
-          "note": "Direct on sequential pressure on adversaries."
+          "headline": "SpaceX will not be fast-tracked into the S&P 500 per S&P DJI",
+          "main": {
+            "url": "https://x.com/unusual_whales/status/2062666465678070014",
+            "text": "SpaceX will reportedly not be fast-tracked into the S&P 500, per the S&P DJI",
+            "views": "164K",
+            "time": "1h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Independent",
+              "text": "Reportedly not fast-tracked into the S&P 500 per S&P DJI.",
+              "url": "https://x.com/unusual_whales/status/2062666465678070014",
+              "views": "164K",
+              "time": "1h ago",
+              "honesty": "9/10",
+              "note": "Direct report on S&P decision for major US company."
+            },
+            {
+              "side": "Conservative",
+              "text": "Bureaucracy holding back America most innovative company from index.",
+              "url": "https://x.com/unusual_whales/status/2062666465678070014",
+              "views": "164K",
+              "time": "1h ago",
+              "honesty": "8/10",
+              "note": "Critique of slow index inclusion for SpaceX."
+            }
+          ]
         },
         {
-          "side": "Democrat",
-          "text": "Endless colonial expansion and insatiable hunger for Arab land.",
-          "url": "https://x.com/m7mdkurd/status/2062653405030494641",
-          "views": "31K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Critical of US/Israel expansionism in region."
+          "headline": "Anthropic starts IPO prep; OpenAI and Anthropic likely by end of July",
+          "main": {
+            "url": "https://x.com/yurumazu/status/2062673873095799085",
+            "text": "Anthropic also starting IPO prep. Once decided moves fast. OpenAI and Anthropic IPOs probably by end of July.",
+            "views": "92K",
+            "time": "1h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Independent",
+              "text": "Anthropic IPO prep started. OpenAI and Anthropic likely by July end.",
+              "url": "https://x.com/yurumazu/status/2062673873095799085",
+              "views": "92K",
+              "time": "1h ago",
+              "honesty": "8.5/10",
+              "note": "Market signal on fast moving AI company IPO timelines."
+            },
+            {
+              "side": "Conservative",
+              "text": "Huge funds and securities companies involved to prevent bubble burst before IPO.",
+              "url": "https://x.com/yurumazu/status/2062673873095799085",
+              "views": "92K",
+              "time": "1h ago",
+              "honesty": "8/10",
+              "note": "Caution on AI valuation bubble during IPO wave."
+            }
+          ]
+        },
+        {
+          "headline": "California election counting shambles makes state global laughing stock",
+          "main": {
+            "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+            "text": "Election Shambles Update: California Democrats have turned our state into a global laughing stock. India counts 600 million ballots in a day. California counts less than 10 million in a MONTH.",
+            "views": "106K",
+            "time": "1h ago"
+          },
+          "perspectives": [
+            {
+              "side": "Conservative",
+              "text": "California turned into global laughing stock with absurd slow counting system.",
+              "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+              "views": "106K",
+              "time": "1h ago",
+              "honesty": "8/10",
+              "note": "High velocity on CA election administration failures."
+            },
+            {
+              "side": "Democrat",
+              "text": "Make sure YOUR vote is counted. We are watching everything closely with lawyers.",
+              "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+              "views": "106K",
+              "time": "1h ago",
+              "honesty": "7/10",
+              "note": "Defensive on vote counting process and legal oversight."
+            }
+          ]
         }
-      ]
+      ],
+      "more": []
     }
-  ],
-  "nation": [
-    {
-      "headline": "Iryna Zarutska I got that white bitch; Henry Nowak two-tier policing",
-      "main": {
-        "url": "https://x.com/ZeekArkham/status/2062658778466488328",
-        "text": "I believe all lives matter. However What was done to Iryna Zarutska was beyond heartbreaking. Afterwards, the savage who stabbed her said I got that white bitch. What was done to Henry Nowak was legitimate injustice. The cops were way more afraid to be seen as racist than they were to enforce the law.",
-        "views": "81K",
-        "time": "1h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Cops more afraid to be seen as racist than enforce law. Two tier killing people.",
-          "url": "https://x.com/ZeekArkham/status/2062658778466488328",
-          "views": "81K",
-          "time": "1h ago",
-          "honesty": "8.5/10",
-          "note": "High engagement on two-tier policing and race fear in law enforcement."
-        },
-        {
-          "side": "Democrat",
-          "text": "The savage who stabbed her said I got that white bitch. People around did nothing.",
-          "url": "https://x.com/ZeekArkham/status/2062658778466488328",
-          "views": "81K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Direct on the stabbing and bystander inaction in the incident."
-        }
-      ]
-    },
-    {
-      "headline": "Dem measure to block Trump Pulte DNI fails 49-49; RINOs with Dems",
-      "main": {
-        "url": "https://x.com/EricLDaugh/status/2062672816974045416",
-        "text": "JUST NOW: A Democrat-led measure in the Senate just FAILED that would have BLOCKED President Trump from naming Bill Pulte as acting Director of National Intelligence, 49-49. TRUMP WINS! Republicans who supported it: Lisa Murkowski, Bill Cassidy, Susan Collins.",
-        "views": "58K",
-        "time": "1h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Trump wins again. RINOs Murkowski, Cassidy, Collins voted with Dems.",
-          "url": "https://x.com/EricLDaugh/status/2062672816974045416",
-          "views": "58K",
-          "time": "1h ago",
-          "honesty": "9/10",
-          "note": "High velocity on Senate vote blocking intel pick failure."
-        },
-        {
-          "side": "Independent",
-          "text": "49-49 vote shows deep division on Trump intel pick Bill Pulte.",
-          "url": "https://x.com/GuntherEagleman/status/2062675952841175285",
-          "views": "22K",
-          "time": "1h ago",
-          "honesty": "8/10",
-          "note": "Factual on the 49-49 Senate outcome and RINO votes."
-        }
-      ]
-    },
-    {
-      "headline": "Starmer: Farage exploiting Henry Nowak family tragedy for grievance",
-      "main": {
-        "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
-        "text": "Henry Nowak family have lost their son and brother in the most appalling circumstances. Nigel Farage is exploiting this tragedy to create grievance and division. It is completely unforgivable.",
-        "views": "103K",
-        "time": "3h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Starmer more angry at Farage video than bodycam of Henry Nowak last moments.",
-          "url": "https://x.com/danwootton/status/2062143002575769907",
-          "views": "15K",
-          "time": "3h ago",
-          "honesty": "8/10",
-          "note": "High anger on perceived misplaced priorities vs footage."
-        },
-        {
-          "side": "Democrat",
-          "text": "Nigel Farage is exploiting this tragedy to create grievance and division.",
-          "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
-          "views": "103K",
-          "time": "3h ago",
-          "honesty": "7/10",
-          "note": "Direct from PM on Farage politicizing the family tragedy."
-        }
-      ]
-    }
-  ],
-  "business": [
-    {
-      "headline": "SpaceX will not be fast-tracked into the S&P 500 per S&P DJI",
-      "main": {
-        "url": "https://x.com/unusual_whales/status/2062666465678070014",
-        "text": "SpaceX will reportedly not be fast-tracked into the S&P 500, per the S&P DJI",
-        "views": "164K",
-        "time": "1h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "Reportedly not fast-tracked into the S&P 500 per S&P DJI.",
-          "url": "https://x.com/unusual_whales/status/2062666465678070014",
-          "views": "164K",
-          "time": "1h ago",
-          "honesty": "9/10",
-          "note": "Direct report on S&P decision for major US company."
-        },
-        {
-          "side": "Conservative",
-          "text": "Bureaucracy holding back America most innovative company from index.",
-          "url": "https://x.com/unusual_whales/status/2062666465678070014",
-          "views": "164K",
-          "time": "1h ago",
-          "honesty": "8/10",
-          "note": "Critique of slow index inclusion for SpaceX."
-        }
-      ]
-    },
-    {
-      "headline": "Anthropic starts IPO prep; OpenAI and Anthropic likely by end of July",
-      "main": {
-        "url": "https://x.com/yurumazu/status/2062673873095799085",
-        "text": "Anthropic also starting IPO prep. Once decided moves fast. OpenAI and Anthropic IPOs probably by end of July.",
-        "views": "92K",
-        "time": "1h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "Anthropic IPO prep started. OpenAI and Anthropic likely by July end.",
-          "url": "https://x.com/yurumazu/status/2062673873095799085",
-          "views": "92K",
-          "time": "1h ago",
-          "honesty": "8.5/10",
-          "note": "Market signal on fast moving AI company IPO timelines."
-        },
-        {
-          "side": "Conservative",
-          "text": "Huge funds and securities companies involved to prevent bubble burst before IPO.",
-          "url": "https://x.com/yurumazu/status/2062673873095799085",
-          "views": "92K",
-          "time": "1h ago",
-          "honesty": "8/10",
-          "note": "Caution on AI valuation bubble during IPO wave."
-        }
-      ]
-    },
-    {
-      "headline": "California election counting shambles makes state global laughing stock",
-      "main": {
-        "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
-        "text": "Election Shambles Update: California Democrats have turned our state into a global laughing stock. India counts 600 million ballots in a day. California counts less than 10 million in a MONTH.",
-        "views": "106K",
-        "time": "1h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "California turned into global laughing stock with absurd slow counting system.",
-          "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
-          "views": "106K",
-          "time": "1h ago",
-          "honesty": "8/10",
-          "note": "High velocity on CA election administration failures."
-        },
-        {
-          "side": "Democrat",
-          "text": "Make sure YOUR vote is counted. We are watching everything closely with lawyers.",
-          "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
-          "views": "106K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Defensive on vote counting process and legal oversight."
-        }
-      ]
-    }
-  ],
+  },
   "elon": [],
   "sports": [],
   "ifollow": [],
