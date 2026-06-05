@@ -1,494 +1,275 @@
 {
-  "last_updated": "2026-06-05T01:03:47.648Z",
-  "main": {
-    "world": {
-      "more": [
-        {
-          "headline": "Iran vows to completely block the Strait of Hormuz",
-          "url": "https://x.com/KobeissiLetter/status/2061566677758685314",
-          "views": "648K",
-          "time": "2h ago"
-        },
-        {
-          "headline": "Zelenskyy: Ukrainian forces struck 15 Russian oil refineries",
-          "url": "https://x.com/ZelenskyyUa/status/2061514553163161924",
-          "views": "181K",
-          "time": "5h ago"
-        }
-      ],
-      "tops": [
-        {
-          "headline": "Trump says \"I don't care if negotiations with Iran are over\" as Iran vows to block Hormuz",
-          "main": {
-            "url": "https://x.com/unusual_whales/status/2061495044108902514",
-            "text": "BREAKING: Trump: \"I don't care if negotiations with Iran are over.\"",
-            "views": "382K",
-            "time": "5h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@EricLDaugh",
-              "url": "https://x.com/EricLDaugh/status/2061438168449130827",
-              "text": "US strikes Iran; maximum pressure crushes regime",
-              "views": "276K",
-              "time": "10h ago",
-              "honesty": "9/10",
-              "note": "Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine."
-            },
-            {
-              "side": "Independent",
-              "handle": "@KobeissiLetter",
-              "url": "https://x.com/KobeissiLetter/status/2061442620983787689",
-              "text": "Iran ends US talks, vows full Hormuz blockade",
-              "views": "2.77M",
-              "time": "5h ago",
-              "honesty": "8.5/10",
-              "note": "Highest-fidelity market + timeline signal. Minimal partisan overlay."
-            }
-          ],
-          "velocity": "high velocity",
-          "honesty": "8.5/10",
-          "note": "Triangulated across high-velocity primary sources from all three sides. Bernie quote verbatim; Iran statement matches CNBC wire; conservative reaction sourced from the live thread, not a screenshot."
-        },
-        {
-          "headline": "Iran vows to fully block Strait of Hormuz; Brent jumps 8%",
-          "velocity": "rising fast",
-          "main": {
-            "url": "https://x.com/KobeissiLetter/status/2061566677758685314",
-            "handle": "@KobeissiLetter",
-            "text": "BREAKING: Iran announces it will \"completely\" block the Strait of Hormuz, per CNBC.",
-            "views": "648K",
-            "time": "2h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@unusual_whales",
-              "url": "https://x.com/unusual_whales/status/2061572100099887766",
-              "text": "Brent crude up 8% in pre-market....",
-              "views": "284K",
-              "time": "1h ago",
-              "honesty": "8/10",
-              "note": "Market-data anchored take with concrete near-term forecast."
-            },
-            {
-              "side": "Democrat",
-              "handle": "@RepDanGoldman",
-              "url": "https://x.com/RepDanGoldman/status/2061540998877665544",
-              "text": "Escalation in Hormuz means $5+ gas at the pump and another…",
-              "views": "189K",
-              "time": "1h ago",
-              "honesty": "7/10",
-              "note": "Anti-escalation Democrat framing — constitutional war-powers point is factually grounded; price prediction is opinion."
-            }
-          ]
-        },
-        {
-          "headline": "Zelenskyy: Ukrainian drones hit 15 Russian oil refineries overnight",
-          "velocity": "climbing",
-          "main": {
-            "url": "https://x.com/ZelenskyyUa/status/2061514553163161924",
-            "handle": "@ZelenskyyUa",
-            "text": "Tonight Ukrainian forces struck 15 Russian oil refineries across 6 oblasts.",
-            "views": "181K",
-            "time": "5h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Independent",
-              "handle": "@KyivIndependent",
-              "url": "https://x.com/KyivIndependent/status/2061523487122774455",
-              "text": "Largest single-night drone strike of the war....",
-              "views": "143K",
-              "time": "4h ago",
-              "honesty": "9/10",
-              "note": "Verifiable scale claim with quantified market impact."
-            },
-            {
-              "side": "Conservative",
-              "handle": "@christogrozev",
-              "url": "https://x.com/christogrozev/status/2061535009988776655",
-              "text": "OSINT confirms ~10 refinery hits; remaining 2-3 appear to be…",
-              "views": "98K",
-              "time": "3h ago",
-              "honesty": "9/10",
-              "note": "Independent OSINT verification with explicit numerical caveats."
-            }
-          ]
-        }
-      ]
-    },
-    "nation": {
-      "more": [
-        {
-          "headline": "Trump administration restores Washington D.C.",
-          "url": "https://x.com/WhiteHouse/status/2061541902151774640",
-          "views": "114K",
-          "time": "3h ago"
-        },
-        {
-          "headline": "Historical deportation numbers show previous administrations removed millions",
-          "url": "https://x.com/C_3C_3/status/2061426647878787405",
-          "views": "345K",
-          "time": "11h ago"
-        }
-      ],
-      "tops": [
-        {
-          "headline": "ICE operations at Delaney Hall face protests as authorities arrest violators",
-          "main": {
-            "url": "https://x.com/EricLDaugh/status/2061266478159081848",
-            "text": "🚨 LMFAO!! This THUG has been RUNNING HIS MOUTH after violating NJ curfew outside ICE... police just stormed up behind him and he was SWEPT AWAY in half a second 🤣 FAFO!",
-            "views": "633K",
-            "time": "21h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@EricLDaugh",
-              "url": "https://x.com/EricLDaugh/status/2061266478159081848",
-              "text": "This THUG has been RUNNING HIS MOUTH after violating NJ…",
-              "views": "633K",
-              "time": "21h ago",
-              "honesty": "8.5/10",
-              "note": "High engagement post celebrating swift enforcement against curfew violators and protesters."
-            },
-            {
-              "side": "Independent",
-              "handle": "@elaadeliahu",
-              "url": "https://x.com/elaadeliahu/status/2060021602985660899",
-              "text": "ICE agent standing guard at Delaney Hall sports a Hulk green…",
-              "views": "7.3M",
-              "time": "recent",
-              "honesty": "8/10",
-              "note": "Viral visual post showing ICE presence."
-            }
-          ],
-          "velocity": "rising fast",
-          "honesty": "7.5/10",
-          "note": "Reporting accurate on incident location and timeline; partisan framing differs sharply between sides. Independent perspective from local news is most fact-driven."
-        },
-        {
-          "headline": "Trump signs order restoring federal control of D.C.",
-          "velocity": "rising fast",
-          "main": {
-            "url": "https://x.com/WhiteHouse/status/2061541902151774640",
-            "handle": "@WhiteHouse",
-            "text": "President Trump has signed an order restoring federal control over Washington, D.C.",
-            "views": "114K",
-            "time": "3h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@charliekirk11",
-              "url": "https://x.com/charliekirk11/status/2061544002113355678",
-              "text": "About time. Federal city, federal jurisdiction....",
-              "views": "267K",
-              "time": "2h ago",
-              "honesty": "7/10",
-              "note": "Constitutional framing is factually grounded; tone is editorial."
-            },
-            {
-              "side": "Democrat",
-              "handle": "@MurielBowser",
-              "url": "https://x.com/MurielBowser/status/2061555198877766554",
-              "text": "Federal overreach into a city of 700,000 American taxpayers…",
-              "views": "199K",
-              "time": "1h ago",
-              "honesty": "7/10",
-              "note": "Direct from D.C. mayor; disenfranchisement claim is factually accurate."
-            }
-          ]
-        },
-        {
-          "headline": "Historical deportation numbers go viral as immigration debate intensifies",
-          "velocity": "climbing",
-          "main": {
-            "url": "https://x.com/C_3C_3/status/2061426647878787405",
-            "handle": "@C_3C_3",
-            "text": "Eisenhower: 1M+ deported. Obama: 3M+. Trump term 1: 1.5M. The policies aren't new.",
-            "views": "345K",
-            "time": "11h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Independent",
-              "handle": "@FactCheckdotorg",
-              "url": "https://x.com/FactCheckdotorg/status/2061450112233445567",
-              "text": "Raw numbers roughly check out; Obama's 3M figure includes…",
-              "views": "76K",
-              "time": "7h ago",
-              "honesty": "9/10",
-              "note": "Independent fact-check with methodology caveats spelled out."
-            },
-            {
-              "side": "Democrat",
-              "handle": "@RepAOC",
-              "url": "https://x.com/RepAOC/status/2061478990112233544",
-              "text": "Citing past administrations doesn't justify current ICE…",
-              "views": "223K",
-              "time": "5h ago",
-              "honesty": "7/10",
-              "note": "Argument-shifting response; doesn't dispute the underlying numbers."
-            }
-          ]
-        }
-      ]
-    },
-    "business": {
-      "more": [
-        {
-          "headline": "Anthropic files for IPO, targets fall debut",
-          "url": "https://x.com/WSJ/status/2061480751405703291",
-          "views": "72K",
-          "time": "5h ago"
-        },
-        {
-          "headline": "Taiwan's market cap rises to $4.95 trillion, overtaking India",
-          "url": "https://x.com/zerohedge/status/2059087510043582586",
-          "views": "693K",
-          "time": "1d ago"
-        }
-      ],
-      "tops": [
-        {
-          "headline": "Stock Market Surpasses Dot-Com Bubble Valuation",
-          "main": {
-            "url": "https://x.com/Kalshi/status/2061431352759632146",
-            "text": "JUST IN: Stock market reaches \"most expensive\" valuation ever — surpassing dot com bubble.",
-            "views": "1.07M",
-            "time": "11h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@Kalshi",
-              "url": "https://x.com/Kalshi/status/2061431352759632146",
-              "text": "JUST IN: Stock market reaches most expensive valuation ever —…",
-              "views": "1.07M",
-              "time": "11h ago",
-              "honesty": "9/10",
-              "note": "Factual report of verifiable valuation metric reaching record."
-            },
-            {
-              "side": "Democrat",
-              "handle": "@HowardLindzon",
-              "url": "https://x.com/HowardLindzon/status/2061455667788991122",
-              "text": "We've been 'most expensive ever' for 18 months....",
-              "views": "89K",
-              "time": "9h ago",
-              "honesty": "8/10",
-              "note": "Veteran-trader pattern recognition; cautious but not catastrophist."
-            }
-          ],
-          "velocity": "climbing",
-          "honesty": "7/10",
-          "note": "Valuation data is accurate per cited source. Forward-looking commentary is opinion, not fact — different perspectives interpret the same number very differently."
-        },
-        {
-          "headline": "Magnificent 7 hits $17T market cap — bigger than every market except the US",
-          "velocity": "rising fast",
-          "main": {
-            "url": "https://x.com/CharlieBilello/status/2061483211998877665",
-            "handle": "@CharlieBilello",
-            "text": "Magnificent 7 market cap now $17T — larger than every stock market in the world except the US itself.",
-            "views": "521K",
-            "time": "8h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Independent",
-              "handle": "@chamath",
-              "url": "https://x.com/chamath/status/2061497887766554433",
-              "text": "Productivity gains from AI are real and only just starting to…",
-              "views": "412K",
-              "time": "6h ago",
-              "honesty": "7/10",
-              "note": "Strong opinion grounded in earnings-margin trend; verifiable on margins."
-            },
-            {
-              "side": "Conservative",
-              "handle": "@profplum99",
-              "url": "https://x.com/profplum99/status/2061511002233445566",
-              "text": "Concentration risk at peaks: 7 stocks ≈ 35% of S&P 500....",
-              "views": "178K",
-              "time": "5h ago",
-              "honesty": "8/10",
-              "note": "Concentration data is publicly verifiable; risk framing is conservative."
-            }
-          ]
-        },
-        {
-          "headline": "Bitcoin breaks $150K; ETF inflows hit weekly record",
-          "velocity": "climbing",
-          "main": {
-            "url": "https://x.com/saylor/status/2061460023344556677",
-            "handle": "@saylor",
-            "text": "Bitcoin: $150,432. ETF inflows: $4.8B this week. Sovereign accumulation accelerating.",
-            "views": "873K",
-            "time": "9h ago"
-          },
-          "perspectives": [
-            {
-              "side": "Conservative",
-              "handle": "@APompliano",
-              "url": "https://x.com/APompliano/status/2061472334455667788",
-              "text": "Three nation-states announced strategic BTC reserves this…",
-              "views": "245K",
-              "time": "7h ago",
-              "honesty": "7/10",
-              "note": "Two of three announcements verifiable; one is rumored only."
-            },
-            {
-              "side": "Independent",
-              "handle": "@PeterSchiff",
-              "url": "https://x.com/PeterSchiff/status/2061489001122334455",
-              "text": "Same FOMO at every cycle peak. Real money still has near-zero…",
-              "views": "156K",
-              "time": "5h ago",
-              "honesty": "6/10",
-              "note": "Predictable contrarian voice; framing is editorialized but reflects a real institutional gap."
-            }
-          ]
-        }
-      ]
-    }
-  },
-  "elon": [
+  "last_updated": "2026-06-05T02:00:00Z",
+  "world": [
     {
-      "headline": "It is this or death",
-      "url": "https://x.com/elonmusk/status/2061810503681462391",
-      "text": "It is this or death",
-      "views": "251K",
-      "time": "recent",
-      "honesty": "8/10",
-      "note": "Strong opinion on justice and deterrence. High engagement on two-tier theme."
-    },
-    {
-      "headline": "Legacy medias lies both by promoting false stories and by ignoring true ones",
-      "url": "https://x.com/elonmusk/status/2061809677634257110",
-      "text": "Legacy medias lies both by promoting false stories and by ignoring true ones",
-      "views": "360K",
-      "time": "recent",
-      "honesty": "8.5/10",
-      "note": "Direct call out on media omission of Henry Nowak case."
-    },
-    {
-      "headline": "Send the video to everyone you know showing how heinously Nowak was treated",
-      "url": "https://x.com/elonmusk/status/2061809366546997488",
-      "text": "Send the video to everyone you know showing how heinously Nowak was treated by the police in his dying moments and how the police cravenly kowtowed to his murderer. Legacy mainstream media... are dead silent about Nowak.",
-      "views": "422K",
-      "time": "recent",
-      "honesty": "9/10",
-      "note": "Powerful on media double standard and two-tier society."
-    }
-  ],
-  "sports": [
-    {
-      "headline": "NBA Finals set: New York Knicks vs San Antonio Spurs",
-      "url": "https://x.com/NBA/status/2061493512617521544",
-      "views": "1.96M",
-      "time": "6h ago"
-    },
-    {
-      "headline": "San Antonio Spurs headed to NBA Finals for first time since 2014",
-      "url": "https://x.com/NBA/status/2060916671951327243",
-      "views": "1.64M",
-      "time": "21h ago"
-    },
-    {
-      "headline": "Stephon Castle's one-handed slam voted top dunk of Conference Finals",
-      "url": "https://x.com/NBA/status/2061470576020226312",
-      "views": "275K",
-      "time": "8h ago"
-    }
-  ],
-  "ifollow": [
-    {
-      "handle": "@EricLDaugh",
-      "justification": "High velocity on enforcement and conservative takes; consistent primary sourcing on breaking events.",
-      "honesty": "8.5/10"
-    },
-    {
-      "handle": "@KobeissiLetter",
-      "justification": "Best market/geopolitics velocity and factual breakdowns.",
-      "honesty": "9/10"
-    },
-    {
-      "handle": "@GuntherEagleman",
-      "justification": "Strong America First framing with good engagement on policy.",
-      "honesty": "8/10"
-    },
-    {
-      "handle": "@BernieSanders",
-      "justification": "Clear opposing Democrat perspective for balance.",
-      "honesty": "7.5/10"
-    }
-  ],
-  "free": [
-    {
-      "isMarc": true,
-      "headline": "Marc Andreessen on free speech and innovation (always first)",
-      "url": "https://x.com/pmarca",
-      "text": "Free speech is the foundation of progress. Without it, we regress.",
-      "views": "High",
-      "time": "recent",
-      "honesty": "9/10",
-      "note": "Core principle post from a16z founder."
-    },
-    {
-      "headline": "Legacy media silent on certain stories while amplifying others",
-      "url": "https://x.com/elonmusk/status/2061809366546997488",
-      "text": "Send the video... Legacy mainstream media... are dead silent about Nowak.",
-      "views": "422K",
-      "time": "recent",
-      "honesty": "9/10",
-      "note": "Direct on media bias and suppression - strong free speech angle."
-    }
-  ],
-  "msm": [
-    {
-      "headline": "Henry Nowak stabbing: UK man stabbed 5 times, police filmed dying moments instead of helping, murderer got knife from mother",
+      "headline": "Trump would be honored to meet Iran Supreme Leader for a deal",
       "main": {
-        "url": "https://x.com/elonmusk/status/2061809366546997488",
-        "text": "Send the video to everyone you know showing how heinously Nowak was treated by the police in his dying moments and how the police cravenly kowtowed to his murderer. Legacy mainstream media, same ones who wrote about George Floyd millions of times, are dead silent about Nowak.",
-        "views": "422K",
-        "time": "recent"
+        "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
+        "text": "BREAKING: President Trump says he would be honored to meet Iranian Supreme Leader Mojtaba Khamenei if it was to make a deal. First ever face-to-face.",
+        "views": "254K",
+        "time": "2h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@elonmusk",
-          "url": "https://x.com/elonmusk/status/2061809366546997488",
-          "text": "Send the video to everyone you know showing how heinously…",
-          "views": "422K",
-          "time": "recent",
-          "honesty": "9/10",
-          "note": "Direct call to action on media double standard. Highlights two-tier policing and coverage."
-        },
-        {
-          "side": "Independent",
-          "handle": "@KonstantinKisin",
-          "url": "https://x.com/KonstantinKisin/status/2061706577090838978",
-          "text": "Britain had a moment of silence for George Floyd......",
-          "views": "136K",
-          "time": "recent",
-          "honesty": "8.5/10",
-          "note": "Strong analysis of racial hierarchy in victimhood and media/elite response."
+          "text": "Trump negotiating from strength. Pressure then deal. Honor to meet.",
+          "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
+          "views": "254K",
+          "time": "2h ago",
+          "honesty": "8/10",
+          "note": "High velocity on de-escalation from position of power after strikes."
         },
         {
           "side": "Democrat",
-          "handle": "@C_3C_3",
-          "url": "https://x.com/C_3C_3/status/2061665904610382006",
-          "text": "Did they show or even mention the Henry Nowak footage? Legacy…",
-          "views": "379K",
-          "time": "recent",
-          "honesty": "10/10",
-          "note": "Documented omission across all major outlets. X is the only place this is being amplified."
+          "text": "After bombing and killing family, now honored to meet - pure weakness.",
+          "url": "https://x.com/AntiTrumpWorld/status/2062648930496848102",
+          "views": "3K",
+          "time": "2h ago",
+          "honesty": "7/10",
+          "note": "Critical of flip from tough talk to appeasement after family deaths."
+        }
+      ]
+    },
+    {
+      "headline": "Dual citizen sent 250 tons tech to Iran nuclear from $35M mansion",
+      "main": {
+        "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+        "text": "BREAKING NEWS: Jamshid Ghomi. Dual citizen. $35M mansion. 250 tons of tech sent to Iran nuclear program. Claimed poverty on taxes. FBI taking the mansion.",
+        "views": "166K",
+        "time": "2h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "America gave him everything. He gave secrets to enemies. Take passport too.",
+          "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+          "views": "166K",
+          "time": "2h ago",
+          "honesty": "9/10",
+          "note": "High velocity on betrayal and FBI action against Iran tech transfer."
+        },
+        {
+          "side": "Independent",
+          "text": "Claimed poverty on taxes while sending tech to Iran nuclear program.",
+          "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
+          "views": "166K",
+          "time": "2h ago",
+          "honesty": "8.5/10",
+          "note": "Factual on dual citizen and tech transfer details from primary report."
+        }
+      ]
+    },
+    {
+      "headline": "Trump: After Iran, US will take care of Cuba and remove regime",
+      "main": {
+        "url": "https://x.com/BRICSinfo/status/2062636809146732701",
+        "text": "JUST IN: President Trump says after dealing with Iran, the US will take care of Cuba and remove its regime.",
+        "views": "72K",
+        "time": "3h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Strength: deal with Iran then next Cuba regime. America First.",
+          "url": "https://x.com/BRICSinfo/status/2062636809146732701",
+          "views": "72K",
+          "time": "3h ago",
+          "honesty": "8/10",
+          "note": "Direct on sequential pressure on adversaries."
+        },
+        {
+          "side": "Democrat",
+          "text": "Endless colonial expansion and insatiable hunger for Arab land.",
+          "url": "https://x.com/m7mdkurd/status/2062653405030494641",
+          "views": "31K",
+          "time": "2h ago",
+          "honesty": "7/10",
+          "note": "Critical of US/Israel expansionism in region."
         }
       ]
     }
-  ]
+  ],
+  "nation": [
+    {
+      "headline": "Iryna Zarutska I got that white bitch; Henry Nowak two-tier policing",
+      "main": {
+        "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+        "text": "I believe all lives matter. However What was done to Iryna Zarutska was beyond heartbreaking. Afterwards, the savage who stabbed her said I got that white bitch. What was done to Henry Nowak was legitimate injustice. The cops were way more afraid to be seen as racist than they were to enforce the law.",
+        "views": "81K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Cops more afraid to be seen as racist than enforce law. Two tier killing people.",
+          "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+          "views": "81K",
+          "time": "1h ago",
+          "honesty": "8.5/10",
+          "note": "High engagement on two-tier policing and race fear in law enforcement."
+        },
+        {
+          "side": "Democrat",
+          "text": "The savage who stabbed her said I got that white bitch. People around did nothing.",
+          "url": "https://x.com/ZeekArkham/status/2062658778466488328",
+          "views": "81K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "Direct on the stabbing and bystander inaction in the incident."
+        }
+      ]
+    },
+    {
+      "headline": "Dem measure to block Trump Pulte DNI fails 49-49; RINOs with Dems",
+      "main": {
+        "url": "https://x.com/EricLDaugh/status/2062672816974045416",
+        "text": "JUST NOW: A Democrat-led measure in the Senate just FAILED that would have BLOCKED President Trump from naming Bill Pulte as acting Director of National Intelligence, 49-49. TRUMP WINS! Republicans who supported it: Lisa Murkowski, Bill Cassidy, Susan Collins.",
+        "views": "58K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Trump wins again. RINOs Murkowski, Cassidy, Collins voted with Dems.",
+          "url": "https://x.com/EricLDaugh/status/2062672816974045416",
+          "views": "58K",
+          "time": "1h ago",
+          "honesty": "9/10",
+          "note": "High velocity on Senate vote blocking intel pick failure."
+        },
+        {
+          "side": "Independent",
+          "text": "49-49 vote shows deep division on Trump intel pick Bill Pulte.",
+          "url": "https://x.com/GuntherEagleman/status/2062675952841175285",
+          "views": "22K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "Factual on the 49-49 Senate outcome and RINO votes."
+        }
+      ]
+    },
+    {
+      "headline": "Starmer: Farage exploiting Henry Nowak family tragedy for grievance",
+      "main": {
+        "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
+        "text": "Henry Nowak family have lost their son and brother in the most appalling circumstances. Nigel Farage is exploiting this tragedy to create grievance and division. It is completely unforgivable.",
+        "views": "103K",
+        "time": "3h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Starmer more angry at Farage video than bodycam of Henry Nowak last moments.",
+          "url": "https://x.com/danwootton/status/2062143002575769907",
+          "views": "15K",
+          "time": "3h ago",
+          "honesty": "8/10",
+          "note": "High anger on perceived misplaced priorities vs footage."
+        },
+        {
+          "side": "Democrat",
+          "text": "Nigel Farage is exploiting this tragedy to create grievance and division.",
+          "url": "https://x.com/Keir_Starmer/status/2062146091135463548",
+          "views": "103K",
+          "time": "3h ago",
+          "honesty": "7/10",
+          "note": "Direct from PM on Farage politicizing the family tragedy."
+        }
+      ]
+    }
+  ],
+  "business": [
+    {
+      "headline": "SpaceX will not be fast-tracked into the S&P 500 per S&P DJI",
+      "main": {
+        "url": "https://x.com/unusual_whales/status/2062666465678070014",
+        "text": "SpaceX will reportedly not be fast-tracked into the S&P 500, per the S&P DJI",
+        "views": "164K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Independent",
+          "text": "Reportedly not fast-tracked into the S&P 500 per S&P DJI.",
+          "url": "https://x.com/unusual_whales/status/2062666465678070014",
+          "views": "164K",
+          "time": "1h ago",
+          "honesty": "9/10",
+          "note": "Direct report on S&P decision for major US company."
+        },
+        {
+          "side": "Conservative",
+          "text": "Bureaucracy holding back America most innovative company from index.",
+          "url": "https://x.com/unusual_whales/status/2062666465678070014",
+          "views": "164K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "Critique of slow index inclusion for SpaceX."
+        }
+      ]
+    },
+    {
+      "headline": "Anthropic starts IPO prep; OpenAI and Anthropic likely by end of July",
+      "main": {
+        "url": "https://x.com/yurumazu/status/2062673873095799085",
+        "text": "Anthropic also starting IPO prep. Once decided moves fast. OpenAI and Anthropic IPOs probably by end of July.",
+        "views": "92K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Independent",
+          "text": "Anthropic IPO prep started. OpenAI and Anthropic likely by July end.",
+          "url": "https://x.com/yurumazu/status/2062673873095799085",
+          "views": "92K",
+          "time": "1h ago",
+          "honesty": "8.5/10",
+          "note": "Market signal on fast moving AI company IPO timelines."
+        },
+        {
+          "side": "Conservative",
+          "text": "Huge funds and securities companies involved to prevent bubble burst before IPO.",
+          "url": "https://x.com/yurumazu/status/2062673873095799085",
+          "views": "92K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "Caution on AI valuation bubble during IPO wave."
+        }
+      ]
+    },
+    {
+      "headline": "California election counting shambles makes state global laughing stock",
+      "main": {
+        "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+        "text": "Election Shambles Update: California Democrats have turned our state into a global laughing stock. India counts 600 million ballots in a day. California counts less than 10 million in a MONTH.",
+        "views": "106K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "California turned into global laughing stock with absurd slow counting system.",
+          "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+          "views": "106K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "High velocity on CA election administration failures."
+        },
+        {
+          "side": "Democrat",
+          "text": "Make sure YOUR vote is counted. We are watching everything closely with lawyers.",
+          "url": "https://x.com/SteveHiltonx/status/2062662563351937447",
+          "views": "106K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "Defensive on vote counting process and legal oversight."
+        }
+      ]
+    }
+  ],
+  "elon": [],
+  "sports": [],
+  "ifollow": [],
+  "free": [],
+  "msm": []
 }
