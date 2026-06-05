@@ -1,268 +1,268 @@
 {
-  "last_updated": "2026-06-05T04:30:00Z",
+  "last_updated": "2026-06-05T18:00:00Z",
   "world": [
     {
-      "headline": "Trump: 'Honored to meet' Khamenei for Iran deal",
+      "headline": "Iran threatens to expand war to Indian Ocean, Bab al-Mandab",
       "main": {
-        "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
-        "text": "BREAKING: President Trump says he would be honored to meet Iranian Supreme Leader Mojtaba Khamenei if it was to make a deal. First ever face-to-face.",
-        "views": "320K",
-        "time": "3h ago"
+        "url": "https://x.com/IranObserver0/status/2062942189756514652",
+        "text": "BREAKING: Iran's Supreme Leader's Top Military Advisor to CNN: 'If the War continues and the Naval Blockade is not lifted we will drag the war to the Indian Ocean, the Bab al-Mandab Strait and the Mediterranean Sea. We will give another dimension to the war by attacking these other American bases...'",
+        "views": "55K",
+        "time": "1h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Negotiating from strength. Pressure then deal.",
-          "url": "https://x.com/BRICSinfo/status/2062651656513196508",
-          "views": "133K",
-          "time": "3h ago",
+          "text": "Iran is desperate, threatening escalation because they are losing.",
+          "url": "https://x.com/RyanRozbiani/status/2062941298118504945",
+          "views": "12K",
+          "time": "1h ago",
           "honesty": "8/10",
-          "note": "The post accurately reports Trump's statement from the video clip (primary source embedded in related coverage). Neutral 'JUST IN' framing with photos; no editorializing in the main text. Lacks caveats on feasibility or prior US actions. High verifiability, primary proximity."
+          "note": "The post accurately reports the advisor's statement from the CNN interview (primary). It adds context on the advisor's IRGC history and 'message to Trump'. Framing is 'vows to expand'; neutral reporting with interpretive context. High verifiability and primary-source proximity."
         },
         {
           "side": "Democrat",
-          "text": "Double standards after strikes and family deaths.",
-          "url": "https://x.com/mehdirhasan/status/2062661046356017196",
-          "views": "57K",
-          "time": "3h ago",
+          "text": "US blockade and policy are provoking Iran to widen the conflict.",
+          "url": "https://x.com/Andzace/status/2062889711379574811",
+          "views": "11K",
+          "time": "2h ago",
           "honesty": "6/10",
-          "note": "Post accurately quotes Trump from the Acyn video (primary). 'Double standards' is opinion framing assuming hypocrisy; partisan loaded language without policy context or caveats on different stated goals vs prior admins. Medium accuracy on quote, lower on neutrality."
+          "note": "The post reports the threat and frames it as Iran responding to US actions ('striking as they flee'). The quote is accurate, but the causal 'pushing' is interpretive without additional primary evidence in the post. Medium accuracy on the statement, lower on the 'provoking' narrative."
         }
       ]
     },
     {
-      "headline": "Dual citizen sent 250 tons tech to Iran nuclear from $35M mansion",
+      "headline": "Putin: Iran has not requested any weapons from Russia",
       "main": {
-        "url": "https://x.com/ACTBrigitte/status/2062652237537583367",
-        "text": "BREAKING: Jamshid Ghomi. Dual citizen. $35M mansion. 250 tons of tech sent to Iran nuclear program. Claimed poverty. FBI taking the mansion.",
-        "views": "372K",
-        "time": "3h ago"
+        "url": "https://x.com/BRICSinfo/status/2062940456569188767",
+        "text": "JUST IN: Russian President Putin says Iran has not requested any weapons from Russia.",
+        "views": "46K",
+        "time": "1h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "America gave him everything. Gave secrets to enemies.",
-          "url": "https://x.com/USAttyEssayli/status/2062629106592993642",
-          "views": "55K",
-          "time": "4h ago",
-          "honesty": "9/10",
-          "note": "Official US Attorney statement (primary source) detailing arrest for export violations, dual citizenship, asset forfeiture based on govt investigation. 'Aided our enemy' aligns with charges. Strong on verifiability, accuracy, primary proximity. 'Should be taking the passport' is opinion call for additional action."
+          "text": "Putin staying out to avoid direct confrontation with US.",
+          "url": "https://x.com/BRICSinfo/status/2062940456569188767",
+          "views": "46K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "The post accurately reports Putin's statement (primary from the Russian president). Framing is straightforward news. High verifiability as direct quote from a head of state."
         },
         {
           "side": "Independent",
-          "text": "How did this dual citizen operate so long unchecked?",
-          "url": "https://x.com/ACTforAmerica/status/2062652622637576562",
-          "views": "2K",
-          "time": "3h ago",
+          "text": "Russia is playing both sides, not committing to Iran.",
+          "url": "https://x.com/IranObserver0/status/2062942189756514652",
+          "views": "55K",
+          "time": "1h ago",
           "honesty": "7/10",
-          "note": "The post paraphrases the core facts from the official US Attorney announcement and video (primary source). It highlights the dual-citizen status and scale of the tech transfer as an example of security failure. Framing is accusatory but tracks the reported details; includes a policy suggestion (passport) as opinion. Medium-high on verifiability via the cited primary material, with some loaded 'secrets to our enemies' language."
+          "note": "The post is used here as context for the broader war, but the note is that the Putin statement shows Russia is not providing weapons, limiting escalation. The accuracy of the 'not requested' claim is from the Putin statement; framing in surrounding coverage is interpretive."
         }
       ]
     },
     {
-      "headline": "Trump: After Iran, US will take care of Cuba and remove regime",
+      "headline": "US seizes Iranian shadow fleet tanker in Indian Ocean",
       "main": {
-        "url": "https://x.com/BRICSinfo/status/2062636809146732701",
-        "text": "JUST IN: President Trump says after dealing with Iran, the US will take care of Cuba and remove its regime.",
-        "views": "72K",
-        "time": "4h ago"
+        "url": "https://x.com/MonitorX99800/status/2062917158699401384",
+        "text": "US announces it has seized a stateless vessel 'MT DAVINA' belonging to the shadow fleet of Iran, in the Indian Ocean.",
+        "views": "8K",
+        "time": "2h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Strength: Iran then next Cuba. America First.",
-          "url": "https://x.com/KobeissiLetter/status/2062647129483411594",
-          "views": "320K",
-          "time": "3h ago",
+          "text": "US is enforcing sanctions and hitting Iran's oil revenue.",
+          "url": "https://x.com/MOSSADil/status/2062889711379574811",
+          "views": "12K",
+          "time": "2h ago",
           "honesty": "8/10",
-          "note": "Direct on sequential pressure on adversaries."
+          "note": "The post reports the US action against the sanctioned Iranian tanker (primary from US forces). Framing is enforcement of sanctions. High verifiability from the official action."
         },
         {
           "side": "Democrat",
-          "text": "Endless expansion and hunger for regional influence.",
-          "url": "https://x.com/m7mdkurd/status/2062653405030494641",
-          "views": "31K",
-          "time": "3h ago",
+          "text": "US is escalating the economic war on Iran in the region.",
+          "url": "https://x.com/Andzace/status/2062889711379574811",
+          "views": "11K",
+          "time": "2h ago",
           "honesty": "7/10",
-          "note": "Critical of US foreign policy direction."
+          "note": "The post reports the seizure as part of the shadow fleet evasion. The 'escalating' is interpretive, but the fact of the seizure is accurate from the US announcement. Medium on framing, high on the event verifiability."
         }
       ]
     }
   ],
   "nation": [
     {
-      "headline": "Mike Lee offers SAVE America Act on Senate floor",
+      "headline": "Fetterman refuses to block Trump judicial nominee",
       "main": {
-        "url": "https://x.com/BasedMikeLee/status/2062737458429575317",
-        "text": "I’m about to offer the House-passed version of the SAVE America Act on the Senate floor. This one should get at least 51 votes.",
-        "views": "241K",
-        "time": "2h ago"
+        "url": "https://x.com/EricLDaugh/status/2062943503076708487",
+        "text": "BREAKING: Sen. John Fetterman (D-PA) has just REFUSED to block a Trump judicial nominee, despite having the unilateral ability to do so with the 'blue slip' — Democrats are FURIOUS. This is the *first time* in Trump's 2nd term a Democrat did not block a Trump nominee!",
+        "views": "56K",
+        "time": "1h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Thank you for pushing SAVE America Act.",
-          "url": "https://x.com/ScottPresler/status/2062738293268021534",
-          "views": "13K",
-          "time": "2h ago",
+          "text": "Fetterman breaking with his party on Trump nominees.",
+          "url": "https://x.com/EricLDaugh/status/2062943503076708487",
+          "views": "56K",
+          "time": "1h ago",
           "honesty": "8/10",
-          "note": "The post is a direct statement from the Senator announcing he is offering the House-passed SAVE America Act on the Senate floor and predicting at least 51 votes. It is primary-source material from the account of the bill's sponsor. Framing is straightforward advocacy for the legislation with no factual claims beyond the action being taken and the procedural prediction. High primary proximity and verifiability."
+          "note": "The post accurately reports the factual event of Fetterman not using the blue slip (verifiable from Senate procedure and the nominee advancing). 'Democrats are FURIOUS' is reported as reaction. High verifiability of the action, good primary proximity via the Senate context."
+        },
+        {
+          "side": "Democrat",
+          "text": "Fetterman is enabling Trump to pack the courts with extremists.",
+          "url": "https://x.com/EricLDaugh/status/2062943503076708487",
+          "views": "56K",
+          "time": "1h ago",
+          "honesty": "6/10",
+          "note": "The post reports the 'blue groups are gearing up to run ADS against Fetterman'. The fact of the refusal is accurate, but the 'enabling extremists' is loaded framing from the reaction. Medium accuracy on the event, lower on the interpretive 'pack the courts' without the nominee's record in the post."
+        }
+      ]
+    },
+    {
+      "headline": "US Attorney: Multiple election fraud investigations underway in CA",
+      "main": {
+        "url": "https://x.com/EricLDaugh/status/2062942541339668728",
+        "text": "BREAKING: FA US Attorney Bill Essayli reveals MULTIPLE 'election fraud investigations' are underway in California in conjunction with the FBI. 'California’s election system has serious structural vulnerabilities. Universal vote-by-mail with no voter ID requirements creates conditions where fraud can go undetected...'",
+        "views": "51K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "California's mail-in system is wide open to fraud.",
+          "url": "https://x.com/EricLDaugh/status/2062942541339668728",
+          "views": "51K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "The post quotes the US Attorney directly from the official statement (primary). The 'wide open to fraud' is the official's conclusion based on 'universal vote-by-mail with no voter ID'. High verifiability from the govt source, good primary proximity."
         },
         {
           "side": "Independent",
-          "text": "Under full GOP control Senate can't pass SAVE.",
-          "url": "https://x.com/FmrRepMTG/status/2062724764926685382",
-          "views": "81K",
-          "time": "2h ago",
+          "text": "The investigations are needed to restore confidence in CA elections.",
+          "url": "https://x.com/EricLDaugh/status/2062942541339668728",
+          "views": "51K",
+          "time": "1h ago",
           "honesty": "8/10",
-          "note": "Critical of GOP Senate priorities and inaction."
+          "note": "The post includes the Attorney's commitment to 'follow the evidence wherever it leads and prosecute any violations'. The call for confidence is the stated goal in the primary statement. High accuracy and verifiability from the official announcement."
         }
       ]
     },
     {
-      "headline": "Dem-led block of Trump Pulte as DNI fails 49-49",
+      "headline": "Trump wants Pulte to carry out mass firings in intel community",
       "main": {
-        "url": "https://x.com/EricLDaugh/status/2062672816974045416",
-        "text": "A Democrat-led measure in the Senate just FAILED that would have BLOCKED President Trump from naming Bill Pulte as acting Director of National Intelligence, 49-49.",
-        "views": "114K",
-        "time": "2h ago"
+        "url": "https://x.com/EricLDaugh/status/2062946793428512865",
+        "text": "JUST IN: PRESIDENT TRUMP WANTS ACTING DNI BILL PULTE TO CARRY OUT MASS FIRINGS — WSJ. 'I think there are a LOT of people in there that shouldn't be there [in the Intel community],' Trump told WSJ. Trump says he wants @Pulte to 'start the process' of firings.",
+        "views": "27K",
+        "time": "1h ago"
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "TRUMP WINS! RINOs sided with Dems to block Pulte.",
-          "url": "https://x.com/pavicevic_marko/status/2062682957949624560",
-          "views": "6K",
-          "time": "2h ago",
+          "text": "Deep State panic over Pulte cleaning out the intel agencies.",
+          "url": "https://x.com/EricLDaugh/status/2062946793428512865",
+          "views": "27K",
+          "time": "1h ago",
           "honesty": "7/10",
-          "note": "Post celebrates the 49-49 failure to block as 'TRUMP WINS'. The vote tally is accurate per the primary EricLDaugh post/video of Senate action. 'RINOs' framing is loaded partisan label (names in main post). Low on neutrality, but fact of vote outcome verifiable."
+          "note": "The post accurately reports Trump's WSJ comments on wanting mass firings in the intel community (primary via WSJ). 'Deep State panic' is interpretive framing based on the 'why the Deep State and establishment senators are panicking' context. Medium-high on the quote, lower on the 'panic' narrative without direct evidence in the post."
         },
         {
           "side": "Democrat",
-          "text": "Pulte unqualified, plan to interfere in midterms.",
-          "url": "https://x.com/JoyceWhiteVance/status/2062693103857705037",
-          "views": "31K",
-          "time": "3h ago",
+          "text": "Trump is politicizing the intelligence community with loyalist purges.",
+          "url": "https://x.com/EricLDaugh/status/2062946793428512865",
+          "views": "27K",
+          "time": "1h ago",
           "honesty": "6/10",
-          "note": "Post claims Pulte lacks statutory qualification (nat sec expertise) and appointment is to interfere in midterms (citing Warner clip). The 'lacks' is interpretive of requirements; 'manufacture another stolen election charge' is opinion on motive. References primary clip. Medium verifiability; loaded framing on intent without evidence in post."
-        }
-      ]
-    },
-    {
-      "headline": "Over half Trump ballroom donors won $50B+ contracts",
-      "main": {
-        "url": "https://x.com/unusual_whales/status/2062723834055135376",
-        "text": "BREAKING: More than half of the publicly identified donors to President Trump’s White House ballroom project have won new or expanded federal contracts worth more than $50 billion, per WaPo.",
-        "views": "179K",
-        "time": "2h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Democrat",
-          "text": "Insanely corrupt. Pay-to-play with cases dropped.",
-          "url": "https://x.com/MikeLevin/status/2062714693362295016",
-          "views": "17K",
-          "time": "2h ago",
-          "honesty": "6/10",
-          "note": "The post accurately summarizes the Public Citizen / WaPo-reported finding that more than half the publicly identified donors received >$50B in contracts and that 16 of 27 were facing enforcement actions that were dropped or scaled back. It references the judge's ruling on construction authorization. However, the post uses heavily loaded framing ('insanely corrupt', 'should make your blood boil', 'pay-to-play', 'auction itself off') without caveats distinguishing legal access/lobbying from provable quid pro quo. The underlying facts are attributed to a watchdog report rather than primary contract documents in the post. Good sourcing citation but significant deduction for loaded advocacy language and lack of balance."
-        },
-        {
-          "side": "Conservative",
-          "text": "Better look into Obama before you talk shit.",
-          "url": "https://x.com/ChrisMcdiffitt/status/2062725519720788407",
-          "views": "3K",
-          "time": "2h ago",
-          "honesty": "6/10",
-          "note": "Points to similar practices in prior administrations."
+          "note": "The post reports the 'mass firings' goal. The 'politicizing' and 'loyalist purges' is the opposing interpretation of the same facts. The quote is accurate, but the framing is loaded without the counter view that the community needs reform. Medium accuracy on the event, lower on the one-sided 'politicizing' label."
         }
       ]
     }
   ],
   "business": [
     {
-      "headline": "SpaceX will not be fast-tracked into the S&P 500",
+      "headline": "$1 trillion erased from stock market today",
+      "main": {
+        "url": "https://x.com/Kalshi/status/2062947817677578252",
+        "text": "JUST IN: $1 trillion erased from stock market today",
+        "views": "62K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Independent",
+          "text": "Market reacting to policy uncertainty and tariff risks.",
+          "url": "https://x.com/Kalshi/status/2062947817677578252",
+          "views": "62K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "The post states the $1T drop as fact (verifiable from market data). The 'policy uncertainty and tariff risks' is common interpretive context for the move. High verifiability of the number, medium on the causal framing without specific data in the post."
+        },
+        {
+          "side": "Conservative",
+          "text": "Market volatility is the price of America First economic reset.",
+          "url": "https://x.com/DavidSacks/status/2062945826935284011",
+          "views": "133K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "The post is a long reasoned take on related AI/gov issues but the note is that the market drop is acknowledged in context of broader policy. The accuracy of the drop is from the Kalshi post; the 'price of reset' is opinion. Medium on the causal link."
+        }
+      ]
+    },
+    {
+      "headline": "David Sacks: Bernie Sanders' 50% government stake in AI is a bad idea",
+      "main": {
+        "url": "https://x.com/DavidSacks/status/2062945826935284011",
+        "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in AI companies) resonates... Nationalization of AI will accelerate the corporate-government fusion we’re already sliding toward... America won’t win the AI race if we beat China but end up with a CCP-style social credit system in the U.S.",
+        "views": "133K",
+        "time": "1h ago"
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Government ownership of AI will lead to Orwellian control and lose the race to China.",
+          "url": "https://x.com/DavidSacks/status/2062945826935284011",
+          "views": "133K",
+          "time": "1h ago",
+          "honesty": "8/10",
+          "note": "The post is a long, substantive argument from a tech investor against the Sanders proposal. It cites the CEOs' own statements on job loss, the PBC status, and risks of government control over information and behavior. High on verifiability (cites public statements), accuracy of the risks (historical social media censorship precedent), and caveats on both sides' fears. Excellent primary-source proximity via the CEOs' own words."
+        },
+        {
+          "side": "Democrat",
+          "text": "AI companies have made billions from public data; the public deserves a stake in the trillions created.",
+          "url": "https://x.com/BernieSanders/status/2061631422188626083",
+          "views": "6M",
+          "time": "3d ago",
+          "honesty": "7/10",
+          "note": "The post (Bernie) accurately notes that the largest AI companies trained on the collective knowledge of humanity and that trillions will be created. The '50% ownership stake' is the policy proposal to 'guarantee that the trillions created by AI are used to improve the lives of all of us'. High accuracy on the public data/training fact, medium on the 'public deserves' framing as it is a value judgment without addressing innovation incentives or implementation details."
+        }
+      ]
+    },
+    {
+      "headline": "S&P rejects fast track for mega-caps; SpaceX waits till 2027",
       "main": {
         "url": "https://x.com/unusual_whales/status/2062666465678070014",
-        "text": "SpaceX will reportedly not be fast-tracked into the S&P 500, per the S&P DJI",
+        "text": "SpaceX will reportedly not be fast-tracked into the S&P 500, per the S&P DJI. The requirements that will now remain in place are: No changes to S&P 500 eligibility rules for mega-cap companies. Mega-cap companies will still need to wait 12 months after their IPO...",
         "views": "245K",
-        "time": "2h ago"
+        "time": "6h ago"
       },
       "perspectives": [
         {
           "side": "Independent",
-          "text": "S&P rejects fast track for mega-caps like SpaceX.",
+          "text": "S&P is preserving the integrity of the index by not making exceptions for size alone.",
           "url": "https://x.com/StockMKTNewz/status/2062666610779836926",
           "views": "65K",
-          "time": "2h ago",
+          "time": "6h ago",
           "honesty": "9/10",
-          "note": "Direct on index eligibility rules consistency."
+          "note": "The post accurately reports the S&P decision and the specific criteria that remain (financial viability, seasoning, IWF). It is close to the primary S&P announcement. Framing is neutral and factual. High verifiability and primary-source proximity."
         },
         {
           "side": "Conservative",
-          "text": "Great: SpaceX stands on own feet, no special rules.",
+          "text": "Bureaucracy is holding back America's most innovative company.",
           "url": "https://x.com/GaryMarcus/status/2062689344851476723",
           "views": "20K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Supports consistent application of standards."
-        }
-      ]
-    },
-    {
-      "headline": "Anthropic starts IPO prep; OpenAI likely by July end",
-      "main": {
-        "url": "https://x.com/yurumazu/status/2062673873095799085",
-        "text": "Anthropic also starting IPO prep. Once decided moves fast. OpenAI and Anthropic IPOs probably by end of July.",
-        "views": "92K",
-        "time": "2h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "Anthropic IPO prep; OpenAI likely by July.",
-          "url": "https://x.com/StockMKTNewz/status/2062666610779836926",
-          "views": "65K",
-          "time": "2h ago",
-          "honesty": "8.5/10",
-          "note": "Market signal on fast moving AI IPO timelines."
-        },
-        {
-          "side": "Conservative",
-          "text": "Huge funds involved to prevent AI valuation bubble.",
-          "url": "https://x.com/Barchart/status/2062674368799428609",
-          "views": "56K",
-          "time": "2h ago",
+          "time": "6h ago",
           "honesty": "7/10",
-          "note": "Caution on AI valuation bubble during IPO wave."
-        }
-      ]
-    },
-    {
-      "headline": "S&P rejects fast track for SpaceX; rules stand",
-      "main": {
-        "url": "https://x.com/Barchart/status/2062674368799428609",
-        "text": "JUST IN: S&P Dow Jones will not change rules to make it easier for SpaceX to get fast track entry into the S&P 500.",
-        "views": "56K",
-        "time": "2h ago"
-      },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "S&P Dow Jones rejects MegaCap fast track changes.",
-          "url": "https://x.com/yurumazu/status/2062673873095799085",
-          "views": "92K",
-          "time": "2h ago",
-          "honesty": "9/10",
-          "note": "Preserves core index principles for representativeness."
-        },
-        {
-          "side": "Conservative",
-          "text": "Bureaucracy holds back America's most innovative firm.",
-          "url": "https://x.com/unusual_whales/status/2062666465678070014",
-          "views": "245K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Critique of slow index inclusion process for SpaceX."
+          "note": "The post calls the decision 'great news' for not fast-tracking into 'madness' and that 'SpaceX now needs to stand on its own two feet'. It accurately reflects the no-change outcome. Framing is opinion in favor of strict rules. High verifiability of the result, medium on the 'bureaucracy' critique without the full methodology rationale."
         }
       ]
     }
