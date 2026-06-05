@@ -49,7 +49,7 @@
      row, so row boundaries stay aligned even when cards differ in height. */
   .main-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
   .main-grid > .col-title { margin-bottom: 0; }
-  .main-grid > .main-story-block { margin-bottom: 0; height: 100%; box-sizing: border-box; }
+  .main-grid > .main-story-block { margin-bottom: 0; box-sizing: border-box; }
   .main-grid > .more-list { margin-top: 0; }
   .main-story-empty { /* invisible placeholder keeps row alignment */ min-height: 1px; }
   @media (max-width: 750px) {
@@ -103,10 +103,8 @@
   /* Shared details panel — sits below the teasers row, spans full card width. */
   .perspective-details { display: none; margin-top: 11px; padding: 11px 12px; background: #fffdf7; border: 1px solid #d4b896; border-radius: 7px; box-shadow: inset 0 1px 0 rgba(255,250,235,0.6); animation: persp-pop 0.16s ease-out; }
   @keyframes persp-pop { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-  .perspective-details .pd-label { display: inline-block; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 800; padding: 2px 8px; border-radius: 9px; margin-bottom: 7px; }
-  .perspective-details .pd-meta { font-size: 0.66rem; color: #6b5d4f; margin-bottom: 6px; }
-  .perspective-details .pd-meta .views { color: #b8860b; font-weight: 700; }
-  .perspective-details .pd-meta .handle { font-weight: 700; color: #2a2218; }
+  /* pd-label + pd-meta intentionally removed: the colored teaser above
+     already conveys side + views + age. Details panel starts at the body. */
   .perspective-details .pd-body { font-size: 0.82rem; color: #2a2218; line-height: 1.5; margin-bottom: 9px; white-space: pre-wrap; word-wrap: break-word; }
   .perspective-details .tweet-embed-container { margin: 0 0 10px; }
   .perspective-details .pd-honesty { display: flex; align-items: baseline; gap: 8px; margin-top: 9px; padding-top: 9px; border-top: 1px dashed #d4b896; }
@@ -404,16 +402,10 @@ function selectMainPerspective(pid, panelId) {
     panel.dataset.openPid = '';
     return;
   }
-  // Build the panel content for the clicked perspective.
-  var pc = persClassForSide(p.side);
-  var ago = timeAgo(p.time, p.url);
-  var metaBits = [];
-  if (p.handle) metaBits.push('<span class="handle">' + esc(p.handle) + '</span>');
-  if (p.views)  metaBits.push('<span class="views">' + esc(p.views) + ' views</span>');
-  if (ago)      metaBits.push(ago);
+  // Build the panel content for the clicked perspective. The teaser
+  // above already conveys side (color) + views + age; the panel skips
+  // those and starts with the body so nothing is duplicated.
   var html = '';
-  html += '<div class="pd-label ' + pc.box + '"><span class="' + pc.lab + '">' + esc(pc.display) + '</span></div>';
-  if (metaBits.length) html += '<div class="pd-meta">' + metaBits.join(' · ') + '</div>';
   html += '<div class="pd-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>';
   // Embed slot — Twitter widget loads inline. The widget itself carries
   // the native "view on X" affordance, so we don't add a separate link
