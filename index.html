@@ -463,6 +463,8 @@ function toggleEmbed(containerId, tweetUrl) {
 
 // Perspective sides are RED / WHITE / BLUE only.
 // Three valid pairings per story: C+I, I+D, C+D.
+// Canonical render order is ALWAYS left-to-right: Conservative → Independent → Democrat
+// (sideRank() below; the renderer sorts perspectives by it before paint).
 // Any non-canonical side label (Skeptical, Bullish, etc.) is coerced
 // to one of {Conservative, Independent, Democrat} via aliases below.
 // Display label is normalised to match the color so users never see
@@ -480,6 +482,18 @@ function persClassForSide(side) {
   // Default: Independent / white. Catches Mixed, Neutral, Balanced,
   // Uncertain, and anything else.
   return { box: 'perspective-independent', lab: 'ind', display: 'Independent' };
+}
+
+// Canonical left-to-right ordering: red → white → blue.
+// Use the same alias coercion as persClassForSide so non-canonical
+// side labels still slot into the right rank.
+function sideRank(p) {
+  if (!p) return 99;
+  var d = persClassForSide(p.side).display;
+  if (d === 'Conservative') return 0;  // red, leftmost
+  if (d === 'Independent')  return 1;  // white, middle
+  if (d === 'Democrat')     return 2;  // blue, rightmost
+  return 99;
 }
 
 function renderEmbedSlot(url) {
@@ -715,9 +729,12 @@ function renderMainStoryBlock(story, rank) {
 
   // Filter perspectives to those with real X URLs (no editorial-only tiles).
   // Cap at 2 for Main tab to match "6 perspectives below" total (3 cards × 2).
+  // Then canonical sort: Conservative (red) → Independent (white) → Democrat (blue),
+  // always in that left-to-right order regardless of Grok's input order.
   var perspectives = (story.perspectives || [])
     .filter(function(p) { return p && isXStatusUrl(p.url); })
-    .slice(0, 2);
+    .slice(0, 2)
+    .sort(function(a, b) { return sideRank(a) - sideRank(b); });
 
   var teasersHtml = '';
   if (perspectives.length) {
