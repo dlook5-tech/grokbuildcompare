@@ -88,9 +88,17 @@
   /* Perspective TEASERS — 2-up grid, half-width each. */
   .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0; margin-bottom: 0; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .main-story-block .perspective.perspective-teaser { cursor: pointer; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.78rem; padding: 10px 12px; line-height: 1.42; transition: transform 0.12s, box-shadow 0.12s; }
+  .main-story-block .perspective.perspective-teaser { position: relative; cursor: pointer; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.78rem; padding: 10px 28px 10px 12px; line-height: 1.42; transition: transform 0.12s, box-shadow 0.12s; }
   .main-story-block .perspective.perspective-teaser:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(80,50,20,0.18); }
   .main-story-block .perspective.perspective-teaser.is-selected { outline: 2px solid #b8860b; outline-offset: 1px; }
+  /* Box-and-line expand/contract icon — top-right of every teaser.
+     ⊞ = collapsed (click to expand) / ⊟ = expanded (click to contract).
+     pointer-events: none so the icon doesn't intercept; the whole
+     teaser is the click target. */
+  .main-story-block .perspective .expand-toggle { position: absolute; top: 6px; right: 7px; font-size: 0.95rem; line-height: 1; color: #8a7e72; user-select: none; pointer-events: none; transition: color 0.12s, transform 0.15s; }
+  .main-story-block .perspective .expand-toggle::before { content: '⊞'; }
+  .main-story-block .perspective.is-selected .expand-toggle { color: #b8860b; transform: scale(1.05); }
+  .main-story-block .perspective.is-selected .expand-toggle::before { content: '⊟'; }
   /* Color of the tile IS the label — drop the textual side label and the
      "tap for full + honesty" hint. The colored border tells you all you
      need to know; click to expand. */
@@ -766,6 +774,7 @@ function renderMainPerspectiveTeaser(p, blockId, idx, panelId) {
     '<div class="tile perspective perspective-teaser ' + pc.box +
       '" data-pid="' + pid +
       '" onclick="selectMainPerspective(\'' + pid + '\',\'' + panelId + '\');">' +
+      '<div class="expand-toggle" aria-hidden="true"></div>' +
       '<div class="label ' + pc.lab + '">' + esc(pc.display) + '</div>' +
       '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
       metaLine +
