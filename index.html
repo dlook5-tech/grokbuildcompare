@@ -105,8 +105,11 @@
   .main-story-block .perspective .label,
   .main-story-block .perspective .teaser-hint { display: none; }
   /* Meta line sits at the BOTTOM of the perspective tile (below the body):
-     views · age · honesty-score — all one row, all plain text, no chips. */
-  .main-story-block .perspective .meta-line { font-size: 0.7rem; margin-top: 8px; margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: baseline; }
+     views · age · honesty-score — all one row, all plain text, no chips,
+     NEVER wraps. If a viewport is so narrow the line would overflow, it
+     clips at the right edge rather than wrapping to a second line. */
+  .main-story-block .perspective .meta-line { font-size: 0.62rem; margin-top: 8px; margin-bottom: 0; display: flex; flex-wrap: nowrap; gap: 3px 5px; align-items: baseline; white-space: nowrap; overflow: hidden; }
+  .main-story-block .perspective .meta-line > * { flex-shrink: 0; white-space: nowrap; }
   /* Honesty score appears as plain bold text inline with the rest of the
      meta — no colored chip, no padding, no rounded background. The
      details panel keeps the full color-coded chip; only the teaser
