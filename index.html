@@ -628,6 +628,30 @@ function renderHonestyFold(honesty, note) {
   );
 }
 
+// Inline "▼ notes" expand — same pattern as iFollow, used across Elon/Free/MSM.
+// Renders nothing when there's no note (no orphan affordance).
+function renderNoteFold(note) {
+  if (!note) return '';
+  var nid = 'nf' + Math.random().toString(36).substr(2, 9);
+  return (
+    '<div class="ifollow-note-fold" id="' + nid + '">' +
+      '<span class="ifollow-note-toggle" onclick="event.stopPropagation();document.getElementById(\'' + nid + '\').classList.toggle(\'open\');">' +
+        '<span class="ifollow-note-arrow">▼</span> notes' +
+      '</span>' +
+      '<div class="ifollow-note-body">' + esc(note) + '</div>' +
+    '</div>'
+  );
+}
+
+// Build the honesty piece for an inline meta row: "Honesty 8/10" as plain text,
+// the number bolded. Returns empty string when no honesty value is set.
+function honestyMetaPiece(honesty) {
+  var v = honestyParse(honesty);
+  if (v == null) return '';
+  var label = (typeof honesty === 'string' && /^\d/.test(honesty)) ? honesty : (v + '/10');
+  return 'Honesty <span class="ifollow-honesty-num">' + esc(label) + '</span>';
+}
+
 function renderSourceTile(mp) {
   if (!mp) return '';
   var url = mp.url || '';
@@ -684,23 +708,30 @@ function renderStoryBlock(s) {
   var mp = s.main || s.main_post || {};
   var headline = esc(s.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
+  // Inline meta row: handle · views · age · Honesty X/10 — same line, no pill.
+  // Used by MSM tab (and anywhere else that calls renderStoryBlock).
+  var blockHonestyBit = honestyMetaPiece(mp.honesty || s.honesty);
   var meta = '<span class="post-meta">' +
     (mp.handle ? esc(mp.handle) + ' · ' : '') +
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
+    (blockHonestyBit ? ' · ' + blockHonestyBit : '') +
     '</span>';
   var sourceTile = renderSourceTile(mp);
   var perspectives = (s.perspectives || []);
   var perspectivesRow = perspectives.length
     ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
     : '';
+  // Body: optional ▼ notes for the main story honesty — perspectives carry
+  // their own honesty inside the perspective tiles.
+  var noteBlock = renderNoteFold(mp.note || s.note);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + perspectivesRow + '</div>' +
+      '<div class="story-body">' + sourceTile + perspectivesRow + noteBlock + '</div>' +
     '</div>'
   );
 }
@@ -713,10 +744,14 @@ function renderElonBlock(item) {
   var rawHeadline = item.headline || item.text || '(no headline)';
   var headline = esc(String(rawHeadline).replace(/^Elon:\s*/i, ''));
   var hdrAgo = timeAgo(item.time, item.url);
+  // Single inline meta row: @elonmusk · 330K views · 1h ago · Honesty 8/10
+  // — matches Main/Earlier/iFollow style. Honesty on the SAME line, no pill.
+  var elonHonestyBit = honestyMetaPiece(item.honesty);
   var meta = '<span class="post-meta">' +
     '@elonmusk' +
     (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
+    (elonHonestyBit ? ' · ' + elonHonestyBit : '') +
     '</span>';
   var sourceTile = renderSourceTile({
     handle: '@elonmusk',
@@ -756,16 +791,16 @@ function renderElonBlock(item) {
       note: c.note
     });
   }
-  var honestyBlock = renderHonestyFold(item.honesty, item.note);
-  var visibleHonesty = '<div style="font-size:10px; color:#666; margin-top:4px; padding-top:3px; border-top:1px solid #f0f0f0;">Honesty: <strong>' + esc(item.honesty || '—') + '</strong> <span style="font-size:9px; cursor:pointer;">▼ footnote</span></div>';
+  // Honesty is now inline on the meta row (above). Body just gets the
+  // optional ▼ notes affordance — renders nothing when there's no note.
+  var noteBlock = renderNoteFold(item.note);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
-        visibleHonesty +
       '</div>' +
-      '<div class="story-body">' + parentHtml + sourceTile + counterTile + honestyBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + counterTile + noteBlock + '</div>' +
     '</div>'
   );
 }
@@ -1191,19 +1226,23 @@ function renderFreeItem(item) {
   var url = item.url || '';
   var headline = esc(item.headline || item.text || '(no headline)');
   var hdrAgo = timeAgo(item.time, url);
+  // Inline meta row: VIEWS · AGE · Honesty X/10 — matches Main/iFollow/Elon.
+  var freeHonestyBit = honestyMetaPiece(item.honesty);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
+    (freeHonestyBit ? ' · ' + freeHonestyBit : '') +
     '</span>';
   var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
-  var honestyBlock = renderHonestyFold(item.honesty, item.note);
+  // Body: optional ▼ notes only — honesty is already in the meta row.
+  var noteBlock = renderNoteFold(item.note);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + honestyBlock + '</div>' +
+      '<div class="story-body">' + sourceTile + noteBlock + '</div>' +
     '</div>'
   );
 }
