@@ -108,7 +108,14 @@
   .main-story-meta .sep { color: #c5b59d; }
   /* Main honesty score — plain bold text, no chip (same treatment as
      perspective teaser meta). */
-  .main-story-meta .honesty-score { background: transparent; color: inherit; padding: 0; border-radius: 0; font-size: inherit; font-weight: 700; }
+  .main-story-meta .honesty-score,
+  .post-meta .honesty-score,
+  .ifollow-meta .honesty-score { background: transparent; color: inherit; padding: 0; border-radius: 0; font-size: inherit; font-weight: 700; }
+  /* Expand-toggle square (the □) inline at end of every meta row.
+     Same affordance Main uses; extended to .post-meta + .ifollow-meta
+     so Elon/Free/MSM/iFollow all match. */
+  .post-meta .expand-toggle,
+  .ifollow-meta .expand-toggle { display: inline-block; width: 10px; height: 10px; border: 1px solid #8a7e72; border-radius: 2px; vertical-align: -1px; margin-left: 2px; }
   /* Perspective TEASERS — 2-up grid, half-width each. */
   .main-story-block .perspectives-row { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0; margin-bottom: 0; }
   .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -643,13 +650,20 @@ function renderNoteFold(note) {
   );
 }
 
-// Build the honesty piece for an inline meta row: "Honesty 8/10" as plain text,
-// the number bolded. Returns empty string when no honesty value is set.
+// Honesty piece for an inline meta row: just "8/10" — no "Honesty" word,
+// no pill. Matches the Main tab's W/N/B format exactly. Returns empty
+// string when honesty is missing so the separator math stays clean.
 function honestyMetaPiece(honesty) {
   var v = honestyParse(honesty);
   if (v == null) return '';
   var label = (typeof honesty === 'string' && /^\d/.test(honesty)) ? honesty : (v + '/10');
-  return 'Honesty <span class="ifollow-honesty-num">' + esc(label) + '</span>';
+  return '<span class="honesty-score">' + esc(label) + '</span>';
+}
+
+// Expand-toggle square for the end of an inline meta row. Same □ Main
+// uses, reused here so Elon/Free/MSM/iFollow all carry the affordance.
+function metaExpandToggle() {
+  return '<span class="expand-toggle" aria-hidden="true"></span>';
 }
 
 function renderSourceTile(mp) {
@@ -708,14 +722,15 @@ function renderStoryBlock(s) {
   var mp = s.main || s.main_post || {};
   var headline = esc(s.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
-  // Inline meta row: handle · views · age · Honesty X/10 — same line, no pill.
-  // Used by MSM tab (and anywhere else that calls renderStoryBlock).
+  // Inline meta row matching Main: handle · views · age · 8/10 · □
+  // Plain text honesty, expand-toggle at end. Used by MSM tab.
   var blockHonestyBit = honestyMetaPiece(mp.honesty || s.honesty);
   var meta = '<span class="post-meta">' +
     (mp.handle ? esc(mp.handle) + ' · ' : '') +
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     (blockHonestyBit ? ' · ' + blockHonestyBit : '') +
+    ' · ' + metaExpandToggle() +
     '</span>';
   var sourceTile = renderSourceTile(mp);
   var perspectives = (s.perspectives || []);
@@ -744,14 +759,16 @@ function renderElonBlock(item) {
   var rawHeadline = item.headline || item.text || '(no headline)';
   var headline = esc(String(rawHeadline).replace(/^Elon:\s*/i, ''));
   var hdrAgo = timeAgo(item.time, item.url);
-  // Single inline meta row: @elonmusk · 330K views · 1h ago · Honesty 8/10
-  // — matches Main/Earlier/iFollow style. Honesty on the SAME line, no pill.
+  // Single inline meta row matching Main exactly:
+  //   @elonmusk · 330K views · 1h ago · 8/10 · □
+  // Plain text honesty (no "Honesty" word, no pill). Expand-toggle at end.
   var elonHonestyBit = honestyMetaPiece(item.honesty);
   var meta = '<span class="post-meta">' +
     '@elonmusk' +
     (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     (elonHonestyBit ? ' · ' + elonHonestyBit : '') +
+    ' · ' + metaExpandToggle() +
     '</span>';
   var sourceTile = renderSourceTile({
     handle: '@elonmusk',
@@ -1161,11 +1178,15 @@ function renderTabIFollow() {
         if (topAgo) metaBits.push(topAgo);
         if (tp.url) topEmbed = renderEmbedSlot(tp.url);
       }
-      // Honesty appended to the same meta line as plain text — no colored pill.
+      // Honesty appended as plain text "8/10" (no "Honesty" word, no pill) —
+      // matches Main W/N/B exactly.
       if (v != null) {
         var hStr = (typeof f.honesty === 'string' ? f.honesty : (v + '/10'));
-        metaBits.push('Honesty <span class="ifollow-honesty-num">' + esc(hStr) + '</span>');
+        metaBits.push('<span class="honesty-score">' + esc(hStr) + '</span>');
       }
+      // Expand-toggle □ at the end so the row reads identical to Main:
+      //   Top post · 105K views · 4h ago · 8/10 · □
+      metaBits.push(metaExpandToggle());
       var metaLine = '';
       if (metaBits.length) {
         var lead = tp ? 'Top post · ' : '';
@@ -1226,12 +1247,14 @@ function renderFreeItem(item) {
   var url = item.url || '';
   var headline = esc(item.headline || item.text || '(no headline)');
   var hdrAgo = timeAgo(item.time, url);
-  // Inline meta row: VIEWS · AGE · Honesty X/10 — matches Main/iFollow/Elon.
+  // Inline meta row matching Main: VIEWS · AGE · 8/10 · □
+  // Plain text honesty, expand-toggle at end.
   var freeHonestyBit = honestyMetaPiece(item.honesty);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     (freeHonestyBit ? ' · ' + freeHonestyBit : '') +
+    ' · ' + metaExpandToggle() +
     '</span>';
   var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
   // Body: optional ▼ notes only — honesty is already in the meta row.
