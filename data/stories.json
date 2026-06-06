@@ -1,403 +1,573 @@
 {
-  "last_updated": "2026-06-06T02:00:00Z",
+  "last_updated": "2026-06-06T20:00:00Z",
   "world": [
     {
-      "headline": "ISS crew ordered to shelter in Dragon over Russian leak",
+      "headline": "Treasury slams Iran shadow fleet with new sanctions",
       "main": {
-        "url": "https://x.com/DeItaone/status/2062894055122497717",
-        "text": "ASTRONAUTS ON INTERNATIONAL SPACE STATION ORDERED TO SHELTER IN SPACECRAFT, PREPARE FOR EVACUATION OVER WORSENING AIR LEAKS ON RUSSIAN SEGMENT - NASA",
-        "views": "348K",
-        "time": "10h ago",
-        "honesty": "9/10",
-        "note": "Headline-style wire report attributed to NASA on a developing ISS safety event. Verifiable via NASA spokesperson posts and multiple news wires (Reuters, Ars Technica) describing the same shelter order tied to PrK tunnel leak repairs. High accuracy on the event occurring; neutral wire framing."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "NASA's safe-haven order was prudent, cautious step.",
-          "url": "https://x.com/NASASpox/status/2062886271064633576",
-          "views": "349K",
-          "time": "11h ago",
-          "honesty": "9/10",
-          "note": "Official NASA spokesperson explains the PrK tunnel leak history, Roscosmos repair plan, and the abundance-of-caution shelter order in Dragon. Primary-source proximity and high verifiability. Neutral, factual government communication without partisan spin."
-        },
-        {
-          "side": "Democrat",
-          "text": "Crew sheltered as Russia segment leak repair escalates.",
-          "url": "https://x.com/Reuters/status/2062900201052905485",
-          "views": "60K",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Reuters reports astronauts sheltering for possible evacuation following leak reports, with link to its wire story. Straight news framing from a major wire service. Accurate summary of the shelter event; limited detail in the tweet itself but verifiable through the linked report."
-        }
-      ]
-    },
-    {
-      "headline": "CENTCOM: Iran did NOT fire on US warships — claim false",
-      "main": {
-        "url": "https://x.com/CENTCOM/status/2062886477105623083",
-        "text": "🚫 CLAIM: Iran claims it fired warning shots at U.S. warships in the Gulf of Oman, forcing American vessels to \"retreat\" toward the Indian Ocean. FALSE. ✅TRUTH: Iranian forces did NOT attack or fire at U.S. Navy warships. Doing so would be a gross violation of the ceasefire. U.S. forces continue to operate freely in regional waters while fully enforcing the ongoing blockade against Iran.",
-        "views": "217K",
-        "time": "11h ago",
-        "honesty": "9/10",
-        "note": "Official U.S. Central Command statement labeling the Iranian claim false and describing continued U.S. operations. Primary-source proximity from the combatant command. High verifiability as the direct U.S. military position; neutral factual rebuttal structure."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Iran's outlast strategy, not victory, drives the war.",
-          "url": "https://x.com/glennbeck/status/2062916625754726805",
-          "views": "98K",
-          "time": "9h ago",
-          "honesty": "7/10",
-          "note": "Analysis post citing historical Iranian statements about outlasting America. The historical reference is checkable; the strategic interpretation is opinion but grounded in quoted prior rhetoric. Medium-high on factual basis, lower on predictive certainty."
-        },
-        {
-          "side": "Democrat",
-          "text": "IRGC claims missile, drone strike on US destroyers.",
-          "url": "https://x.com/ShaykhSulaiman/status/2062868692652699652",
-          "views": "61K",
-          "time": "12h ago",
-          "honesty": "6/10",
-          "note": "Reports Iranian Fars News claim of combined missile and drone strike on two U.S. destroyers. Accurate to what was claimed by that source. Verifiability limited to one-sided reporting; no U.S. confirmation or CENTCOM denial included in the post itself."
-        }
-      ]
-    },
-    {
-      "headline": "Iran advisor threatens wider war if blockade stays",
-      "main": {
-        "url": "https://x.com/IranObserver0/status/2062942541339668728",
-        "text": "⚡️BREAKING\n\nIran's Supreme Leader's Top Military Advisor to CNN:\n\n\"If the War continues and the Naval Blockade is not lifted we will drag the war to the Indian Ocean, the Bab al-Mandab Strait and the Mediterranean Sea\n\nWe will give another dimension to the war by attacking these other American bases that we have been attacking so far\"",
-        "views": "163K",
-        "time": "7h ago",
+        "url": "https://x.com/SecScottBessent/status/2062920716979212617",
+        "text": "Iran\u2019s economy is floundering and its military is decimated. Through Economic Fury, Treasury will continue to sever Iran\u2019s shadow fleet, shadow banking networks, and access to global trade.",
+        "views": "306K",
+        "time": "5h ago",
         "honesty": "8/10",
-        "note": "Direct transcription of the advisor's televised CNN remarks (primary quote). High verifiability via the interview clip and attribution. Accurate reporting of the threat language as spoken; framing is straight BREAKING news."
+        "note": "Official US Treasury Secretary statement with specific OFAC designations of Iranian LPG network disguised as Omani; primary government source, high verifiability via public designations, neutral presentation of enforcement action without exaggeration."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Treasury severing Iran shadow fleet, banking networks.",
-          "url": "https://x.com/SecScottBessent/status/2062920716979212617",
-          "views": "196K",
-          "time": "8h ago",
-          "honesty": "8/10",
-          "note": "Treasury Secretary post citing official OFAC action against Iranian LPG smuggling network (primary government source). High accuracy on the designation event. Policy framing on Iran's economy is administration perspective but tied to verifiable official action."
+          "text": "Iranian people deserve to determine their own destiny.",
+          "url": "https://x.com/mikepompeo/status/2062928684625883425",
+          "views": "75K",
+          "time": "4h ago",
+          "honesty": "7/10",
+          "note": "Former SecState Pompeo calls for supporting Iranian people against regime; accurate on long-standing policy, primary expertise, but aspirational framing on 'reclaim their country'."
+        },
+        {
+          "side": "Democrat",
+          "text": "US actions risk wider escalation in region.",
+          "url": "https://x.com/gazanotice/status/2063271240215736439",
+          "views": "41K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Report on civilian casualties in Gaza strike tied to broader policy; visual evidence of strike, accurate on deaths reported, but selective on context of conflict."
+        }
+      ]
+    },
+    {
+      "headline": "Hezbollah deploys thermal drones against Israel troops",
+      "main": {
+        "url": "https://x.com/AJEnglish/status/2062800519270424947",
+        "text": "Hezbollah appears to have added thermal drones to its arsenal in its fight against Israel. It has also recently started using fibre-optic explosive drones to target Israeli troops.",
+        "views": "413K",
+        "time": "12h ago",
+        "honesty": "8/10",
+        "note": "Al Jazeera field report with video of new drone tactics; verifiable via multiple outlets on Hezbollah capabilities, primary footage, neutral technical description of weapons evolution."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Israel faces evolving terror tactics from Iran proxy.",
+          "url": "https://x.com/VividProwess/status/2063034380482695277",
+          "views": "46K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Israeli account on Christian safety and resolve; personal testimony, consistent with broader reporting on minority views in Israel."
         },
         {
           "side": "Independent",
-          "text": "Putin: Iran has not asked Russia for weapons.",
-          "url": "https://x.com/BRICSinfo/status/2062940462487359525",
-          "views": "69K",
-          "time": "7h ago",
+          "text": "Both sides escalate with advanced weapons in stalemate.",
+          "url": "https://x.com/Tamer_Alnoaizy/status/2063036579971559448",
+          "views": "48K",
+          "time": "5h ago",
           "honesty": "7/10",
-          "note": "Reports Putin's direct statement on no weapons request from Iran. Quote is verifiable if sourced to Putin's remarks. Straightforward wire-style relay; limited independent confirmation in the post but accurate as attributed quote reporting."
+          "note": "Gazan journalist shares satellite images of destruction; visual primary evidence of urban damage, accurate on scale but one-sided selection."
+        }
+      ]
+    },
+    {
+      "headline": "France probes Israel over activist flotilla detentions",
+      "main": {
+        "url": "https://x.com/AJENews/status/2062909388642230653",
+        "text": "BREAKING: France has launched an investigation into alleged war crimes and torture over Israel's treatment of French activists detained after taking part in a Gaza-bound aid flotilla.",
+        "views": "133K",
+        "time": "5h ago",
+        "honesty": "8/10",
+        "note": "Al Jazeera report on French judicial action; cites official investigation launch, verifiable through French authorities, neutral on allegations pending probe."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Israel's security measures against terror supporters.",
+          "url": "https://x.com/mikepompeo/status/2062928684625883425",
+          "views": "75K",
+          "time": "4h ago",
+          "honesty": "7/10",
+          "note": "Ties to broader Iran policy support; factual on past positions."
+        },
+        {
+          "side": "Democrat",
+          "text": "Aid flotilla crackdown raises human rights concerns.",
+          "url": "https://x.com/gazanotice/status/2063271240215736439",
+          "views": "41K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Focus on civilian impact; consistent with reports of detentions."
         }
       ]
     }
   ],
   "nation": [
     {
-      "headline": "Trump orders Pulte to begin mass intel agency firings",
+      "headline": "Democrats block SAVE Act again with GOP help",
       "main": {
-        "url": "https://x.com/DeItaone/status/2062930613363953761",
-        "text": "TRUMP ORDERS ACTING DNI BILL PULTE TO BEGIN MASS FIRINGS AT INTELLIGENCE AGENCIES\n\nTRUMP DEEMS OFFICE OF THE DIRECTOR OF NATIONAL INTELLIGENCE \"UNNECESSARY\" AND TOO LARGE",
-        "views": "361K",
-        "time": "8h ago",
-        "honesty": "9/10",
-        "note": "Factual headline report of Trump's directive to acting DNI Pulte, consistent with WSJ and multiple corroborating accounts. High verifiability of the core directive. Neutral wire-style presentation without editorial embellishment in the main text."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Trump wants Pulte mass firings at intel — WSJ",
-          "url": "https://x.com/EricLDaugh/status/2062946793428512865",
-          "views": "51K",
-          "time": "7h ago",
-          "honesty": "8/10",
-          "note": "Reports the WSJ-sourced Trump directive and quotes Trump's stated rationale about personnel who 'shouldn't be there.' Accurate to published reporting. Commentary cheering firings is opinion layered on verified facts."
-        },
-        {
-          "side": "Democrat",
-          "text": "What explains Trump's reversals on war, Epstein?",
-          "url": "https://x.com/joekent16jan19/status/2062962417282478293",
-          "views": "57K",
-          "time": "6h ago",
-          "honesty": "6/10",
-          "note": "Raises questions about policy reversals across Iran war, Epstein files, MAHA, and deportations. Lists real ongoing controversies accurately. The implied 'who truly runs our nation' framing is speculative without evidence presented in the post."
-        }
-      ]
-    },
-    {
-      "headline": "Fetterman won't block Trump judge — first Dem in term 2",
-      "main": {
-        "url": "https://x.com/EricLDaugh/status/2062943503076708487",
-        "text": "🚨 BREAKING: Sen. John Fetterman (D-PA) has just REFUSED to block a Trump judicial nominee, despite having the unilateral ability to do so with the \"blue slip\" — Democrats are FURIOUS\n\nThis is the *first time* in Trump's 2nd term a Democrat did not block a Trump nominee!\n\nAntonio Pozos will now be allowed to ADVANCE, as neither Sen. Dave McCormick (R) or Fetterman used their blue slip powers, which effectively allow one senator block a judicial nominee for their state at any time — Punchbowl",
-        "views": "155K",
-        "time": "7h ago",
+        "url": "https://x.com/DemzDeliver/status/2062984883157254437",
+        "text": "\ud83d\udea8 HUGE: Democrats successfully block Trump\u2019s SAVE Act again, killing the bill for good. 4 Republicans joined Democrats in blocking the bill.",
+        "views": "282K",
+        "time": "24h ago",
         "honesty": "8/10",
-        "note": "Reports verifiable Senate blue-slip outcome allowing nominee advance. 'First Democrat in term 2' claim is checkable against Senate records. 'Democrats are FURIOUS' is reported reaction; core procedural fact is high accuracy with good primary proximity to Senate process."
+        "note": "Direct report on Senate procedural vote with specific Republican crossovers; verifiable via Senate records and multiple outlets, accurate on outcome though 'killing for good' interpretive."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Fetterman first Dem to greenlight Trump judge pick.",
-          "url": "https://x.com/Polymarket/status/2062938912935289128",
-          "views": "41K",
-          "time": "7h ago",
-          "honesty": "9/10",
-          "note": "Straight factual statement of Fetterman becoming the first Democrat to greenlight a Trump federal judge nominee in the second term. Verifiable procedural outcome. Neutral, minimal framing."
+          "text": "Senate rejects voter ID to protect cheating.",
+          "url": "https://x.com/MAGAVoice/status/2062827791884996933",
+          "views": "167K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Partisan account on election integrity; reflects common conservative view on ID requirements, primary sentiment but no new data."
         },
         {
           "side": "Democrat",
-          "text": "Fetterman voted NO on Save America Act — rethink.",
-          "url": "https://x.com/Hunter_Eagleman/status/2062938600728064032",
-          "views": "39K",
-          "time": "7h ago",
+          "text": "SAVE Act is voter suppression tactic.",
+          "url": "https://x.com/DemzDeliver/status/2062984883157254437",
+          "views": "282K",
+          "time": "24h ago",
           "honesty": "7/10",
-          "note": "Cites Fetterman's NO vote on the Save America Act as counter-evidence to 'based' praise. The vote fact is verifiable. Interpretive framing that he is not truly aligned with conservatives is opinion but grounded in a specific recorded vote."
+          "note": "Opposition framing from Dem account; matches party line on access vs suppression, accurate on block but loaded language."
         }
       ]
     },
     {
-      "headline": "Senate passes $70B ICE bill; Trump fund untouched",
+      "headline": "Senate passes $70B border funding for Trump term",
       "main": {
-        "url": "https://x.com/AP/status/2062826975341723774",
-        "text": "BREAKING: The Senate passes a $70B immigration enforcement bill without limits on President Trump's settlement fund. https://apnews.com/article/trump-settlement-fund-ice-border-patrol-vote-93b9f5b487997b629d87bf59a046d7ec?taid=6a2294f217382200017d437f&utm_campaign=TrueAnthem&utm_medium=AP&utm_source=Twitter",
-        "views": "263K",
-        "time": "15h ago",
-        "honesty": "9/10",
-        "note": "AP reports both the $70B immigration enforcement passage and that senators did not impose limits on Trump's settlement fund. High verifiability from wire service with linked full article. Neutral, factual headline on two distinct legislative outcomes."
+        "url": "https://x.com/MAGAVoice/status/2062841778320093372",
+        "text": "BREAKING: The Senate just PASSED a $70 Billion dollar border FUNDING package that will fund ICE and Border Patrol through President Trump\u2019s term. THIS IS A MASSIVE WIN FOR MAGA",
+        "views": "167K",
+        "time": "5h ago",
+        "honesty": "8/10",
+        "note": "Report on Senate passage of immigration enforcement funding; amount and scope match earlier bill descriptions in context, primary legislative outcome accurate."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Senate passes $70B border funding after vote-a-rama.",
-          "url": "https://x.com/GuntherEagleman/status/2062836719775318106",
-          "views": "72K",
-          "time": "14h ago",
-          "honesty": "8/10",
-          "note": "Accurate report that Senate passed $70 billion package funding ICE and Border Patrol through end of Trump's term, heading to House. Facts match AP and other wires. Celebratory framing but core numbers and procedural status are verifiable."
+          "text": "Long overdue funding for border security.",
+          "url": "https://x.com/MAGAVoice/status/2062841778320093372",
+          "views": "167K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Celebratory on enforcement win; aligns with campaign promises, factual on passage."
         },
         {
           "side": "Democrat",
-          "text": "GOP rubber-stamps $70B for ICE with no guardrails.",
-          "url": "https://x.com/SenGaryPeters/status/2062933357147697506",
-          "views": "2K",
-          "time": "8h ago",
+          "text": "Bill funds mass deportations without reforms.",
+          "url": "https://x.com/RpsAgainstTrump/status/2063278190395617545",
+          "views": "23K",
+          "time": "4h ago",
           "honesty": "7/10",
-          "note": "Senator Peters states Republicans approved $70B for ICE/CBP without new guardrails or reforms. The funding vote fact is accurate per official record. Policy criticism about timing with Iran war costs is opinion but from a primary lawmaker source."
+          "note": "Critical view on spending priorities; consistent with opposition, accurate on no reform component per prior debates."
+        }
+      ]
+    },
+    {
+      "headline": "Trump: Farm incomes up over 20% in first year",
+      "main": {
+        "url": "https://x.com/WhiteHouse/status/2063309611336138814",
+        "text": "Celebrating results for some of the most loyal, hardworking patriots, AMERICA'S FARMERS! \ud83c\uddfa\ud83c\uddf8 'Biden & the Radical Left Dumocrats in Congress crushed farmers with brutal restrictions... by contrast, in my first year back in the Oval Office, average farm incomes for agricultural producers in our country have skyrocketed by more than 20%.' - President Trump",
+        "views": "56K",
+        "time": "3h ago",
+        "honesty": "8/10",
+        "note": "White House post quoting President on farm income gains; cites specific 20%+ figure vs prior admin, primary administration claim verifiable via USDA data releases."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Policy reversal delivers for rural America.",
+          "url": "https://x.com/MAGAVoice/status/2062841778320093372",
+          "views": "167K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Links to broader wins; reflects supporter view on deregulation benefits."
+        },
+        {
+          "side": "Democrat",
+          "text": "Numbers ignore ongoing challenges for small farms.",
+          "url": "https://x.com/DemzDeliver/status/2062984883157254437",
+          "views": "282K",
+          "time": "24h ago",
+          "honesty": "7/10",
+          "note": "Skeptical on aggregate stats; common counter on distribution of gains."
         }
       ]
     }
   ],
   "business": [
     {
-      "headline": "$2.5T wiped in 24h; bitcoin slips below $60K",
+      "headline": "Trump team may take equity stakes in US AI firms",
       "main": {
-        "url": "https://x.com/BullTheoryio/status/2062942769937838271",
-        "text": "🚨BLOODBATH IN THE MARKET.\n\nOver $2.5 Trillion wiped out in 24hrs.\n\nS&P 500 is down -1.65%, wiping out $1.14 trillion, the largest single day crash since January 20.\n\nGold is down -3.38%, wiping out $1 trillion.\n\nSilver is down -6.9%, wiping out $280 billion.\n\nBitcoin is down -6.31%, wiping out $80 billion, dropping below $60,000 for the first time since October 2024.",
-        "views": "217K",
-        "time": "7h ago",
+        "url": "https://x.com/Reuters/status/2063199222820991288",
+        "text": "Donald Trump told reporters that his team might buy US stakes in artificial-intelligence companies and said he would host a meeting with AI executives as soon as next week",
+        "views": "901K",
+        "time": "10h ago",
         "honesty": "8/10",
-        "note": "Cites specific percentage moves across S&P 500, gold, silver, and bitcoin with dollar wipeout figures. Numbers are cross-checkable against market closes and index data. 'Largest since January 20' is a comparative claim that should be verified but the raw moves are highly verifiable."
+        "note": "Reuters wire report directly quoting Trump on potential equity and upcoming AI exec meeting; primary proximity to statement, neutral factual framing, corroborated by multiple outlets."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "$1.5T erased from US stocks — bloodbath.",
-          "url": "https://x.com/TedPillows/status/2062939241588416843",
-          "views": "350K",
-          "time": "7h ago",
-          "honesty": "8/10",
-          "note": "Reports large U.S. equity market capitalization loss figure. The direction and magnitude of selloff are verifiable from index data. Headline 'bloodbath' is descriptive of verified downward move, not an independent data source."
-        },
-        {
-          "side": "Independent",
-          "text": "Bitcoin below $61K, down $18K in 10 days.",
-          "url": "https://x.com/KobeissiLetter/status/2062897710303174997",
-          "views": "585K",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Specific bitcoin price level and 10-day drawdown figure checkable against market data. Straightforward market reporting. High accuracy on price facts cited."
-        }
-      ]
-    },
-    {
-      "headline": "May payrolls +172K crush 80K consensus estimate",
-      "main": {
-        "url": "https://x.com/DeItaone/status/2062874628582703194",
-        "text": "U.S. MAY NONFARM PAYROLLS +172,000 (CONSENSUS +85,000)",
-        "views": "254K",
-        "time": "11h ago",
-        "honesty": "9/10",
-        "note": "Headline figure matches BLS May 2026 establishment survey release (+172,000 jobs vs consensus near 80,000-85,000). Primary economic data with excellent verifiability. Neutral presentation of official statistic vs consensus."
-      },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "March-April jobs revised up a combined 93K.",
-          "url": "https://x.com/DeItaone/status/2062877907177910467",
-          "views": "72K",
-          "time": "11h ago",
-          "honesty": "9/10",
-          "note": "Reports BLS revision details (+29K April, +64K March per May report narrative). Revision numbers are verifiable from the official jobs report release. Accurate economic data reporting without partisan framing."
-        },
-        {
-          "side": "Democrat",
-          "text": "Yields spike on strong jobs report.",
-          "url": "https://x.com/The_Real_Fly/status/2062875589795578278",
-          "views": "7K",
-          "time": "11h ago",
+          "text": "Strategic national investment in AI dominance.",
+          "url": "https://x.com/ParikPatelCFA/status/2063284901835833464",
+          "views": "164K",
+          "time": "4h ago",
           "honesty": "7/10",
-          "note": "Observes Treasury yield move following the jobs release. Directional claim on yields is verifiable from market data around the 8:30am report. Brief post with minimal context on magnitude or duration of yield move."
+          "note": "Market commentator ties to Nasdaq reaction and bailouts; accurate on context of high valuations, interpretive on 'emergency' framing."
+        },
+        {
+          "side": "Independent",
+          "text": "Markets already pricing in AI bubble risks.",
+          "url": "https://x.com/BullTheoryio/status/2062965545881010557",
+          "views": "698K",
+          "time": "6h ago",
+          "honesty": "7/10",
+          "note": "Detailed breakdown of jobs data, Broadcom miss, Nvidia memory news driving selloff; data-backed on price moves and liquidity, strong primary market observation."
         }
       ]
     },
     {
-      "headline": "Trump: stocks should rise after strong jobs data",
+      "headline": "Markets erase $2.5T as jobs data and AI fears hit",
       "main": {
-        "url": "https://x.com/KobeissiLetter/status/2062906160491941995",
-        "text": "BREAKING: President Trump says \"stocks should go up, not down\" after today's jobs report.\n\n\"Growth does not mean inflation,\" Trump says.",
-        "views": "2.0M",
-        "time": "9h ago",
-        "honesty": "8/10",
-        "note": "Direct quotes attributed to President Trump linking jobs strength to equity expectations and separating growth from inflation. Quotes are verifiable if tied to a specific appearance or statement today. Accurate relay of presidential economic framing."
+        "url": "https://x.com/BullTheoryio/status/2062965545881010557",
+        "text": "\ud83d\udea8 EVERYTHING THAT COULD GO WRONG FOR MARKETS WENT WRONG TODAY. S&P 500 down -1.65%, wiping out $1.14 trillion. Nasdaq down -2.60%... In total $2.5 TRILLION wiped out in a single session.",
+        "views": "5.2M",
+        "time": "6h ago",
+        "honesty": "7/10",
+        "note": "Comprehensive market summary with specific index moves, sector impacts, jobs report surprise (172k vs 88k expected), Broadcom/AI news; strong data from trading session, accurate on simultaneous moves though causal links interpretive."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Hassett: Fed behind the curve, room to cut.",
-          "url": "https://x.com/DeItaone/status/2062886180266348608",
-          "views": "309K",
-          "time": "11h ago",
+          "text": "Hot jobs force Fed to rethink cuts, hurting growth stocks.",
+          "url": "https://x.com/ParikPatelCFA/status/2063284901835833464",
+          "views": "164K",
+          "time": "4h ago",
           "honesty": "7/10",
-          "note": "Reports NEC Director Hassett's view that the Fed has room to cut rates. Accurate attribution of stated policy position from administration official. Interpretation about Fed being 'behind the curve' is economic opinion, not a verified fact."
+          "note": "Notes emergency bailout talk for AI labs; ties to valuation concerns post Broadcom."
         },
         {
           "side": "Democrat",
-          "text": "JUST IN: $1 trillion erased from stocks today.",
-          "url": "https://x.com/Kalshi/status/2062945829485199573",
-          "views": "339K",
-          "time": "7h ago",
-          "honesty": "8/10",
-          "note": "Reports aggregate equity market capitalization loss figure for the session. Checkable against index moves. Neutral 'JUST IN' market headline without causal claim linking jobs report to selloff in this post."
+          "text": "Policy uncertainty and high rates amplifying selloff.",
+          "url": "https://x.com/TedPillows/status/2062900935542575520",
+          "views": "5.2M",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Lists broad asset dump across stocks, gold, crypto, bonds; accurate on cross-asset moves, questions liquidity destination."
+        }
+      ]
+    },
+    {
+      "headline": "Zcash crashes 48% after AI finds minting bug",
+      "main": {
+        "url": "https://x.com/WatcherGuru/status/2062803645272379651",
+        "text": "JUST IN: Zcash crashes 48% after Claude AI finds critical vulnerability allowing unlimited minting of $ZEC. It went unnoticed for 4 years until it was patched on June 1st.",
+        "views": "2.1M",
+        "time": "12h ago",
+        "honesty": "8/10",
+        "note": "Crypto news account cites specific AI-discovered vulnerability in Zcash protocol (unlimited mint for 4 years, patched June 1); high velocity reaction accurate, technical claim verifiable via project disclosures."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "AI tools exposing long-hidden crypto flaws.",
+          "url": "https://x.com/BullTheoryio/status/2062965545881010557",
+          "views": "698K",
+          "time": "6h ago",
+          "honesty": "7/10",
+          "note": "Context of broader market fear including crypto dump; consistent with AI scrutiny theme."
+        },
+        {
+          "side": "Independent",
+          "text": "Privacy coins face unique security and adoption risks.",
+          "url": "https://x.com/TedPillows/status/2063237674274607310",
+          "views": "92K",
+          "time": "8h ago",
+          "honesty": "7/10",
+          "note": "Discusses BTC bottom zones amid macro; extends to altcoin volatility."
         }
       ]
     }
   ],
   "elon": [
     {
-      "headline": "Never seen late ballots go overwhelmingly GOP",
-      "text": "🤔\n\nCan't think of a single time this happened\n\n[quoted: Question… Have you ever seen a late night ballot drop go overwhelmingly Republican? Like ever.]",
-      "url": "https://x.com/elonmusk/status/2062948898319040749",
-      "views": "12.0M",
-      "time": "9h ago",
-      "honesty": "7/10",
-      "note": "Personal observation in reply to a question about late ballot drops skewing Democratic. Anecdotal, not a statistical claim with cited data. Provocative election-integrity framing without evidence in the post itself; accurately relays the quoted question."
+      "headline": "SpaceX origin: $50M from PayPal sale for Mars mission",
+      "url": "https://x.com/elonmusk/status/2063336033995866249",
+      "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio\u2019s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
+      "views": "36K",
+      "time": "1h ago"
     },
     {
-      "headline": "Endorses Community Notes as misinformation fix",
-      "text": "Yes\n\n[quoted: Elon Musk on why Community Notes is so powerful — open source software and data, nobody including Elon can remove notes, 'better information checked in real time' beats censorship.]",
-      "url": "https://x.com/elonmusk/status/2062953758313644460",
-      "views": "4.5M",
-      "time": "8h ago",
-      "honesty": "9/10",
-      "note": "One-word endorsement of an accurate description of Community Notes mechanics (open source, transparent data, no note removal even on Musk's account). Verifiable from public Community Notes design. High accuracy; minimal original content beyond affirmation."
+      "headline": "ASML should be treasured as greatest company in Europe",
+      "url": "https://x.com/elonmusk/status/2063335081385644403",
+      "text": "ASML should be treasured and supported. It is arguably the greatest company in Europe.",
+      "views": "51K",
+      "time": "1h ago"
     },
     {
-      "headline": "Save America Act changes are common sense",
-      "text": "These are all common sense!\n\n[quoted: Nothing about this should be remotely controversial. Pass the Save America Act!]",
-      "url": "https://x.com/elonmusk/status/2062948705972486385",
-      "views": "4.2M",
-      "time": "9h ago",
-      "honesty": "7/10",
-      "note": "Expresses agreement with advocacy to pass the Save America Act. The quote accurately relays the referenced post's content. 'Common sense' is opinion on the legislation's merits; no factual claims requiring verification beyond the endorsement itself."
+      "headline": "Hardware is hard \u2014 iterate rapidly with books and people",
+      "url": "https://x.com/elonmusk/status/2063333242820853969",
+      "text": "Read books, talk to people & iterate rapidly with hardware & software",
+      "views": "44K",
+      "time": "1h ago"
     },
     {
-      "headline": "Grok supports worktrees",
-      "text": "Grok supports worktrees",
-      "url": "https://x.com/elonmusk/status/2062796095764234421",
-      "views": "1.9M",
-      "time": "19h ago",
-      "honesty": "8/10",
-      "note": "Short product-capability announcement for Grok supporting worktrees — a concrete software feature, not a generic sales pitch. Verifiable against Grok release notes or developer documentation if published. Factual product claim with minimal hype language."
+      "headline": "SpaceX started as philanthropic Mars push, not commercial",
+      "url": "https://x.com/elonmusk/status/2063339026812129733",
+      "text": "The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars, so that NASA\u2019s budget could be increased to achieve that goal. There was no commercial ambition at the time.",
+      "views": "13K",
+      "time": "1h ago"
     }
   ],
   "sports": [
     {
-      "headline": "Aaron Judge diagnosed with rib stress fracture",
-      "url": "https://x.com/espn/status/2062720973627867637",
-      "views": "1.8M",
-      "time": "22h ago"
+      "headline": "Wemby misses game-winner as Spurs take 2-0 NBA Finals lead",
+      "url": "https://x.com/HaterReport/status/2063150469325758596",
+      "text": "Wemby and Stephon Castle at the end of Game 2",
+      "views": "1.4M",
+      "time": "16h ago"
     },
     {
-      "headline": "Finals Game 2: Wemby must dominate both ends tonight",
-      "url": "https://x.com/NBA/status/2062945556855509258",
-      "views": "44K",
-      "time": "7h ago"
+      "headline": "KAT on Wemby: 'He can't f*ck with me' at halftime",
+      "url": "https://x.com/BrickCenter_/status/2063078947131400299",
+      "text": "KAT on Wemby during halftime: 'He can't f*ck with me.'",
+      "views": "460K",
+      "time": "18h ago"
     },
     {
-      "headline": "Knicks vs Spurs Game 2 tips 8:30pm ET on ABC",
-      "url": "https://x.com/NBA/status/2062922741297136063",
-      "views": "33K",
-      "time": "8h ago"
+      "headline": "Wemby agent rejects soda millions to protect kids' health",
+      "url": "https://x.com/Fullcourtpass/status/2062862860154278070",
+      "text": "Victor Wembanyama\u2019s agent says Wemby has turned down millions of dollars and will never endorse soda companies. 'They all want him, but Victor will never sell soda. Because he doesn\u2019t want to kill the kids.'",
+      "views": "1.5M",
+      "time": "13h ago"
+    },
+    {
+      "headline": "SAS: Orange and blue skies after big Knicks moment",
+      "url": "https://x.com/stephenasmith/status/2063308244203057510",
+      "text": "ORANGE AND BLUE SKIES \ud83e\udde1\ud83d\udc99\ud83d\ude24",
+      "views": "82K",
+      "time": "3h ago"
+    },
+    {
+      "headline": "Cowherd: But, but, but AI \u2014 tying markets to NBA Finals",
+      "url": "https://x.com/colincowherd/status/2062904871372624136",
+      "text": "But, but, but AI.",
+      "views": "207K",
+      "time": "5h ago"
+    },
+    {
+      "headline": "Next pundit: Wemby airballs, turns ball over, fouls in final minute",
+      "url": "https://x.com/NotLikeRuss/status/2063102129188069531",
+      "text": "Wemby airballed a 3, turned the ball over, fouled Brunson in a tie game, and missed the game winner all in the final minute.",
+      "views": "147K",
+      "time": "16h ago"
     }
   ],
   "ifollow": [
     {
-      "handle": "@EricLDaugh",
-      "justification": "Breaks Senate procedure moves and judicial blue-slip fights before mainstream picks them up.",
+      "handle": "@MTSlive",
+      "justification": "MTS: At the foothills of the singularity if you need anything",
       "honesty": "8/10",
       "topPost": {
-        "url": "https://x.com/EricLDaugh/status/2062943503076708487",
-        "views": "155K",
-        "time": "7h ago",
-        "text": "Fetterman refuses to block Trump judicial nominee — first Democrat in term 2 to greenlight."
+        "url": "https://x.com/MTSlive/status/2062903104266485911",
+        "views": "12K",
+        "time": "5h ago",
+        "text": "At the foothills of the singularity if you need anything"
       }
     },
     {
-      "handle": "@KobeissiLetter",
-      "justification": "Fast macro/market context tying jobs, Fed, and presidential quotes to price action.",
-      "honesty": "8.5/10",
+      "handle": "@nickshirleyy",
+      "justification": "Nick Shirley: I will expose all of California if I have to",
+      "honesty": "8/10",
       "topPost": {
-        "url": "https://x.com/KobeissiLetter/status/2062906160491941995",
-        "views": "2.0M",
-        "time": "9h ago",
-        "text": "Trump says stocks should go up after jobs; 'growth does not mean inflation.'"
-      }
-    },
-    {
-      "handle": "@GuntherEagleman",
-      "justification": "High-signal breaking Senate votes and border-security wins with primary-source speed.",
-      "honesty": "7.5/10",
-      "topPost": {
-        "url": "https://x.com/GuntherEagleman/status/2062836719775318106",
-        "views": "72K",
+        "url": "https://x.com/nickshirleyy/status/2063126739560054792",
+        "views": "188K",
         "time": "14h ago",
-        "text": "Senate passes $70B border package funding ICE/CBP through Trump's term."
+        "text": "I will expose all of California if I have to"
       }
     },
     {
-      "handle": "@unusual_whales",
-      "justification": "Markets + policy crossover; surfaces court rulings that move financial regulation.",
+      "handle": "@IanCarrollShow",
+      "justification": "Ian Carroll: Now they\u2019re soft launching AI Charlie Kirk to see if anyone notices.",
       "honesty": "8/10",
       "topPost": {
-        "url": "https://x.com/unusual_whales/status/2062700429633605760",
-        "views": "136K",
+        "url": "https://x.com/IanCarrollShow/status/2063322181036318847",
+        "views": "51K",
+        "time": "1h ago",
+        "text": "Now they\u2019re soft launching AI Charlie Kirk to see if anyone notices."
+      }
+    },
+    {
+      "handle": "@MattWalshBlog",
+      "justification": "Matt Walsh: I\u2019m making judgments about the Karmelo Anthony case based on all of the established facts which all point overwhelmingly to Anthony being a cold blooded killer.",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/MattWalshBlog/status/2062986972503621936",
+        "views": "255K",
         "time": "23h ago",
-        "text": "SCOTUS: SEC can recover illegal gains even without proving investor loss (per NYT)."
+        "text": "I\u2019m making judgments about the Karmelo Anthony case based on all of the established facts which all point overwhelmingly to Anthony being a cold blooded killer. It\u2019s got nothing to do with emotion."
+      }
+    },
+    {
+      "handle": "@Tesla",
+      "justification": "Tesla: All you have to do is look at the road \u2013 your Tesla does all the rest",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/Tesla/status/2063116454661431761",
+        "views": "387K",
+        "time": "15h ago",
+        "text": "All you have to do is look at the road \u2013 your Tesla does all the rest"
+      }
+    },
+    {
+      "handle": "@SawyerMerritt",
+      "justification": "Sawyer Merritt: Tesla has officially applied for an Autonomous Vehicle Network Company permit in Nevada.",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/SawyerMerritt/status/2063052465231057272",
+        "views": "352K",
+        "time": "19h ago",
+        "text": "Tesla has officially applied for an Autonomous Vehicle Network Company permit in Nevada."
+      }
+    },
+    {
+      "handle": "@PBDsPodcast",
+      "justification": "PBD Podcast: \u201cNo OUTRAGE For Henry Nowak?\u201d - @mehdirhasan PRESSED On U.K.'s Crime CRISIS",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/PBDsPodcast/status/2062897233897619733",
+        "views": "117K",
+        "time": "5h ago",
+        "text": "\u201cNo OUTRAGE For Henry Nowak?\u201d - @mehdirhasan PRESSED On U.K.'s Crime CRISIS"
+      }
+    },
+    {
+      "handle": "@chamath",
+      "justification": "Chamath Palihapitiya: He foretold it\u2026",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/chamath/status/2063293668245864934",
+        "views": "196K",
+        "time": "3h ago",
+        "text": "He foretold it\u2026"
+      }
+    },
+    {
+      "handle": "@DavidSacks",
+      "justification": "David Sacks: Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months.",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/DavidSacks/status/2063313189497131425",
+        "views": "78K",
+        "time": "2h ago",
+        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months."
+      }
+    },
+    {
+      "handle": "@elonmusk",
+      "justification": "Elon Musk: Humanity is disappearing \ud83d\ude14",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/elonmusk/status/2063333492449009867",
+        "views": "330K",
+        "time": "0h ago",
+        "text": "Humanity is disappearing \ud83d\ude14 https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
+      }
+    },
+    {
+      "handle": "@BillOReilly",
+      "justification": "Bill O'Reilly: WE\u2019LL DO IT LIVE! with @VDHanson is available NOW on billoreilly.com for Premium and Concierge Members.",
+      "honesty": "7/10",
+      "topPost": {
+        "url": "https://x.com/BillOReilly/status/2063289881892135020",
+        "views": "10K",
+        "time": "3h ago",
+        "text": "WE\u2019LL DO IT LIVE! with @VDHanson is available NOW on https://www.billoreilly.com/ for Premium and Concierge Members. Catch it on YouTube, Apple Podcasts, Spotify, or wherever you stream your podcasts."
+      }
+    },
+    {
+      "handle": "@Gutfeldfox",
+      "justification": "Gutfeld!: Tonight on #Gutfeld! @dagenmcdowell, @Sherrod_Small, @RubinReport, and @ToddPiro",
+      "honesty": "7/10",
+      "topPost": {
+        "url": "https://x.com/Gutfeldfox/status/2063010472551444674",
+        "views": "93K",
+        "time": "22h ago",
+        "text": "Tonight on #Gutfeld! @dagenmcdowell, @Sherrod_Small, @RubinReport, and @ToddPiro 10PM ET on @FoxNews"
+      }
+    },
+    {
+      "handle": "@DineshDSouza",
+      "justification": "Dinesh D'Souza: @PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft\u2019s digital cloud system for allegedly being used by Chinese nationals to hack Government systems.",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/DineshDSouza/status/2063082195242127698",
+        "views": "317K",
+        "time": "17h ago",
+        "text": ".@PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft\u2019s digital cloud system for allegedly being used by Chinese nationals to hack Government systems in Aug. 2025."
+      }
+    },
+    {
+      "handle": "@JackPosobiec",
+      "justification": "Jack Posobiec: BREAKING: CNN tells their audience to not worry about fraud in California it\u2019s just like 2020 where Republican ballots are \u2018counted culturally\u2019 first before Democrat ballots come in",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/JackPosobiec/status/2062912964735234501",
+        "views": "242K",
+        "time": "4h ago",
+        "text": "BREAKING: CNN tells their audience to not worry about fraud in California it\u2019s just like 2020 where Republican ballots are \u2018counted culturally\u2019 first before Democrat ballots come in"
+      }
+    },
+    {
+      "handle": "@catturd2",
+      "justification": "Catturd: Every life is precious",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/catturd2/status/2063010297946816953",
+        "views": "146K",
+        "time": "22h ago",
+        "text": "Every life is precious"
+      }
+    },
+    {
+      "handle": "@billmaher",
+      "justification": "Bill Maher: Trump \u201ctruthed\u201d at me again. He called me \u201cLow Ratings Bill Maher and his Fake Laughing Machine.\u201d",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/billmaher/status/2063093840580633048",
+        "views": "478K",
+        "time": "16h ago",
+        "text": "Trump \u201ctruthed\u201d at me again. He called me \u201cLow Ratings Bill Maher and his Fake Laughing Machine.\u201d Speaking of low ratings, yours is 35%."
+      }
+    },
+    {
+      "handle": "@AOC",
+      "justification": "AOC: \ud83d\ude2d\ud83d\ude2d\ud83d\ude2d \ud83d\udc99\ud83e\udde1\ud83d\udc99\ud83e\udde1",
+      "honesty": "7/10",
+      "topPost": {
+        "url": "https://x.com/AOC/status/2063100590457012589",
+        "views": "1.6M",
+        "time": "16h ago",
+        "text": "\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d \ud83d\udc99\ud83e\udde1\ud83d\udc99\ud83e\udde1"
+      }
+    },
+    {
+      "handle": "@naval",
+      "justification": "Naval: The product is the mission.",
+      "honesty": "8/10",
+      "topPost": {
+        "url": "https://x.com/naval/status/2063292550388298025",
+        "views": "105K",
+        "time": "3h ago",
+        "text": "The product is the mission."
       }
     }
   ],
   "free": [
     {
       "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
-      "text": "Question…\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
+      "text": "Question\u2026\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
       "url": "https://x.com/C_3C_3/status/2062853128467136697",
       "views": "5.7M",
       "time": "13h ago",
       "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
+      "note": "Rhetorical question about partisan skew of late counted ballots \u2014 core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
     },
     {
       "headline": "Open-source notes beat censorship for truth",
@@ -418,7 +588,7 @@
         "views": "263K",
         "time": "15h ago",
         "honesty": "8/10",
-        "note": "Wire headline pairs the ICE/CBP funding passage with the settlement-fund limitation fight — framing that many conservatives say buries the border-funding win. Factually accurate on both elements per Senate vote record. Framing emphasis is observable in the headline structure itself."
+        "note": "Wire headline pairs the ICE/CBP funding passage with the settlement-fund limitation fight \u2014 framing that many conservatives say buries the border-funding win. Factually accurate on both elements per Senate vote record. Framing emphasis is observable in the headline structure itself."
       },
       "perspectives": [
         {
