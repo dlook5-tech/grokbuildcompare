@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-07T05:00:00Z",
+  "last_updated": "2026-06-07T06:00:00Z",
   "world": [
     {
       "headline": "Israeli Air Force strikes Hezbollah cell in Lebanon, eliminates terrorists",
@@ -287,70 +287,120 @@
   ],
   "elon": [
     {
-      "headline": "Antonio's support for SpaceX: short-term loan in 2008, no equity, decades of investment",
+      "headline": "SpaceX started with under 10 people and no office furniture",
+      "url": "https://x.com/elonmusk/status/2063270313933091097",
+      "text": "SpaceX was less than 10 people back then. We didn’t even have office furniture.",
+      "views": "11.2M",
+      "time": "5h ago",
+      "parentPost": {
+        "url": "https://x.com/cb_doge/status/2063228406289117662",
+        "text": "SpaceX started with a mariachi band party in 2002.",
+        "handle": "@cb_doge",
+        "views": "11.3M",
+        "time": "8h ago"
+      },
+      "honesty": "9/10",
+      "note": "Primary source confirmation of SpaceX founding conditions in 2002; tiny team, no furniture, mariachi party origins. Matches historical photos and public record. Direct from founder on the humble start of the reusable rocket company."
+    },
+    {
+      "headline": "Antonio's support for SpaceX: loan in 2008 when it looked like failure",
       "url": "https://x.com/elonmusk/status/2063336033995866249",
       "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio’s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
-      "views": "159K",
+      "views": "387K",
       "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/SMB_Attorney/status/2063297889242059071",
         "text": "Antonio Gracias lent Elon Musk $1 million in ‘08 to save SpaceX from bankruptcy for 7.2% of the company. It’s now worth $90 billion, making it the single greatest investment in the history of the world.",
         "handle": "@SMB_Attorney",
         "views": "214K",
-        "time": "3h ago"
+        "time": "5h ago"
       },
       "honesty": "9/10",
-      "note": "Primary source from Elon on SpaceX 2008 financing details. Directly corrects the 'lent for 7.2% equity' claim with facts on short-term loan vs. long-term support-based ownership. Excellent verifiability and accuracy from the principal actor; neutral framing."
+      "note": "Primary source from Elon on SpaceX 2008 financing details and long-term friendship-based ownership. Directly addresses and corrects equity claims with facts. Excellent verifiability and accuracy from the principal; neutral on the personal support that enabled the tech development."
     },
     {
-      "headline": "ASML should be treasured and supported — arguably the greatest company in Europe",
+      "headline": "No university degree teaches how to build an orbital rocket",
+      "url": "https://x.com/elonmusk/status/2063320495047553401",
+      "text": "There is obviously no “degree” you can get from a university that actually teaches you how to make an orbital rocket, as none of the professors know how to do it!",
+      "views": "364K",
+      "time": "5h ago",
+      "honesty": "9/10",
+      "note": "Direct explanation from founder on why practical, hands-on engineering (not academic credentials) was required for SpaceX. Highlights the gap in formal education for frontier rocket tech and the first-principles approach that drove reusable launch vehicles."
+    },
+    {
+      "headline": "ASML should be treasured — arguably the greatest company in Europe",
       "url": "https://x.com/elonmusk/status/2063335081385644403",
       "text": "ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-      "views": "113K",
+      "views": "288K",
       "time": "4h ago",
       "honesty": "8/10",
-      "note": "Elon's view on ASML's pivotal role in advanced chip manufacturing essential for AI and EVs. Factually supported by ASML's industry leadership in EUV tech; the 'arguably greatest' is subjective opinion but not misleading. Strong primary proximity from key tech figure."
+      "note": "Elon's assessment of ASML's critical role in EUV lithography for advanced semiconductors (key enabler for AI training chips, Tesla FSD hardware, and compute generally). Subjective 'greatest' framing but grounded in ASML's unique tech monopoly position; primary view from a major tech customer/peer."
+    },
+    {
+      "headline": "I didn’t think I was qualified — no one good would join a failing rocket startup",
+      "url": "https://x.com/elonmusk/status/2063319907849093544",
+      "text": "I didn’t “think I was qualified”. There was no other choice. No one good would join a rocket startup as chief engineer that they thought was destined for failure.",
+      "views": "223K",
+      "time": "5h ago",
+      "honesty": "8/10",
+      "note": "Primary account of stepping into chief engineer role at early SpaceX despite self-doubt. Illustrates the talent acquisition challenge for high-risk deep-tech hardware ventures and the personal commitment required to advance rocket reusability."
+    },
+    {
+      "headline": "Hardware is hard",
+      "url": "https://x.com/elonmusk/status/2063296591717421070",
+      "text": "Hardware is hard",
+      "views": "153K",
+      "time": "5h ago",
+      "parentPost": {
+        "url": "https://x.com/aaditsh/status/2063153391153602789",
+        "text": "Wait. Google is paying SpaceX $920 million per month for GPUs? ... 110,000 NVIDIA GPUs... I'm honestly not sure what to make of this. Either Google's AI compute needs have gotten so massive... Or SpaceX has built something in AI infrastructure that nobody was paying attention to.",
+        "handle": "@aaditsh",
+        "views": "908K",
+        "time": "10h ago"
+      },
+      "honesty": "8/10",
+      "note": "Iconic short observation in context of SpaceX landing a massive $920M/mo compute supply deal with Google (110k H100-class GPUs). Highlights the real-world difficulty of scaling physical AI infrastructure at the same time as rockets — primary from the builder."
     },
     {
       "headline": "Read books, talk to people & iterate rapidly with hardware & software",
       "url": "https://x.com/elonmusk/status/2063333242820853969",
       "text": "Read books, talk to people & iterate rapidly with hardware & software",
-      "views": "77K",
+      "views": "128K",
       "time": "4h ago",
       "honesty": "8/10",
-      "note": "Recurring principle from Elon on continuous learning and fast iteration, repeatedly demonstrated in Tesla and SpaceX development. Not a verifiable claim but consistent with public record of his methods; high transparency as personal philosophy."
+      "note": "Concise statement of Elon's core development philosophy — continuous learning plus fast physical + digital iteration. Repeatedly demonstrated in Tesla Autopilot/FSD and SpaceX Starship/raptor engine cycles; transparent personal operating principle behind the tech progress."
     },
     {
-      "headline": "SpaceX started with $50M PayPal proceeds for Mars mission, no commercial ambition initially",
+      "headline": "SpaceX origin: $50M from PayPal for philanthropic Mars mission, not commercial",
       "url": "https://x.com/elonmusk/status/2063339026812129733",
-      "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space... The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars... The $50M was from the proceeds of the sale of PayPal to eBay. ... fully reusable rocket...",
-      "views": "44K",
+      "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space, but didn’t think there was anything private individuals could do. The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars, so that NASA’s budget could be increased... The $50M was from the proceeds of the sale of PayPal to eBay. After learning more... the issue was a lack of advancement in rocket technology, in particular the failure to develop a fully reusable rocket...",
+      "views": "86K",
       "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/adeoressi/status/2063327234929447277",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car... Life to Mars plan... The intervention failed. Elon was committed.",
+        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
         "handle": "@adeoressi",
         "views": "186K",
-        "time": "1h ago"
+        "time": "5h ago"
       },
       "honesty": "9/10",
-      "note": "Detailed first-hand account of SpaceX founding as non-commercial Mars inspiration effort using PayPal exit proceeds. Corroborated by the linked parent post from Adeo Ressi describing the original Life to Mars plan. High accuracy, primary source, and context provided."
+      "note": "Detailed first-hand account of SpaceX founding intent (philanthropic Mars excitement to boost NASA, $50M PayPal exit capital, pivot to reusable rocket as the core technical blocker). Corroborated by Adeo Ressi parent post. High accuracy and primary-source proximity on the non-commercial origins."
     },
     {
-      "headline": "Hiding in plain sight 🤷‍♂️",
+      "headline": "Hiding in plain sight",
       "url": "https://x.com/elonmusk/status/2063331842510537017",
       "text": "Hiding in plain sight 🤷‍♂️",
-      "views": "39K",
+      "views": "62K",
       "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/beffjezos/status/2063195922910400602",
-        "text": "The xAI master plan was right under our nose all along... (quoting old Elon: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
+        "text": "The xAI master plan was right under our nose all along... (quoting old Elon 2019: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
         "handle": "@beffjezos",
-        "views": "105K",
+        "views": "142K",
         "time": "9h ago"
       },
       "honesty": "7/10",
-      "note": "Brief, contextual reply within the thread referencing the 2019 'buy GPUs' post as xAI's early strategy. Verifiable via the quoted parent post; humorous tone rather than substantive claim. Score reduced for minimal standalone content requiring thread context, but no factual error."
+      "note": "Brief reply acknowledging that the xAI strategy (massive GPU clusters for training) was visible in a 2019 tweet. Context supplied entirely by the quoted parent post; verifiability high once thread is seen. Minimal standalone text so honesty tempered, but no inaccuracy."
     },
     {
       "headline": "True",
@@ -363,8 +413,10 @@
         "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
         "handle": "@adeoressi",
         "views": "186K",
-        "time": "1h ago"
-      }
+        "time": "5h ago"
+      },
+      "honesty": "8/10",
+      "note": "One-word affirmation of Adeo Ressi's account of the pre-SpaceX intervention attempt. The parent post supplies the full context of the original Life to Mars philanthropic vision and Elon's early determination. Verifiable via the referenced conversation; the brevity is typical but the embedded parent makes the exchange meaningful."
     }
   ],
   "sports": [
