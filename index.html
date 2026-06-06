@@ -1129,8 +1129,16 @@ function renderTabSports() {
     h += '<div class="empty-msg">No sports stories in this cycle.</div>';
     return h;
   }
+  // Top 3 stories across the top (world, nation, highest views)
   h += '<div class="three-up">';
   sports.slice(0, 3).forEach(function(item) {
+    h += '<div>' + renderSportsBlock(item) + '</div>';
+  });
+  h += '</div>';
+  // Pundits below (SAS, Cowherd, Next)
+  h += '<div style="margin-top:16px; font-size:13px; color:#888; font-weight:600;">Pundits</div>';
+  h += '<div class="three-up">';
+  sports.slice(3, 6).forEach(function(item) {
     h += '<div>' + renderSportsBlock(item) + '</div>';
   });
   h += '</div>';
@@ -1287,10 +1295,26 @@ function renderTabFree() {
 }
 
 // Earlier tab — W/N/B stories that rotated off in a later cron but are
-// still <24h fresh. Grok includes them as data.earlier[] with a
-// `category` field marking which tab they came from. The renderer
-// groups by category and reuses the main story-block layout with a
-// small category chip on top of each card.
+// still <24h fresh. Each entry renders through renderFreeItem so the
+// block looks identical to every other tab (views · age · 8/10 · □).
+// Grok ships entries in a FLAT shape (headline/url/views/time/honesty/
+// note at the top level). If a `main` object is provided per the README
+// nested shape, we normalize to the flat shape before rendering so both
+// inputs produce the same output.
+function normalizeEarlier(item) {
+  var mp = item.main || item.main_post || {};
+  // Top-level wins; fall back to main.* when missing. Honesty + note
+  // are story-level on Earlier (no perspectives).
+  return {
+    headline: item.headline,
+    text: item.text || mp.text,
+    url: item.url || mp.url,
+    views: item.views || mp.views,
+    time: item.time || mp.time,
+    honesty: item.honesty || mp.honesty,
+    note: item.note || mp.note
+  };
+}
 function renderTabEarlier() {
   var list = (NEWS_DATA && NEWS_DATA.earlier) || [];
   var h = renderHero('earlier');
@@ -1299,7 +1323,8 @@ function renderTabEarlier() {
     return h;
   }
   // Group by category so the user can scan World / Nation / Business
-  // separately within Earlier.
+  // separately within Earlier. If category is missing, fall back to World
+  // (most common default).
   var byCat = { World: [], Nation: [], Business: [] };
   list.forEach(function(item) {
     var c = (item && item.category) || 'World';
@@ -1312,10 +1337,10 @@ function renderTabEarlier() {
     h += '<div class="earlier-section">' +
            '<div class="col-title">' + esc(cat) + ' — earlier</div>' +
            '<div class="earlier-list">';
-    items.forEach(function(item, idx) {
-      // Reuse the main story-block renderer so look + click-to-expand
-      // behave exactly like the live W/N/B cards.
-      h += renderMainStoryBlock(item, idx + 1);
+    items.forEach(function(item) {
+      // Render through renderFreeItem so the block matches every other
+      // tab exactly: ▶ headline / views · age · 8/10 · □ + ▼ notes.
+      h += renderFreeItem(normalizeEarlier(item));
     });
     h += '</div></div>';
   });
