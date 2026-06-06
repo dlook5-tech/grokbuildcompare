@@ -229,6 +229,16 @@
   .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid #b8860b; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
   .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
 
+  /* Honesty score as inline link to its note. When a note exists, the
+     score itself is the affordance — underlined, blue, click to expand
+     the note inline. No separate ▼ notes line, no green/yellow pill.
+     Consistent on every tab. When there's no note, the score renders
+     as plain text (the .honesty-score rule). */
+  .honesty-link { color: #1f6feb; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; cursor: pointer; font-weight: 700; }
+  .honesty-link:hover { color: #0a4fb8; }
+  .honesty-note-body { display: none; margin-top: 6px; padding: 7px 10px; background: #f4ede0; border-left: 2px solid #1f6feb; border-radius: 3px; font-size: 0.74rem; color: #4a3a25; line-height: 1.5; }
+  .honesty-note-body.open { display: block; }
+
   /* Earlier tab — per-category section + grid of demoted W/N/B cards */
   .earlier-section { margin-bottom: 28px; }
   .earlier-section .col-title { margin-bottom: 14px; }
@@ -310,8 +320,13 @@
   .honesty-fold-body { display: none; padding: 5px 0 0 11px; font-size: 0.74rem; color: #6b5d4f; line-height: 1.45; }
   .honesty-fold.open .honesty-fold-body { display: block; }
   .honesty-score { font-weight: 700; padding: 0px 5px; border-radius: 7px; font-size: 0.7rem; }
-  .h-good { background: #d6ebd8; color: #1f5a23; }
-  .h-mid  { background: #f3e6c3; color: #6e5018; }
+  /* Legacy h-good / h-mid honesty pill colors — DEAD.
+     Per user directive (2026-06-06): no green for good scores, no tan
+     for mid scores. Honesty is plain text; if a note exists the score
+     becomes a blue underlined link via .honesty-link. Keeping the
+     rules commented for git archaeology. */
+  /* .h-good { background: #d6ebd8; color: #1f5a23; } */
+  /* .h-mid  { background: #f3e6c3; color: #6e5018; } */
   .h-poor { background: #f4d2cd; color: #7a2a20; }
 
   /* Tweet embed container */
@@ -565,8 +580,11 @@ function selectMainPerspective(pid, panelId) {
   var v = honestyParse(p.honesty);
   if (v != null) {
     var label = (typeof p.honesty === 'string') ? p.honesty : (v + '/10');
+    // No more green/yellow honestyClass — plain text only, like every
+    // other tab. Note (if present) appears inline below; the panel
+    // already shows it via .pd-note, so no link wiring needed here.
     html += '<div class="pd-honesty">' +
-      '<span class="honesty-score ' + honestyClass(v) + '">' + esc(label) + '</span>' +
+      '<span class="honesty-score">' + esc(label) + '</span>' +
       '<span class="honesty-label">Honesty</span>' +
     '</div>';
   }
@@ -709,6 +727,35 @@ function renderParentPost(pp) {
          '</div>';
 }
 
+// Media post — the "show me the clip" companion to a source post.
+// When the source describes an event (goal, dunk, strike, vote, etc.),
+// Grok finds a related X post that has the actual video/photo of that
+// event and ships it as mediaPost. Embedded inline BELOW the source.
+//
+// Schema:
+//   mediaPost: { url, handle, text, time, views, label }
+//
+//   - url:    REQUIRED. Real X /status/ URL with the media payload.
+//   - label:  Short noun describing the media. "Video of the goal",
+//             "The dunk", "Footage of the strike", "Floor speech",
+//             "Press conference clip". Defaults to "Watch" if absent.
+//   - rest:   Display metadata (optional but recommended).
+//
+// Returns '' (no affordance, no orphan box) when mediaPost is absent.
+function renderMediaPost(mp) {
+  if (!mp || typeof mp !== 'object') return '';
+  if (!isXStatusUrl(mp.url)) return '';
+  var label = esc(mp.label || 'Watch');
+  var who   = mp.handle ? ' · ' + esc(mp.handle) : '';
+  var ago   = timeAgo(mp.time, mp.url);
+  var head  = '<div class="media-head"><span class="media-label">▶ ' + label + '</span>' +
+              '<span class="media-sub">' + who + (ago ? ' · ' + ago : '') + '</span></div>';
+  return '<div class="media-post">' +
+           head +
+           renderEmbedSlot(mp.url) +
+         '</div>';
+}
+
 // Inline "▼ notes" expand — same pattern as iFollow, used across Elon/Free/MSM.
 // Renders nothing when there's no note (no orphan affordance).
 function renderNoteFold(note) {
@@ -725,13 +772,35 @@ function renderNoteFold(note) {
 }
 
 // Honesty piece for an inline meta row: just "8/10" — no "Honesty" word,
-// no pill. Matches the Main tab's W/N/B format exactly. Returns empty
-// string when honesty is missing so the separator math stays clean.
-function honestyMetaPiece(honesty) {
+// no green/yellow pill. When a note is provided, the score itself becomes
+// a blue underlined link (clicking it expands the note body). No separate
+// ▼ notes affordance — the score IS the affordance. Consistent across
+// every tab. Pair with honestyNoteBody() to render the hidden body.
+//
+// Returns the inline element string. nid (caller-provided) ties the link
+// to its body so click→toggle works.
+function honestyMetaPiece(honesty, note, nid) {
   var v = honestyParse(honesty);
   if (v == null) return '';
   var label = (typeof honesty === 'string' && /^\d/.test(honesty)) ? honesty : (v + '/10');
+  if (note && nid) {
+    return '<a class="honesty-link" href="javascript:void(0)" onclick="event.stopPropagation();document.getElementById(\'' + nid + '\').classList.toggle(\'open\');">' + esc(label) + '</a>';
+  }
   return '<span class="honesty-score">' + esc(label) + '</span>';
+}
+
+// Hidden body for a honesty note — revealed when the inline honesty link
+// is clicked. Returns '' when there's no note. Caller decides where to
+// drop it inside the block (usually as the last child of .story-body or
+// right after the meta line).
+function honestyNoteBody(note, nid) {
+  if (!note || !nid) return '';
+  return '<div class="honesty-note-body" id="' + nid + '">' + esc(note) + '</div>';
+}
+
+// Generate a unique id for tying a honesty link to its note body.
+function honestyNid() {
+  return 'hn' + Math.random().toString(36).substr(2, 9);
 }
 
 // Expand-toggle square for the end of an inline meta row. Same □ Main
@@ -797,8 +866,10 @@ function renderStoryBlock(s) {
   var headline = esc(s.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
   // Inline meta row matching Main: handle · views · age · 8/10 · □
-  // Plain text honesty, expand-toggle at end. Used by MSM tab.
-  var blockHonestyBit = honestyMetaPiece(mp.honesty || s.honesty);
+  // The 8/10 is the link to the note. Used by MSM tab.
+  var blockNid = honestyNid();
+  var blockNote = mp.note || s.note;
+  var blockHonestyBit = honestyMetaPiece(mp.honesty || s.honesty, blockNote, blockNid);
   var meta = '<span class="post-meta">' +
     (mp.handle ? esc(mp.handle) + ' · ' : '') +
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
@@ -813,16 +884,15 @@ function renderStoryBlock(s) {
   var perspectivesRow = perspectives.length
     ? '<div class="perspectives-row">' + perspectives.map(renderPerspectiveTile).join('') + '</div>'
     : '';
-  // Body: optional ▼ notes for the main story honesty — perspectives carry
-  // their own honesty inside the perspective tiles.
-  var noteBlock = renderNoteFold(mp.note || s.note);
+  var blockNoteBody = honestyNoteBody(blockNote, blockNid);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
+        blockNoteBody +
       '</div>' +
-      '<div class="story-body">' + parentHtml + sourceTile + perspectivesRow + noteBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + perspectivesRow + '</div>' +
     '</div>'
   );
 }
@@ -837,8 +907,10 @@ function renderElonBlock(item) {
   var hdrAgo = timeAgo(item.time, item.url);
   // Single inline meta row matching Main exactly:
   //   @elonmusk · 330K views · 1h ago · 8/10 · □
-  // Plain text honesty (no "Honesty" word, no pill). Expand-toggle at end.
-  var elonHonestyBit = honestyMetaPiece(item.honesty);
+  // The 8/10 is itself the link to the note (blue underlined) when a
+  // note exists. No green/yellow pill, no separate ▼ notes line.
+  var elonNid = honestyNid();
+  var elonHonestyBit = honestyMetaPiece(item.honesty, item.note, elonNid);
   var meta = '<span class="post-meta">' +
     '@elonmusk' +
     (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
@@ -876,16 +948,17 @@ function renderElonBlock(item) {
       note: c.note
     });
   }
-  // Honesty is now inline on the meta row (above). Body just gets the
-  // optional ▼ notes affordance — renders nothing when there's no note.
-  var noteBlock = renderNoteFold(item.note);
+  // Honesty + note: the score in the meta row IS the link. Note body
+  // sits hidden in the story body, revealed when score is clicked.
+  var elonNoteBody = honestyNoteBody(item.note, elonNid);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
+        elonNoteBody +
       '</div>' +
-      '<div class="story-body">' + parentHtml + sourceTile + counterTile + noteBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + counterTile + '</div>' +
     '</div>'
   );
 }
@@ -1263,33 +1336,21 @@ function renderTabIFollow() {
         if (topAgo) metaBits.push(topAgo);
         if (tp.url) topEmbed = renderEmbedSlot(tp.url);
       }
-      // Honesty appended as plain text "8/10" (no "Honesty" word, no pill) —
-      // matches Main W/N/B exactly.
-      if (v != null) {
-        var hStr = (typeof f.honesty === 'string' ? f.honesty : (v + '/10'));
-        metaBits.push('<span class="honesty-score">' + esc(hStr) + '</span>');
-      }
+      // Honesty score IS the link to its note (blue underlined) when a
+      // note exists; plain text otherwise. Same pattern as every other tab.
+      var ifNid = honestyNid();
+      var ifHonestyBit = honestyMetaPiece(f.honesty, f.note, ifNid);
+      if (ifHonestyBit) metaBits.push(ifHonestyBit);
       // Expand-toggle □ at the end so the row reads identical to Main:
-      //   Top post · 105K views · 4h ago · 8/10 · □
-      metaBits.push(metaExpandToggle());
-      // Same meta format as Main W/N/B — no leading label.
       //   1.6M views · 17h ago · 8/10 · □
+      metaBits.push(metaExpandToggle());
       var metaLine = '';
       if (metaBits.length) {
         metaLine = '<div class="ifollow-meta">' + metaBits.join(' · ') + '</div>';
       }
-
-      // Honesty note fold — only renders ▼ when an actual note is present.
-      var noteFold = '';
-      if (f.note && v != null) {
-        var nid = 'ifn' + Math.random().toString(36).substr(2, 9);
-        noteFold = '<div class="ifollow-note-fold" id="' + nid + '">' +
-                     '<span class="ifollow-note-toggle" onclick="event.stopPropagation();document.getElementById(\'' + nid + '\').classList.toggle(\'open\');">' +
-                       '<span class="ifollow-note-arrow">▼</span> notes' +
-                     '</span>' +
-                     '<div class="ifollow-note-body">' + esc(f.note) + '</div>' +
-                   '</div>';
-      }
+      // Hidden note body — revealed by clicking the score. No standalone
+      // ▼ notes line anymore. Renders nothing when there's no note.
+      var noteFold = honestyNoteBody(f.note, ifNid);
 
       var sid = 'if' + Math.random().toString(36).substr(2, 9);
       // Cards with a top-post URL get an expandable accordion (embed loads on open).
@@ -1334,8 +1395,9 @@ function renderFreeItem(item) {
   var headline = esc(item.headline || item.text || '(no headline)');
   var hdrAgo = timeAgo(item.time, url);
   // Inline meta row matching Main: VIEWS · AGE · 8/10 · □
-  // Plain text honesty, expand-toggle at end.
-  var freeHonestyBit = honestyMetaPiece(item.honesty);
+  // The 8/10 is the blue underlined link to the note when one exists.
+  var freeNid = honestyNid();
+  var freeHonestyBit = honestyMetaPiece(item.honesty, item.note, freeNid);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
@@ -1346,15 +1408,15 @@ function renderFreeItem(item) {
   // a thread; without the parent, the reaction loses meaning.
   var parentHtml = renderParentPost(item.parentPost || item.parent_post);
   var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
-  // Body: optional ▼ notes only — honesty is already in the meta row.
-  var noteBlock = renderNoteFold(item.note);
+  var freeNoteBody = honestyNoteBody(item.note, freeNid);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
+        freeNoteBody +
       '</div>' +
-      '<div class="story-body">' + parentHtml + sourceTile + noteBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + '</div>' +
     '</div>'
   );
 }
