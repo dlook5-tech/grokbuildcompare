@@ -690,7 +690,8 @@ function renderStoryBlock(s) {
 // summaries are NOT rendered. No URL → no counter tile.)
 function renderElonBlock(item) {
   var sid = 'e' + Math.random().toString(36).substr(2, 9);
-  var headline = esc(item.headline || item.text || '(no headline)');
+  var rawHeadline = item.headline || item.text || '(no headline)';
+  var headline = esc(String(rawHeadline).replace(/^Elon:\s*/i, ''));
   var hdrAgo = timeAgo(item.time, item.url);
   var meta = '<span class="post-meta">' +
     '@elonmusk' +
@@ -781,7 +782,7 @@ function renderMoreList(items) {
 function renderHero(tab) {
   var heros = {
     main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty + notes folded in. <strong>&lt;24h only.</strong> Scroll for more in each category.' },
-    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Top 3 Elon posts of the cycle. Counter view tile appears only when there\'s a real X post to embed — no editorial summaries.' },
+    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Every @elonmusk post, reply, and retweet from the last 24 hours — ranked by views. Pure sales pitches omitted. Counter view tile only when there\'s a real X post to embed.' },
     sports:  { h: 'Sports — what\'s<br>moving the needle.', p: 'Top 3 stories by velocity. No perspectives, no honesty score — just what people are watching.' },
     ifollow: { h: 'People worth<br>following on X.', p: 'Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.' },
     free:    { h: 'Free speech<br>front and center.', p: 'Marc Andreessen always leads. Then 0–10 free-speech-themed posts from today. Honesty fold only when opinion content.' },
@@ -1027,11 +1028,9 @@ function renderTabElon() {
     h += '<div class="empty-msg">No Elon posts in this cycle.</div>';
     return h;
   }
-  h += '<div class="three-up">';
-  elon.slice(0, 3).forEach(function(item) {
-    h += '<div>' + renderElonBlock(item) + '</div>';
+  elon.forEach(function(item) {
+    h += renderElonBlock(item);
   });
-  h += '</div>';
   return h;
 }
 
