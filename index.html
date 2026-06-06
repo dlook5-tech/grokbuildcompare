@@ -307,12 +307,23 @@
   .ifollow-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(80,50,20,0.18); }
   .ifollow-card.story.open { transform: none; }
   .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
-  .ifollow-handle { font-weight: 800; color: #2a2218; font-size: 1rem; margin-bottom: 4px; }
-  .ifollow-handle a { color: #2a2218; text-decoration: none; }
-  .ifollow-handle a:hover { color: #b8860b; }
+  .ifollow-name { font-weight: 700; color: #2a2218; font-size: 0.92rem; margin-bottom: 3px; letter-spacing: 0.1px; }
+  .ifollow-name a { color: #2a2218; text-decoration: none; }
+  .ifollow-name a:hover { color: #b8860b; }
   .ifollow-just { font-size: 0.8rem; color: #4a3a25; line-height: 1.35; margin-bottom: 4px; }
-  .ifollow-toppost-meta { font-size: 0.72rem; color: #8a7e72; font-weight: 600; margin-bottom: 6px; }
-  .ifollow-toppost-meta .views { color: #b8860b; font-weight: 800; }
+  /* Single meta row: "Top post · 146K views · 22h ago · Honesty 8/10"
+     — same line, no pill, plain text, matches other tabs */
+  .ifollow-meta { font-size: 0.72rem; color: #8a7e72; font-weight: 600; margin-bottom: 4px; }
+  .ifollow-meta .views { color: #b8860b; font-weight: 800; }
+  .ifollow-meta .ifollow-honesty-num { color: #2a2218; font-weight: 800; }
+  /* Note fold — ▼ arrow + click-to-expand. Only renders when entry has a note. */
+  .ifollow-note-fold { margin-top: 3px; }
+  .ifollow-note-toggle { font-size: 0.68rem; color: #8a7e72; cursor: pointer; font-weight: 600; user-select: none; display: inline-flex; align-items: center; gap: 4px; }
+  .ifollow-note-toggle:hover { color: #b8860b; }
+  .ifollow-note-toggle .ifollow-note-arrow { display: inline-block; transition: transform 0.18s; }
+  .ifollow-note-fold.open .ifollow-note-toggle .ifollow-note-arrow { transform: rotate(180deg); }
+  .ifollow-note-body { display: none; margin-top: 5px; padding: 6px 8px; background: #f4ede0; border-left: 2px solid #b8860b; border-radius: 3px; font-size: 0.72rem; color: #4a3a25; line-height: 1.45; }
+  .ifollow-note-fold.open .ifollow-note-body { display: block; }
 
   /* Tweet embed sizing — twitter widget renders at min 220px wide. In a
      narrow World/Nation column the tile is ~180px so the widget would
@@ -1089,25 +1100,56 @@ function renderTabIFollow() {
     list.forEach(function(f) {
       var v = honestyParse(f.honesty);
       var profileUrl = 'https://x.com/' + (f.handle || '').replace(/^@/, '');
-      // Optional top-post fields Grok can populate per handle:
-      //   topPost: { url, views, time, text }
-      // Renders meta line (views · age) and an embedded post (if URL given).
+
+      // Display name: prefer the readable name out of "Name: blurb" justification,
+      //               fallback to handle-without-@. NO leading @ ever.
+      var rawJust = (f.justification || '').trim();
+      var displayName, justBody;
+      var colonIdx = rawJust.indexOf(':');
+      if (colonIdx > 0 && colonIdx <= 40) {
+        displayName = rawJust.slice(0, colonIdx).trim();
+        justBody = rawJust.slice(colonIdx + 1).trim();
+      } else {
+        displayName = (f.handle || '?').replace(/^@/, '');
+        justBody = rawJust;
+      }
+
+      // topPost (optional): { url, views, time, text }
       var tp = f.topPost || f.top_post || null;
-      var topMeta = '';
       var topEmbed = '';
+      var metaBits = [];
       if (tp) {
+        if (tp.views) metaBits.push('<span class="views">' + esc(tp.views) + ' views</span>');
         var topAgo = timeAgo(tp.time, tp.url);
-        var bits = [];
-        if (tp.views) bits.push('<span class="views">' + esc(tp.views) + ' views</span>');
-        if (topAgo)   bits.push(topAgo);
-        if (bits.length) {
-          topMeta = '<div class="ifollow-toppost-meta">Top post · ' + bits.join(' · ') + '</div>';
-        }
+        if (topAgo) metaBits.push(topAgo);
         if (tp.url) topEmbed = renderEmbedSlot(tp.url);
       }
+      // Honesty appended to the same meta line as plain text — no colored pill.
+      if (v != null) {
+        var hStr = (typeof f.honesty === 'string' ? f.honesty : (v + '/10'));
+        metaBits.push('Honesty <span class="ifollow-honesty-num">' + esc(hStr) + '</span>');
+      }
+      var metaLine = '';
+      if (metaBits.length) {
+        var lead = tp ? 'Top post · ' : '';
+        metaLine = '<div class="ifollow-meta">' + lead + metaBits.join(' · ') + '</div>';
+      }
+
+      // Honesty note fold — only renders ▼ when an actual note is present.
+      var noteFold = '';
+      if (f.note && v != null) {
+        var nid = 'ifn' + Math.random().toString(36).substr(2, 9);
+        noteFold = '<div class="ifollow-note-fold" id="' + nid + '">' +
+                     '<span class="ifollow-note-toggle" onclick="event.stopPropagation();document.getElementById(\'' + nid + '\').classList.toggle(\'open\');">' +
+                       '<span class="ifollow-note-arrow">▼</span> notes' +
+                     '</span>' +
+                     '<div class="ifollow-note-body">' + esc(f.note) + '</div>' +
+                   '</div>';
+      }
+
       var sid = 'if' + Math.random().toString(36).substr(2, 9);
-      // Wrap each card in a story-like accordion so the embed loads on expand.
-      // (Cards without a top-post URL skip the accordion and stay flat.)
+      // Cards with a top-post URL get an expandable accordion (embed loads on open).
+      // Cards without stay flat.
       var wrapStart = topEmbed
         ? '<div class="ifollow-card story" id="' + sid + '">' +
             '<div class="story-header" onclick="toggleStory(\'' + sid + '\');" style="padding:0;background:transparent;">' +
@@ -1118,10 +1160,10 @@ function renderTabIFollow() {
         ? '</span></div><div class="story-body" style="padding-top:10px;border-top:1px solid #ede4cf;">' + topEmbed + '</div></div>'
         : '</div>';
       h += wrapStart +
-             '<div class="ifollow-handle"><a href="' + esc(profileUrl) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">' + esc(f.handle || '?') + '</a></div>' +
-             '<div class="ifollow-just">' + esc(f.justification || '') + '</div>' +
-             topMeta +
-             (v != null ? '<div><span class="honesty-score ' + honestyClass(v) + '">Honesty ' + (typeof f.honesty === 'string' ? f.honesty : (v + '/10')) + '</span></div>' : '') +
+             '<div class="ifollow-name"><a href="' + esc(profileUrl) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">' + esc(displayName) + '</a></div>' +
+             (justBody ? '<div class="ifollow-just">' + esc(justBody) + '</div>' : '') +
+             metaLine +
+             noteFold +
            wrapEnd;
     });
     h += '</div>';
