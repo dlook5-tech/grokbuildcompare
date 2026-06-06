@@ -203,6 +203,14 @@
   .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid #b8860b; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
   .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
 
+  /* Earlier tab — per-category section + grid of demoted W/N/B cards */
+  .earlier-section { margin-bottom: 28px; }
+  .earlier-section .col-title { margin-bottom: 14px; }
+  .earlier-section .earlier-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; align-items: start; }
+  @media (max-width: 750px) {
+    .earlier-section .earlier-list { grid-template-columns: 1fr; }
+  }
+
   /* 3-up grid for Elon + Sports tabs */
   .three-up { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 
@@ -362,6 +370,7 @@
     <a data-tab="ifollow">i follow</a>
     <a data-tab="free">free</a>
     <a data-tab="msm" class="msm-tab">MSM</a>
+    <a data-tab="earlier">Earlier</a>
   </nav>
 </header>
 <main id="content"><div class="empty-msg">Loading stories…</div></main>
@@ -799,7 +808,8 @@ function renderHero(tab) {
     sports:  { h: 'Sports — what\'s<br>moving the needle.', p: 'Top 3 stories by velocity. No perspectives, no honesty score — just what people are watching.' },
     ifollow: { h: 'People worth<br>following on X.', p: 'Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.' },
     free:    { h: 'Free speech<br>front and center.', p: 'Marc Andreessen always leads. Then 0–10 free-speech-themed posts from today. Honesty fold only when opinion content.' },
-    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.', p: 'High-velocity X stories that mainstream media is systematically ignoring or downplaying. Henry-Nowak-style cases. Perspectives + honesty when relevant.' }
+    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.', p: 'High-velocity X stories that mainstream media is systematically ignoring or downplaying. Henry-Nowak-style cases. Perspectives + honesty when relevant.' },
+    earlier: { h: 'Earlier today —<br>still worth a look.', p: 'World / Nation / Business stories that rotated off the front page in a later cron, but are still <strong>&lt;24h</strong> fresh. Age off automatically after a day.' }
   };
   var hero = heros[tab] || heros.main;
   return '<div class="hero">' +
@@ -1192,6 +1202,42 @@ function renderTabFree() {
   return h;
 }
 
+// Earlier tab — W/N/B stories that rotated off in a later cron but are
+// still <24h fresh. Grok includes them as data.earlier[] with a
+// `category` field marking which tab they came from. The renderer
+// groups by category and reuses the main story-block layout with a
+// small category chip on top of each card.
+function renderTabEarlier() {
+  var list = (NEWS_DATA && NEWS_DATA.earlier) || [];
+  var h = renderHero('earlier');
+  if (!list.length) {
+    h += '<div class="empty-msg">Nothing has rotated off the front page yet this cycle. Earlier stories will show up here when the next hourly cron replaces them.</div>';
+    return h;
+  }
+  // Group by category so the user can scan World / Nation / Business
+  // separately within Earlier.
+  var byCat = { World: [], Nation: [], Business: [] };
+  list.forEach(function(item) {
+    var c = (item && item.category) || 'World';
+    if (!byCat[c]) byCat[c] = [];
+    byCat[c].push(item);
+  });
+  ['World', 'Nation', 'Business'].forEach(function(cat) {
+    var items = byCat[cat] || [];
+    if (!items.length) return;
+    h += '<div class="earlier-section">' +
+           '<div class="col-title">' + esc(cat) + ' — earlier</div>' +
+           '<div class="earlier-list">';
+    items.forEach(function(item, idx) {
+      // Reuse the main story-block renderer so look + click-to-expand
+      // behave exactly like the live W/N/B cards.
+      h += renderMainStoryBlock(item, idx + 1);
+    });
+    h += '</div></div>';
+  });
+  return h;
+}
+
 // MSM tab — stories legacy outlets won't touch
 function renderTabMSM() {
   var msm = (NEWS_DATA && NEWS_DATA.msm) || [];
@@ -1217,6 +1263,7 @@ function renderContent() {
   else if (activeTab === 'ifollow') html = renderTabIFollow();
   else if (activeTab === 'free')    html = renderTabFree();
   else if (activeTab === 'msm')     html = renderTabMSM();
+  else if (activeTab === 'earlier') html = renderTabEarlier();
   // Last-updated footer
   if (NEWS_DATA && NEWS_DATA.last_updated) {
     var ts = new Date(NEWS_DATA.last_updated);
