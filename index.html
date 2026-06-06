@@ -1187,10 +1187,11 @@ function renderTabIFollow() {
       // Expand-toggle □ at the end so the row reads identical to Main:
       //   Top post · 105K views · 4h ago · 8/10 · □
       metaBits.push(metaExpandToggle());
+      // Same meta format as Main W/N/B — no leading label.
+      //   1.6M views · 17h ago · 8/10 · □
       var metaLine = '';
       if (metaBits.length) {
-        var lead = tp ? 'Top post · ' : '';
-        metaLine = '<div class="ifollow-meta">' + lead + metaBits.join(' · ') + '</div>';
+        metaLine = '<div class="ifollow-meta">' + metaBits.join(' · ') + '</div>';
       }
 
       // Honesty note fold — only renders ▼ when an actual note is present.
@@ -1277,34 +1278,11 @@ function renderTabFree() {
     h += '<div class="empty-msg">Nothing yet today.</div>';
     return h;
   }
-  // Marc card first
-  free.forEach(function(item) {
-    if (item.isMarc) {
-      var sid = 'fm' + Math.random().toString(36).substr(2, 9);
-      var url = item.url || '';
-      var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url, handle: '@pmarca' });
-      var honestyBlock = renderHonestyFold(item.honesty, item.note);
-      h += '<div class="marc-card">' +
-             '<div class="marc-tag">ALWAYS FIRST</div>' +
-             '<div style="font-family:Playfair Display,Georgia,serif; font-size:1.15rem; font-weight:800; line-height:1.3; margin-bottom:8px;">' + esc(item.headline || item.text || '(no headline)') + '</div>' +
-             '<div class="story" id="' + sid + '" style="margin-bottom:0;">' +
-               '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
-                 '<span class="arrow">▶</span>' +
-                 '<span class="story-headline-text">Open Marc\'s post' +
-                   ((function(){ var ag = timeAgo(item.time, url); var v = item.views; return (v || ag) ? '<span class="post-meta">' + (v ? '<span class="views">' + esc(v) + ' views</span>' : '') + (ag ? (v ? ' · ' : '') + ag : '') + '</span>' : ''; })()) +
-                 '</span>' +
-               '</div>' +
-               '<div class="story-body">' + sourceTile + honestyBlock + '</div>' +
-             '</div>' +
-           '</div>';
-    }
-  });
-  // Then the rest
-  var others = free.filter(function(it) { return !it.isMarc; });
-  if (others.length) {
-    h += '<div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:#f0e6d6; font-weight:700; margin:18px 0 8px;">Today\'s posts</div>';
-    h += others.map(renderFreeItem).join('');
-  }
+  // Every entry — including Marc — renders through the same block.
+  // No "ALWAYS FIRST" badge, no special card frame, no "Open Marc's post"
+  // wrapper. The accumulator already sorts isMarc:true entries to the top
+  // of free[], so order is preserved without special-casing the render.
+  h += free.map(renderFreeItem).join('');
   return h;
 }
 
