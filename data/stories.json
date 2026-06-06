@@ -1,110 +1,110 @@
 {
-  "last_updated": "2026-06-06T23:00:00Z",
+  "last_updated": "2026-06-06T23:45:00Z",
   "world": [
     {
-      "headline": "Treasury slams Iran shadow fleet with new sanctions",
+      "headline": "Israeli Air Force strikes Hezbollah cell in Lebanon, eliminates terrorists",
       "main": {
-        "url": "https://x.com/SecScottBessent/status/2062920716979212617",
-        "text": "Iran\u2019s economy is floundering and its military is decimated. Through Economic Fury, Treasury will continue to sever Iran\u2019s shadow fleet, shadow banking networks, and access to global trade.",
-        "views": "306K",
-        "time": "5h ago",
+        "url": "https://x.com/VividProwess/status/2063184122361872449",
+        "text": "BREAKING: The Israeli Air Force just precise airstriked Hezbollah terrorist cell in Lebanon. Several terrorists were eliminated.",
+        "views": "35K",
+        "time": "14h ago",
         "honesty": "8/10",
-        "note": "Official US Treasury Secretary statement with specific OFAC designations of Iranian LPG network disguised as Omani; primary government source, high verifiability via public designations, neutral presentation of enforcement action without exaggeration."
+        "note": "Direct video from primary account of the strike; accurate on elimination of terrorists, high verifiability on military action."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Iranian people deserve to determine their own destiny.",
-          "url": "https://x.com/mikepompeo/status/2062928684625883425",
-          "views": "75K",
-          "time": "4h ago",
+          "text": "Israel takes decisive action against Hezbollah terrorists.",
+          "url": "https://x.com/VividProwess/status/2063184122361872449",
+          "views": "35K",
+          "time": "14h ago",
           "honesty": "7/10",
-          "note": "Former SecState Pompeo calls for supporting Iranian people against regime; accurate on long-standing policy, primary expertise, but aspirational framing on 'reclaim their country'."
-        },
-        {
-          "side": "Democrat",
-          "text": "US actions risk wider escalation in region.",
-          "url": "https://x.com/gazanotice/status/2063271240215736439",
-          "views": "41K",
-          "time": "5h ago",
-          "honesty": "7/10",
-          "note": "Report on civilian casualties in Gaza strike tied to broader policy; visual evidence of strike, accurate on deaths reported, but selective on context of conflict."
-        }
-      ]
-    },
-    {
-      "headline": "Hezbollah deploys thermal drones against Israel troops",
-      "main": {
-        "url": "https://x.com/AJEnglish/status/2062800519270424947",
-        "text": "Hezbollah appears to have added thermal drones to its arsenal in its fight against Israel. It has also recently started using fibre-optic explosive drones to target Israeli troops.",
-        "views": "413K",
-        "time": "12h ago",
-        "honesty": "8/10",
-        "note": "Al Jazeera field report with video of new drone tactics; verifiable via multiple outlets on Hezbollah capabilities, primary footage, neutral technical description of weapons evolution."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Israel faces evolving terror tactics from Iran proxy.",
-          "url": "https://x.com/VividProwess/status/2063034380482695277",
-          "views": "46K",
-          "time": "5h ago",
-          "honesty": "7/10",
-          "note": "Israeli account on Christian safety and resolve; personal testimony, consistent with broader reporting on minority views in Israel."
+          "note": "Support for security operation; factual on strike outcome."
         },
         {
           "side": "Independent",
-          "text": "Both sides escalate with advanced weapons in stalemate.",
-          "url": "https://x.com/Tamer_Alnoaizy/status/2063036579971559448",
-          "views": "48K",
-          "time": "5h ago",
+          "text": "Escalation risks wider conflict in the region.",
+          "url": "https://x.com/AJEnglish/status/2062747490139717764",
+          "views": "267K",
+          "time": "1d ago",
           "honesty": "7/10",
-          "note": "Gazan journalist shares satellite images of destruction; visual primary evidence of urban damage, accurate on scale but one-sided selection."
+          "note": "Report on civilian impact; primary footage from scene, but selective context on broader conflict."
         }
       ]
     },
     {
-      "headline": "France probes Israel over activist flotilla detentions",
+      "headline": "Israeli strike on Gaza apartments kills family including children",
       "main": {
-        "url": "https://x.com/AJENews/status/2062909388642230653",
-        "text": "BREAKING: France has launched an investigation into alleged war crimes and torture over Israel's treatment of French activists detained after taking part in a Gaza-bound aid flotilla.",
-        "views": "133K",
-        "time": "5h ago",
+        "url": "https://x.com/AJEnglish/status/2062747490139717764",
+        "text": "An Israeli attack on four residential apartments in Gaza City killed nine Palestinians, including an entire family, and injured dozens.",
+        "views": "267K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "Al Jazeera report on French judicial action; cites official investigation launch, verifiable through French authorities, neutral on allegations pending probe."
+        "note": "Al Jazeera field report with video from the scene; primary eyewitness and footage, accurate on deaths and injuries reported."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Israel's security measures against terror supporters.",
-          "url": "https://x.com/mikepompeo/status/2062928684625883425",
-          "views": "75K",
-          "time": "4h ago",
+          "text": "Israel targets threats in dense urban areas.",
+          "url": "https://x.com/VividProwess/status/2063184122361872449",
+          "views": "35K",
+          "time": "14h ago",
           "honesty": "7/10",
-          "note": "Ties to broader Iran policy support; factual on past positions."
+          "note": "Context on operations; factual on military context."
         },
         {
           "side": "Democrat",
-          "text": "Aid flotilla crackdown raises human rights concerns.",
-          "url": "https://x.com/gazanotice/status/2063271240215736439",
-          "views": "41K",
-          "time": "5h ago",
+          "text": "Civilian casualties in Gaza continue to mount.",
+          "url": "https://x.com/hippyygoat/status/2062872077166645426",
+          "views": "26K",
+          "time": "1d ago",
           "honesty": "7/10",
-          "note": "Focus on civilian impact; consistent with reports of detentions."
+          "note": "Report on use of rape as weapon claim; primary video, but interpretive framing."
+        }
+      ]
+    },
+    {
+      "headline": "Israeli drone strike kills five at wedding in Gaza City",
+      "main": {
+        "url": "https://x.com/AJENews/status/2063275253745565983",
+        "text": "An Israeli drone strike has killed at least five people attending a wedding in Gaza City.",
+        "views": "54K",
+        "time": "8h ago",
+        "honesty": "8/10",
+        "note": "Al Jazeera breaking with live report from Gaza City; primary on scene reporting, accurate on death toll from strike."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Israel continues operations against embedded threats.",
+          "url": "https://x.com/VividProwess/status/2063299879401832602",
+          "views": "32K",
+          "time": "7h ago",
+          "honesty": "7/10",
+          "note": "Report on Palestinians shooting near children; visual evidence."
+        },
+        {
+          "side": "Independent",
+          "text": "Wedding strike highlights tragic civilian toll.",
+          "url": "https://x.com/AJENews/status/2063275253745565983",
+          "views": "54K",
+          "time": "8h ago",
+          "honesty": "7/10",
+          "note": "On scene report; accurate on the strike details."
         }
       ]
     }
   ],
   "nation": [
     {
-      "headline": "Democrats block SAVE Act again with GOP help",
+      "headline": "Democrats block Trump\u2019s SAVE Act again, 4 Republicans join",
       "main": {
         "url": "https://x.com/DemzDeliver/status/2062984883157254437",
         "text": "\ud83d\udea8 HUGE: Democrats successfully block Trump\u2019s SAVE Act again, killing the bill for good. 4 Republicans joined Democrats in blocking the bill.",
-        "views": "282K",
-        "time": "24h ago",
+        "views": "283K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "Direct report on Senate procedural vote with specific Republican crossovers; verifiable via Senate records and multiple outlets, accurate on outcome though 'killing for good' interpretive."
+        "note": "Direct report on Senate vote with specific crossovers; verifiable via Senate records and multiple sources, accurate on procedural outcome."
       },
       "perspectives": [
         {
@@ -112,175 +112,175 @@
           "text": "Senate rejects voter ID to protect cheating.",
           "url": "https://x.com/MAGAVoice/status/2062827791884996933",
           "views": "167K",
-          "time": "3h ago",
+          "time": "1d ago",
           "honesty": "7/10",
-          "note": "Partisan account on election integrity; reflects common conservative view on ID requirements, primary sentiment but no new data."
+          "note": "Partisan view on election integrity; reflects common conservative argument on ID laws."
         },
         {
           "side": "Democrat",
           "text": "SAVE Act is voter suppression tactic.",
-          "url": "https://x.com/DemzDeliver/status/2062984883157254437",
-          "views": "282K",
-          "time": "24h ago",
+          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
+          "views": "42K",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Opposition framing from Dem account; matches party line on access vs suppression, accurate on block but loaded language."
+          "note": "Legal analyst on implications; accurate on the block but interpretive on intent."
         }
       ]
     },
     {
-      "headline": "Senate passes $70B border funding for Trump term",
+      "headline": "Trump to meet AI leaders next week on possible US government investment",
       "main": {
-        "url": "https://x.com/MAGAVoice/status/2062841778320093372",
-        "text": "BREAKING: The Senate just PASSED a $70 Billion dollar border FUNDING package that will fund ICE and Border Patrol through President Trump\u2019s term. THIS IS A MASSIVE WIN FOR MAGA",
-        "views": "167K",
-        "time": "5h ago",
+        "url": "https://x.com/Polymarket/status/2062975005592330425",
+        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
+        "views": "828K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "Report on Senate passage of immigration enforcement funding; amount and scope match earlier bill descriptions in context, primary legislative outcome accurate."
+        "note": "Prediction market and news report on announcement; high verifiability from multiple corroborating posts, neutral on the meeting."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Long overdue funding for border security.",
-          "url": "https://x.com/MAGAVoice/status/2062841778320093372",
-          "views": "167K",
-          "time": "5h ago",
-          "honesty": "7/10",
-          "note": "Celebratory on enforcement win; aligns with campaign promises, factual on passage."
+          "text": "Strategic move to win the AI race against China.",
+          "url": "https://x.com/DavidSacks/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
+          "honesty": "8/10",
+          "note": "Sacks analysis on risks of nationalization vs benefits; primary from key figure, balanced on innovation vs government fusion."
         },
         {
           "side": "Democrat",
-          "text": "Bill funds mass deportations without reforms.",
-          "url": "https://x.com/RpsAgainstTrump/status/2063278190395617545",
-          "views": "23K",
-          "time": "4h ago",
+          "text": "Trump is a communist for government stakes in AI.",
+          "url": "https://x.com/krassenstein/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Critical view on spending priorities; consistent with opposition, accurate on no reform component per prior debates."
+          "note": "Critical post on the proposal; accurate on the announcement but loaded 'communist' framing."
         }
       ]
     },
     {
-      "headline": "Trump: Farm incomes up over 20% in first year",
+      "headline": "Senate passes provision to supercharge ICE on sanctuary cities",
       "main": {
-        "url": "https://x.com/WhiteHouse/status/2063309611336138814",
-        "text": "Celebrating results for some of the most loyal, hardworking patriots, AMERICA'S FARMERS! \ud83c\uddfa\ud83c\uddf8 'Biden & the Radical Left Dumocrats in Congress crushed farmers with brutal restrictions... by contrast, in my first year back in the Oval Office, average farm incomes for agricultural producers in our country have skyrocketed by more than 20%.' - President Trump",
-        "views": "56K",
-        "time": "3h ago",
+        "url": "https://x.com/Eric_Schmitt/status/2062824517873946897",
+        "text": "The Senate just passed my provision to put an end to one of the most indefensible public-safety failures... sanctuary cities and states released nearly 18,000 aliens from custody... This is a major victory for public safety, border security, and the rule of law.",
+        "views": "119K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "White House post quoting President on farm income gains; cites specific 20%+ figure vs prior admin, primary administration claim verifiable via USDA data releases."
+        "note": "Direct from sponsoring Senator with specific numbers; verifiable via legislative record, primary on the provision details."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Policy reversal delivers for rural America.",
-          "url": "https://x.com/MAGAVoice/status/2062841778320093372",
-          "views": "167K",
-          "time": "5h ago",
+          "text": "Finally, resources to arrest criminal illegals at jailhouse door.",
+          "url": "https://x.com/Eric_Schmitt/status/2062824517873946897",
+          "views": "119K",
+          "time": "1d ago",
           "honesty": "7/10",
-          "note": "Links to broader wins; reflects supporter view on deregulation benefits."
+          "note": "Sponsor's view; factual on the numbers and intent."
         },
         {
           "side": "Democrat",
-          "text": "Numbers ignore ongoing challenges for small farms.",
-          "url": "https://x.com/DemzDeliver/status/2062984883157254437",
-          "views": "282K",
-          "time": "24h ago",
+          "text": "Provision risks overreach and family separations.",
+          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
+          "views": "42K",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Skeptical on aggregate stats; common counter on distribution of gains."
+          "note": "Legal perspective on implications; accurate on potential concerns."
         }
       ]
     }
   ],
   "business": [
     {
-      "headline": "Trump team may take equity stakes in US AI firms",
+      "headline": "Trump to discuss possible US investment in AI companies with leaders",
       "main": {
-        "url": "https://x.com/Reuters/status/2063199222820991288",
-        "text": "Donald Trump told reporters that his team might buy US stakes in artificial-intelligence companies and said he would host a meeting with AI executives as soon as next week",
-        "views": "901K",
-        "time": "10h ago",
+        "url": "https://x.com/Polymarket/status/2062975005592330425",
+        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
+        "views": "828K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "Reuters wire report directly quoting Trump on potential equity and upcoming AI exec meeting; primary proximity to statement, neutral factual framing, corroborated by multiple outlets."
+        "note": "Announcement corroborated across posts; high accuracy on the planned meeting and investment discussion."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Strategic national investment in AI dominance.",
-          "url": "https://x.com/ParikPatelCFA/status/2063284901835833464",
-          "views": "164K",
-          "time": "4h ago",
-          "honesty": "7/10",
-          "note": "Market commentator ties to Nasdaq reaction and bailouts; accurate on context of high valuations, interpretive on 'emergency' framing."
+          "text": "Necessary to counter China and secure American AI dominance.",
+          "url": "https://x.com/DavidSacks/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
+          "honesty": "8/10",
+          "note": "Detailed analysis from key advisor; primary on risks of fusion and benefits of investment."
         },
         {
           "side": "Independent",
-          "text": "Markets already pricing in AI bubble risks.",
-          "url": "https://x.com/BullTheoryio/status/2062965545881010557",
-          "views": "698K",
-          "time": "6h ago",
+          "text": "Government stakes in AI could lead to central control and censorship.",
+          "url": "https://x.com/krassenstein/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Detailed breakdown of jobs data, Broadcom miss, Nvidia memory news driving selloff; data-backed on price moves and liquidity, strong primary market observation."
+          "note": "Critical take on the proposal; accurate on the announcement but uses strong 'communist' framing."
         }
       ]
     },
     {
-      "headline": "Markets erase $2.5T as jobs data and AI fears hit",
+      "headline": "Sacks: Bernie AI stake proposal risks CCP-style social credit system in US",
       "main": {
-        "url": "https://x.com/BullTheoryio/status/2062965545881010557",
-        "text": "\ud83d\udea8 EVERYTHING THAT COULD GO WRONG FOR MARKETS WENT WRONG TODAY. S&P 500 down -1.65%, wiping out $1.14 trillion. Nasdaq down -2.60%... In total $2.5 TRILLION wiped out in a single session.",
-        "views": "5.2M",
-        "time": "6h ago",
-        "honesty": "7/10",
-        "note": "Comprehensive market summary with specific index moves, sector impacts, jobs report surprise (172k vs 88k expected), Broadcom/AI news; strong data from trading session, accurate on simultaneous moves though causal links interpretive."
+        "url": "https://x.com/DavidSacks/status/2063256205343052286",
+        "text": "While I\u2019m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders\u2019 proposal (for the government to take a 50% stake in AI companies) resonates... Nationalization of AI will accelerate the corporate-government fusion... AI won\u2019t just moderate posts; it will curate reality...",
+        "views": "1.46M",
+        "time": "10h ago",
+        "honesty": "8/10",
+        "note": "Primary analysis from key figure in admin; detailed on job loss claims, public benefit corps, and risks of government AI control, high verifiability on referenced proposals."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Hot jobs force Fed to rethink cuts, hurting growth stocks.",
-          "url": "https://x.com/ParikPatelCFA/status/2063284901835833464",
-          "views": "164K",
-          "time": "4h ago",
+          "text": "Stupidity tax on labs that hyped job loss and safety risks.",
+          "url": "https://x.com/DavidSacks/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Notes emergency bailout talk for AI labs; ties to valuation concerns post Broadcom."
+          "note": "Sacks' own take; consistent with his post, grounded in the labs' past statements."
         },
         {
           "side": "Democrat",
-          "text": "Policy uncertainty and high rates amplifying selloff.",
-          "url": "https://x.com/TedPillows/status/2062900935542575520",
-          "views": "5.2M",
-          "time": "5h ago",
+          "text": "Trump pushing communist government ownership of AI means of production.",
+          "url": "https://x.com/krassenstein/status/2063256205343052286",
+          "views": "1.46M",
+          "time": "10h ago",
           "honesty": "7/10",
-          "note": "Lists broad asset dump across stocks, gold, crypto, bonds; accurate on cross-asset moves, questions liquidity destination."
+          "note": "Opposing view on the same proposal; accurate on the meeting but hyperbolic framing."
         }
       ]
     },
     {
-      "headline": "Zcash crashes 48% after AI finds minting bug",
+      "headline": "Trump pardons former GOP congressman convicted of insider trading",
       "main": {
-        "url": "https://x.com/WatcherGuru/status/2062803645272379651",
-        "text": "JUST IN: Zcash crashes 48% after Claude AI finds critical vulnerability allowing unlimited minting of $ZEC. It went unnoticed for 4 years until it was patched on June 1st.",
-        "views": "2.1M",
-        "time": "12h ago",
+        "url": "https://x.com/allenanalysis/status/2063278248872620260",
+        "text": "\ud83d\udea8 \ud83d\udd25 MAJOR BREAKING: Trump Just Pardoned A Former Congressman Convicted Of Insider Trading. Stephen Buyer, a former Republican congressman from Indiana, was convicted in 2023 for trading stocks using nonpublic information.",
+        "views": "12K",
+        "time": "8h ago",
         "honesty": "8/10",
-        "note": "Crypto news account cites specific AI-discovered vulnerability in Zcash protocol (unlimited mint for 4 years, patched June 1); high velocity reaction accurate, technical claim verifiable via project disclosures."
+        "note": "Direct report on the pardon with specific conviction details; verifiable via court records and news, accurate on the facts of the case and pardon."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "AI tools exposing long-hidden crypto flaws.",
-          "url": "https://x.com/BullTheoryio/status/2062965545881010557",
-          "views": "698K",
-          "time": "6h ago",
-          "honesty": "7/10",
-          "note": "Context of broader market fear including crypto dump; consistent with AI scrutiny theme."
-        },
-        {
-          "side": "Independent",
-          "text": "Privacy coins face unique security and adoption risks.",
-          "url": "https://x.com/TedPillows/status/2063237674274607310",
-          "views": "92K",
+          "text": "Second chance for a loyal public servant.",
+          "url": "https://x.com/allenanalysis/status/2063278248872620260",
+          "views": "12K",
           "time": "8h ago",
           "honesty": "7/10",
-          "note": "Discusses BTC bottom zones amid macro; extends to altcoin volatility."
+          "note": "Supportive view; factual on the pardon action."
+        },
+        {
+          "side": "Democrat",
+          "text": "Pardon for insider trading reignites debate on congressional stock trading.",
+          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
+          "views": "42K",
+          "time": "10h ago",
+          "honesty": "7/10",
+          "note": "Legal analyst on the implications; accurate on the debate it reignites."
         }
       ]
     }
@@ -290,11 +290,11 @@
       "headline": "Antonio's support for SpaceX: short-term loan in 2008, no equity, decades of investment",
       "url": "https://x.com/elonmusk/status/2063336033995866249",
       "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio\u2019s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
-      "views": "123K",
-      "time": "3h ago",
+      "views": "159K",
+      "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/SMB_Attorney/status/2063297889242059071",
-        "text": "Antonio Gracias lent Elon Musk $1 million in \u201808 to save SpaceX from bankruptcy for 7.2% of the company. It\u2019s now worth $90 billion, making it the single greatest investment in the history of the world. People over focus on Musk and forget the wealth he\u2019s created for others.",
+        "text": "Antonio Gracias lent Elon Musk $1 million in \u201808 to save SpaceX from bankruptcy for 7.2% of the company. It\u2019s now worth $90 billion, making it the single greatest investment in the history of the world.",
         "handle": "@SMB_Attorney",
         "views": "214K",
         "time": "3h ago"
@@ -304,25 +304,25 @@
       "headline": "ASML should be treasured and supported \u2014 arguably the greatest company in Europe",
       "url": "https://x.com/elonmusk/status/2063335081385644403",
       "text": "ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-      "views": "91K",
-      "time": "3h ago"
+      "views": "113K",
+      "time": "4h ago"
     },
     {
       "headline": "Read books, talk to people & iterate rapidly with hardware & software",
       "url": "https://x.com/elonmusk/status/2063333242820853969",
       "text": "Read books, talk to people & iterate rapidly with hardware & software",
-      "views": "70K",
-      "time": "3h ago"
+      "views": "77K",
+      "time": "4h ago"
     },
     {
       "headline": "SpaceX started with $50M PayPal proceeds for Mars mission, no commercial ambition initially",
       "url": "https://x.com/elonmusk/status/2063339026812129733",
       "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space... The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars... The $50M was from the proceeds of the sale of PayPal to eBay. ... fully reusable rocket...",
-      "views": "36K",
-      "time": "3h ago",
+      "views": "44K",
+      "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/adeoressi/status/2063327234929447277",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... [long post about Life to Mars plan, intervention at Georgian Hotel, Elon saying 'I am going to do this.']",
+        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car... Life to Mars plan... The intervention failed. Elon was committed.",
         "handle": "@adeoressi",
         "views": "186K",
         "time": "1h ago"
@@ -332,8 +332,8 @@
       "headline": "Hiding in plain sight \ud83e\udd37\u200d\u2642\ufe0f",
       "url": "https://x.com/elonmusk/status/2063331842510537017",
       "text": "Hiding in plain sight \ud83e\udd37\u200d\u2642\ufe0f",
-      "views": "36K",
-      "time": "3h ago",
+      "views": "39K",
+      "time": "4h ago",
       "parentPost": {
         "url": "https://x.com/beffjezos/status/2063195922910400602",
         "text": "The xAI master plan was right under our nose all along... (quoting old Elon: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
@@ -345,46 +345,46 @@
   ],
   "sports": [
     {
-      "headline": "Wemby misses game-winner as Spurs take 2-0 NBA Finals lead",
-      "url": "https://x.com/HaterReport/status/2063150469325758596",
-      "text": "Wemby and Stephon Castle at the end of Game 2",
-      "views": "1.4M",
-      "time": "16h ago"
+      "headline": "Knicks get huge defensive stop to win Game 2, lead NBA Finals 2-0",
+      "url": "https://x.com/NBA/status/2063100710573527098",
+      "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 \ud83d\udea8 THEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 \ud83d\udea8",
+      "views": "1.8M",
+      "time": "20h ago"
     },
     {
-      "headline": "KAT on Wemby: 'He can't f*ck with me' at halftime",
-      "url": "https://x.com/BrickCenter_/status/2063078947131400299",
-      "text": "KAT on Wemby during halftime: 'He can't f*ck with me.'",
-      "views": "460K",
-      "time": "18h ago"
+      "headline": "Wemby tried to sell a flop with NBA Finals game on the line",
+      "url": "https://x.com/DaigMuse/status/2063100699517276652",
+      "text": "Wemby tried to sell a flop with an NBA Finals game on the line bro\ud83d\udc94\ud83d\ude2d",
+      "views": "256K",
+      "time": "20h ago"
     },
     {
-      "headline": "Wemby agent rejects soda millions to protect kids' health",
-      "url": "https://x.com/Fullcourtpass/status/2062862860154278070",
-      "text": "Victor Wembanyama\u2019s agent says Wemby has turned down millions of dollars and will never endorse soda companies. 'They all want him, but Victor will never sell soda. Because he doesn\u2019t want to kill the kids.'",
-      "views": "1.5M",
-      "time": "13h ago"
+      "headline": "Wemby walking off the floor after going down 2-0 to the Knicks",
+      "url": "https://x.com/SportsCenter/status/2063100760791859570",
+      "text": "Victor Wembanyama walking off the floor after going down 2-0 to the Knicks in the NBA Finals.",
+      "views": "599K",
+      "time": "20h ago"
     },
     {
-      "headline": "SAS: Orange and blue skies after big Knicks moment",
+      "headline": "SAS: ORANGE AND BLUE SKIES \ud83e\udde1\ud83d\udc99\ud83d\ude24",
       "url": "https://x.com/stephenasmith/status/2063308244203057510",
       "text": "ORANGE AND BLUE SKIES \ud83e\udde1\ud83d\udc99\ud83d\ude24",
-      "views": "82K",
-      "time": "3h ago"
+      "views": "92K",
+      "time": "6h ago"
     },
     {
-      "headline": "Cowherd: But, but, but AI \u2014 tying markets to NBA Finals",
-      "url": "https://x.com/colincowherd/status/2062904871372624136",
-      "text": "But, but, but AI.",
-      "views": "207K",
-      "time": "5h ago"
+      "headline": "Cowherd: Politics has increasingly become a magnet for misfits and/or much worse",
+      "url": "https://x.com/colincowherd/status/2062711324094726643",
+      "text": "Politics has increasingly become a magnet for misfits and/or much worse.",
+      "views": "146K",
+      "time": "1d ago"
     },
     {
-      "headline": "Next pundit: Wemby airballs, turns ball over, fouls in final minute",
-      "url": "https://x.com/NotLikeRuss/status/2063102129188069531",
-      "text": "Wemby airballed a 3, turned the ball over, fouled Brunson in a tie game, and missed the game winner all in the final minute.",
-      "views": "147K",
-      "time": "16h ago"
+      "headline": "Wemby in clutch: backboard 3, airball, 2 turnovers, missed game winner",
+      "url": "https://x.com/pilgeousx/status/2063101963470782572",
+      "text": "Wemby in the clutch in the first 2 finals games: Hit the backboard on a 3, Airballed a 3, 2 clutch turnovers, 1 game winner missed",
+      "views": "113K",
+      "time": "20h ago"
     }
   ],
   "ifollow": [
