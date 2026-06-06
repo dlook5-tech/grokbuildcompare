@@ -381,6 +381,16 @@
   footer strong { color: #f0e6d6; }
   .empty-msg { color: #f0e6d6; font-size: 0.88rem; margin-top: 16px; }
 
+  /* Parent post embed — shown above any source post that's a reply or
+     quote-tweet. Same X widget used elsewhere, just with an "In reply to"
+     header so the reader instantly understands the context. The "worst
+     thing about X" problem (reactions without the original post) is
+     solved by always showing the parent inline. */
+  .parent-post { background: #f8f1e3; border: 1px solid #d4b896; border-left: 3px solid #b8860b; border-radius: 5px; padding: 8px 10px 10px; margin-bottom: 10px; }
+  .parent-post .parent-head { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.6px; color: #8a6f3f; font-weight: 700; margin-bottom: 6px; }
+  .parent-post-textfallback .parent-text { font-size: 0.82rem; color: #4a3a25; line-height: 1.35; }
+
+
   /* Mobile: stack columns vertically */
   @media (max-width: 850px) {
     .columns, .three-up { grid-template-columns: 1fr; }
@@ -663,6 +673,42 @@ function renderHonestyFold(honesty, note) {
   );
 }
 
+// Parent post context for replies and quote-tweets.
+// X's worst UX problem: someone responds to a thread and the original
+// post isn't shown, so readers have no idea what's being reacted to.
+// Whenever Grok ships an entry with parentPost{url,text,handle,time,views},
+// we embed the parent X post inline above the source. Same widget the
+// source uses, so the reader sees full context without leaving the page.
+//
+// Schema:
+//   parentPost: { url, handle, text, time, views }
+// Behavior:
+//   - With a real X /status/ URL → embed the parent post as a full
+//     X widget (auto-loads through Twitter's oembed).
+//   - Without a URL → fall back to a tight text snippet + handle line.
+//   - Returns '' (no affordance, no orphan box) when parentPost is absent.
+function renderParentPost(pp) {
+  if (!pp || typeof pp !== 'object') return '';
+  var pAgo = timeAgo(pp.time, pp.url);
+  var headLine = '<div class="parent-head">In reply to ' +
+    esc(pp.handle || '@user') + (pAgo ? ' · ' + pAgo : '') + '</div>';
+  // Real X URL → embed the parent post in full.
+  if (isXStatusUrl(pp.url)) {
+    return '<div class="parent-post">' +
+             headLine +
+             renderEmbedSlot(pp.url) +
+           '</div>';
+  }
+  // No URL → tight text fallback (legacy path; Grok should always send a URL).
+  var text = (pp.text || '').trim();
+  if (!text) return '';
+  return '<div class="parent-post parent-post-textfallback">' +
+           headLine +
+           '<div class="parent-text">' + esc(text.substring(0, 220)) +
+             (text.length > 220 ? '…' : '') + '</div>' +
+         '</div>';
+}
+
 // Inline "▼ notes" expand — same pattern as iFollow, used across Elon/Free/MSM.
 // Renders nothing when there's no note (no orphan affordance).
 function renderNoteFold(note) {
@@ -760,6 +806,8 @@ function renderStoryBlock(s) {
     (blockHonestyBit ? ' · ' + blockHonestyBit : '') +
     ' · ' + metaExpandToggle() +
     '</span>';
+  // Parent post first (replies/QTs lose meaning without context).
+  var parentHtml = renderParentPost(mp.parentPost || mp.parent_post || s.parentPost || s.parent_post);
   var sourceTile = renderSourceTile(mp);
   var perspectives = (s.perspectives || []);
   var perspectivesRow = perspectives.length
@@ -774,7 +822,7 @@ function renderStoryBlock(s) {
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + perspectivesRow + noteBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + perspectivesRow + noteBlock + '</div>' +
     '</div>'
   );
 }
@@ -806,17 +854,9 @@ function renderElonBlock(item) {
     url: item.url
   });
 
-  // Parent post context for replies (one-word or short replies now have the referred post embedded)
-  var parentHtml = '';
-  if (item.parentPost) {
-    var pp = item.parentPost;
-    var pAgo = timeAgo(pp.time, pp.url);
-    parentHtml = '<div style="background:#f8f1e3; border:1px solid #d4b896; border-radius:4px; padding:6px 8px; margin-bottom:6px; font-size:11px;">' +
-      '<div style="font-weight:600; color:#5c4630; font-size:10px;">In reply to ' + esc(pp.handle || '@user') + (pAgo ? ' · ' + pAgo : '') + '</div>' +
-      '<div style="color:#4a3a25; line-height:1.25; margin:2px 0;">' + esc((pp.text || '').substring(0, 140)) + ((pp.text || '').length > 140 ? '…' : '') + '</div>' +
-      '<div style="font-size:9px; color:#8a7e72;">' + (pp.views ? '<span class="views">' + esc(pp.views) + ' views</span> · ' : '') + '<a href="' + esc(pp.url || '#') + '" target="_blank" style="color:#b8860b;">view full context on X</a></div>' +
-      '</div>';
-  }
+  // Parent post context for replies — uses the shared renderParentPost
+  // helper so every tab embeds the parent X post the same way.
+  var parentHtml = renderParentPost(item.parentPost || item.parent_post);
 
   // Optional counter-post: render only when backed by a real X URL.
   // Accepts either a perspective-shaped object (handle/text/url/views/honesty/note)
@@ -860,6 +900,10 @@ function renderSportsBlock(item) {
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     '</span>';
+  // Parent post first (when the sports post is a reply — e.g. SAS reacting
+  // to a Knicks thread, Cowherd reacting to a Germany goal). Without the
+  // parent the reader has no idea what's being celebrated/lamented.
+  var parentHtml = renderParentPost(item.parentPost || item.parent_post);
   var sourceTile = renderSourceTile({ text: item.headline, views: item.views, time: item.time, url: url });
   return (
     '<div class="story" id="' + sid + '">' +
@@ -867,7 +911,7 @@ function renderSportsBlock(item) {
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + '</div>' +
     '</div>'
   );
 }
@@ -1298,6 +1342,9 @@ function renderFreeItem(item) {
     (freeHonestyBit ? ' · ' + freeHonestyBit : '') +
     ' · ' + metaExpandToggle() +
     '</span>';
+  // Parent post first (when this is a reply). Free Speech often quotes
+  // a thread; without the parent, the reaction loses meaning.
+  var parentHtml = renderParentPost(item.parentPost || item.parent_post);
   var sourceTile = renderSourceTile({ text: item.text, views: item.views, time: item.time, url: url });
   // Body: optional ▼ notes only — honesty is already in the meta row.
   var noteBlock = renderNoteFold(item.note);
@@ -1307,7 +1354,7 @@ function renderFreeItem(item) {
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + noteBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + noteBlock + '</div>' +
     '</div>'
   );
 }
