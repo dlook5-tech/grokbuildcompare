@@ -1050,7 +1050,14 @@ function renderTabSports() {
 }
 
 function renderTabIFollow() {
-  var list = (NEWS_DATA && NEWS_DATA.ifollow) || [];
+  var rawList = (NEWS_DATA && NEWS_DATA.ifollow) || [];
+  // Sort by topPost views desc — most-viewed top-left, least bottom-right.
+  // Handles without a topPost (no views) sink to the bottom.
+  var list = rawList.slice().sort(function(a, b) {
+    var av = viewsNumber(((a && a.topPost) || {}).views);
+    var bv = viewsNumber(((b && b.topPost) || {}).views);
+    return bv - av;
+  });
   var h = renderHero('ifollow');
   if (!list.length) {
     h += '<div class="empty-msg">No follows configured yet.</div>';
