@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-07T01:30:00Z",
+  "last_updated": "2026-06-07T02:00:00Z",
   "world": [
     {
       "headline": "Israeli Air Force strikes Hezbollah cell in Lebanon, eliminates terrorists",
@@ -407,7 +407,8 @@
         "views": "1.6M",
         "time": "16h ago",
         "text": "\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d \ud83d\udc99\ud83e\udde1\ud83d\udc99\ud83e\udde1"
-      }
+      },
+      "note": "Primary post from @AOC; high engagement but emoji-heavy, limited textual substance."
     },
     {
       "handle": "@billmaher",
@@ -418,7 +419,8 @@
         "views": "478K",
         "time": "16h ago",
         "text": "Trump \u201ctruthed\u201d at me again. He called me \u201cLow Ratings Bill Maher and his Fake Laughing Machine.\u201d Speaking of low ratings, yours is 35%."
-      }
+      },
+      "note": "Direct quote from Maher; verifiable primary source, minor opinion framing."
     },
     {
       "handle": "@Tesla",
@@ -429,7 +431,8 @@
         "views": "387K",
         "time": "15h ago",
         "text": "All you have to do is look at the road \u2013 your Tesla does all the rest"
-      }
+      },
+      "note": "Tesla corporate post; clear promo but factual on product feature."
     },
     {
       "handle": "@SawyerMerritt",
@@ -440,7 +443,8 @@
         "views": "352K",
         "time": "19h ago",
         "text": "Tesla has officially applied for an Autonomous Vehicle Network Company permit in Nevada."
-      }
+      },
+      "note": "Insider report on Tesla filing; high verifiability from regulatory notice."
     },
     {
       "handle": "@elonmusk",
@@ -451,7 +455,8 @@
         "views": "330K",
         "time": "0h ago",
         "text": "Humanity is disappearing \ud83d\ude14 https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
-      }
+      },
+      "note": "Elon personal post linking WSJ; high velocity, opinion on fertility data."
     },
     {
       "handle": "@DineshDSouza",
@@ -462,7 +467,8 @@
         "views": "317K",
         "time": "17h ago",
         "text": ".@PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft\u2019s digital cloud system for allegedly being used by Chinese nationals to hack Government systems in Aug. 2025."
-      }
+      },
+      "note": "Dinesh post on audit; primary claim with specifics, good sourcing."
     },
     {
       "handle": "@MattWalshBlog",
@@ -473,7 +479,8 @@
         "views": "255K",
         "time": "23h ago",
         "text": "I\u2019m making judgments about the Karmelo Anthony case based on all of the established facts which all point overwhelmingly to Anthony being a cold blooded killer. It\u2019s got nothing to do with emotion."
-      }
+      },
+      "note": "Opinionated analysis from Walsh; strong framing but facts on case align with reports."
     },
     {
       "handle": "@JackPosobiec",
@@ -484,7 +491,8 @@
         "views": "242K",
         "time": "4h ago",
         "text": "BREAKING: CNN tells their audience to not worry about fraud in California it\u2019s just like 2020 where Republican ballots are \u2018counted culturally\u2019 first before Democrat ballots come in"
-      }
+      },
+      "note": "Breaking claim from Posobiec; video evidence in thread supports core allegation."
     },
     {
       "handle": "@chamath",
@@ -495,7 +503,8 @@
         "views": "196K",
         "time": "3h ago",
         "text": "He foretold it\u2026"
-      }
+      },
+      "note": "Chamath quote-tweet; short but ties to open-source AI discussion."
     },
     {
       "handle": "@nickshirleyy",
@@ -506,7 +515,8 @@
         "views": "188K",
         "time": "14h ago",
         "text": "I will expose all of California if I have to"
-      }
+      },
+      "note": "Personal vow from Nick; high engagement, primary but anecdotal."
     },
     {
       "handle": "@catturd2",
@@ -517,7 +527,8 @@
         "views": "146K",
         "time": "22h ago",
         "text": "Every life is precious"
-      }
+      },
+      "note": "Catturd quote; emotional but aligns with pro-life primary sources."
     },
     {
       "handle": "@PBDsPodcast",
@@ -528,7 +539,8 @@
         "views": "117K",
         "time": "5h ago",
         "text": "\u201cNo OUTRAGE For Henry Nowak?\u201d - @mehdirhasan PRESSED On U.K.'s Crime CRISIS"
-      }
+      },
+      "note": "PBD episode clip; factual title but self-promo for podcast."
     },
     {
       "handle": "@naval",
@@ -539,7 +551,8 @@
         "views": "105K",
         "time": "3h ago",
         "text": "The product is the mission."
-      }
+      },
+      "note": "Naval philosophical; consistent with his body of work, high primary."
     },
     {
       "handle": "@DavidSacks",
@@ -550,7 +563,8 @@
         "views": "78K",
         "time": "2h ago",
         "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months."
-      }
+      },
+      "note": "Sacks reply; primary from key figure, generous tone."
     },
     {
       "handle": "@IanCarrollShow",
@@ -561,7 +575,8 @@
         "views": "51K",
         "time": "1h ago",
         "text": "Now they\u2019re soft launching AI Charlie Kirk to see if anyone notices."
-      }
+      },
+      "note": "Ian Carroll opinion; high velocity, ties to verifiable Kirk footage."
     },
     {
       "handle": "@MTSlive",
@@ -572,10 +587,21 @@
         "views": "12K",
         "time": "5h ago",
         "text": "At the foothills of the singularity if you need anything"
-      }
+      },
+      "note": "MTS recap; aggregate of news, useful signal but secondary synthesis."
     }
   ],
   "free": [
+    {
+      "isMarc": true,
+      "headline": "Andreessen on the \"greengrocer lie\" \u2014 why we chant slogans we know are false",
+      "handle": "@deelwithit10",
+      "url": "https://x.com/deelwithit10/status/2047170884574773345",
+      "text": "Marc Andreessen on preference falsification: the 1985 Prague greengrocer parable, back again.",
+      "views": "eXpressO pin",
+      "honesty": "9.5/10",
+      "note": "Andreessen unpacking Timur Kuran's \"Private Truths, Public Lies\" + V\u00e1clav Havel's greengrocer parable. No speculation \u2014 maps directly onto modern forced public compliance."
+    },
     {
       "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
       "text": "Question\u2026\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
@@ -719,6 +745,26 @@
           "note": "Counter-narrative on protests; acknowledges events but frames as exploitation without engaging primary evidence of the murder and policing."
         }
       ]
+    }
+  ],
+  "earlier": [
+    {
+      "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
+      "text": "Question\u2026\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
+      "url": "https://x.com/C_3C_3/status/2062853128467136697",
+      "views": "5.7M",
+      "time": "13h ago",
+      "honesty": "7/10",
+      "note": "Rhetorical question about partisan skew of late counted ballots \u2014 core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
+    },
+    {
+      "headline": "Open-source notes beat censorship for truth",
+      "text": "Elon Musk on Community Notes: open source software and data, everyone including him gets checked, no note removal, 'better information checked in real time' beats censorship.",
+      "url": "https://x.com/elonmusk/status/2062953758313644460",
+      "views": "2.0M",
+      "time": "6h ago",
+      "honesty": "9/10",
+      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features."
     }
   ]
 }
