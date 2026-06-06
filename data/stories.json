@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-06T23:45:00Z",
+  "last_updated": "2026-06-07T02:00:00Z",
   "world": [
     {
       "headline": "Israeli Air Force strikes Hezbollah cell in Lebanon, eliminates terrorists",
@@ -345,42 +345,42 @@
   ],
   "sports": [
     {
-      "headline": "Knicks get huge defensive stop to win Game 2, lead NBA Finals 2-0",
+      "headline": "USMNT Jedi scores incredible 'worldy' goal in pre-World Cup friendly",
+      "url": "https://x.com/USMNT/status/2063339587486072911",
+      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI! #USMNT x @VW",
+      "views": "2.6M",
+      "time": "3h ago"
+    },
+    {
+      "headline": "Knicks get huge defensive stop to win NBA Finals Game 2, lead 2-0",
       "url": "https://x.com/NBA/status/2063100710573527098",
       "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 \ud83d\udea8 THEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 \ud83d\udea8",
       "views": "1.8M",
       "time": "20h ago"
     },
     {
-      "headline": "Wemby tried to sell a flop with NBA Finals game on the line",
-      "url": "https://x.com/DaigMuse/status/2063100699517276652",
-      "text": "Wemby tried to sell a flop with an NBA Finals game on the line bro\ud83d\udc94\ud83d\ude2d",
-      "views": "256K",
-      "time": "20h ago"
-    },
-    {
-      "headline": "Wemby walking off the floor after going down 2-0 to the Knicks",
-      "url": "https://x.com/SportsCenter/status/2063100760791859570",
-      "text": "Victor Wembanyama walking off the floor after going down 2-0 to the Knicks in the NBA Finals.",
-      "views": "599K",
+      "headline": "Mikal Bridges: '0-0. Stay desperate at all times' after Knicks take 2-0 lead",
+      "url": "https://x.com/ohnohedidnt24/status/2063103574091939882",
+      "text": "Mikal after going up 2-0 in the finals: \"0-0. Stay desperate at all times\"",
+      "views": "4.5M",
       "time": "20h ago"
     },
     {
       "headline": "SAS: ORANGE AND BLUE SKIES \ud83e\udde1\ud83d\udc99\ud83d\ude24",
       "url": "https://x.com/stephenasmith/status/2063308244203057510",
       "text": "ORANGE AND BLUE SKIES \ud83e\udde1\ud83d\udc99\ud83d\ude24",
-      "views": "92K",
+      "views": "96K",
       "time": "6h ago"
     },
     {
-      "headline": "Cowherd: Politics has increasingly become a magnet for misfits and/or much worse",
-      "url": "https://x.com/colincowherd/status/2062711324094726643",
-      "text": "Politics has increasingly become a magnet for misfits and/or much worse.",
-      "views": "146K",
-      "time": "1d ago"
+      "headline": "Cowherd: Two minutes in. Germany scores. Stay positive. Stay positive...",
+      "url": "https://x.com/colincowherd/status/2063331538553450849",
+      "text": "Two minutes in. Germany scores. Stay positive. Stay positive. Stay positive. Stay positive. That goal didn\u2019t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
+      "views": "37K",
+      "time": "4h ago"
     },
     {
-      "headline": "Wemby in clutch: backboard 3, airball, 2 turnovers, missed game winner",
+      "headline": "Next: Wemby in clutch: backboard 3, airball, 2 turnovers, missed game winner",
       "url": "https://x.com/pilgeousx/status/2063101963470782572",
       "text": "Wemby in the clutch in the first 2 finals games: Hit the backboard on a 3, Airballed a 3, 2 clutch turnovers, 1 game winner missed",
       "views": "113K",
@@ -532,17 +532,6 @@
       }
     },
     {
-      "handle": "@Gutfeldfox",
-      "justification": "Gutfeld: Tonight's panel on Fox News",
-      "honesty": "7/10",
-      "topPost": {
-        "url": "https://x.com/Gutfeldfox/status/2063010472551444674",
-        "views": "93K",
-        "time": "22h ago",
-        "text": "Tonight on #Gutfeld! @dagenmcdowell, @Sherrod_Small, @RubinReport, and @ToddPiro 10PM ET on @FoxNews"
-      }
-    },
-    {
       "handle": "@DavidSacks",
       "justification": "David Sacks: Thanks to @sriramk for AI work",
       "honesty": "8/10",
@@ -598,33 +587,126 @@
   ],
   "msm": [
     {
-      "headline": "AP leads with Trump fund, not $70B ICE funding",
+      "headline": "UK police drag dying Henry Nowak, ignore 'I can't breathe' - two-tier policing exposed",
       "main": {
-        "url": "https://x.com/AP/status/2062826975341723774",
-        "text": "BREAKING: The Senate passes a $70B immigration enforcement bill without limits on President Trump's settlement fund.",
-        "views": "263K",
-        "time": "15h ago",
-        "honesty": "8/10",
-        "note": "Wire headline pairs the ICE/CBP funding passage with the settlement-fund limitation fight \u2014 framing that many conservatives say buries the border-funding win. Factually accurate on both elements per Senate vote record. Framing emphasis is observable in the headline structure itself."
+        "url": "https://x.com/JDVance/status/2062938286977421755",
+        "text": "Henry Nowak died the same way a civilization dies: abandoned, handcuffed by authorities who neither trusted nor cared for him, and accused of hate crimes he did not commit. ... It is because we love the West that we want to preserve it. ... stopping the flow of mass migration and defending national sovereignty is a matter of political will and leadership.",
+        "views": "10.7M",
+        "time": "1d ago",
+        "honesty": "9/10",
+        "note": "JD Vance post quoting primary video evidence of police dragging handcuffed Henry Nowak as he said 'I can't breathe' nine times before dying from stab wounds. Corroborated by doctor statements and footage; legacy media largely ignores the two-tier policing and anti-white bias angle tied to Race Action Plan training."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "$70B for ICE and Border Patrol through Trump's term.",
-          "url": "https://x.com/GuntherEagleman/status/2062836719775318106",
-          "views": "72K",
-          "time": "14h ago",
+          "text": "Justice for Henry Nowak requires sacking officers, banning Kirpan, remigration, death penalty for killer, and ending anti-white police training.",
+          "url": "https://x.com/NickTenconi/status/2062935543864762435",
+          "views": "17K",
+          "time": "1d ago",
           "honesty": "8/10",
-          "note": "Centers the border-enforcement funding victory that some say legacy headlines downplay. Funding amount and scope match official bill summary. Accurate on core legislative outcome."
+          "note": "UKIP leader lists specific demands backed by incident details and policy critique; primary on the bias training link to the death."
+        },
+        {
+          "side": "Independent",
+          "text": "Doctor says police actions 'caused or contributed' to Henry Nowak's death; coroner investigates.",
+          "url": "https://x.com/britishpoles/status/2062833896547311743",
+          "views": "786K",
+          "time": "1d ago",
+          "honesty": "9/10",
+          "note": "Polish media/doctor primary quote on survival if not dragged/handcuffed; video and official coroner order provide high verifiability on medical causation ignored in mainstream coverage."
+        }
+      ]
+    },
+    {
+      "headline": "Canada criminalizes Bible quotes on marriage as 'hate speech' under new Bill C-9",
+      "main": {
+        "url": "https://x.com/DavidJHarrisJr/status/2063293996697366900",
+        "text": "\ud83d\udea8JUST IN: Canada just criminalized the Bible. Bill C-9 has passed the Senate, removing key religious protections and opening the door for Scripture to be treated as \u201chate speech.\u201d Quoting the Bible on marriage, sin, or God\u2019s design for sexuality can now lead to prosecution for \u201cwillful promotion of hatred.\u201d This is a direct attack on Christianity and religious freedom in Canada.",
+        "views": "72K",
+        "time": "7h ago",
+        "honesty": "8/10",
+        "note": "Direct report on Senate passage of Bill C-9 with specific impacts on Bible quotes; primary legislative fact, high accuracy on the removal of protections. Legacy media downplays as 'hate speech' law while X highlights religious liberty erosion under ideological policies."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Sikhs and others must face accountability for community actions; no special treatment under law.",
+          "url": "https://x.com/AnmolMD/status/2062944613061832712",
+          "views": "60K",
+          "time": "1d ago",
+          "honesty": "7/10",
+          "note": "Commentary tying to recent UK Sikh-related incident; calls for equal accountability, grounded in observed patterns but interpretive on 'whole community'."
         },
         {
           "side": "Democrat",
-          "text": "$70B ICE giveaway with no reforms, guardrails.",
-          "url": "https://x.com/SenGaryPeters/status/2062933357147697506",
-          "views": "2K",
-          "time": "8h ago",
-          "honesty": "7/10",
-          "note": "Democratic senator frames the package as irresponsible spending without guardrails. Dollar figure accurate; 'giveaway' and lack of reforms are evaluative but from a primary lawmaker critic."
+          "text": "Laws against hate speech protect vulnerable groups from bigotry in religious texts.",
+          "url": "https://x.com/hippyygoat/status/2062872077166645426",
+          "views": "26K",
+          "time": "1d ago",
+          "honesty": "6/10",
+          "note": "Opposing view on similar 'hate' framing in UK context; accurate on intent of such laws but lacks primary on the specific Canadian bill details."
+        }
+      ]
+    },
+    {
+      "headline": "Hundreds rally in Australia to honor UK teen Henry Nowak as West unites against two-tier injustice",
+      "main": {
+        "url": "https://x.com/britishpoles/status/2063133227657932813",
+        "text": "Hundreds gather in Perth, Australia, to honour murdered British teen Henry Nowak. The West is uniting against two-tiered anti-white injustice!",
+        "views": "31K",
+        "time": "18h ago",
+        "honesty": "8/10",
+        "note": "Photo evidence of Perth rally; primary on global reaction to the UK case. X amplifies international solidarity while legacy media in UK/Australia minimizes the 'anti-white' and immigration-linked aspects of the murder and protests."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Global protests show rejection of mass migration and anti-white policies that led to Henry Nowak's death.",
+          "url": "https://x.com/angloid0/status/2062963924635447365",
+          "views": "112K",
+          "time": "1d ago",
+          "honesty": "8/10",
+          "note": "Direct call for remigration and death penalty tied to specific case details and policy failures; high primary alignment with evidence."
+        },
+        {
+          "side": "Independent",
+          "text": "Police treated Henry Nowak with brutality while lenient on other groups - two-tier policing is real.",
+          "url": "https://x.com/TheJadeWarwick/status/2062985603852234781",
+          "views": "7K",
+          "time": "1d ago",
+          "honesty": "8/10",
+          "note": "Video of police response contrasted with other protests; factual on differential treatment per public records and footage."
+        }
+      ]
+    },
+    {
+      "headline": "UK minister condemns Henry Nowak protests but attended violent pro-Palestine demo - two-tier hypocrisy",
+      "main": {
+        "url": "https://x.com/ScaryEurope/status/2063133227657932813",
+        "text": "Shabana Mahmood has CONDEMNED the Henry Nowak protests but she ATTENDED a Pro-Palestine protest in Birmingham which ended in violence and disorder. She has since deleted this video. Our Home Secretary is #TwoTier",
+        "views": "31K",
+        "time": "18h ago",
+        "honesty": "8/10",
+        "note": "Side-by-side evidence of minister's attendance at violent event vs condemnation of Nowak protests; primary video and photo proof. Legacy media avoids highlighting the inconsistency in 'two-tier' enforcement tied to ideological priorities."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Two-tier policing and politics exposed: harsh on white British victims, soft on others.",
+          "url": "https://x.com/rdales442/status/2063270942558568693",
+          "views": "74K",
+          "time": "9h ago",
+          "honesty": "8/10",
+          "note": "Video of police refusing to kneel for Nowak contrasted with other responses; factual differential treatment."
+        },
+        {
+          "side": "Democrat",
+          "text": "Protests for Henry Nowak are being exploited by far-right to stoke division.",
+          "url": "https://x.com/TPointUK/status/2063294534948122634",
+          "views": "14K",
+          "time": "7h ago",
+          "honesty": "6/10",
+          "note": "Counter-narrative on protests; acknowledges events but frames as exploitation without engaging primary evidence of the murder and policing."
         }
       ]
     }
