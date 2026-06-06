@@ -1129,16 +1129,11 @@ function renderTabSports() {
     h += '<div class="empty-msg">No sports stories in this cycle.</div>';
     return h;
   }
-  // Top 3 stories across the top (world, nation, highest views)
+  // Single 3×2 grid: 6 items total, NO intermediate subhead. Contract per
+  // shared-state/contract.md §3.Sports. Top row world/nation/highest-views,
+  // bottom row pundits — but they read as one continuous grid to the user.
   h += '<div class="three-up">';
-  sports.slice(0, 3).forEach(function(item) {
-    h += '<div>' + renderSportsBlock(item) + '</div>';
-  });
-  h += '</div>';
-  // Pundits below (SAS, Cowherd, Next)
-  h += '<div style="margin-top:16px; font-size:13px; color:#888; font-weight:600;">Pundits</div>';
-  h += '<div class="three-up">';
-  sports.slice(3, 6).forEach(function(item) {
+  sports.slice(0, 6).forEach(function(item) {
     h += '<div>' + renderSportsBlock(item) + '</div>';
   });
   h += '</div>';
