@@ -705,6 +705,19 @@ function renderElonBlock(item) {
     time: item.time,
     url: item.url
   });
+
+  // Parent post context for replies (one-word or short replies now have the referred post embedded)
+  var parentHtml = '';
+  if (item.parentPost) {
+    var pp = item.parentPost;
+    var pAgo = timeAgo(pp.time, pp.url);
+    parentHtml = '<div style="background:#f8f1e3; border:1px solid #d4b896; border-radius:4px; padding:6px 8px; margin-bottom:6px; font-size:11px;">' +
+      '<div style="font-weight:600; color:#5c4630; font-size:10px;">In reply to ' + esc(pp.handle || '@user') + (pAgo ? ' · ' + pAgo : '') + '</div>' +
+      '<div style="color:#4a3a25; line-height:1.25; margin:2px 0;">' + esc((pp.text || '').substring(0, 140)) + ((pp.text || '').length > 140 ? '…' : '') + '</div>' +
+      '<div style="font-size:9px; color:#8a7e72;">' + (pp.views ? '<span class="views">' + esc(pp.views) + ' views</span> · ' : '') + '<a href="' + esc(pp.url || '#') + '" target="_blank" style="color:#b8860b;">view full context on X</a></div>' +
+      '</div>';
+  }
+
   // Optional counter-post: render only when backed by a real X URL.
   // Accepts either a perspective-shaped object (handle/text/url/views/honesty/note)
   // or a bare URL string. Free-text editorial summaries are dropped.
@@ -730,7 +743,7 @@ function renderElonBlock(item) {
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
       '</div>' +
-      '<div class="story-body">' + sourceTile + counterTile + honestyBlock + '</div>' +
+      '<div class="story-body">' + parentHtml + sourceTile + counterTile + honestyBlock + '</div>' +
     '</div>'
   );
 }

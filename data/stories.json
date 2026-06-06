@@ -291,7 +291,14 @@
       "url": "https://x.com/elonmusk/status/2063336033995866249",
       "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio\u2019s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
       "views": "123K",
-      "time": "3h ago"
+      "time": "3h ago",
+      "parentPost": {
+        "url": "https://x.com/SMB_Attorney/status/2063297889242059071",
+        "text": "Antonio Gracias lent Elon Musk $1 million in \u201808 to save SpaceX from bankruptcy for 7.2% of the company. It\u2019s now worth $90 billion, making it the single greatest investment in the history of the world. People over focus on Musk and forget the wealth he\u2019s created for others.",
+        "handle": "@SMB_Attorney",
+        "views": "214K",
+        "time": "3h ago"
+      }
     },
     {
       "headline": "ASML should be treasured and supported \u2014 arguably the greatest company in Europe",
@@ -312,14 +319,28 @@
       "url": "https://x.com/elonmusk/status/2063339026812129733",
       "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space... The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars... The $50M was from the proceeds of the sale of PayPal to eBay. ... fully reusable rocket...",
       "views": "36K",
-      "time": "3h ago"
+      "time": "3h ago",
+      "parentPost": {
+        "url": "https://x.com/adeoressi/status/2063327234929447277",
+        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... [long post about Life to Mars plan, intervention at Georgian Hotel, Elon saying 'I am going to do this.']",
+        "handle": "@adeoressi",
+        "views": "186K",
+        "time": "1h ago"
+      }
     },
     {
       "headline": "Hiding in plain sight \ud83e\udd37\u200d\u2642\ufe0f",
       "url": "https://x.com/elonmusk/status/2063331842510537017",
       "text": "Hiding in plain sight \ud83e\udd37\u200d\u2642\ufe0f",
       "views": "36K",
-      "time": "3h ago"
+      "time": "3h ago",
+      "parentPost": {
+        "url": "https://x.com/beffjezos/status/2063195922910400602",
+        "text": "The xAI master plan was right under our nose all along... (quoting old Elon: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
+        "handle": "@beffjezos",
+        "views": "105K",
+        "time": "9h ago"
+      }
     }
   ],
   "sports": [
