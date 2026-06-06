@@ -30,8 +30,16 @@
   nav a.msm-tab.active::after { color: #fff8ee; }
   main { flex: 1; padding: 24px 28px 36px; max-width: 1280px; margin: 0 auto; width: 100%; }
 
-  /* Hero — big newspaper-style headline at top of every tab */
-  .hero { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px dashed rgba(247,242,234,0.35); }
+  /* Hero — big newspaper-style headline at top of every tab. When the
+     tab has a themed accent thumbnail (ported from eXpressO), it sits
+     to the left of the text at ~96px, rounded, with a faint border to
+     read on the brown background. Smaller scale at narrow widths. */
+  .hero { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px dashed rgba(247,242,234,0.35); display: flex; gap: 18px; align-items: flex-start; }
+  .hero .hero-text { flex: 1; min-width: 0; }
+  .hero-accent { width: 96px; height: 96px; flex-shrink: 0; object-fit: cover; border-radius: 10px; border: 1px solid rgba(247,242,234,0.25); box-shadow: 0 3px 10px rgba(40,20,0,0.25); }
+  @media (max-width: 600px) {
+    .hero-accent { width: 64px; height: 64px; border-radius: 8px; }
+  }
   .hero h1 { font-family: "Playfair Display", Georgia, serif; font-size: 2.6rem; font-weight: 900; line-height: 1.05; color: #fff8ee; letter-spacing: -1px; text-shadow: 0 2px 4px rgba(60,30,0,0.35); margin-bottom: 12px; }
   .hero p { color: #f0e6d6; font-size: 1.02rem; line-height: 1.55; max-width: 660px; font-weight: 400; }
   .hero .accent-word { color: #ffd479; font-style: italic; font-weight: 800; }
@@ -348,9 +356,15 @@
   .submit-form button { margin-top: 12px; background: #b8860b; color: #fff; border: 0; padding: 9px 18px; border-radius: 5px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; cursor: pointer; text-transform: uppercase; }
   .submit-form button:hover { background: #976d09; }
 
-  /* Marc Andreessen always-first card */
-  .marc-card { background: linear-gradient(135deg, #fffdf7 0%, #f4e8c8 100%); border: 2px solid #b8860b; border-radius: 6px; padding: 14px 16px; margin-bottom: 16px; box-shadow: 0 3px 12px rgba(184,134,11,0.18); }
-  .marc-tag { display: inline-block; background: #b8860b; color: #fff; font-size: 0.6rem; padding: 2px 8px; border-radius: 7px; letter-spacing: 1px; margin-bottom: 6px; font-weight: 700; }
+  /* Marc Andreessen card styling — DEAD. Marc renders as a standard block
+     now (no special "ALWAYS FIRST" badge, no gold frame). The accumulator
+     keeps him pinned to free[0]. CSS rule kept commented for git archaeology. */
+  /* .marc-card { background: linear-gradient(135deg, #fffdf7 0%, #f4e8c8 100%); border: 2px solid #b8860b; border-radius: 6px; padding: 14px 16px; margin-bottom: 16px; box-shadow: 0 3px 12px rgba(184,134,11,0.18); } */
+  .marc-card-DEAD { display: none; }
+  /* .marc-tag — DEAD. "ALWAYS FIRST" badge removed; Marc renders as a
+     standard block now. Keep the rule commented for git archaeology. */
+  /* .marc-tag { display: inline-block; background: #b8860b; color: #fff; font-size: 0.6rem; padding: 2px 8px; border-radius: 7px; letter-spacing: 1px; margin-bottom: 6px; font-weight: 700; } */
+  .marc-tag-DEAD { display: none; }
 
   footer { background: #1c1410; color: #d4b896; padding: 16px 28px; text-align: center; font-size: 0.74rem; }
   footer strong { color: #f0e6d6; }
@@ -382,11 +396,14 @@
     </div>
   </div>
   <nav id="nav">
+    <!-- Nav source uses Title Case; CSS uppercases on render. MSM intentionally
+         styled with strikethrough + ✕ via .msm-tab — the tab IS the editorial
+         statement (stories MSM won't touch). -->
     <a data-tab="main" class="active">World · Nation · Business</a>
     <a data-tab="elon">Elon</a>
     <a data-tab="sports">Sports</a>
     <a data-tab="ifollow">i follow</a>
-    <a data-tab="free">free</a>
+    <a data-tab="free">Free</a>
     <a data-tab="msm" class="msm-tab">MSM</a>
     <a data-tab="earlier">Earlier</a>
   </nav>
@@ -868,18 +885,28 @@ function renderMoreList(items) {
 // Shared hero block — different copy per tab but same visual style
 function renderHero(tab) {
   var heros = {
-    main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty + notes folded in. <strong>&lt;24h only.</strong> Scroll for more in each category.' },
-    elon:    { h: 'Elon\'s latest<br>and the pushback.', p: 'Every @elonmusk post, reply, and retweet from the last 24 hours — ranked by views. Pure sales pitches omitted. Counter view tile only when there\'s a real X post to embed.' },
-    sports:  { h: 'Sports — what\'s<br>moving the needle.', p: 'Top 3 stories by velocity. No perspectives, no honesty score — just what people are watching.' },
-    ifollow: { h: 'People worth<br>following on X.', p: 'Curated list with one-line justification and honesty score per handle. Suggest someone at the bottom.' },
-    free:    { h: 'Free speech<br>front and center.', p: 'Marc Andreessen always leads. Then 0–10 free-speech-themed posts from today. Honesty fold only when opinion content.' },
-    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.', p: 'High-velocity X stories that mainstream media is systematically ignoring or downplaying. Henry-Nowak-style cases. Perspectives + honesty when relevant.' },
-    earlier: { h: 'Earlier today —<br>still worth a look.', p: 'World / Nation / Business stories that rotated off the front page in a later cron, but are still <strong>&lt;24h</strong> fresh. Age off automatically after a day.' }
+    // Hero subtitles unified: ~15–22 words, declarative tone, no inline
+    // strong tags, factually accurate to the current contract. Headlines
+    // keep their newspaper rhythm with the same line-break structure.
+    // `img` is the small hero accent thumbnail (~96px) ported from eXpressO.
+    main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty score and notes on every block. Strictly under 24 hours.', img: 'images/world.jpg' },
+    elon:    { h: 'Elon\'s latest<br>and the pushback.',                       p: 'Every @elonmusk post from the last 24 hours, ranked by views. Counter view when there\'s a real X post to embed.', img: 'images/elon.jpg' },
+    sports:  { h: 'Sports — what\'s<br>moving the needle.',                   p: 'Six top stories in a 3×2 grid — three velocity leaders, three pundit takes. The only tab without an honesty score.', img: 'images/sports.jpg' },
+    ifollow: { h: 'People worth<br>following on X.',                          p: 'Hand-picked handles. One-line take and honesty score per person. Suggest someone at the bottom of the page.' },
+    free:    { h: 'Free speech<br>front and center.',                         p: 'Marc Andreessen always first. Then free-speech-themed posts kept across crons until manually cleared. The only tab that accumulates.' },
+    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.',              p: 'High-velocity X stories the mainstream is ignoring or downplaying. Same block format as everything else.', img: 'images/msm.jpg' },
+    earlier: { h: 'Earlier today —<br>still worth a look.',                   p: 'World, Nation, and Business stories that rotated off the front page but are still under 24 hours old. Age off after a day.', img: 'images/earlier.jpg' }
   };
   var hero = heros[tab] || heros.main;
+  var img = hero.img
+    ? '<img class="hero-accent" src="' + hero.img + '" alt="" loading="lazy" />'
+    : '';
   return '<div class="hero">' +
-           '<h1>' + hero.h + '</h1>' +
-           '<p>' + hero.p + '</p>' +
+           img +
+           '<div class="hero-text">' +
+             '<h1>' + hero.h + '</h1>' +
+             '<p>' + hero.p + '</p>' +
+           '</div>' +
          '</div>';
 }
 
