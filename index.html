@@ -425,6 +425,18 @@
   footer strong { color: #f0e6d6; }
   .empty-msg { color: #f0e6d6; font-size: 0.88rem; margin-top: 16px; }
 
+  /* Narrow-list: 2-column grid for Elon / Free / MSM tabs so each block
+     is roughly half-width — eXpressO News pattern, per user 2026-06-07
+     ("Narrower blocks, not blocks that take all eight and a half width").
+     Collapses to single column under 700px. Items align top so cards in
+     the same row line up cleanly; expanding one card doesn't push the
+     other to fill empty space. */
+  .narrow-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; align-items: start; }
+  .narrow-list > .story { margin-bottom: 0; }
+  @media (max-width: 700px) {
+    .narrow-list { grid-template-columns: 1fr; }
+  }
+
   /* Parent post embed — shown above any source post that's a reply or
      quote-tweet. Same X widget used elsewhere, just with an "In reply to"
      header so the reader instantly understands the context. The "worst
@@ -924,8 +936,8 @@ function renderStoryBlock(s) {
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
-        blockNoteBody +
       '</div>' +
+      blockNoteBody +
       '<div class="story-body">' + parentHtml + sourceTile + perspectivesRow + '</div>' +
     '</div>'
   );
@@ -983,15 +995,17 @@ function renderElonBlock(item) {
     });
   }
   // Honesty + note: the score in the meta row IS the link. Note body
-  // sits hidden in the story body, revealed when score is clicked.
+  // sits OUTSIDE the .story-header flex container (was previously inside,
+  // which squished the headline when the note opened — user-flagged
+  // 2026-06-07 on the Elon SpaceX card).
   var elonNoteBody = honestyNoteBody(item.note, elonNid);
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
-        elonNoteBody +
       '</div>' +
+      elonNoteBody +
       '<div class="story-body">' + parentHtml + sourceTile + counterTile + '</div>' +
     '</div>'
   );
@@ -1332,9 +1346,14 @@ function renderTabElon() {
     h += '<div class="empty-msg">No Elon posts in this cycle.</div>';
     return h;
   }
+  // Two-column grid so blocks are narrower (per eXpressO News pattern,
+  // user 2026-06-07: "Narrower blocks, not blocks that take all eight
+  // and a half width of the page"). Drops to 1 column under 700px.
+  h += '<div class="narrow-list">';
   elon.forEach(function(item) {
     h += renderElonBlock(item);
   });
+  h += '</div>';
   return h;
 }
 
@@ -1475,8 +1494,8 @@ function renderFreeItem(item) {
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
-        freeNoteBody +
       '</div>' +
+      freeNoteBody +
       '<div class="story-body">' + parentHtml + sourceTile + '</div>' +
     '</div>'
   );
@@ -1493,7 +1512,8 @@ function renderTabFree() {
   // No "ALWAYS FIRST" badge, no special card frame, no "Open Marc's post"
   // wrapper. The accumulator already sorts isMarc:true entries to the top
   // of free[], so order is preserved without special-casing the render.
-  h += free.map(renderFreeItem).join('');
+  // Wrapped in narrow-list so blocks are 2-up like Elon, not full width.
+  h += '<div class="narrow-list">' + free.map(renderFreeItem).join('') + '</div>';
   return h;
 }
 
@@ -1561,8 +1581,9 @@ function renderTabMSM() {
          '</div>';
     return h;
   }
-  // MSM items reuse the story-block renderer; schema like main but flat array
-  h += msm.map(renderStoryBlock).join('');
+  // MSM items reuse the story-block renderer; schema like main but flat
+  // array. Wrapped in narrow-list so blocks are 2-up like Elon/Free.
+  h += '<div class="narrow-list">' + msm.map(renderStoryBlock).join('') + '</div>';
   return h;
 }
 
