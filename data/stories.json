@@ -79,7 +79,44 @@
   "business": [],
   "elon": [],
   "sports": [],
-  "ifollow": [],
+  "ifollow": [
+    {
+      "handle": "@elonmusk",
+      "justification": "Elon Musk: Humanity is disappearing \ud83d\ude14  https://www.wsj.c\u2026",
+      "honesty": "8/10",
+      "note": "Links WSJ fertility report; opinion on demographic decline.",
+      "topPost": {
+        "url": "https://x.com/elonmusk/status/2063333492449009867",
+        "views": "13.5M",
+        "time": "21h ago",
+        "text": "Humanity is disappearing \ud83d\ude14  https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
+      }
+    },
+    {
+      "handle": "@IanCarrollShow",
+      "justification": "Ian Carroll: Now they\u2019re soft launching AI Charlie Kirk to\u2026",
+      "honesty": "8/10",
+      "note": "Opinion on AI likeness; ties to verifiable Kirk footage.",
+      "topPost": {
+        "url": "https://x.com/IanCarrollShow/status/2063322181036318847",
+        "views": "265K",
+        "time": "22h ago",
+        "text": "Now they\u2019re soft launching AI Charlie Kirk to see if anyone notices."
+      }
+    },
+    {
+      "handle": "@DavidSacks",
+      "justification": "David Sacks: Thank you @sriramk for this generous post. It\u2026",
+      "honesty": "8/10",
+      "note": "Primary recap of administration AI policy milestones.",
+      "topPost": {
+        "url": "https://x.com/DavidSacks/status/2063313189497131425",
+        "views": "284K",
+        "time": "22h ago",
+        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months. Your skills are genuinely unique: a rare combination of deep technical fluency in AI, sharp policy instincts, exceptional strategic thinking, and true diplomatic talent. It will be a huge loss for the administration, but I\u2019m glad we\u2019ll continue working together with you as an outside adviser.\n\nWe've accomplished a lot together, and this feels like the right moment to recap some of the key milestones:\n* You co-authored the Administration\u2019s AI Action Plan, our comprehensive strategy for winning the AI race.\n* You helped drive the AI Acceleration Partnerships that are positioning the American AI stack to compete and win globally.\n* You played a key role in the National AI Policy Framework (executive order and policy document), which is now the foundation for discussions with Congress on a national approach to AI regulation instead of a chaotic patchwork of state rules.\n* You helped deliver the Preventing Woke AI in the Federal Government executive order, which ensures that federally procured AI systems prioritize neutrality and truth-seeking over ideological bias and capture.\n* You advanced American interests at the AI Summits in France and India and through state visits to the UK, the Middle East, and beyond.\n\nAs AI Czar, it has been a huge honor for me to work for President Trump as he provides the clear leadership and vision for American AI dominance. His policies have put America in the lead in the AI race: supporting innovation, unleashing energy abundance, building out infrastructure, pushing back against unnecessary regulation, enabling American exports, and promoting re-industrialization. \n\nSriram was a key partner in turning these priorities into action. And as he said, this was a true team effort with White House Chief of Staff Susie Wiles, NEC Director Kevin Hassett, OSTP Director Michael Kratsios, Secretary Rubio, Secretary Bessent, Secretary Lutnick, and too many others to mention.\n\nThank you again Sriram for your service. You made a huge difference. I\u2019m sorry to see you go but grateful for the work we\u2019ve done together and looking forward to what comes next."
+      }
+    }
+  ],
   "free": [
     {
       "isMarc": true,
