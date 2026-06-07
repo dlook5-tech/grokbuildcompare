@@ -461,6 +461,40 @@
     .narrow-list { grid-template-columns: 1fr; }
   }
 
+  /* "Ask Grok about this post" footer — sits under every X embed.
+     Subtle dark-on-cream pill so it reads as native chrome, not an ad.
+     Hover lifts the saturation; spark glyph mirrors X's native Grok UI
+     so 65-year-old eyes recognize it from screenshots they've seen. */
+  .grok-ask-row { margin: 8px 0 2px; display: flex; justify-content: flex-end; }
+  .grok-ask-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.3px;
+    color: #6b5d4f; background: #f3e9d2; border: 1px solid #d4b896;
+    padding: 4px 10px 4px 8px; border-radius: 999px;
+    text-decoration: none; transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .grok-ask-link:hover { background: #e8d9b3; color: #1f1a12; border-color: #b8860b; }
+  .grok-glyph { font-size: 0.9rem; line-height: 1; color: #b8860b; }
+  .grok-ask-label { white-space: nowrap; }
+
+  /* Floating "Back to top" pill — fixed bottom-right, only appears after
+     the reader scrolls past the first viewport. One-click jump home when
+     a reader has gone deep into a tab and an X embed didn't open a new
+     tab the way they expected. */
+  #back-to-top {
+    position: fixed; right: 18px; bottom: 18px; z-index: 200;
+    display: none;
+    background: #1f1a12; color: #f5e9d0;
+    border: 1px solid #b8860b; border-radius: 999px;
+    padding: 8px 14px;
+    font-family: inherit; font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.4px; text-transform: uppercase;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transition: background 0.15s, transform 0.15s;
+  }
+  #back-to-top:hover { background: #2d2418; transform: translateY(-1px); }
+  #back-to-top.visible { display: block; }
+
   /* Parent post embed — shown above any source post that's a reply or
      quote-tweet. Same X widget used elsewhere, just with an "In reply to"
      header so the reader instantly understands the context. The "worst
@@ -485,6 +519,12 @@
 </style>
 </head>
 <body>
+<!-- "Back to top" — fixed pill, shown after the reader scrolls past the
+     first viewport. Click jumps home + closes any expanded card. The
+     companion answer to the "X embed flung me to x.com" problem: when a
+     reader does come back to their grokpress tab, this gets them visually
+     re-oriented in one click instead of scrolling for ten seconds. -->
+<button id="back-to-top" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'});">↑ TOP</button>
 <header>
   <div class="header-top">
     <div>
@@ -743,7 +783,27 @@ function sideRank(p) {
 function renderEmbedSlot(url) {
   if (!isXStatusUrl(url)) return '';
   var id = 'em' + Math.random().toString(36).substr(2, 9);
-  return '<div id="' + id + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>';
+  return '<div id="' + id + '" class="tweet-embed-container" data-tweet-url="' + esc(url) + '" style="display:none;"></div>' +
+         grokAskFooter(url);
+}
+
+// "Ask Grok about this post" footer that sits under every X embed.
+// Opens grok.com in a NEW TAB with a pre-filled prompt so the user can
+// dig into the post without losing their place on grokpress. Same idea
+// as X's native ✨ Grok button, surfaced one click closer to the reader.
+function grokAskFooter(url) {
+  if (!isXStatusUrl(url)) return '';
+  var q = encodeURIComponent('Tell me about this X post: ' + url);
+  var grokUrl = 'https://grok.com/?q=' + q;
+  return (
+    '<div class="grok-ask-row" onclick="event.stopPropagation();">' +
+      '<a class="grok-ask-link" href="' + esc(grokUrl) + '" target="_blank" rel="noopener" ' +
+        'onclick="event.stopPropagation();">' +
+        '<span class="grok-glyph" aria-hidden="true">✨</span>' +
+        '<span class="grok-ask-label">Ask Grok about this post</span>' +
+      '</a>' +
+    '</div>'
+  );
 }
 
 function renderHonestyFold(honesty, note) {
@@ -1706,6 +1766,22 @@ function loadData() {
 }
 
 window.addEventListener('DOMContentLoaded', loadData);
+
+// Reveal the "↑ TOP" pill once the reader scrolls past the first viewport.
+// Throttled with rAF so it's silent on iOS Safari momentum scrolls.
+(function() {
+  var btn = null, ticking = false;
+  function tick() {
+    if (!btn) btn = document.getElementById('back-to-top');
+    if (!btn) { ticking = false; return; }
+    if (window.scrollY > 600) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+    ticking = false;
+  }
+  window.addEventListener('scroll', function() {
+    if (!ticking) { window.requestAnimationFrame(tick); ticking = true; }
+  }, { passive: true });
+})();
 </script>
 
 <!-- Static Netlify Forms declaration for ifollow-suggest -->
