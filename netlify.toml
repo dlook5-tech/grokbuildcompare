@@ -1,5 +1,14 @@
 [build]
   publish = "."
+  functions = "netlify/functions"
+
+# In-site "Ask Grok" panel — JS POSTs to /api/grok-ask, Netlify
+# rewrites that to the bundled function. Keeps the URL clean and lets us
+# swap implementations later without touching the frontend.
+[[redirects]]
+  from = "/api/grok-ask"
+  to = "/.netlify/functions/grok-ask"
+  status = 200
 
 [[headers]]
   for = "/data/*"
