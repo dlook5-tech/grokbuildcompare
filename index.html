@@ -41,10 +41,16 @@
      tab has a themed accent thumbnail (ported from eXpressO), it sits
      to the left of the text at ~96px, rounded, with a faint border to
      read on the brown background. Smaller scale at narrow widths. */
-  .hero { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px dashed rgba(247,242,234,0.35); display: flex; gap: 18px; align-items: flex-start; }
+  .hero { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px dashed rgba(247,242,234,0.35); display: flex; gap: 22px; align-items: flex-start; }
   .hero .hero-text { flex: 1; min-width: 0; }
-  .hero-accent { width: 96px; height: 96px; flex-shrink: 0; object-fit: cover; border-radius: 10px; border: 1px solid rgba(247,242,234,0.25); box-shadow: 0 3px 10px rgba(40,20,0,0.25); }
-  @media (max-width: 600px) {
+  /* Hero accent bumped from 96 → 140px so subject is clearly visible
+     (user 2026-06-07: 'Bigger picture of Rory.' on Sports). Drops to
+     96px on narrow screens so it doesn't crowd the headline. */
+  .hero-accent { width: 140px; height: 140px; flex-shrink: 0; object-fit: cover; border-radius: 12px; border: 1px solid rgba(247,242,234,0.25); box-shadow: 0 3px 12px rgba(40,20,0,0.28); }
+  @media (max-width: 700px) {
+    .hero-accent { width: 96px; height: 96px; border-radius: 10px; }
+  }
+  @media (max-width: 480px) {
     .hero-accent { width: 64px; height: 64px; border-radius: 8px; }
   }
   .hero h1 { font-family: "Playfair Display", Georgia, serif; font-size: 2.6rem; font-weight: 900; line-height: 1.05; color: #fff8ee; letter-spacing: -1px; text-shadow: 0 2px 4px rgba(60,30,0,0.35); margin-bottom: 12px; }
@@ -74,24 +80,19 @@
   .main-grid > .main-story-block > .perspectives-row { width: 100%; min-width: 0; box-sizing: border-box; }
   .main-grid > .main-story-block > .perspectives-row > .perspective { min-width: 0; }
 
-  /* Row tier: higher views = bigger block. Driven by the data-row
-     attribute (0 = top row, 2 = bottom). All three columns in the same
-     row stay the same tier so the row alignment holds. */
-  .main-story-block[data-row="0"] .main-story-header-block { padding: 18px 18px 16px; }
-  .main-story-block[data-row="0"] .main-story-headline { font-size: 1.22rem; line-height: 1.32; margin-bottom: 12px; letter-spacing: -0.2px; }
-  .main-story-block[data-row="0"] .main-story-meta { font-size: 0.76rem; }
-  .main-story-block[data-row="0"] .perspective.perspective-teaser { padding: 9px 11px; font-size: 0.78rem; line-height: 1.38; }
-  /* Row 0 perspective clamp tightened from 4 lines → 2 lines per
-     user directive — bottom-left card is the height target. */
-  .main-story-block[data-row="0"] .perspective .post-body { -webkit-line-clamp: 2; font-size: 0.78rem; }
-
-  /* Row 1 (default tier, baseline) — already covered by the general
-     .main-story-block rules above; no override needed. */
-
-  .main-story-block[data-row="2"] .main-story-header-block { padding: 11px 13px 9px; }
-  .main-story-block[data-row="2"] .main-story-headline { font-size: 0.96rem; line-height: 1.28; margin-bottom: 7px; }
-  .main-story-block[data-row="2"] .main-story-meta { font-size: 0.68rem; }
-  .main-story-block[data-row="2"] .perspective.perspective-teaser { padding: 6px 9px; font-size: 0.73rem; line-height: 1.32; }
+  /* Row tier — flattened per user 2026-06-07 ("same size font for all
+     title blocks for symmetry and composition"). All three rows now use
+     the default headline / meta / perspective sizes from the base
+     .main-story-block rules. The data-row attribute is preserved so
+     CSS clamps and other row-specific behaviors can still target it
+     without per-row font tiering muddying the visual.
+     OLD: row 0 was 1.22rem, default 1.12rem, row 2 was 0.96rem.
+     NEW: every row 1.12rem. Same padding. Same line-height. Same
+     perspective tile size. Reads as a uniform grid. */
+  /* Per-row perspective post-body clamp still varies by row — keeps
+     2-line discipline on every row for height-rhythm. */
+  .main-story-block[data-row="0"] .perspective .post-body { -webkit-line-clamp: 2; }
+  .main-story-block[data-row="2"] .perspective .post-body { -webkit-line-clamp: 2; }
   .main-story-block[data-row="2"] .perspective .post-body { -webkit-line-clamp: 2; font-size: 0.73rem; }
   .main-story-block[data-row="2"] .perspective .meta-line { font-size: 0.58rem; margin-top: 4px; }
   .main-grid > .more-list { margin-top: 0; }
@@ -253,7 +254,13 @@
      World, Apple Pie for Nation, Trading Places for Business) sit above
      the section name, gold-bordered, rounded, low-key. */
   .col-header { margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #b8860b; }
-  .col-placard { display: block; width: 100%; height: 72px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(184,134,11,0.5); box-shadow: 0 2px 6px rgba(40,20,0,0.22); margin-bottom: 8px; }
+  /* Placard taller (88px from 72) + object-position higher so the
+     Strait of Hormuz body of water + the Iranian/Omani coastlines
+     are both visible — you can tell at a glance what it is and
+     where, per user 2026-06-07 ("Zoom out just a tiny bit on the
+     Strait of Hormuz picture next to world so you can see clearly
+     what it is. Where it is."). */
+  .col-placard { display: block; width: 100%; height: 88px; object-fit: cover; object-position: center 35%; border-radius: 6px; border: 1px solid rgba(184,134,11,0.5); box-shadow: 0 2px 6px rgba(40,20,0,0.22); margin-bottom: 8px; }
   .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 2px; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
   .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
   .col-sub { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 1.4px; color: #f0e6d6; font-weight: 600; opacity: 0.85; }
