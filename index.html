@@ -484,6 +484,61 @@
     .narrow-list { grid-template-columns: 1fr; }
   }
 
+  /* Coverage bar — Ground News-inspired "which sides covered this story"
+     indicator. Three thin segments (Conservative red / Independent cream /
+     Democrat blue) filled when a perspective of that side is present, gray
+     when absent. Caption summarizes the spread. Sits above each Main story
+     headline so the spread is legible before the reader clicks in. */
+  .coverage-bar {
+    display: flex; align-items: center; gap: 6px;
+    margin: 4px 0 6px; padding: 0; font-size: 0.62rem;
+    color: #6b5d4f; font-weight: 700; letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+  .coverage-seg {
+    display: inline-block; height: 5px; width: 28px; border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.18);
+  }
+  .coverage-seg.cov-cons.on { background: #c0392b; border-color: #8a2a1e; }
+  .coverage-seg.cov-ind.on  { background: #f5e9d0; border-color: #b8860b; }
+  .coverage-seg.cov-dem.on  { background: #1f6feb; border-color: #0a4fb8; }
+  .coverage-seg.off { background: #e6dcc8; border-color: #cdbfa3; opacity: 0.55; }
+  .coverage-label { color: #6b5d4f; }
+  /* Compact variant for Earlier tab cards which are narrower */
+  .main-story-block[data-row="2"] .coverage-bar { font-size: 0.58rem; gap: 5px; }
+  .main-story-block[data-row="2"] .coverage-seg { width: 22px; height: 4px; }
+
+  /* BLINDSPOT badge — sharper editorial wedge for MSM. Sits at the top of
+     each MSM story card so the reader instantly understands WHY this story
+     is here: it's something legacy outlets are ignoring. Red pill with the
+     same urgency vocabulary the empty-MSM banner uses. */
+  .blindspot-badge {
+    display: inline-block;
+    background: #c0392b; color: #fff8ee;
+    font-size: 0.62rem; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px; border-radius: 3px;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  }
+
+  /* "Live" pulse dot — appears next to the freshness badge so the site
+     feels alive between hourly crons. Soft heartbeat animation, never
+     more than 0.6 → 1 opacity. The 65-year-old reader's eye registers
+     "this thing is on" without it being annoying. */
+  .live-pulse {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: #4caf50;
+    margin-right: 6px; vertical-align: middle;
+    box-shadow: 0 0 0 0 rgba(76,175,80,0.55);
+    animation: live-pulse-anim 2.4s ease-out infinite;
+  }
+  @keyframes live-pulse-anim {
+    0%   { box-shadow: 0 0 0 0 rgba(76,175,80,0.55); opacity: 1; }
+    70%  { box-shadow: 0 0 0 8px rgba(76,175,80,0);   opacity: 0.6; }
+    100% { box-shadow: 0 0 0 0 rgba(76,175,80,0);     opacity: 1; }
+  }
+
   /* "Ask Grok about this post" footer — sits under every X embed.
      Subtle dark-on-cream pill so it reads as native chrome, not an ad.
      Hover lifts the saturation; spark glyph mirrors X's native Grok UI
@@ -803,6 +858,47 @@ function sideRank(p) {
   return 99;
 }
 
+// Coverage indicator — Ground News-style "which sides covered this story"
+// bar. Three segments (red / cream / blue) filled when a perspective of
+// that side is present, gray-strikethrough when absent. Caption summarizes
+// the spread: "All sides covered" / "Missing Democrat view" / "One-sided".
+// Sits above the headline on Main + Earlier so the reader sees at a glance
+// whether grokpress has the full picture before clicking into the story.
+function renderCoverageBar(perspectives) {
+  var sides = { Conservative: false, Independent: false, Democrat: false };
+  (perspectives || []).forEach(function(p) {
+    if (!p || !isXStatusUrl(p && p.url)) return;
+    var d = persClassForSide(p.side).display;
+    if (sides.hasOwnProperty(d)) sides[d] = true;
+  });
+  var c = sides.Conservative ? 'on' : 'off';
+  var i = sides.Independent  ? 'on' : 'off';
+  var d = sides.Democrat     ? 'on' : 'off';
+  var count = (sides.Conservative ? 1 : 0) + (sides.Independent ? 1 : 0) + (sides.Democrat ? 1 : 0);
+  var label;
+  if (count >= 2 && sides.Conservative && sides.Democrat) {
+    label = 'BOTH SIDES';
+  } else if (count === 3) {
+    label = 'ALL SIDES';
+  } else if (count === 0) {
+    label = 'NO PERSPECTIVES YET';
+  } else {
+    var missing = [];
+    if (!sides.Conservative) missing.push('Conservative');
+    if (!sides.Independent)  missing.push('Independent');
+    if (!sides.Democrat)     missing.push('Democrat');
+    label = 'Missing: ' + missing.join(', ');
+  }
+  return (
+    '<div class="coverage-bar" aria-label="Perspective coverage: ' + label + '">' +
+      '<span class="coverage-seg cov-cons ' + c + '" title="Conservative perspective ' + (sides.Conservative ? 'present' : 'missing') + '"></span>' +
+      '<span class="coverage-seg cov-ind ' + i + '" title="Independent perspective ' + (sides.Independent ? 'present' : 'missing') + '"></span>' +
+      '<span class="coverage-seg cov-dem ' + d + '" title="Democrat perspective ' + (sides.Democrat ? 'present' : 'missing') + '"></span>' +
+      '<span class="coverage-label">' + esc(label) + '</span>' +
+    '</div>'
+  );
+}
+
 function renderEmbedSlot(url) {
   if (!isXStatusUrl(url)) return '';
   var id = 'em' + Math.random().toString(36).substr(2, 9);
@@ -1018,6 +1114,12 @@ function renderStoryBlock(s) {
   var mp = s.main || s.main_post || {};
   var headline = esc(s.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
+  // BLINDSPOT badge — only renders on MSM tab. Tells the reader at a
+  // glance that this story IS the editorial wedge: legacy media isn't
+  // covering it. Same urgency vocabulary as the empty-MSM banner.
+  var blindspotHtml = (activeTab === 'msm')
+    ? '<div class="blindspot-badge">⚠ Blindspot</div>'
+    : '';
   // Inline meta row matching Main: handle · views · age · 8/10 · □
   // The 8/10 is the link to the note. Used by MSM tab.
   var blockNid = honestyNid();
@@ -1040,6 +1142,7 @@ function renderStoryBlock(s) {
   var blockNoteBody = honestyNoteBody(blockNote, blockNid);
   return (
     '<div class="story" id="' + sid + '">' +
+      blindspotHtml +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
         '<span class="arrow">▶</span>' +
         '<span class="story-headline-text">' + headline + meta + '</span>' +
@@ -1300,11 +1403,17 @@ function renderMainStoryBlock(story, rank, catLabel) {
   // main.honesty / main.note). No more external anchor — users never have
   // to leave the page to read the source post. The 🗖/🗗 icon sits inline
   // in the meta line (rendered by metaHtml).
+  // Coverage bar — sits between the eyebrow and the headline so the reader
+  // sees at a glance whether this story has the full political spread or
+  // is missing a side. Ground News-style three-segment indicator.
+  var coverageHtml = renderCoverageBar(story.perspectives);
+
   var headerBlockHtml =
     '<div class="main-story-header-block" data-pid="' + mainPid +
       '" onclick="selectMainPerspective(\'' + mainPid + '\',\'' + panelId + '\');">' +
       eyebrowHtml +
       '<div class="main-story-headline">' + headline + '</div>' +
+      coverageHtml +
       metaHtml +
     '</div>';
 
@@ -1757,12 +1866,22 @@ function renderNav() {
 function updateFreshness() {
   var b = document.getElementById('freshnessBadge');
   if (!b) return;
-  if (!NEWS_DATA || !NEWS_DATA.last_updated) { b.textContent = 'no data'; return; }
+  if (!NEWS_DATA || !NEWS_DATA.last_updated) { b.innerHTML = '<span class="live-pulse"></span>no data'; return; }
   var diffMin = Math.floor((Date.now() - new Date(NEWS_DATA.last_updated).getTime()) / 60000);
   if (diffMin < 0) diffMin = 0;
-  if (diffMin < 60) b.textContent = diffMin + 'm ago · tap to refresh';
-  else b.textContent = Math.floor(diffMin / 60) + 'h ago · tap to refresh';
+  var ageLabel = diffMin < 60
+    ? diffMin + 'm ago · tap to refresh'
+    : Math.floor(diffMin / 60) + 'h ago · tap to refresh';
+  // Live pulse dot + age label. Dot signals "site is alive"; the rolling
+  // m-ago count signals freshness even on a static netlify page.
+  b.innerHTML = '<span class="live-pulse"></span>' + ageLabel;
 }
+
+// Keep the m-ago count rolling without a fetch — every 30s recompute the
+// freshness label so the page feels alive even on a long-open tab. The
+// underlying NEWS_DATA.last_updated stays fixed until hardRefresh, but
+// the displayed "Xm ago" advances naturally.
+setInterval(function() { try { updateFreshness(); } catch(e) {} }, 30000);
 
 function hardRefresh() {
   var u = new URL(window.location.href);
