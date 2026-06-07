@@ -162,275 +162,27 @@
       "perspectives": []
     }
   ],
-  "business": [
-    {
-      "headline": "Elon Musk shares WSJ fertility data — warns humanity is disappearing",
-      "main": {
-        "url": "https://x.com/elonmusk/status/2063333492449009867",
-        "text": "Humanity is disappearing 😔  https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii",
-        "views": "13.5M",
-        "time": "21h ago",
-        "honesty": "8/10",
-        "note": "Links primary WSJ reporting on fertility decline data."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "@NUnl ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-          "url": "https://x.com/elonmusk/status/2063335081385644403",
-          "views": "1.1M",
-          "time": "21h ago",
-          "honesty": "7/10",
-          "note": "Private-sector championing of ASML vs government equity stakes."
-        },
-        {
-          "side": "Independent",
-          "text": "@AJamesMcCarthy Read books, talk to people & iterate rapidly with hardware & software",
-          "url": "https://x.com/elonmusk/status/2063333242820853969",
-          "views": "1.2M",
-          "time": "21h ago",
-          "honesty": "7/10",
-          "note": "Iterative build philosophy vs top-down industrial policy."
-        }
-      ]
-    },
-    {
-      "headline": "David Sacks posts detailed thank-you to Sriram Krishna for 18 months of AI policy work",
-      "main": {
-        "url": "https://x.com/DavidSacks/status/2063313189497131425",
-        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months. Your skills are genuinely unique: a rare combination of deep technical fluency in AI, sharp policy instincts, exceptional strategic thinking, and true diplomatic talent. It will be a huge loss for the administration, but I’m glad we’ll continue working together with you as an outside adviser.\n\nWe've accomplished a lot together, and this feels like the right moment to recap some of the key milestones:\n* You co-authored the Administration’s AI Action Plan, our comprehensive strategy for winning the AI race.\n* You helped drive the AI Acceleration Partnerships that are positioning the American AI stack to compete and win globally.\n* You played a key role in the National AI Policy Framework (executive order and policy document), which is now the foundation for discussions with Congress on a national approach to AI regulation instead of a chaotic patchwork of state rules.\n* You helped deliver the Preventing Woke AI in the Federal Government executive order, which ensures that federally procured AI systems prioritize neutrality and truth-seeking over ideological bias and capture.\n* You advanced American interests at the AI Summits in France and India and through state visits to the UK, the Middle East, and beyond.\n\nAs AI Czar, it has been a huge honor for me to work for President Trump as he provides the clear leadership and vision for American AI dominance. His policies have put America in the lead in the AI race: supporting innovation, unleashing energy abundance, building out infrastructure, pushing back against unnecessary regulation, enabling American exports, and promoting re-industrialization. \n\nSriram was a key partner in turning these priorities into action. And as he said, this was a true team effort with White House Chief of Staff Susie Wiles, NEC Director Kevin Hassett, OSTP Director Michael Kratsios, Secretary Rubio, Secretary Bessent, Secretary Lutnick, and too many others to mention.\n\nThank you again Sriram for your service. You made a huge difference. I’m sorry to see you go but grateful for the work we’ve done together and looking forward to what comes next.",
-        "views": "284K",
-        "time": "22h ago",
-        "honesty": "8/10",
-        "note": "Primary Sacks recap of administration AI milestones with named officials."
-      },
-      "perspectives": []
-    },
-    {
-      "headline": "Colin Cowherd tells USMNT fans to stay positive after Germany scores early in friendly",
-      "main": {
-        "url": "https://x.com/colincowherd/status/2063331538553450849",
-        "text": "That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
-        "views": "59K",
-        "time": "21h ago",
-        "honesty": "8/10",
-        "note": "Broadcast take on USMNT pre-World Cup friendly performance."
-      },
-      "perspectives": []
-    }
-  ],
-  "elon": [
-    {
-      "headline": "Antonio's support for SpaceX: loan in 2008 when it looked like failure",
-      "url": "https://x.com/elonmusk/status/2063336033995866249",
-      "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio’s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
-      "views": "387K",
-      "time": "21h ago",
-      "parentPost": {
-        "url": "https://x.com/SMB_Attorney/status/2063297889242059071",
-        "text": "Antonio Gracias lent Elon Musk $1 million in ‘08 to save SpaceX from bankruptcy for 7.2% of the company. It’s now worth $90 billion, making it the single greatest investment in the history of the world.",
-        "handle": "@SMB_Attorney",
-        "views": "214K",
-        "time": "5h ago"
-      },
-      "honesty": "9/10",
-      "note": "Primary source from Elon on SpaceX 2008 financing details and long-term friendship-based ownership. Directly addresses and corrects equity claims with facts. Excellent verifiability and accuracy from the principal; neutral on the personal support that enabled the tech development."
-    },
-    {
-      "headline": "No university degree teaches how to build an orbital rocket",
-      "url": "https://x.com/elonmusk/status/2063320495047553401",
-      "text": "There is obviously no “degree” you can get from a university that actually teaches you how to make an orbital rocket, as none of the professors know how to do it!",
-      "views": "364K",
-      "time": "22h ago",
-      "honesty": "9/10",
-      "note": "Direct explanation from founder on why practical, hands-on engineering (not academic credentials) was required for SpaceX. Highlights the gap in formal education for frontier rocket tech and the first-principles approach that drove reusable launch vehicles."
-    },
-    {
-      "headline": "ASML should be treasured — arguably the greatest company in Europe",
-      "url": "https://x.com/elonmusk/status/2063335081385644403",
-      "text": "ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-      "views": "288K",
-      "time": "21h ago",
-      "honesty": "8/10",
-      "note": "Elon's assessment of ASML's critical role in EUV lithography for advanced semiconductors (key enabler for AI training chips, Tesla FSD hardware, and compute generally). Subjective 'greatest' framing but grounded in ASML's unique tech monopoly position; primary view from a major tech customer/peer."
-    },
-    {
-      "headline": "I didn’t think I was qualified — no one good would join a failing rocket startup",
-      "url": "https://x.com/elonmusk/status/2063319907849093544",
-      "text": "I didn’t “think I was qualified”. There was no other choice. No one good would join a rocket startup as chief engineer that they thought was destined for failure.",
-      "views": "223K",
-      "time": "22h ago",
-      "honesty": "8/10",
-      "note": "Primary account of stepping into chief engineer role at early SpaceX despite self-doubt. Illustrates the talent acquisition challenge for high-risk deep-tech hardware ventures and the personal commitment required to advance rocket reusability."
-    },
-    {
-      "headline": "Hardware is hard",
-      "url": "https://x.com/elonmusk/status/2063296591717421070",
-      "text": "Hardware is hard",
-      "views": "153K",
-      "time": "23h ago",
-      "parentPost": {
-        "url": "https://x.com/aaditsh/status/2063153391153602789",
-        "text": "Wait. Google is paying SpaceX $920 million per month for GPUs? ... 110,000 NVIDIA GPUs... I'm honestly not sure what to make of this. Either Google's AI compute needs have gotten so massive... Or SpaceX has built something in AI infrastructure that nobody was paying attention to.",
-        "handle": "@aaditsh",
-        "views": "908K",
-        "time": "10h ago"
-      },
-      "honesty": "8/10",
-      "note": "Iconic short observation in context of SpaceX landing a massive $920M/mo compute supply deal with Google (110k H100-class GPUs). Highlights the real-world difficulty of scaling physical AI infrastructure at the same time as rockets — primary from the builder."
-    },
-    {
-      "headline": "Read books, talk to people & iterate rapidly with hardware & software",
-      "url": "https://x.com/elonmusk/status/2063333242820853969",
-      "text": "Read books, talk to people & iterate rapidly with hardware & software",
-      "views": "128K",
-      "time": "21h ago",
-      "honesty": "8/10",
-      "note": "Concise statement of Elon's core development philosophy — continuous learning plus fast physical + digital iteration. Repeatedly demonstrated in Tesla Autopilot/FSD and SpaceX Starship/raptor engine cycles; transparent personal operating principle behind the tech progress."
-    },
-    {
-      "headline": "SpaceX origin: $50M from PayPal for philanthropic Mars mission, not commercial",
-      "url": "https://x.com/elonmusk/status/2063339026812129733",
-      "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space, but didn’t think there was anything private individuals could do. The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars, so that NASA’s budget could be increased... The $50M was from the proceeds of the sale of PayPal to eBay. After learning more... the issue was a lack of advancement in rocket technology, in particular the failure to develop a fully reusable rocket...",
-      "views": "86K",
-      "time": "21h ago",
-      "parentPost": {
-        "url": "https://x.com/adeoressi/status/2063327234929447277",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
-        "handle": "@adeoressi",
-        "views": "186K",
-        "time": "5h ago"
-      },
-      "honesty": "9/10",
-      "note": "Detailed first-hand account of SpaceX founding intent (philanthropic Mars excitement to boost NASA, $50M PayPal exit capital, pivot to reusable rocket as the core technical blocker). Corroborated by Adeo Ressi parent post. High accuracy and primary-source proximity on the non-commercial origins."
-    },
-    {
-      "headline": "Hiding in plain sight",
-      "url": "https://x.com/elonmusk/status/2063331842510537017",
-      "text": "Hiding in plain sight 🤷‍♂️",
-      "views": "62K",
-      "time": "21h ago",
-      "parentPost": {
-        "url": "https://x.com/beffjezos/status/2063195922910400602",
-        "text": "The xAI master plan was right under our nose all along... (quoting old Elon 2019: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
-        "handle": "@beffjezos",
-        "views": "142K",
-        "time": "9h ago"
-      },
-      "honesty": "7/10",
-      "note": "Brief reply acknowledging that the xAI strategy (massive GPU clusters for training) was visible in a 2019 tweet. Context supplied entirely by the quoted parent post; verifiability high once thread is seen. Minimal standalone text so honesty tempered, but no inaccuracy."
-    },
-    {
-      "headline": "True",
-      "url": "https://x.com/elonmusk/status/2063336918255813069",
-      "text": "True",
-      "views": "30K",
-      "time": "21h ago",
-      "parentPost": {
-        "url": "https://x.com/adeoressi/status/2063237987295760550",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
-        "handle": "@adeoressi",
-        "views": "186K",
-        "time": "5h ago"
-      },
-      "honesty": "8/10",
-      "note": "One-word affirmation of Adeo Ressi's account of the pre-SpaceX intervention attempt. The parent post supplies the full context of the original Life to Mars philanthropic vision and Elon's early determination. Verifiable via the referenced conversation; the brevity is typical but the embedded parent makes the exchange meaningful."
-    }
-  ],
-  "sports": [
-    {
-      "headline": "USMNT Jedi scores incredible 'worldy' in Germany friendly",
-      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!\n\n#USMNT x @VW — USMNT's official account posts the long-range Jedi Murphy strike in the Germany friendly ahead of the World Cup.",
-      "url": "https://x.com/USMNT/status/2063339587486072911",
-      "views": "9.4M",
-      "time": "21h ago"
-    },
-    {
-      "headline": "Cowherd: Stay positive as Germany leads USMNT friendly early",
-      "text": "That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
-      "url": "https://x.com/colincowherd/status/2063331538553450849",
-      "views": "59K",
-      "time": "21h ago"
-    },
-    {
-      "headline": "SAS: ORANGE AND BLUE SKIES — Knicks Finals fever",
-      "text": "ORANGE AND BLUE SKIES 🧡💙😤",
-      "url": "https://x.com/stephenasmith/status/2063308244203057510",
-      "views": "180K",
-      "time": "23h ago",
-      "parentPost": {
-        "url": "https://x.com/NBA/status/2063100710573527098",
-        "handle": "@NBA",
-        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
-        "views": "1.9M",
-        "time": "1d ago"
-      }
-    },
-    {
-      "headline": "SAS: ORANGE AND BLUE SKIES 🧡💙😤",
-      "text": "ORANGE AND BLUE SKIES 🧡💙😤",
-      "url": "https://x.com/stephenasmith/status/2063308244203057510",
-      "views": "180K",
-      "time": "23h ago",
-      "parentPost": {
-        "url": "https://x.com/NBA/status/2063100710573527098",
-        "handle": "@NBA",
-        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
-        "views": "1.9M",
-        "time": "1d ago"
-      }
-    },
-    {
-      "headline": "Cowherd: Two minutes in. Germany scores. Stay positive...",
-      "text": "That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
-      "url": "https://x.com/colincowherd/status/2063331538553450849",
-      "views": "59K",
-      "time": "21h ago"
-    },
-    {
-      "headline": "USMNT broadcast highlight: Jedi Murphy worldy vs Germany",
-      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!\n\n#USMNT x @VW — USMNT's official account posts the long-range Jedi Murphy strike in the Germany friendly ahead of the World Cup.",
-      "url": "https://x.com/USMNT/status/2063339587486072911",
-      "views": "9.4M",
-      "time": "21h ago"
-    }
-  ],
+  "business": [],
+  "elon": [],
+  "sports": [],
   "ifollow": [
     {
       "handle": "@elonmusk",
       "justification": "Elon Musk: Humanity is disappearing 😔  https://www.wsj.c…",
       "honesty": "8/10",
-      "note": "Links WSJ fertility report; opinion on demographic decline.",
-      "topPost": {
-        "url": "https://x.com/elonmusk/status/2063333492449009867",
-        "views": "13.5M",
-        "time": "21h ago",
-        "text": "Humanity is disappearing 😔  https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
-      }
+      "note": "Links WSJ fertility report; opinion on demographic decline."
     },
     {
       "handle": "@IanCarrollShow",
       "justification": "Ian Carroll: Now they’re soft launching AI Charlie Kirk to…",
       "honesty": "8/10",
-      "note": "Opinion on AI likeness; ties to verifiable Kirk footage.",
-      "topPost": {
-        "url": "https://x.com/IanCarrollShow/status/2063322181036318847",
-        "views": "265K",
-        "time": "22h ago",
-        "text": "Now they’re soft launching AI Charlie Kirk to see if anyone notices."
-      }
+      "note": "Opinion on AI likeness; ties to verifiable Kirk footage."
     },
     {
       "handle": "@DavidSacks",
       "justification": "David Sacks: Thank you @sriramk for this generous post. It…",
       "honesty": "8/10",
-      "note": "Primary recap of administration AI policy milestones.",
-      "topPost": {
-        "url": "https://x.com/DavidSacks/status/2063313189497131425",
-        "views": "284K",
-        "time": "22h ago",
-        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months. Your skills are genuinely unique: a rare combination of deep technical fluency in AI, sharp policy instincts, exceptional strategic thinking, and true diplomatic talent. It will be a huge loss for the administration, but I’m glad we’ll continue working together with you as an outside adviser.\n\nWe've accomplished a lot together, and this feels like the right moment to recap some of the key milestones:\n* You co-authored the Administration’s AI Action Plan, our comprehensive strategy for winning the AI race.\n* You helped drive the AI Acceleration Partnerships that are positioning the American AI stack to compete and win globally.\n* You played a key role in the National AI Policy Framework (executive order and policy document), which is now the foundation for discussions with Congress on a national approach to AI regulation instead of a chaotic patchwork of state rules.\n* You helped deliver the Preventing Woke AI in the Federal Government executive order, which ensures that federally procured AI systems prioritize neutrality and truth-seeking over ideological bias and capture.\n* You advanced American interests at the AI Summits in France and India and through state visits to the UK, the Middle East, and beyond.\n\nAs AI Czar, it has been a huge honor for me to work for President Trump as he provides the clear leadership and vision for American AI dominance. His policies have put America in the lead in the AI race: supporting innovation, unleashing energy abundance, building out infrastructure, pushing back against unnecessary regulation, enabling American exports, and promoting re-industrialization. \n\nSriram was a key partner in turning these priorities into action. And as he said, this was a true team effort with White House Chief of Staff Susie Wiles, NEC Director Kevin Hassett, OSTP Director Michael Kratsios, Secretary Rubio, Secretary Bessent, Secretary Lutnick, and too many others to mention.\n\nThank you again Sriram for your service. You made a huge difference. I’m sorry to see you go but grateful for the work we’ve done together and looking forward to what comes next."
-      }
+      "note": "Primary recap of administration AI policy milestones."
     }
   ],
   "free": [
@@ -443,24 +195,6 @@
       "views": "eXpressO pin",
       "honesty": "9.5/10",
       "note": "Andreessen unpacking Timur Kuran's \"Private Truths, Public Lies\" + Václav Havel's greengrocer parable. No speculation — maps directly onto modern forced public compliance."
-    },
-    {
-      "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
-      "text": "Question…\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
-      "url": "https://x.com/C_3C_3/status/2062853128467136697",
-      "views": "5.7M",
-      "time": "13h ago",
-      "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
-    },
-    {
-      "headline": "Open-source notes beat censorship for truth",
-      "text": "Elon Musk on Community Notes: open source software and data, everyone including him gets checked, no note removal, 'better information checked in real time' beats censorship.",
-      "url": "https://x.com/elonmusk/status/2062953758313644460",
-      "views": "2.0M",
-      "time": "6h ago",
-      "honesty": "9/10",
-      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features."
     }
   ],
   "msm": [],
