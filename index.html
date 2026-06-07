@@ -57,19 +57,16 @@
      supplies up to 3 stories per category; rendered as 3 rows × 3 cols
      (Row 1 = W#1·N#1·B#1, etc.). Each row's height = tallest card in the
      row, so row boundaries stay aligned even when cards differ in height. */
-  /* Row alignment: every card in the same row bottom-aligns. Grid cells
-     auto-size to the row's tallest card; align-items: stretch is the
-     default — every cell gets that height. The block itself fills the
-     cell as a flex column so the perspectives row anchors to the
-     bottom edge with margin-top: auto. overflow: hidden clips any
-     accidental grid-child overflow back to the rounded card border so
-     the visible corners always match. .perspectives-row gets
-     min-width: 0 + width: 100% to prevent its inner grid from
-     pushing past the parent padding. */
-  .main-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+  /* Row layout: each card uses its NATURAL height (align-items: start)
+     so when one card expands the others don't grow huge whitespace to
+     match. The 2-line clamps on headlines + perspectives keep the
+     natural heights tight, so the row tops still line up nicely even
+     without forced stretching. overflow: hidden + min-width: 0
+     prevent any inner grid overflow past the rounded card border. */
+  .main-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
   .main-grid > .col-title { margin-bottom: 0; }
-  .main-grid > .main-story-block { margin-bottom: 0; box-sizing: border-box; height: 100%; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
-  .main-grid > .main-story-block > .perspectives-row { margin-top: auto; width: 100%; min-width: 0; box-sizing: border-box; }
+  .main-grid > .main-story-block { margin-bottom: 0; box-sizing: border-box; overflow: hidden; min-width: 0; }
+  .main-grid > .main-story-block > .perspectives-row { width: 100%; min-width: 0; box-sizing: border-box; }
   .main-grid > .main-story-block > .perspectives-row > .perspective { min-width: 0; }
 
   /* Row tier: higher views = bigger block. Driven by the data-row
