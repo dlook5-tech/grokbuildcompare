@@ -1089,13 +1089,17 @@ function renderHero(tab) {
     // strong tags, factually accurate to the current contract. Headlines
     // keep their newspaper rhythm with the same line-break structure.
     // `img` is the small hero accent thumbnail (~96px) ported from eXpressO.
-    main:    { h: 'The biggest conversations<br>on <span class="accent-word">X</span> right now.', p: 'Real velocity. Opposing perspectives where they exist. Honesty score and notes on every block. Strictly under 24 hours.', img: 'images/world.jpg' },
-    elon:    { h: 'Elon\'s latest<br>and the pushback.',                       p: 'Every @elonmusk post from the last 24 hours, ranked by views. Counter view when there\'s a real X post to embed.', img: 'images/elon.jpg' },
-    sports:  { h: 'Sports — what\'s<br>moving the needle.',                   p: 'Six top stories in a 3×2 grid — three velocity leaders, three pundit takes. The only tab without an honesty score.', img: 'images/sports.jpg' },
-    ifollow: { h: 'People worth<br>following on X.',                          p: 'Hand-picked handles. One-line take and honesty score per person. Suggest someone at the bottom of the page.', img: 'images/tiktok.jpg' },
-    free:    { h: 'Free speech<br>front and center.',                         p: 'Marc Andreessen always first. Then free-speech-themed posts kept across crons until manually cleared. The only tab that accumulates.', img: 'images/top.jpg' },
-    msm:     { h: 'Stories the legacy<br>outlets won\'t touch.',              p: 'High-velocity X stories the mainstream is ignoring or downplaying. Same block format as everything else.', img: 'images/msm.jpg' },
-    earlier: { h: 'Earlier today —<br>still worth a look.',                   p: 'World, Nation, and Business stories that rotated off the front page but are still under 24 hours old. Age off after a day.', img: 'images/earlier.jpg' }
+    // Tab subtitles ported from eXpressO News (2026-06-07 user directive:
+    // 'The explanations you use are too long and wordy'). eXpressO's house
+    // style: very short title, even shorter subtitle ending in "Click block
+    // to view post." Same voice on the sister site.
+    main:    { h: 'Top Story of the Day',         p: 'Conservative, Independent, Democrat posts. Click block to view.', img: 'images/world.jpg' },
+    elon:    { h: 'Elon’s Latest Bangers',   p: 'What’s Elon posting. Click block to view post.', img: 'images/elon.jpg' },
+    sports:  { h: 'Top Sports Story of the Day',  p: 'Today’s biggest sports moments. Click block to view post.', img: 'images/sports.jpg' },
+    ifollow: { h: 'iFollow',                      p: 'Top posts in the last 24 hours from a rotating set of accounts. Suggest someone at the bottom.', img: 'images/tiktok.jpg' },
+    free:    { h: 'Free Speech',                  p: 'Marc Andreessen first. Then today’s free-speech posts. Click block to view.', img: 'images/top.jpg' },
+    msm:     { h: 'Not in MSM',                   p: 'Stories mainstream media is underreporting or ignoring. Click block to view post.', img: 'images/msm.jpg' },
+    earlier: { h: 'Earlier Today',                p: 'W/N/B stories rotated off the front page but still under 24h. Click block to view.', img: 'images/earlier.jpg' }
   };
   var hero = heros[tab] || heros.main;
   var img = hero.img
