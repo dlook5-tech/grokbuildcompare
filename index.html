@@ -1353,7 +1353,7 @@ function renderSportsBlock(item) {
   // to a Knicks thread, Cowherd reacting to a Germany goal). Without the
   // parent the reader has no idea what's being celebrated/lamented.
   var parentHtml = renderParentPost(item.parentPost || item.parent_post);
-  var sourceTile = renderSourceTile({ text: item.headline, views: item.views, time: item.time, url: url });
+  var sourceTile = renderSourceTile({ text: item.text || item.headline, views: item.views, time: item.time, url: url });
   return (
     '<div class="story" id="' + sid + '">' +
       '<div class="story-header" onclick="toggleStory(\'' + sid + '\');">' +
