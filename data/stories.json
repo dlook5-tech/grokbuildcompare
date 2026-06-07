@@ -249,33 +249,68 @@
   ],
   "sports": [
     {
-      "headline": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!  #USMNT x @VW",
+      "headline": "USMNT Jedi scores incredible 'worldy' in Germany friendly",
       "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!\n\n#USMNT x @VW",
       "url": "https://x.com/USMNT/status/2063339587486072911",
       "views": "9.4M",
       "time": "21h ago"
     },
     {
+      "headline": "Cowherd: Stay positive as Germany leads USMNT friendly early",
+      "text": "That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
+      "url": "https://x.com/colincowherd/status/2063331538553450849",
+      "views": "59K",
+      "time": "21h ago"
+    },
+    {
+      "headline": "SAS: ORANGE AND BLUE SKIES — Knicks Finals fever",
+      "text": "ORANGE AND BLUE SKIES 🧡💙😤",
+      "url": "https://x.com/stephenasmith/status/2063308244203057510",
+      "views": "180K",
+      "time": "23h ago",
+      "parentPost": {
+        "url": "https://x.com/NBA/status/2063100710573527098",
+        "handle": "@NBA",
+        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
+        "views": "1.9M",
+        "time": "1d ago"
+      }
+    },
+    {
       "headline": "SAS: ORANGE AND BLUE SKIES 🧡💙😤",
       "text": "ORANGE AND BLUE SKIES 🧡💙😤",
       "url": "https://x.com/stephenasmith/status/2063308244203057510",
       "views": "180K",
-      "time": "23h ago"
+      "time": "23h ago",
+      "parentPost": {
+        "url": "https://x.com/NBA/status/2063100710573527098",
+        "handle": "@NBA",
+        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
+        "views": "1.9M",
+        "time": "1d ago"
+      }
     },
     {
-      "headline": "Cowherd: That goal didn’t count. No reason to get cynical. Th...",
+      "headline": "Cowherd: Two minutes in. Germany scores. Stay positive...",
       "text": "That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
       "url": "https://x.com/colincowherd/status/2063331538553450849",
       "views": "59K",
+      "time": "21h ago"
+    },
+    {
+      "headline": "USMNT: RIP IT AND FLIP IT — Jedi worldy",
+      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!\n\n#USMNT x @VW",
+      "url": "https://x.com/USMNT/status/2063339587486072911",
+      "views": "9.4M",
       "time": "21h ago"
     }
   ],
   "ifollow": [
     {
       "handle": "@DavidSacks",
-      "justification": "David Sacks: Thanks to @sriramk for AI work",
+      "justification": "David Sacks: Thank you @sriramk for this generous post. It…",
       "honesty": "8/10",
-      "note": "Sacks reply; primary from key figure, generous tone.",
+      "note": "Primary from key figure on administration AI work.",
       "topPost": {
         "url": "https://x.com/DavidSacks/status/2063313189497131425",
         "views": "284K",
@@ -285,7 +320,7 @@
     },
     {
       "handle": "@IanCarrollShow",
-      "justification": "Ian Carroll: Soft launching AI Charlie Kirk?",
+      "justification": "Ian Carroll: Now they’re soft launching AI Charlie Kirk to…",
       "honesty": "8/10",
       "note": "Opinion on AI likeness; ties to verifiable Kirk footage.",
       "topPost": {
@@ -297,12 +332,12 @@
     },
     {
       "handle": "@elonmusk",
-      "justification": "Elon Musk: Humanity is disappearing 😔",
+      "justification": "Elon Musk: Humanity is disappearing 😔  https://www.wsj.c…",
       "honesty": "8/10",
       "note": "Links WSJ fertility report; opinion on demographic decline.",
       "topPost": {
         "url": "https://x.com/elonmusk/status/2063333492449009867",
-        "views": "13.4M",
+        "views": "13.5M",
         "time": "21h ago",
         "text": "Humanity is disappearing 😔  https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
       }
@@ -339,26 +374,5 @@
     }
   ],
   "msm": [],
-  "earlier": [
-    {
-      "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
-      "text": "Question…\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
-      "url": "https://x.com/C_3C_3/status/2062853128467136697",
-      "views": "5.7M",
-      "time": "13h ago",
-      "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency.",
-      "category": "Nation"
-    },
-    {
-      "headline": "Open-source notes beat censorship for truth",
-      "text": "Elon Musk on Community Notes: open source software and data, everyone including him gets checked, no note removal, 'better information checked in real time' beats censorship.",
-      "url": "https://x.com/elonmusk/status/2062953758313644460",
-      "views": "2.0M",
-      "time": "6h ago",
-      "honesty": "9/10",
-      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features.",
-      "category": "Business"
-    }
-  ]
+  "earlier": []
 }
