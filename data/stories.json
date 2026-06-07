@@ -280,96 +280,29 @@
   ],
   "sports": [
     {
-      "headline": "USMNT Jedi scores incredible 'worldy' goal in pre-World Cup friendly",
+      "headline": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!  #USMNT x @VW",
+      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI!\n\n#USMNT x @VW",
       "url": "https://x.com/USMNT/status/2063339587486072911",
-      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI! #USMNT x @VW — USMNT official account celebrates Jedi Murphy's long-range strike in the Germany friendly ahead of the World Cup.",
-      "views": "2.6M",
+      "views": "9.4M",
       "time": "20h ago"
     },
     {
       "headline": "SAS: ORANGE AND BLUE SKIES 🧡💙😤",
-      "url": "https://x.com/stephenasmith/status/2063308244203057510",
       "text": "ORANGE AND BLUE SKIES 🧡💙😤",
-      "views": "96K",
-      "time": "22h ago",
-      "parentPost": {
-        "url": "https://x.com/NBA/status/2063100710573527098",
-        "handle": "@NBA",
-        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
-        "views": "1.9M",
-        "time": "1d ago"
-      }
-    },
-    {
-      "headline": "Cowherd: Two minutes in. Germany scores. Stay positive. Stay positive...",
-      "url": "https://x.com/colincowherd/status/2063331538553450849",
-      "text": "Two minutes in. Germany scores. Stay positive. Stay positive. Stay positive. Stay positive. That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
-      "views": "37K",
-      "time": "21h ago"
+      "url": "https://x.com/stephenasmith/status/2063308244203057510",
+      "views": "179K",
+      "time": "22h ago"
     }
   ],
   "ifollow": [
     {
-      "handle": "@AOC",
-      "justification": "AOC: Heartfelt Knicks reaction 🧡💙",
-      "honesty": "7/10",
-      "note": "Primary post from @AOC; emoji-heavy Knicks reaction with limited textual substance."
-    },
-    {
-      "handle": "@billmaher",
-      "justification": "Bill Maher: Trump blasts 'Low Ratings Bill Maher'",
-      "honesty": "8/10",
-      "note": "Direct quote from Maher; verifiable primary source, minor opinion framing."
-    },
-    {
-      "handle": "@Tesla",
-      "justification": "Tesla: FSD does the rest – just look at the road",
-      "honesty": "8/10",
-      "note": "Tesla corporate post; clear promo but factual on product feature."
-    },
-    {
-      "handle": "@SawyerMerritt",
-      "justification": "Sawyer Merritt: Tesla seeks Nevada robotaxi permit",
-      "honesty": "8/10",
-      "note": "Insider report on Tesla filing; high verifiability from regulatory notice."
-    },
-    {
-      "handle": "@elonmusk",
-      "justification": "Elon Musk: Humanity is disappearing 😔",
-      "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/elonmusk/status/2063333492449009867",
-        "views": "330K",
-        "time": "21h ago",
-        "text": "Humanity is disappearing 😔 https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
-      },
-      "note": "Links WSJ fertility report; opinion on demographic decline."
-    },
-    {
-      "handle": "@DineshDSouza",
-      "justification": "Dinesh D'Souza: Hegseth audits Microsoft cloud for China hacks",
-      "honesty": "8/10",
-      "note": "Dinesh post on audit; primary claim with specifics, good sourcing."
-    },
-    {
-      "handle": "@MattWalshBlog",
-      "justification": "Matt Walsh: Facts point to Karmelo Anthony as cold-blooded killer",
-      "honesty": "8/10",
-      "note": "Opinionated analysis from Walsh; strong framing but facts on case align with reports."
-    },
-    {
-      "handle": "@JackPosobiec",
-      "justification": "Jack Posobiec: CNN on 'cultural' ballot counting in California",
-      "honesty": "8/10",
-      "note": "Breaking claim from Posobiec; video evidence in thread supports core allegation."
-    },
-    {
       "handle": "@chamath",
-      "justification": "Chamath: He foretold it… (open-source AI)",
+      "justification": "Chamath Palihapitiya: He foretold it…",
       "honesty": "8/10",
+      "note": "Chamath quote-tweet; short but ties to open-source AI discussion.",
       "topPost": {
         "url": "https://x.com/chamath/status/2063293668245864934",
-        "views": "196K",
+        "views": "508K",
         "time": "23h ago",
         "text": "He foretold it…",
         "parentPost": {
@@ -379,68 +312,55 @@
           "views": "23.5M",
           "time": "276d ago"
         }
-      },
-      "note": "Chamath quote-tweet; short but ties to open-source AI discussion."
-    },
-    {
-      "handle": "@nickshirleyy",
-      "justification": "Nick Shirley: Vowing to expose all of California",
-      "honesty": "8/10",
-      "note": "Personal vow from Nick; primary source but anecdotal framing."
-    },
-    {
-      "handle": "@catturd2",
-      "justification": "Catturd: Every life is precious",
-      "honesty": "8/10",
-      "note": "Catturd quote; emotional but aligns with pro-life primary sources."
-    },
-    {
-      "handle": "@PBDsPodcast",
-      "justification": "PBD Podcast: Mehdi Hasan pressed on UK crime crisis",
-      "honesty": "8/10",
-      "note": "PBD episode clip; factual title but self-promo for podcast."
-    },
-    {
-      "handle": "@naval",
-      "justification": "Naval: The product is the mission",
-      "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/naval/status/2063292550388298025",
-        "views": "105K",
-        "time": "23h ago",
-        "text": "The product is the mission. Build things people want, not things that optimize metrics."
-      },
-      "note": "Naval philosophical; consistent with his body of work, high primary."
+      }
     },
     {
       "handle": "@DavidSacks",
-      "justification": "David Sacks: Thanks to @sriramk for AI work",
+      "justification": "David Sacks: Thank you @sriramk for this generous post. It h...",
       "honesty": "8/10",
+      "note": "Sacks reply; primary from key figure, generous tone.",
       "topPost": {
         "url": "https://x.com/DavidSacks/status/2063313189497131425",
-        "views": "78K",
+        "views": "284K",
         "time": "22h ago",
-        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months."
-      },
-      "note": "Sacks reply; primary from key figure, generous tone."
+        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months. Your skills are genuinely unique: a rare combination of deep technical fluency in AI, sharp policy instincts, exceptional strategic thinking, and true diplomatic talent. It will be a huge loss for the administration, but I’m glad we’ll continue working together with you as an outside adviser.\n\nWe've accomplished a lot together, and this feels like the right moment to recap some of the key milestones:\n* You co-authored the Administration’s AI Action Plan, our comprehensive strategy for winning the AI race.\n* You helped drive the AI Acceleration Partnerships that are positioning the American AI stack to compete and win globally.\n* You played a key role in the National AI Policy Framework (executive order and policy document), which is now the foundation for discussions with Congress on a national approach to AI regulation instead of a chaotic patchwork of state rules.\n* You helped deliver the Preventing Woke AI in the Federal Government executive order, which ensures that federally procured AI systems prioritize neutrality and truth-seeking over ideological bias and capture.\n* You advanced American interests at the AI Summits in France and India and through state visits to the UK, the Middle East, and beyond.\n\nAs AI Czar, it has been a huge honor for me to work for President Trump as he provides the clear leadership and vision for American AI dominance. His policies have put America in the lead in the AI race: supporting innovation, unleashing energy abundance, building out infrastructure, pushing back against unnecessary regulation, enabling American exports, and promoting re-industrialization. \n\nSriram was a key partner in turning these priorities into action. And as he said, this was a true team effort with White House Chief of Staff Susie Wiles, NEC Director Kevin Hassett, OSTP Director Michael Kratsios, Secretary Rubio, Secretary Bessent, Secretary Lutnick, and too many others to mention.\n\nThank you again Sriram for your service. You made a huge difference. I’m sorry to see you go but grateful for the work we’ve done together and looking forward to what comes next."
+      }
     },
     {
       "handle": "@IanCarrollShow",
-      "justification": "Ian Carroll: Soft launching AI Charlie Kirk?",
+      "justification": "Ian Carroll: Now they’re soft launching AI Charlie Kirk to s...",
       "honesty": "8/10",
+      "note": "Opinion on AI likeness; ties to verifiable Kirk footage.",
       "topPost": {
         "url": "https://x.com/IanCarrollShow/status/2063322181036318847",
-        "views": "51K",
+        "views": "264K",
         "time": "21h ago",
         "text": "Now they’re soft launching AI Charlie Kirk to see if anyone notices."
-      },
-      "note": "Opinion on AI likeness; ties to verifiable Kirk footage."
+      }
     },
     {
-      "handle": "@MTSlive",
-      "justification": "MTS: At the foothills of the singularity",
+      "handle": "@elonmusk",
+      "justification": "Elon Musk: Humanity is disappearing 😔  https://www.wsj.com...",
       "honesty": "8/10",
-      "note": "MTS recap; aggregate of news, useful signal but secondary synthesis."
+      "note": "Links WSJ fertility report; opinion on demographic decline.",
+      "topPost": {
+        "url": "https://x.com/elonmusk/status/2063333492449009867",
+        "views": "13.4M",
+        "time": "21h ago",
+        "text": "Humanity is disappearing 😔  https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
+      }
+    },
+    {
+      "handle": "@naval",
+      "justification": "Naval: The product is the mission.",
+      "honesty": "8/10",
+      "note": "Naval philosophical; consistent with his body of work, high primary.",
+      "topPost": {
+        "url": "https://x.com/naval/status/2063292550388298025",
+        "views": "1.2M",
+        "time": "23h ago",
+        "text": "The product is the mission."
+      }
     }
   ],
   "free": [
