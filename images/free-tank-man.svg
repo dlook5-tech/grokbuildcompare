@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editorial silhouette for the Free Speech tab hero.
+  Inspired by the 1989 Tank Man scene: lone figure standing in the path
+  of a column of armored vehicles. Stylized, monochrome, designed to read
+  at 96px and scale to 200px. Cream→sepia gradient sky matches the
+  eXpressO News palette so it sits beside the other hero accents
+  (world.jpg, elon.jpg, etc.) without clashing.
+
+  When David saves the actual Tank Man photo to ~/Desktop, swap this
+  reference back to a raster JPG in renderHero(). Until then this
+  silhouette stands in.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Lone figure standing before a column of armored vehicles — Tank Man, 1989">
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f5ead8"/>
+      <stop offset="55%" stop-color="#e8d3a6"/>
+      <stop offset="100%" stop-color="#c9a067"/>
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#8a6f3f"/>
+      <stop offset="100%" stop-color="#3a2f1c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="260" fill="url(#skyGradient)"/>
+
+  <!-- Distant horizon haze -->
+  <rect x="0" y="240" width="400" height="20" fill="#9a7040" opacity="0.35"/>
+
+  <!-- Road / ground -->
+  <rect x="0" y="260" width="400" height="140" fill="url(#roadGradient)"/>
+  <!-- Lane markings -->
+  <rect x="30"  y="345" width="42" height="6" fill="#1c1410" opacity="0.55"/>
+  <rect x="100" y="345" width="42" height="6" fill="#1c1410" opacity="0.55"/>
+  <rect x="170" y="345" width="42" height="6" fill="#1c1410" opacity="0.55"/>
+  <rect x="240" y="345" width="42" height="6" fill="#1c1410" opacity="0.55"/>
+  <rect x="310" y="345" width="42" height="6" fill="#1c1410" opacity="0.55"/>
+
+  <!-- Column of armored vehicles approaching from the right -->
+  <g fill="#1c1410">
+    <!-- Tank 4 (furthest, smallest) -->
+    <g transform="translate(345,225) scale(0.55)">
+      <rect x="0"  y="20" width="60" height="22" rx="2"/>
+      <rect x="6"  y="6"  width="40" height="16" rx="2"/>
+      <rect x="40" y="12" width="34" height="6"/>
+      <circle cx="10" cy="44" r="6"/>
+      <circle cx="30" cy="44" r="6"/>
+      <circle cx="50" cy="44" r="6"/>
+    </g>
+    <!-- Tank 3 -->
+    <g transform="translate(305,228) scale(0.68)">
+      <rect x="0"  y="20" width="60" height="24" rx="2"/>
+      <rect x="6"  y="4"  width="42" height="18" rx="2"/>
+      <rect x="42" y="11" width="36" height="6"/>
+      <circle cx="10" cy="46" r="7"/>
+      <circle cx="32" cy="46" r="7"/>
+      <circle cx="54" cy="46" r="7"/>
+    </g>
+    <!-- Tank 2 -->
+    <g transform="translate(255,230) scale(0.82)">
+      <rect x="0"  y="22" width="62" height="26" rx="3"/>
+      <rect x="6"  y="4"  width="44" height="20" rx="3"/>
+      <rect x="44" y="12" width="40" height="7"/>
+      <circle cx="11" cy="50" r="8"/>
+      <circle cx="34" cy="50" r="8"/>
+      <circle cx="57" cy="50" r="8"/>
+    </g>
+    <!-- Tank 1 (closest, biggest) -->
+    <g transform="translate(195,232) scale(1.0)">
+      <!-- hull -->
+      <rect x="0"  y="22" width="64" height="28" rx="3"/>
+      <!-- turret -->
+      <rect x="6"  y="2"  width="48" height="22" rx="3"/>
+      <!-- barrel pointing left -->
+      <rect x="-22" y="12" width="28" height="7"/>
+      <!-- wheels -->
+      <circle cx="10" cy="52" r="9"/>
+      <circle cx="32" cy="52" r="9"/>
+      <circle cx="54" cy="52" r="9"/>
+    </g>
+  </g>
+
+  <!-- Lone figure: standing in the road, shopping bags in each hand -->
+  <g fill="#1c1410">
+    <!-- shopping bag — left hand -->
+    <rect x="115" y="280" width="13" height="17" rx="1"/>
+    <path d="M115 281 Q121 273 128 281" stroke="#1c1410" stroke-width="1.5" fill="none"/>
+    <!-- shopping bag — right hand -->
+    <rect x="158" y="280" width="13" height="17" rx="1"/>
+    <path d="M158 281 Q164 273 171 281" stroke="#1c1410" stroke-width="1.5" fill="none"/>
+    <!-- body: shirt + pants -->
+    <rect x="132" y="225" width="22" height="60" rx="2"/>
+    <!-- arms (extended slightly out to bags) -->
+    <rect x="123" y="232" width="10" height="50" rx="2"/>
+    <rect x="153" y="232" width="10" height="50" rx="2"/>
+    <!-- head -->
+    <circle cx="143" cy="215" r="9"/>
+  </g>
+
+  <!-- Subtle vignette to focus on the figure -->
+  <radialGradient id="vignette" cx="36%" cy="62%" r="62%">
+    <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.28"/>
+  </radialGradient>
+  <rect x="0" y="0" width="400" height="400" fill="url(#vignette)"/>
+</svg>
