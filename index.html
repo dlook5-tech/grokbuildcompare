@@ -10,7 +10,9 @@
   body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #c9a67a; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; }
   header { background: #f7f2ea; color: #1c1410; padding: 18px 28px 0; border-bottom: 3px solid #d4b896; }
   .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; }
-  .logo { font-family: "Playfair Display", Georgia, serif; font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; color: #1c1410; }
+  /* Logo: italic Playfair Display, the eXpressO News voice. Same typeface
+     David is using on the sister site so the family resemblance reads. */
+  .logo { font-family: "Playfair Display", Georgia, serif; font-size: 1.9rem; font-weight: 800; font-style: italic; letter-spacing: -0.7px; color: #1c1410; }
   .build-tag { display: inline-block; margin-left: 8px; padding: 2px 8px; background: #b8860b; color: #fff; font-size: 0.55rem; font-weight: 700; letter-spacing: 1px; border-radius: 8px; vertical-align: middle; }
   .tagline { font-size: 0.62rem; letter-spacing: 2.2px; text-transform: uppercase; color: #8a7e72; margin-bottom: 10px; font-weight: 500; }
   .date { font-size: 0.78rem; color: #6b5d4f; font-weight: 500; }
@@ -238,8 +240,15 @@
     .main-story-block .perspectives-row { grid-template-columns: 1fr; }
     .main-story-block .perspectives-row .perspective:last-child:nth-child(odd) { grid-column: auto; }
   }
-  .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 10px; padding-bottom: 7px; border-bottom: 2px solid #b8860b; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
+  /* Column header — placard image + Playfair title + tight subtitle.
+     Ported from eXpressO's design DNA. The placards (Hormuz Strait for
+     World, Apple Pie for Nation, Trading Places for Business) sit above
+     the section name, gold-bordered, rounded, low-key. */
+  .col-header { margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #b8860b; }
+  .col-placard { display: block; width: 100%; height: 72px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(184,134,11,0.5); box-shadow: 0 2px 6px rgba(40,20,0,0.22); margin-bottom: 8px; }
+  .col-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; font-weight: 900; color: #fff8ee; text-shadow: 0 1px 2px rgba(80,40,0,0.4); margin-bottom: 2px; letter-spacing: 0.4px; display: flex; align-items: center; gap: 8px; }
   .col-title::before { content: ''; width: 6px; height: 6px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 8px rgba(255,212,121,0.6); }
+  .col-sub { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 1.4px; color: #f0e6d6; font-weight: 600; opacity: 0.85; }
 
   /* Honesty score as inline link to its note. When a note exists, the
      score itself is the affordance — underlined, blue, click to expand
@@ -1245,9 +1254,22 @@ function renderTabMain() {
 
   h += '<div class="main-grid">';
 
-  // Header row — World / Nation / Business titles, one per column.
+  // Header row — placard image + section name + tight subtitle, one per column.
+  // Images carried over from eXpressO News (Hormuz Strait for World, Apple
+  // Pie for Nation, Trading Places still for Business). Subtitles in
+  // eXpressO's tight-language style.
+  var colArt = {
+    world:    { img: 'images/world.jpg',    sub: 'The biggest international story.' },
+    nation:   { img: 'images/usa.jpg',      sub: 'What the country is arguing about.' },
+    business: { img: 'images/business.jpg', sub: 'Markets, money, what\'s moving.' }
+  };
   byCat.forEach(function(x) {
-    h += '<div class="col-title">' + x.sec.title + '</div>';
+    var art = colArt[x.sec.key] || {};
+    h += '<div class="col-header">' +
+           (art.img ? '<img class="col-placard" src="' + art.img + '" alt="" loading="lazy" />' : '') +
+           '<div class="col-title">' + esc(x.sec.title) + '</div>' +
+           (art.sub ? '<div class="col-sub">' + esc(art.sub) + '</div>' : '') +
+         '</div>';
   });
 
   if (rowCount === 0) {
