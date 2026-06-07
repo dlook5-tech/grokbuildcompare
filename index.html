@@ -272,8 +272,31 @@
      the note inline. No separate ▼ notes line, no green/yellow pill.
      Consistent on every tab. When there's no note, the score renders
      as plain text (the .honesty-score rule). */
-  .honesty-link { color: #1f6feb; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; cursor: pointer; font-weight: 700; }
-  .honesty-link:hover { color: #0a4fb8; }
+  /* UNIFIED HONESTY STYLE — every honesty score across every tab
+     renders as a non-bold underlined blue link. This wins over all
+     earlier .honesty-score rules (post-meta, ifollow-meta,
+     main-story-block .perspective, pd-honesty etc.) thanks to the
+     stacked selectors below. */
+  .honesty-link,
+  .honesty-score,
+  .main-story-meta .honesty-score,
+  .post-meta .honesty-score,
+  .ifollow-meta .honesty-score,
+  .main-story-block .perspective .meta-line .honesty-score,
+  .perspective-details .pd-honesty .honesty-score {
+    color: #1f6feb;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+  .honesty-link:hover,
+  .honesty-score:hover { color: #0a4fb8; }
   .honesty-note-body { display: none; margin-top: 6px; padding: 7px 10px; background: #f4ede0; border-left: 2px solid #1f6feb; border-radius: 3px; font-size: 0.74rem; color: #4a3a25; line-height: 1.5; }
   .honesty-note-body.open { display: block; }
 
@@ -1596,16 +1619,34 @@ function renderFreeItem(item) {
 function renderTabFree() {
   var free = (NEWS_DATA && NEWS_DATA.free) || [];
   var h = renderHero('free');
-  if (!free.length) {
+  if (free.length) {
+    // Every entry — including Marc — renders through the same block.
+    // No "ALWAYS FIRST" badge, no special card frame, no "Open Marc's post"
+    // wrapper. The accumulator already sorts isMarc:true entries to the top
+    // of free[], so order is preserved without special-casing the render.
+    // Wrapped in narrow-list so blocks are 2-up like Elon, not full width.
+    h += '<div class="narrow-list">' + free.map(renderFreeItem).join('') + '</div>';
+  } else {
     h += '<div class="empty-msg">Nothing yet today.</div>';
-    return h;
   }
-  // Every entry — including Marc — renders through the same block.
-  // No "ALWAYS FIRST" badge, no special card frame, no "Open Marc's post"
-  // wrapper. The accumulator already sorts isMarc:true entries to the top
-  // of free[], so order is preserved without special-casing the render.
-  // Wrapped in narrow-list so blocks are 2-up like Elon, not full width.
-  h += '<div class="narrow-list">' + free.map(renderFreeItem).join('') + '</div>';
+
+  // Suggest-a-post + general AI feedback form. Same Netlify Forms
+  // pattern as iFollow's Suggest Someone — user submits, we get the
+  // event in Netlify's dashboard, the AIs pick it up on the next cron.
+  // Two fields: an X URL or topic, and a free-text "anything you want
+  // to tell the AIs" box. The second box doubles as a generic feedback
+  // channel for "this story was wrong" / "you missed X" / "change this".
+  h += '<div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:#f0e6d6; font-weight:700; margin:28px 0 8px;">Suggest a story · feedback to the AIs</div>';
+  h += '<form class="submit-form" id="freeForm" name="free-suggest" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFreeSubmit(event)">' +
+         '<input type="hidden" name="form-name" value="free-suggest" />' +
+         '<p style="display:none;"><label>Don\'t fill: <input name="bot-field" /></label></p>' +
+         '<label for="frU">X post URL or topic</label>' +
+         '<input type="text" id="frU" name="post" placeholder="https://x.com/... or describe the topic" />' +
+         '<label for="frJ">Feedback to the AIs</label>' +
+         '<textarea id="frJ" name="feedback" rows="4" placeholder="A free-speech story Grok should pick up, a perspective that\'s mis-labeled, a story that\'s missing from MSM, or anything else you want Grok + Claude to know..."></textarea>' +
+         '<button type="submit">Send to AIs</button>' +
+         '<div id="frMsg" style="display:none; margin-top:10px; padding:8px 12px; background:#e8f5e9; border-radius:5px; color:#2e7d32; font-size:0.85rem; font-weight:500;"></div>' +
+       '</form>';
   return h;
 }
 
@@ -1667,9 +1708,15 @@ function renderTabMSM() {
   var msm = (NEWS_DATA && NEWS_DATA.msm) || [];
   var h = renderHero('msm');
   if (!msm.length) {
+    // MSM should NEVER be empty per David's directive — Henry Nowak,
+    // London grooming gangs, the laptop story, the Hunter Biden plea
+    // discrepancies are ALWAYS happening with legacy outlets ignoring
+    // them. Surfacing this rejection note tells Grok this is a contract
+    // violation, not a normal state. The watcher's audit also flags
+    // empty msm[] as a hard failure now.
     h += '<div class="empty-msg" style="border-left: 4px solid #c0392b; padding: 14px 18px; background: rgba(192,57,43,0.12); border-radius: 6px;">' +
-           '<strong style="color:#fff8ee;">Nothing flagged yet this cycle.</strong><br/>' +
-           '<span style="color:#f0e6d6;font-size:0.85rem;">When Grok identifies high-velocity X stories that MSM is ignoring (Henry-Nowak-style cases), they appear here. Updated each cron.</span>' +
+           '<strong style="color:#fff8ee;">⚠ MSM tab should never be empty.</strong><br/>' +
+           '<span style="color:#f0e6d6;font-size:0.85rem;">Henry-Nowak-style stories run all day, every day. Grok is being re-prompted to surface them on the next cron. Refresh in a few minutes.</span>' +
          '</div>';
     return h;
   }
@@ -1750,6 +1797,37 @@ function handleIFollowSubmit(e) {
   document.getElementById('ifollowForm').reset();
 }
 
+// Free tab — Suggest-a-post + general AI feedback. Same Netlify Forms
+// flow as iFollow but with two open-ended fields (post URL/topic and a
+// free-text feedback box). Both fields are optional — submitting just
+// the feedback alone is fine, since this doubles as the generic AI
+// feedback channel ("you mis-labeled this perspective", etc).
+function handleFreeSubmit(e) {
+  e.preventDefault();
+  var post = (document.getElementById('frU').value || '').trim();
+  var feedback = (document.getElementById('frJ').value || '').trim();
+  if (!post && !feedback) return;
+  var msg = document.getElementById('frMsg');
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      'form-name': 'free-suggest',
+      'bot-field': '',
+      'post': post,
+      'feedback': feedback
+    }).toString()
+  }).then(function(r) {
+    if (msg) {
+      msg.style.display = 'block';
+      msg.textContent = r.ok ? 'Sent. Grok + Claude will see this on the next cron sweep.' : ('Submission failed: HTTP ' + r.status);
+    }
+  }).catch(function(err) {
+    if (msg) { msg.style.display = 'block'; msg.textContent = 'Submission error: ' + err; }
+  });
+  document.getElementById('freeForm').reset();
+}
+
 function loadData() {
   fetch('data/stories.json?_=' + Date.now())
     .then(function(r) { return r.ok ? r.json() : null; })
@@ -1790,6 +1868,13 @@ window.addEventListener('DOMContentLoaded', loadData);
   <input type="text" name="bot-field" />
   <input type="text" name="handle" />
   <input type="text" name="justification" />
+</form>
+<!-- Static Netlify Forms declaration for free-suggest -->
+<form name="free-suggest" data-netlify="true" netlify-honeypot="bot-field" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;">
+  <input type="hidden" name="form-name" value="free-suggest" />
+  <input type="text" name="bot-field" />
+  <input type="text" name="post" />
+  <textarea name="feedback"></textarea>
 </form>
 </body>
 </html>
