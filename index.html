@@ -393,13 +393,19 @@
   .ifollow-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(80,50,20,0.18); }
   .ifollow-card.story.open { transform: none; }
   .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
-  .ifollow-name { font-weight: 700; color: #2a2218; font-size: 0.92rem; margin-bottom: 3px; letter-spacing: 0.1px; }
-  .ifollow-name a { color: #2a2218; text-decoration: none; }
+  /* Typography inverted 2026-06-07 per user: 'Smaller font for twitter
+     handle name, larger font for story summary, smaller font for stats
+     on the bottom line. What does the reader really want? They want
+     to understand what the story's about and whether they should
+     read it. Punchy, catchy, a teaser.'
+       name (eyebrow):  small uppercase label — just attribution
+       just (headline): largest, bold — the hook the reader scans
+       meta (stats):    smallest — utility info */
+  .ifollow-name { font-weight: 600; color: #6b5d4f; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 4px; }
+  .ifollow-name a { color: #6b5d4f; text-decoration: none; }
   .ifollow-name a:hover { color: #b8860b; }
-  .ifollow-just { font-size: 0.8rem; color: #4a3a25; line-height: 1.35; margin-bottom: 4px; }
-  /* Single meta row: "Top post · 146K views · 22h ago · Honesty 8/10"
-     — same line, no pill, plain text, matches other tabs */
-  .ifollow-meta { font-size: 0.72rem; color: #8a7e72; font-weight: 600; margin-bottom: 4px; }
+  .ifollow-just { font-size: 1rem; color: #1a1a1a; line-height: 1.28; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.15px; }
+  .ifollow-meta { font-size: 0.66rem; color: #8a7e72; font-weight: 600; margin-bottom: 4px; }
   .ifollow-meta .views { color: #b8860b; font-weight: 800; }
   .ifollow-meta .ifollow-honesty-num { color: #2a2218; font-weight: 800; }
   /* Note fold — ▼ arrow + click-to-expand. Only renders when entry has a note. */
