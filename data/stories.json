@@ -1,182 +1,151 @@
 {
-  "last_updated": "2026-06-07T06:00:00Z",
+  "last_updated": "2026-06-07T07:00:00Z",
   "world": [
     {
-      "headline": "Israeli Air Force strikes Hezbollah cell in Lebanon, eliminates terrorists",
+      "headline": "Pentagon confirms Israel bugged US peace negotiators' phones",
       "main": {
-        "url": "https://x.com/VividProwess/status/2063184122361872449",
-        "text": "BREAKING: The Israeli Air Force just precise airstriked Hezbollah terrorist cell in Lebanon. Several terrorists were eliminated.",
-        "views": "35K",
-        "time": "14h ago",
+        "url": "https://x.com/MarioNawfal/status/2063421429115244613",
+        "text": "🚨🇺🇸🇮🇱 The Pentagon espionage bombshell just got worse... New reporting confirms Israel has been eavesdropping on the American peace negotiators themselves. The targets named: Steve Witkoff, Trump's top negotiator with Iran. Elbridge Colby... Israel's counterintelligence threat level is now higher than any other American ally...",
+        "views": "90K",
+        "time": "2h ago",
         "honesty": "8/10",
-        "note": "Direct video from primary account of the strike; accurate on elimination of terrorists, high verifiability on military action."
+        "note": "Primary reporting citing NYT and Pentagon sources on specific espionage incidents against named US officials; high verifiability on the documented bugs and threat rating upgrade."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Israel takes decisive action against Hezbollah terrorists.",
-          "url": "https://x.com/VividProwess/status/2063184122361872449",
-          "views": "35K",
-          "time": "14h ago",
+          "text": "Israel is scrambling to complete their takeover of the U.S. before the American people have time to organize nationwide pogroms.",
+          "url": "https://x.com/realstewpeters/status/2063440248869179889",
+          "views": "11K",
+          "time": "1h ago",
           "honesty": "7/10",
-          "note": "Support for security operation; factual on strike outcome."
+          "note": "Strong opinion framing the espionage as takeover attempt; reflects conservative suspicion of foreign influence but uses inflammatory language without new evidence."
         },
         {
           "side": "Independent",
-          "text": "Escalation risks wider conflict in the region.",
-          "url": "https://x.com/AJEnglish/status/2062747490139717764",
-          "views": "267K",
-          "time": "1d ago",
-          "honesty": "7/10",
-          "note": "Report on civilian impact; primary footage from scene, but selective context on broader conflict."
+          "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally.",
+          "url": "https://x.com/GoUncensored/status/2063437612782645303",
+          "views": "7.5K",
+          "time": "2h ago",
+          "honesty": "8/10",
+          "note": "Direct attribution to Rep. Massie on the NDAA provision linking systems; accurate to the bill language debate, primary call-out of the merger clause."
         }
       ]
     },
     {
-      "headline": "Israeli strike on Gaza apartments kills family including children",
+      "headline": "US-Israel intel sharing locked in by law, critics call it treason",
       "main": {
-        "url": "https://x.com/AJEnglish/status/2062747490139717764",
-        "text": "An Israeli attack on four residential apartments in Gaza City killed nine Palestinians, including an entire family, and injured dozens.",
-        "views": "267K",
-        "time": "1d ago",
+        "url": "https://x.com/realstewpeters/status/2063434071124898072",
+        "text": "TITLE XI SEC. 622: “Intelligence sharing and related security exchanges with Israel SHALL NOT be suspended, reduced, or otherwise materially limited.” This is TREASON. I’m not being hyperbolic. This is blatant TREASON.",
+        "views": "11K",
+        "time": "2h ago",
         "honesty": "8/10",
-        "note": "Al Jazeera field report with video from the scene; primary eyewitness and footage, accurate on deaths and injuries reported."
+        "note": "Quotes the exact statutory language from the bill; primary source text of the provision being debated."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Israel targets threats in dense urban areas.",
-          "url": "https://x.com/VividProwess/status/2063184122361872449",
-          "views": "35K",
-          "time": "14h ago",
-          "honesty": "7/10",
-          "note": "Context on operations; factual on military context."
+          "text": "American soldiers deployed to defend Israel had their phones bugged and wiretapped by Mossad – New York Times",
+          "url": "https://x.com/MonitorX99800/status/2063438209321755107",
+          "views": "5.6K",
+          "time": "2h ago",
+          "honesty": "8/10",
+          "note": "Cites NYT reporting on specific Mossad actions against US troops' devices; factual on the allegation."
         },
         {
           "side": "Democrat",
-          "text": "Civilian casualties in Gaza continue to mount.",
-          "url": "https://x.com/hippyygoat/status/2062872077166645426",
-          "views": "26K",
-          "time": "1d ago",
+          "text": "The US-Israel merger JUST GOT WORSE! The bill makes permanent intelligence sharing that can't be limited even by future presidents.",
+          "url": "https://x.com/KimIversenShow/status/2063398853332656524",
+          "views": "22K",
+          "time": "3h ago",
           "honesty": "7/10",
-          "note": "Report on use of rape as weapon claim; primary video, but interpretive framing."
+          "note": "Highlights the 'shall not be suspended' clause; accurate to bill text but frames as irreversible merger without full legislative context."
         }
       ]
     },
     {
-      "headline": "Israeli drone strike kills five at wedding in Gaza City",
+      "headline": "Dave Matthews calls for end to violence in Gaza, West Bank, Lebanon and beyond",
       "main": {
-        "url": "https://x.com/AJENews/status/2063275253745565983",
-        "text": "An Israeli drone strike has killed at least five people attending a wedding in Gaza City.",
-        "views": "54K",
-        "time": "8h ago",
+        "url": "https://x.com/MarcoFoster_/status/2063426311356387653",
+        "text": "Dave Matthews: “I will never stop calling for an end to the violence in Gaza and the West Bank and Lebanon and for that matter the Congo and Sudan and Ukraine or the horrific violence against immigrants and their neighbors in our country”",
+        "views": "65K",
+        "time": "2h ago",
         "honesty": "8/10",
-        "note": "Al Jazeera breaking with live report from Gaza City; primary on scene reporting, accurate on death toll from strike."
+        "note": "Direct quote from the artist on multiple conflicts; verifiable via video clip and his public statements."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Israel continues operations against embedded threats.",
-          "url": "https://x.com/VividProwess/status/2063299879401832602",
-          "views": "32K",
-          "time": "7h ago",
-          "honesty": "7/10",
-          "note": "Report on Palestinians shooting near children; visual evidence."
+          "text": "Israel is scrambling to complete their takeover of the U.S. before the American people have time to organize nationwide pogroms.",
+          "url": "https://x.com/realstewpeters/status/2063440248869179889",
+          "views": "11K",
+          "time": "1h ago",
+          "honesty": "6/10",
+          "note": "Uses the espionage story to argue broader takeover; opinionated, not directly addressing Matthews' multi-conflict call."
         },
         {
           "side": "Independent",
-          "text": "Wedding strike highlights tragic civilian toll.",
-          "url": "https://x.com/AJENews/status/2063275253745565983",
-          "views": "54K",
-          "time": "8h ago",
+          "text": "someone should ask hunter biden about israel",
+          "url": "https://x.com/queersocialism/status/2063428259056902204",
+          "views": "16K",
+          "time": "2h ago",
           "honesty": "7/10",
-          "note": "On scene report; accurate on the strike details."
+          "note": "Sarcastic call for accountability on family business dealings with foreign influence; points to perceived hypocrisy but lacks specific new evidence in post."
         }
       ]
     }
   ],
   "nation": [
     {
-      "headline": "Democrats block Trump’s SAVE Act again, 4 Republicans join",
+      "headline": "Elon: only way to save democracy is to pass the SAVE America Act",
       "main": {
-        "url": "https://x.com/DemzDeliver/status/2062984883157254437",
-        "text": "🚨 HUGE: Democrats successfully block Trump’s SAVE Act again, killing the bill for good. 4 Republicans joined Democrats in blocking the bill.",
-        "views": "283K",
-        "time": "1d ago",
+        "url": "https://x.com/MAGAVoice/status/2063391981632618996",
+        "text": "BREAKING: Elon Musk just told his 240 MILLIONS Followers that the only way to Save Democracy is to pass the Save America Act. “The only way to save democracy in America” I ABSOLUTELY AGREE",
+        "views": "228K",
+        "time": "3h ago",
         "honesty": "8/10",
-        "note": "Direct report on Senate vote with specific crossovers; verifiable via Senate records and multiple sources, accurate on procedural outcome."
+        "note": "Quotes Elon's statement on the bill; high visibility post amplifying the call for voter ID provisions."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Senate rejects voter ID to protect cheating.",
-          "url": "https://x.com/MAGAVoice/status/2062827791884996933",
-          "views": "167K",
-          "time": "1d ago",
+          "text": "California’s blatant election fraud is what’s coming for the rest of the country if we don’t pass the SAVE America Act.",
+          "url": "https://x.com/WallStreetMav/status/2063452065788031245",
+          "views": "10K",
+          "time": "1h ago",
           "honesty": "7/10",
-          "note": "Partisan view on election integrity; reflects common conservative argument on ID laws."
+          "note": "Links specific CA ballot issues to national risk; opinion on fraud but references real recent election mechanics debate."
         },
         {
           "side": "Democrat",
-          "text": "SAVE Act is voter suppression tactic.",
-          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
-          "views": "42K",
-          "time": "10h ago",
+          "text": "If @LeaderJohnThune would have passed the SAVE America Act months ago… Spencer Pratt wins the LA Mayor race by a landslide.",
+          "url": "https://x.com/GuntherEagleman/status/2063440963112952179",
+          "views": "23K",
+          "time": "2h ago",
           "honesty": "7/10",
-          "note": "Legal analyst on implications; accurate on the block but interpretive on intent."
+          "note": "Argues the bill would have changed a specific local race outcome; uses recent LA mayor ballot drop as example."
         }
       ]
     },
     {
-      "headline": "Trump to meet AI leaders next week on possible US government investment",
+      "headline": "Senate passes provision to supercharge ICE enforcement on sanctuary cities",
       "main": {
-        "url": "https://x.com/Polymarket/status/2062975005592330425",
-        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
-        "views": "828K",
-        "time": "1d ago",
+        "url": "https://x.com/Eric_Schmitt/status/2063337625486782844",
+        "text": "The same people who told us decline was inevitable are furious that America is being restored. The border is closed. Murder is down. American-born workers are gaining ground. Sovereignty is back on the table. Our civilization is still alive.",
+        "views": "23K",
+        "time": "4h ago",
         "honesty": "8/10",
-        "note": "Prediction market and news report on announcement; high verifiability from multiple corroborating posts, neutral on the meeting."
+        "note": "Sen. Schmitt post tying multiple metrics (border, crime, jobs) to policy wins; primary from sponsor on the broader restoration narrative."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "text": "Strategic move to win the AI race against China.",
-          "url": "https://x.com/DavidSacks/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Sacks analysis on risks of nationalization vs benefits; primary from key figure, balanced on innovation vs government fusion."
-        },
-        {
-          "side": "Democrat",
-          "text": "Trump is a communist for government stakes in AI.",
-          "url": "https://x.com/krassenstein/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "10h ago",
+          "text": "JUST IN: ICE Agents have started to sh**t pepper balls at Anti ICE Rioters so vehicles can go through I COULD WATCH THIS ALL DAY LONG",
+          "url": "https://x.com/MAGAVoice/status/2063372175034503386",
+          "views": "33K",
+          "time": "3h ago",
           "honesty": "7/10",
-          "note": "Critical post on the proposal; accurate on the announcement but loaded 'communist' framing."
-        }
-      ]
-    },
-    {
-      "headline": "Senate passes provision to supercharge ICE on sanctuary cities",
-      "main": {
-        "url": "https://x.com/Eric_Schmitt/status/2062824517873946897",
-        "text": "The Senate just passed my provision to put an end to one of the most indefensible public-safety failures... sanctuary cities and states released nearly 18,000 aliens from custody... This is a major victory for public safety, border security, and the rule of law.",
-        "views": "119K",
-        "time": "1d ago",
-        "honesty": "8/10",
-        "note": "Direct from sponsoring Senator with specific numbers; verifiable via legislative record, primary on the provision details."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Finally, resources to arrest criminal illegals at jailhouse door.",
-          "url": "https://x.com/Eric_Schmitt/status/2062824517873946897",
-          "views": "119K",
-          "time": "1d ago",
-          "honesty": "7/10",
-          "note": "Sponsor's view; factual on the numbers and intent."
+          "note": "Video of enforcement action; shows real-time clash but graphic language and celebration framing."
         },
         {
           "side": "Democrat",
@@ -185,71 +154,7 @@
           "views": "42K",
           "time": "10h ago",
           "honesty": "7/10",
-          "note": "Legal perspective on implications; accurate on potential concerns."
-        }
-      ]
-    }
-  ],
-  "business": [
-    {
-      "headline": "Trump to discuss possible US investment in AI companies with leaders",
-      "main": {
-        "url": "https://x.com/Polymarket/status/2062975005592330425",
-        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
-        "views": "828K",
-        "time": "1d ago",
-        "honesty": "8/10",
-        "note": "Announcement corroborated across posts; high accuracy on the planned meeting and investment discussion."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Necessary to counter China and secure American AI dominance.",
-          "url": "https://x.com/DavidSacks/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Detailed analysis from key advisor; primary on risks of fusion and benefits of investment."
-        },
-        {
-          "side": "Independent",
-          "text": "Government stakes in AI could lead to central control and censorship.",
-          "url": "https://x.com/krassenstein/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "10h ago",
-          "honesty": "7/10",
-          "note": "Critical take on the proposal; accurate on the announcement but uses strong 'communist' framing."
-        }
-      ]
-    },
-    {
-      "headline": "Sacks: Bernie AI stake proposal risks CCP-style social credit system in US",
-      "main": {
-        "url": "https://x.com/DavidSacks/status/2063256205343052286",
-        "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in AI companies) resonates... Nationalization of AI will accelerate the corporate-government fusion... AI won’t just moderate posts; it will curate reality...",
-        "views": "1.46M",
-        "time": "10h ago",
-        "honesty": "8/10",
-        "note": "Primary analysis from key figure in admin; detailed on job loss claims, public benefit corps, and risks of government AI control, high verifiability on referenced proposals."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Stupidity tax on labs that hyped job loss and safety risks.",
-          "url": "https://x.com/DavidSacks/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "10h ago",
-          "honesty": "7/10",
-          "note": "Sacks' own take; consistent with his post, grounded in the labs' past statements."
-        },
-        {
-          "side": "Democrat",
-          "text": "Bernie Sanders' proposal for the government to take a 50% stake in AI companies would guarantee that the trillions created by AI are used to improve the lives of all of us — and block oligarch decisions that harm the American people.",
-          "url": "https://x.com/DavidSacks/status/2063256205343052286",
-          "views": "1.46M",
-          "time": "7h ago",
-          "honesty": "7/10",
-          "note": "Reaction supporting the public stake idea to ensure benefits for all and counter oligarch control; accurate to the proposal details but normative on the 'improve lives' outcome."
+          "note": "Legal analyst warning on implementation effects; consistent with prior civil liberties concerns on enforcement tactics."
         }
       ]
     },
@@ -261,17 +166,17 @@
         "views": "12K",
         "time": "8h ago",
         "honesty": "8/10",
-        "note": "Direct report on the pardon with specific conviction details; verifiable via court records and news, accurate on the facts of the case and pardon."
+        "note": "Direct report citing the 2023 conviction and recent pardon action; verifiable via court records."
       },
       "perspectives": [
         {
           "side": "Conservative",
           "text": "Second chance for a loyal public servant.",
-          "url": "https://x.com/allenanalysis/status/2063278248872620260",
-          "views": "12K",
-          "time": "8h ago",
+          "url": "https://x.com/LangmanVince/status/2063439767971213765",
+          "views": "7.5K",
+          "time": "2h ago",
           "honesty": "7/10",
-          "note": "Supportive view; factual on the pardon action."
+          "note": "Opinion supporting the pardon as redemption for past service; normative on 'loyal'."
         },
         {
           "side": "Democrat",
@@ -279,8 +184,103 @@
           "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
           "views": "42K",
           "time": "10h ago",
+          "honesty": "8/10",
+          "note": "Notes the broader policy debate the pardon revives; accurate that it spotlights the issue of members trading on nonpublic info."
+        }
+      ]
+    }
+  ],
+  "business": [
+    {
+      "headline": "Trump to meet AI leaders on possible US government investment",
+      "main": {
+        "url": "https://x.com/Polymarket/status/2062975005592330425",
+        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
+        "views": "828K",
+        "time": "1d ago",
+        "honesty": "8/10",
+        "note": "Announcement corroborated by prediction market and multiple reports; high accuracy on the planned meeting."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Strategic move to win the AI race against China.",
+          "url": "https://x.com/DiligentDenizen/status/2063441505541316814",
+          "views": "17K",
+          "time": "1h ago",
           "honesty": "7/10",
-          "note": "Legal analyst on the implications; accurate on the debate it reignites."
+          "note": "Frames the meeting and potential investment as necessary competition response; references Grok confirmation on related intel bills."
+        },
+        {
+          "side": "Independent",
+          "text": "Government stakes in AI could lead to central control and censorship.",
+          "url": "https://x.com/GoUncensored/status/2063437612782645303",
+          "views": "7.5K",
+          "time": "2h ago",
+          "honesty": "7/10",
+          "note": "Links investment talks to broader NDAA merger concerns; warns of fusion risks."
+        }
+      ]
+    },
+    {
+      "headline": "Sacks warns Bernie 50% AI stake proposal risks CCP-style social credit",
+      "main": {
+        "url": "https://x.com/DavidSacks/status/2063256205343052286",
+        "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in AI companies) resonates... Nationalization of AI will accelerate the corporate-government fusion... AI won’t just moderate posts; it will curate reality...",
+        "views": "1.46M",
+        "time": "10h ago",
+        "honesty": "8/10",
+        "note": "Primary detailed analysis from Sacks on the specific 50% stake idea, job loss rhetoric, and risks of government curation of reality."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Stupidity tax on labs that hyped job loss and safety risks.",
+          "url": "https://x.com/WallStreetMav/status/2063452065788031245",
+          "views": "10K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "Sarcastic take tying the proposal to past AI safety/job hype; opinionated but connects to Sacks' points on labs."
+        },
+        {
+          "side": "Democrat",
+          "text": "Bernie Sanders' proposal for the government to take a 50% stake in AI companies would guarantee that the trillions created by AI are used to improve the lives of all of us.",
+          "url": "https://x.com/queersocialism/status/2063428259056902204",
+          "views": "16K",
+          "time": "2h ago",
+          "honesty": "7/10",
+          "note": "Supports the public stake to ensure broad benefits and counter private power; normative on outcomes but references the proposal accurately."
+        }
+      ]
+    },
+    {
+      "headline": "Thomas Massie calls NDAA Israel military merger 'treasonous'",
+      "main": {
+        "url": "https://x.com/GoUncensored/status/2063437612782645303",
+        "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally.",
+        "views": "7.5K",
+        "time": "2h ago",
+        "honesty": "8/10",
+        "note": "Direct report of Rep. Massie's characterization of the specific NDAA section linking the militaries' systems and data."
+      },
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "We need to RALLY and DEMAND 622 of S 4615 AND Section 224 of NDAA FY 27 be STRIPPED out of legislation!",
+          "url": "https://x.com/DiligentDenizen/status/2063441505541316814",
+          "views": "17K",
+          "time": "1h ago",
+          "honesty": "7/10",
+          "note": "Citizen journalist call to action citing the exact sections; reflects grassroots conservative pushback on the provisions."
+        },
+        {
+          "side": "Independent",
+          "text": "Elon Musk asked @grok to confirm if Congress was trying to silently attach an Israel-US military intelligence merger without We the People knowing. Grok said YES.",
+          "url": "https://x.com/MarioNawfal/status/2063421429115244613",
+          "views": "90K",
+          "time": "2h ago",
+          "honesty": "8/10",
+          "note": "References Elon's query to Grok and the confirmation on the hidden attachment; ties to the espionage reporting."
         }
       ]
     }
