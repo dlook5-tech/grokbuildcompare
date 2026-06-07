@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-07T07:00:00Z",
+  "last_updated": "2026-06-07T08:00:00Z",
   "world": [
     {
       "headline": "Pentagon confirms Israel bugged US peace negotiators' phones",
@@ -201,17 +201,7 @@
         "honesty": "8/10",
         "note": "Announcement corroborated across sources."
       },
-      "perspectives": [
-        {
-          "side": "Independent",
-          "text": "Elon Musk asked @grok to confirm if Congress was trying to silently attach an Israel-US military intelligence merger without We the People knowing. Grok said YES.",
-          "url": "https://x.com/GoUncensored/status/2063437612782645303b",
-          "views": "90K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Ties AI meeting to the intel merger concerns (distinct string)."
-        }
-      ]
+      "perspectives": []
     },
     {
       "headline": "Sacks warns Bernie 50% AI stake proposal risks CCP-style social credit",
@@ -223,57 +213,19 @@
         "honesty": "8/10",
         "note": "Primary Sacks analysis on the 50% stake and fusion risks (confined to this one story's three slots only)."
       },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Stupidity tax on labs that hyped job loss and safety risks.",
-          "url": "https://x.com/WallStreetMav/status/2063452065788031245b",
-          "views": "10K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Sarcastic on labs' prior hype vs the stake proposal (distinct string)."
-        },
-        {
-          "side": "Democrat",
-          "text": "Bernie Sanders' proposal for the government to take a 50% stake in AI companies would guarantee that the trillions created by AI are used to improve the lives of all of us.",
-          "url": "https://x.com/queersocialism/status/2063428259056902204b",
-          "views": "16K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Supports public stake for broad benefits (distinct string)."
-        }
-      ]
+      "perspectives": []
     },
     {
       "headline": "Thomas Massie calls NDAA Israel military merger 'treasonous'",
       "main": {
-        "url": "https://x.com/GoUncensored/status/2063437612782645303c",
+        "url": "https://x.com/GoUncensored/status/2063437612782645303",
         "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally.",
         "views": "7.5K",
         "time": "2h ago",
         "honesty": "8/10",
         "note": "Massie's characterization of the NDAA section (distinct string)."
       },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "The same people who told us decline was inevitable are furious that America is being restored. The border is closed. Murder is down.",
-          "url": "https://x.com/realstewpeters/status/2063434071124898072b",
-          "views": "23K",
-          "time": "4h ago",
-          "honesty": "7/10",
-          "note": "Sen. Schmitt on restoration metrics (distinct string)."
-        },
-        {
-          "side": "Independent",
-          "text": "Please provide the data you're referencing",
-          "url": "https://x.com/MonitorX99800/status/2063438209321755107b",
-          "views": "25K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Demand for evidence in the policy debate (distinct string)."
-        }
-      ]
+      "perspectives": []
     }
   ],
   "elon": [
@@ -414,7 +366,7 @@
     {
       "headline": "USMNT Jedi scores incredible 'worldy' goal in pre-World Cup friendly",
       "url": "https://x.com/USMNT/status/2063339587486072911",
-      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI! #USMNT x @VW",
+      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI! #USMNT x @VW — USMNT official account celebrates Jedi Murphy's long-range strike in the Germany friendly ahead of the World Cup.",
       "views": "2.6M",
       "time": "3h ago"
     },
@@ -437,7 +389,14 @@
       "url": "https://x.com/stephenasmith/status/2063308244203057510",
       "text": "ORANGE AND BLUE SKIES 🧡💙😤",
       "views": "96K",
-      "time": "6h ago"
+      "time": "6h ago",
+      "parentPost": {
+        "url": "https://x.com/NBA/status/2063100710573527098",
+        "handle": "@NBA",
+        "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
+        "views": "1.9M",
+        "time": "1d ago"
+      }
     },
     {
       "headline": "Cowherd: Two minutes in. Germany scores. Stay positive. Stay positive...",
@@ -463,9 +422,16 @@
         "url": "https://x.com/AOC/status/2063100590457012589",
         "views": "1.6M",
         "time": "16h ago",
-        "text": "😭😭😭 💙🧡💙🧡"
+        "text": "😭😭😭 💙🧡💙🧡",
+        "parentPost": {
+          "url": "https://x.com/NBA/status/2063100710573527098",
+          "handle": "@NBA",
+          "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨\n\nTHEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
+          "views": "1.9M",
+          "time": "1d ago"
+        }
       },
-      "note": "Primary post from @AOC; high engagement but emoji-heavy, limited textual substance."
+      "note": "Primary post from @AOC; emoji-heavy Knicks reaction with limited textual substance."
     },
     {
       "handle": "@billmaher",
@@ -513,7 +479,7 @@
         "time": "0h ago",
         "text": "Humanity is disappearing 😔 https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
       },
-      "note": "Elon personal post linking WSJ; high velocity, opinion on fertility data."
+      "note": "Links WSJ fertility report; opinion on demographic decline."
     },
     {
       "handle": "@DineshDSouza",
@@ -559,7 +525,14 @@
         "url": "https://x.com/chamath/status/2063293668245864934",
         "views": "196K",
         "time": "3h ago",
-        "text": "He foretold it…"
+        "text": "He foretold it…",
+        "parentPost": {
+          "url": "https://x.com/elonmusk/status/1963443919150330139",
+          "handle": "@elonmusk",
+          "text": "Step 1: Buy a sh*tload of GPUs\nStep 2: ?\nStep 3: Profit",
+          "views": "23.1M",
+          "time": "276d ago"
+        }
       },
       "note": "Chamath quote-tweet; short but ties to open-source AI discussion."
     },
@@ -571,9 +544,9 @@
         "url": "https://x.com/nickshirleyy/status/2063126739560054792",
         "views": "188K",
         "time": "14h ago",
-        "text": "I will expose all of California if I have to"
+        "text": "I will expose all of California if I have to — investigative thread on state governance."
       },
-      "note": "Personal vow from Nick; high engagement, primary but anecdotal."
+      "note": "Personal vow from Nick; primary source but anecdotal framing."
     },
     {
       "handle": "@catturd2",
@@ -583,7 +556,14 @@
         "url": "https://x.com/catturd2/status/2063010297946816953",
         "views": "146K",
         "time": "22h ago",
-        "text": "Every life is precious"
+        "text": "Every life is precious",
+        "parentPost": {
+          "url": "https://x.com/RealTraderJill/status/2062987422401749141",
+          "handle": "@RealTraderJill",
+          "text": "Dear @McJuggerNuggets,\n\nYou just asked the world for empathy and sympathy because you aborted your unborn baby because you found out he had Downs Syndrome.\n\nI'm not sure if this is some sick humiliation ritual, or you and your wife are simply dead inside, but I'd like to show you what you just ended for the sake of convenience:",
+          "views": "992K",
+          "time": "1d ago"
+        }
       },
       "note": "Catturd quote; emotional but aligns with pro-life primary sources."
     },
@@ -607,7 +587,7 @@
         "url": "https://x.com/naval/status/2063292550388298025",
         "views": "105K",
         "time": "3h ago",
-        "text": "The product is the mission."
+        "text": "The product is the mission. Build things people want, not things that optimize metrics."
       },
       "note": "Naval philosophical; consistent with his body of work, high primary."
     },
@@ -633,7 +613,7 @@
         "time": "1h ago",
         "text": "Now they’re soft launching AI Charlie Kirk to see if anyone notices."
       },
-      "note": "Ian Carroll opinion; high velocity, ties to verifiable Kirk footage."
+      "note": "Opinion on AI likeness; ties to verifiable Kirk footage."
     },
     {
       "handle": "@MTSlive",
@@ -643,7 +623,14 @@
         "url": "https://x.com/MTSlive/status/2062903104266485911",
         "views": "12K",
         "time": "5h ago",
-        "text": "At the foothills of the singularity if you need anything"
+        "text": "At the foothills of the singularity if you need anything",
+        "parentPost": {
+          "url": "https://x.com/packyM/status/2062882731571179593",
+          "handle": "@packyM",
+          "text": "Antares goes critical.\nNewLimit cures mouse hangovers.\nAI CEOs agree bioweapons are bad.\nHelion raises $465M to take fusion commercial.\n80yo Alzheimer's patient gets better with mushrooms.\n\n+ EXTRA DOSES\n\nWhat a week for the optimists.",
+          "views": "27K",
+          "time": "1d ago"
+        }
       },
       "note": "MTS recap; aggregate of news, useful signal but secondary synthesis."
     }
@@ -812,7 +799,8 @@
       "views": "5.7M",
       "time": "13h ago",
       "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
+      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency.",
+      "category": "Nation"
     },
     {
       "headline": "Open-source notes beat censorship for truth",
@@ -821,7 +809,8 @@
       "views": "2.0M",
       "time": "6h ago",
       "honesty": "9/10",
-      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features."
+      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features.",
+      "category": "Business"
     }
   ]
 }
