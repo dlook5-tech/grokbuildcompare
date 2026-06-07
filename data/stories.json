@@ -11,7 +11,17 @@
         "honesty": "8/10",
         "note": "Primary reporting citing NYT/Pentagon on specific bugs against named US officials."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "Israel is scrambling to complete their takeover of the U.S. before the American people have time to organize nationwide pogroms.",
+          "url": "https://x.com/realstewpeters/status/2063440248869179889",
+          "views": "11K",
+          "time": "14h ago",
+          "honesty": "7/10",
+          "note": "Opinion framing espionage as takeover; conservative foreign influence concern."
+        }
+      ]
     },
     {
       "headline": "US-Israel intel sharing locked in by law, critics call it treason",
@@ -23,7 +33,26 @@
         "honesty": "8/10",
         "note": "Exact statutory language from the bill."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "American soldiers deployed to defend Israel had their phones bugged and wiretapped by Mossad \u2013 New York Times",
+          "url": "https://x.com/MonitorX99800/status/2063438209321755107",
+          "views": "5.6K",
+          "time": "14h ago",
+          "honesty": "8/10",
+          "note": "Cites NYT on Mossad actions vs US troops."
+        },
+        {
+          "side": "Democrat",
+          "text": "The US-Israel merger JUST GOT WORSE! The bill makes permanent intelligence sharing that can't be limited even by future presidents.",
+          "url": "https://x.com/KimIversenShow/status/2063398853332656524",
+          "views": "22K",
+          "time": "17h ago",
+          "honesty": "7/10",
+          "note": "Highlights the 'shall not be suspended' clause."
+        }
+      ]
     },
     {
       "headline": "Dave Matthews calls for end to violence in Gaza, West Bank, Lebanon and beyond",
@@ -49,7 +78,17 @@
         "honesty": "8/10",
         "note": "Elon statement on SAVE America Act as democracy safeguard."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "California\u2019s blatant election fraud is what\u2019s coming for the rest of the country if we don\u2019t pass the SAVE America Act.",
+          "url": "https://x.com/WallStreetMav/status/2063452065788031245",
+          "views": "52K",
+          "time": "13h ago",
+          "honesty": "7/10",
+          "note": "Links CA fraud concerns to national SAVE Act need."
+        }
+      ]
     },
     {
       "headline": "ICE agents fire pepper balls at anti-ICE rioters blocking vehicles in street clashes",
