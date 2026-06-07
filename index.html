@@ -131,6 +131,12 @@
      Without -webkit-line-clamp, long 3-line headlines would push the
      row height up and create the ragged-bottom whitespace problem. */
   .main-story-headline { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1.12rem; line-height: 1.33; font-weight: 700; color: #1c1410; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; letter-spacing: -0.1px; }
+
+  /* Eyebrow label above each main story — eXpressO newspaper touch.
+     Tiny uppercase category + velocity descriptor. Sits just above
+     the headline, gold underline color. */
+  .main-story-eyebrow { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 1.6px; color: #b8860b; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .main-story-eyebrow .eyebrow-dot { width: 4px; height: 4px; background: #ffd479; border-radius: 50%; box-shadow: 0 0 6px rgba(255,212,121,0.7); flex-shrink: 0; }
   .main-story-meta { display: flex; flex-wrap: nowrap; gap: 4px 6px; align-items: baseline; font-size: 0.72rem; color: #6b5d4f; font-weight: 500; margin-bottom: 0; white-space: nowrap; overflow: hidden; }
   .main-story-meta > * { flex-shrink: 0; white-space: nowrap; }
   .main-story-meta .views { color: #b8860b; font-weight: 700; }
@@ -1070,12 +1076,25 @@ function renderHero(tab) {
 // X widget embeds are lazy: only the currently-open perspective's widget
 // is loaded; closing the panel discards it. Honesty + note hidden until
 // the panel opens.
-function renderMainStoryBlock(story, rank) {
+function renderMainStoryBlock(story, rank, catLabel) {
   var blockId = 'b' + Math.random().toString(36).substr(2, 9);
   var panelId = blockId + '-details';
   var mp = story.main || story.main_post || {};
   var headline = esc(story.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
+  // Eyebrow content: tiny category label + rank descriptor. eXpressO touch.
+  // catLabel is passed from the renderTabMain loop (World / Nation / Business).
+  // Falls back to story.category for Earlier tab entries.
+  var eyebrowCat = catLabel || story.category || '';
+  var rankLabel = ({1: 'Top story', 2: 'Also big', 3: 'Worth a look'})[rank] || '';
+  var eyebrowHtml = '';
+  if (eyebrowCat || rankLabel) {
+    eyebrowHtml = '<div class="main-story-eyebrow">' +
+                    '<span class="eyebrow-dot"></span>' +
+                    esc(eyebrowCat) + (eyebrowCat && rankLabel ? ' &middot; ' : '') +
+                    esc(rankLabel) +
+                  '</div>';
+  }
 
   // Register the main post as a pseudo-perspective so the header block
   // can use the same selectMainPerspective() handler + shared details
@@ -1152,6 +1171,7 @@ function renderMainStoryBlock(story, rank) {
   var headerBlockHtml =
     '<div class="main-story-header-block" data-pid="' + mainPid +
       '" onclick="selectMainPerspective(\'' + mainPid + '\',\'' + panelId + '\');">' +
+      eyebrowHtml +
       '<div class="main-story-headline">' + headline + '</div>' +
       metaHtml +
     '</div>';
@@ -1278,7 +1298,7 @@ function renderTabMain() {
     for (var r = 0; r < rowCount; r++) {
       byCat.forEach(function(x) {
         var t = x.tops[r];
-        if (t) h += renderMainStoryBlock(t, r + 1);
+        if (t) h += renderMainStoryBlock(t, r + 1, x.sec.title);
         else   h += '<div class="main-story-empty" aria-hidden="true"></div>';
       });
     }
