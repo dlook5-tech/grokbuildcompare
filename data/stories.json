@@ -201,7 +201,26 @@
         "honesty": "8/10",
         "note": "Announcement corroborated across sources."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": ".@PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft’s digital cloud system for allegedly being used by Chinese nationals to hack Government systems in Aug. 2025.",
+          "url": "https://x.com/DineshDSouza/status/2063082195242127698",
+          "views": "454K",
+          "time": "1d ago",
+          "honesty": "7/10",
+          "note": "Hegseth audit of Microsoft cloud cited; conservative tech-security framing."
+        },
+        {
+          "side": "Independent",
+          "text": "Wait. Google is paying SpaceX $920 million per month for GPUs?  Google. The company that builds its own TPUs. That runs one of the largest cloud infrastructures on earth. Is renting 110,000 Nvidia GPUs from a rocket company.  I'm honestly not sure what to make of this. Either Google's AI compute needs have gotten so massive that even they can't build fast enough. Or SpaceX has built something in AI infrastructure that nobody was paying attention to. Or both.  $920M a month. $30B over the contrac",
+          "url": "https://x.com/aaditsh/status/2063153391153602789",
+          "views": "1.1M",
+          "time": "21h ago",
+          "honesty": "8/10",
+          "note": "Analyst breakdown of reported Google–SpaceX GPU supply deal; verifiable dollar figure cited."
+        }
+      ]
     },
     {
       "headline": "Sacks warns Bernie 50% AI stake proposal risks CCP-style social credit",
@@ -213,19 +232,57 @@
         "honesty": "8/10",
         "note": "Primary Sacks analysis on the 50% stake and fusion risks (confined to this one story's three slots only)."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "@NUnl ASML should be treasured and supported. It is arguably the greatest company in Europe.",
+          "url": "https://x.com/elonmusk/status/2063335081385644403",
+          "views": "698K",
+          "time": "9h ago",
+          "honesty": "7/10",
+          "note": "Private-sector championing of ASML as counterpoint to government equity stakes."
+        },
+        {
+          "side": "Independent",
+          "text": "@AJamesMcCarthy Read books, talk to people & iterate rapidly with hardware & software",
+          "url": "https://x.com/elonmusk/status/2063333242820853969",
+          "views": "647K",
+          "time": "9h ago",
+          "honesty": "8/10",
+          "note": "Founder emphasis on iterative hardware/software learning vs top-down control."
+        }
+      ]
     },
     {
-      "headline": "Thomas Massie calls NDAA Israel military merger 'treasonous'",
+      "headline": "Tesla applies for Nevada robotaxi permit — up to 5,000 vehicles year one",
       "main": {
-        "url": "https://x.com/GoUncensored/status/2063437612782645303",
-        "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally.",
-        "views": "7.5K",
-        "time": "2h ago",
+        "url": "https://x.com/SawyerMerritt/status/2063052465231057272",
+        "text": "Tesla has officially applied for an Autonomous Vehicle Network Company permit in Nevada.\n\nTesla is seeking approval for up to 5,000 robotaxis during the first 12 months after the permit is granted.\n\nThe filing covers Clark County (Las Vegas), including Harry Reid International Airport and Henderson Executive Airport, according to a new public notice from the Nevada Transport Authority.",
+        "views": "391K",
+        "time": "1d ago",
         "honesty": "8/10",
-        "note": "Massie's characterization of the NDAA section (distinct string)."
+        "note": "Insider report on Nevada Transport Authority filing with airport coverage details."
       },
-      "perspectives": []
+      "perspectives": [
+        {
+          "side": "Conservative",
+          "text": "All you have to do is look at the road – your Tesla does all the rest",
+          "url": "https://x.com/Tesla/status/2063116454661431761",
+          "views": "465K",
+          "time": "23h ago",
+          "honesty": "7/10",
+          "note": "Corporate messaging on FSD capability ahead of regulatory approval."
+        },
+        {
+          "side": "Democrat",
+          "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it.   Antonio’s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades.   One could not ask for a better friend. He is a great man.",
+          "url": "https://x.com/elonmusk/status/2063336033995866249",
+          "views": "845K",
+          "time": "9h ago",
+          "honesty": "8/10",
+          "note": "Founder narrative on private capital rescuing deep-tech ventures without government equity."
+        }
+      ]
     }
   ],
   "elon": [
