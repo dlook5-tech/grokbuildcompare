@@ -35,7 +35,9 @@
   nav a.msm-tab:hover { background: #fbe9e9; color: #a02e21; }
   nav a.msm-tab.active { background: #c0392b; color: #fff; text-decoration: line-through; }
   nav a.msm-tab.active::after { color: #fff8ee; }
-  main { flex: 1; padding: 24px 28px 36px; max-width: 1280px; margin: 0 auto; width: 100%; }
+  /* Top padding tightened (24 → 14) so the first row of content sits
+     close under the nav now that the hero is gone on Main. */
+  main { flex: 1; padding: 14px 28px 36px; max-width: 1280px; margin: 0 auto; width: 100%; }
 
   /* Hero — big newspaper-style headline at top of every tab. When the
      tab has a themed accent thumbnail (ported from eXpressO), it sits
@@ -1276,7 +1278,11 @@ function renderTabMain() {
     { key: 'nation',   title: 'Nation'   },
     { key: 'business', title: 'Business' }
   ];
-  var h = renderHero('main');
+  // Hero erased on Main per user 2026-06-07 — the W/N/B column placards
+  // immediately below ARE the visual anchor for this tab. The big hero
+  // was redundant + ate screen real estate before the reader saw any
+  // story. Nav now flows directly into the 3-column header.
+  var h = '';
 
   // Resolve each category's story array. Schemas supported:
   //   FLAT (Grok's cron contract):   { world: [...], nation: [...], business: [...] }
