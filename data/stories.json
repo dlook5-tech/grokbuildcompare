@@ -2,49 +2,49 @@
   "last_updated": "2026-06-07T22:00:00Z",
   "world": [
     {
-      "headline": "Trump Tells Netanyahu Not to Retaliate After Iran Missile Strike",
+      "headline": "Iran Fires Ballistic Missiles at Israel, Shattering April Ceasefire",
       "main": {
-        "handle": "@BarakRavid",
-        "url": "https://x.com/BarakRavid/status/2063714218986156158",
-        "text": "🚨🚨President Trump tells me: I am going to call Netanyahu right now and tell him not to strike back",
-        "views": "1.99M",
-        "time": "2h ago",
+        "handle": "@IDF",
+        "url": "https://x.com/IDF/status/2063698932966813942",
+        "text": "🚨 The IDF identified missiles launched from Iran toward Israel. Defensive systems are operating to intercept the threat.",
+        "views": "937K",
+        "time": "3h ago",
         "honesty": "9/10",
-        "note": "Axios correspondent with direct Trump sourcing; widely corroborated by NY Post and Times of Israel"
+        "note": "Official Israeli military account; primary-source alert on incoming fire."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@AmitSegal",
-          "url": "https://x.com/AmitSegal/status/2061757230278492542",
-          "text": "EXCLUSIVE: According to a very senior official on the PM's team on the late-night Netanyahu-Trump call, the Axios report is inaccurate. Trump did not make personal remarks about jail or claim Netanyahu is hated globally. Instead, the tense call focused on conflicting social media posts...",
-          "views": "785K",
-          "time": "5d ago",
+          "handle": "@itamarbengvir",
+          "url": "https://x.com/itamarbengvir/status/2063701015283568651",
+          "text": "הלילה טהרן חייבת לבעור! (Tonight Tehran must burn!)",
+          "views": "2.0M",
+          "time": "3h ago",
           "honesty": "7/10",
-          "note": "Netanyahu-team pushback on profanity-laced call reporting; single-source but from senior PM official"
+          "note": "Israeli far-right security minister demanding maximal retaliation; advocacy, not neutral reporting."
         },
         {
           "side": "Democrat",
           "handle": "@RepJeffries",
           "url": "https://x.com/RepJeffries/status/2063632075190571250",
           "text": "This is Day 100 of the reckless war of choice in Iran. It's time for the Republican-controlled Senate to move our war powers resolution. So we can end this costly conflict immediately.",
-          "views": "22K",
+          "views": "23K",
           "time": "7h ago",
           "honesty": "8/10",
-          "note": "House Democratic leader; partisan framing but accurate on war duration and war-powers push"
+          "note": "House Democratic leader; frames escalation as unauthorized war requiring congressional action."
         }
       ]
     },
     {
-      "headline": "Trump Urges Iran to Return to Nuclear Talks After Missile Barrage",
+      "headline": "Trump Says Netanyahu Has 'No Choice' But to Accept US-Iran Deal",
       "main": {
-        "handle": "@TreyYingst",
-        "url": "https://x.com/TreyYingst/status/2063709736327864356",
-        "text": "Spoke with President Trump. We'll have more on Fox News in a few minutes. \"What I would suggest to Iran: You've shot your missiles, that's enough. Get back to the table and make a deal,\" President Trump told Fox News.",
-        "views": "1.37M",
-        "time": "2h ago",
-        "honesty": "9/10",
-        "note": "Fox chief foreign correspondent quoting Trump directly; aligns with White House rapid-response posts"
+        "handle": "@KobeissiLetter",
+        "url": "https://x.com/KobeissiLetter/status/2063746855591199096",
+        "text": "BREAKING: President Trump says Israeli Prime Minister Netanyahu will have \"no choice\" but to accept a US deal with Iran, because he \"calls the shots,\" per FT. Trump said today's missile strikes by Iran will not impact the deal.",
+        "views": "714K",
+        "time": "1h ago",
+        "honesty": "8/10",
+        "note": "Markets-focused outlet citing Financial Times interview; widely followed for macro news."
       },
       "perspectives": [
         {
@@ -52,173 +52,173 @@
           "handle": "@RapidResponse47",
           "url": "https://x.com/RapidResponse47/status/2063616018849632712",
           "text": ".@POTUS on a deal with Iran: \"We're very close. We have a couple of points; they don't even seem like big points. They've conceded the fact that they will not have nuclear weapons.\"",
-          "views": "452K",
+          "views": "460K",
           "time": "8h ago",
           "honesty": "8/10",
-          "note": "Official White House rapid-response account amplifying Trump's Meet the Press Iran comments"
+          "note": "White House rapid-response account amplifying Trump's direct quotes on negotiations."
         },
         {
           "side": "Democrat",
-          "handle": "@RepJeffries",
-          "url": "https://x.com/RepJeffries/status/2063632075190571250",
-          "text": "This is Day 100 of the reckless war of choice in Iran. It's time for the Republican-controlled Senate to move our war powers resolution. So we can end this costly conflict immediately.",
-          "views": "22K",
-          "time": "7h ago",
-          "honesty": "8/10",
-          "note": "Democratic counter-frame: diplomacy talk does not end unauthorized war"
+          "handle": "@MeidasTouch",
+          "url": "https://x.com/MeidasTouch/status/2063661459675185172",
+          "text": "Trump called Kristen Welker \"crooked and stupid,\" ripped off his mic, and ran off the set of Meet the Press. Meanwhile Israel just struck Beirut and Iran is threatening full-scale war.",
+          "views": "41K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Democrat-aligned media; links Trump's diplomacy claims to simultaneous regional escalation."
         }
       ]
     },
     {
-      "headline": "Iran Fires Missiles at Israel in First Attack Since April Ceasefire",
+      "headline": "US Forces Down Iranian Drones Threatening Hormuz Shipping",
       "main": {
-        "handle": "@IDF",
-        "url": "https://x.com/IDF/status/2063698932966813942",
-        "text": "🚨 The IDF identified missiles launched from Iran toward Israel. Defensive systems are operating to intercept the threat.",
-        "views": "882K",
-        "time": "3h ago",
+        "handle": "@CENTCOM",
+        "url": "https://x.com/CENTCOM/status/2063424127508037983",
+        "text": "Earlier today, U.S. forces in the Middle East shot down two Iranian one-way attack drones that threatened international maritime traffic in the Strait of Hormuz. American forces remain postured and ready to continue defending against Iranian aggression.",
+        "views": "535K",
+        "time": "21h ago",
         "honesty": "9/10",
-        "note": "Official Israeli military account; confirmed by NYT, Reuters, and Al Jazeera"
+        "note": "Official US Central Command statement on defensive action in a critical shipping lane."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@FoxNews",
-          "url": "https://x.com/FoxNews/status/2063718456739143699",
-          "text": "BREAKING: FOX News' @TreyYingst spoke with President Trump after Iran's latest strikes against Israel. Iran launched multiple missile barrages toward Israel on Sunday, prompting air raid sirens across regions and sending civilians into shelters, according to the Israel Defense Forces.",
-          "views": "243K",
-          "time": "2h ago",
+          "handle": "@RapidResponse47",
+          "url": "https://x.com/RapidResponse47/status/2063620954488492393",
+          "text": "\"Would you unfreeze any Iranian assets or lift any sanctions up front as a part of any deal?\" @POTUS: \"No.\"",
+          "views": "166K",
+          "time": "8h ago",
           "honesty": "8/10",
-          "note": "Major conservative outlet; pairs attack reporting with Trump de-escalation interview"
+          "note": "Trump White House account stressing hard-line sanctions posture alongside military action."
         },
         {
           "side": "Democrat",
-          "handle": "@nytimes",
-          "url": "https://x.com/nytimes/status/2063707897364623707",
-          "text": "Breaking News: Iran fired missiles at Israel, the Israeli military said, the first such attack since a cease-fire paused the U.S.-Israeli war with Iran in April. Follow live updates.",
-          "views": "288K",
-          "time": "2h ago",
-          "honesty": "9/10",
-          "note": "Mainstream outlet with live verification; underscores ceasefire breakdown risk"
+          "handle": "@SenDuckworth",
+          "url": "https://x.com/SenDuckworth/status/2063622003454820859",
+          "text": "It's day 100 of Trump's illegal war in Iran. 100 days spent putting our troops' lives in danger. 100 days without an end game. 100 days too many. It's past time for this war of choice to come to an end.",
+          "views": "7.8K",
+          "time": "8h ago",
+          "honesty": "8/10",
+          "note": "Senate Democrat and veteran criticizing open-ended military operations in the Gulf."
         }
       ]
     }
   ],
   "nation": [
     {
-      "headline": "VP Vance Links UK Teen's Murder to Migration in Viral Post",
+      "headline": "Trump Storms Off Meet the Press After Election Fraud Clash",
       "main": {
-        "handle": "@JDVance",
-        "url": "https://x.com/JDVance/status/2062938286977421755",
-        "text": "Henry Nowak died the same way a civilization dies: abandoned, handcuffed by authorities who neither trusted nor cared for him, and accused of hate crimes he did not commit. His murder is as tragic as it is enraging. He should still be alive today, and he would be if the last few generations of European elites had stood their ground against the politics of self-hatred and the mass invasion of migrants, many of whom despise the West and the people who love it.",
-        "views": "12.7M",
-        "time": "2d ago",
-        "honesty": "7/10",
-        "note": "Vice president's opinion post; factual details of Nowak case disputed by UK authorities"
+        "handle": "@Acyn",
+        "url": "https://x.com/Acyn/status/2063635651082478066",
+        "text": "Trump has a meltdown and ends the interview. Welker: Just to be very clear, there's no evidence of what you're saying. Trump: There's a lot of evidence. There's tremendous evidence. There's nothing but evidence. The election was rigged.",
+        "views": "5.6M",
+        "time": "7h ago",
+        "honesty": "8/10",
+        "note": "Clip aggregator with verified NBC footage; documents the on-air exchange directly."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@visegrad24",
-          "url": "https://x.com/visegrad24/status/2061573327911543106",
-          "text": "In his final moments, Henry Nowak told police officers nine times \"I can't breathe\" and four times that he had been stabbed. In response police officer dragged him across the gravel, handcuffed and read him his rights. It was the last thing Henry heard before he died.",
-          "views": "21.3M",
-          "time": "6d ago",
+          "handle": "@BoLoudon",
+          "url": "https://x.com/BoLoudon/status/2063651108250128694",
+          "text": "🚨President Trump took off his microphone, dropped it on the ground, & LEFT the Kristen Welker interview after she FALSELY claimed Trump never presented evidence the 2020 election was rigged. God bless Trump.",
+          "views": "14K",
+          "time": "6h ago",
           "honesty": "6/10",
-          "note": "Right-leaning aggregator that drove the incident into U.S. discourse; video context Vance quoted"
+          "note": "Pro-Trump youth activist; defends walkout and repeats unsubstantiated fraud claims."
         },
         {
           "side": "Democrat",
-          "handle": "@Telegraph",
-          "url": "https://x.com/Telegraph/status/2063592044912624023",
-          "text": "David Lammy has revealed he phoned JD Vance to tell him he was wrong to blame Henry Nowak's death on the \"mass invasion of migrants\". The Justice Secretary and Deputy Prime Minister, who has a friendship with the US vice-president, said the amicable conversation had ended with the pair \"agreeing to disagree\"",
-          "views": "20K",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Reports UK Labour government's direct rebuttal; reflects center-left pushback on Vance's migration framing"
+          "handle": "@MeidasTouch",
+          "url": "https://x.com/MeidasTouch/status/2063661459675185172",
+          "text": "Trump called Kristen Welker \"crooked and stupid,\" ripped off his mic, and ran off the set of Meet the Press. Meanwhile Israel just struck Beirut and Iran is threatening full-scale war.",
+          "views": "41K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Democrat-aligned outlet framing the walkout as a meltdown under press scrutiny."
         }
       ]
     },
     {
-      "headline": "Hunter Biden Goes Viral Clapping Back at Critics on X",
+      "headline": "Hunter Biden's Viral X Clapbacks Reshape His Public Image",
       "main": {
         "handle": "@HunterBiden",
-        "url": "https://x.com/HunterBiden/status/2062574276083888267",
-        "text": "@SoundDobad I know this may sound petty, but I can't stand it when people put photoshop a meth pipe in my mouth. A crack pipe doesn't have that little bowl at the end. This is why we can't trust AI. Please make the appropriate edit. Thank you for your attention to this matter.",
-        "views": "10.4M",
+        "url": "https://x.com/HunterBiden/status/2062576436695732270",
+        "text": "Do I look like I'm a part of the elite oligarch class. This was taken at a super 8 motel off I95 by the way.",
+        "views": "36.8M",
         "time": "3d ago",
-        "honesty": "8/10",
-        "note": "First-person satirical reply; self-deprecating humor widely covered by USA Today and WaPo"
+        "honesty": "7/10",
+        "note": "First-person post from Hunter Biden; self-deprecating but still one-sided narrative."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@JasonMiller",
-          "url": "https://x.com/JasonMiller/status/2062890393557938561",
-          "text": "If you're out there defending Hunter Biden you have lost the plot! 🤣🤣🤣",
-          "views": "40K",
-          "time": "2d ago",
-          "honesty": "7/10",
-          "note": "Former Trump campaign adviser; partisan dismissal without addressing substance"
+          "handle": "@KatiePavlich",
+          "url": "https://x.com/KatiePavlich/status/2061958578479513884",
+          "text": "So disgusting. Hunter has a daughter named Navy Joan. While first Lady, Jill Biden would hang stockings for 6 grandchildren and the dog, refusing to hang 7 to include Navy. Hunter has been held in contempt by a judge for refusing to pay child support.",
+          "views": "200K",
+          "time": "5d ago",
+          "honesty": "6/10",
+          "note": "Fox News commentator attacking Biden family character; mixes documented and disputed claims."
         },
         {
           "side": "Democrat",
-          "handle": "@HunterBiden",
-          "url": "https://x.com/HunterBiden/status/2062668906175541717",
-          "text": "Wait…Did he just say checkered past ? I'm 28 felonies, 6 bankruptcies, and an Epstein bromance short of his checkered past.",
-          "views": "2.25M",
-          "time": "3d ago",
+          "handle": "@harryjsisson",
+          "url": "https://x.com/harryjsisson/status/2062760044186177902",
+          "text": "Trump is posting about Hunter Biden in the middle of the night. He has a SEVERE and terminal case of Biden Derangement Syndrome.",
+          "views": "349K",
+          "time": "2d ago",
           "honesty": "7/10",
-          "note": "Follow-up jab at Trump after president commented on his 2028 speculation; opinion not fact-checked line-by-line"
+          "note": "Democrat influencer arguing Trump's fixation shows political insecurity."
         }
       ]
     },
     {
-      "headline": "Hegseth D-Day Speech Sparks GOP Backlash Over Immigration Remarks",
+      "headline": "Trump Marks Day 100 of Iran War, Says Nuclear Deal Is Near",
       "main": {
-        "handle": "@SecWar",
-        "url": "https://x.com/SecWar/status/2063300354792374487",
-        "text": "Eighty-two years ago, Allied forces stormed the beaches of Normandy into the hell of war — answering the call of duty in defense of freedom. Today, we honor their courage, remember their sacrifice, and remain forever grateful for the liberty they secured for generations to come.",
-        "views": "242K",
-        "time": "1d ago",
+        "handle": "@RapidResponse47",
+        "url": "https://x.com/RapidResponse47/status/2063616018849632712",
+        "text": ".@POTUS on a deal with Iran: \"We're very close. We have a couple of points; they don't even seem like big points. They've conceded the fact that they will not have nuclear weapons.\"",
+        "views": "460K",
+        "time": "8h ago",
         "honesty": "8/10",
-        "note": "Official Pentagon post; separate Normandy speech drew bipartisan criticism for immigration parallels"
+        "note": "Official White House account posting Trump's Sunday interview remarks on war timeline."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@business",
-          "url": "https://x.com/business/status/2063656889074786652",
-          "text": "US Defense Secretary Pete Hegseth's D-Day anniversary remarks criticizing what he deemed an immigrant invasion in Europe were \"inappropriate,\" House Republican Michael McCaul said Sunday.",
-          "views": "21K",
-          "time": "6h ago",
+          "handle": "@FoxNews",
+          "url": "https://x.com/FoxNews/status/2063718456739143699",
+          "text": "BREAKING: FOX News' @TreyYingst spoke with President Trump after Iran's latest strikes against Israel. Iran launched multiple missile barrages toward Israel on Sunday, prompting air raid sirens across regions.",
+          "views": "293K",
+          "time": "2h ago",
           "honesty": "8/10",
-          "note": "Bloomberg reporting GOP foreign-affairs veteran's on-record Sunday criticism"
+          "note": "Major conservative network; pairs Trump's diplomacy message with live strike reporting."
         },
         {
           "side": "Democrat",
-          "handle": "@BulwarkOnline",
-          "url": "https://x.com/BulwarkOnline/status/2063659041679696209",
-          "text": "Q: \"Would you still vote for FISA reauthorization if Pulte is in the spot?\" Rep. Jim Himes: \"If I had to vote again on this thing, knowing Bill Pulte's background, experience, and what he's done, I don't think I could look myself in the mirror in the morning and say this is a guy who should have control and access to this authority.\"",
-          "views": "38K",
-          "time": "6h ago",
+          "handle": "@RepJeffries",
+          "url": "https://x.com/RepJeffries/status/2063632075190571250",
+          "text": "This is Day 100 of the reckless war of choice in Iran. It's time for the Republican-controlled Senate to move our war powers resolution. So we can end this costly conflict immediately.",
+          "views": "23K",
+          "time": "7h ago",
           "honesty": "8/10",
-          "note": "Center-left outlet quoting top House Intelligence Democrat on same-day Sunday shows criticizing Trump national-security appointments"
+          "note": "Top House Democrat demanding Senate vote to terminate unauthorized hostilities."
         }
       ]
     }
   ],
   "business": [
     {
-      "headline": "Trump Says Stocks Should Rise After Blowout Jobs Report",
+      "headline": "Markets Watch as Trump Tells Netanyahu to Accept Iran Deal",
       "main": {
         "handle": "@KobeissiLetter",
-        "url": "https://x.com/KobeissiLetter/status/2062906160491941995",
-        "text": "BREAKING: President Trump says \"stocks should go up, not down\" after today's jobs report. \"Growth does not mean inflation,\" Trump says.",
-        "views": "2.58M",
-        "time": "2d ago",
+        "url": "https://x.com/KobeissiLetter/status/2063746855591199096",
+        "text": "BREAKING: President Trump says Israeli Prime Minister Netanyahu will have \"no choice\" but to accept a US deal with Iran, because he \"calls the shots,\" per FT. Trump said today's missile strikes by Iran will not impact the deal.",
+        "views": "714K",
+        "time": "1h ago",
         "honesty": "8/10",
-        "note": "Markets account quoting Trump; May payrolls beat was confirmed by BLS at +172K"
+        "note": "High-engagement markets letter translating FT reporting for traders."
       },
       "perspectives": [
         {
@@ -226,88 +226,88 @@
           "handle": "@RapidResponse47",
           "url": "https://x.com/RapidResponse47/status/2063616018849632712",
           "text": ".@POTUS on a deal with Iran: \"We're very close. We have a couple of points; they don't even seem like big points. They've conceded the fact that they will not have nuclear weapons.\"",
-          "views": "452K",
+          "views": "460K",
           "time": "8h ago",
-          "honesty": "7/10",
-          "note": "White House account backing administration economic and diplomatic messaging same weekend"
+          "honesty": "8/10",
+          "note": "Administration touts near-deal to reassure markets; direct presidential quote."
         },
         {
           "side": "Democrat",
-          "handle": "@byHeatherLong",
-          "url": "https://x.com/byHeatherLong/status/2062876141669486872",
-          "text": "JUST IN: Another strong jobs report. The US economy added 172,000 jobs in May (way better than the 88k expected) and the revisions for April and March were 93k higher. Hospitality was the top job gainer (+70k) followed by local gov't (+55k). Unemployment rate in May: 4.3% (same as April). The bad news = wages grew 3.4% in past year. -->The lowest rate in 4 years and well below ~4% inflation.",
-          "views": "147K",
-          "time": "2d ago",
-          "honesty": "9/10",
-          "note": "Navy Federal chief economist; data matches official BLS release with nuanced wage caveat"
+          "handle": "@RepJeffries",
+          "url": "https://x.com/RepJeffries/status/2063632075190571250",
+          "text": "This is Day 100 of the reckless war of choice in Iran. It's time for the Republican-controlled Senate to move our war powers resolution. So we can end this costly conflict immediately.",
+          "views": "23K",
+          "time": "7h ago",
+          "honesty": "8/10",
+          "note": "Argues prolonged conflict—not diplomacy alone—drives economic and geopolitical risk."
         }
       ]
     },
     {
-      "headline": "U.S. Adds 172,000 Jobs in May, Crushing Forecasts",
+      "headline": "US Stock Futures Slide as Mideast Ceasefire Unravels",
       "main": {
         "handle": "@KobeissiLetter",
-        "url": "https://x.com/KobeissiLetter/status/2062875498741387522",
-        "text": "BREAKING: The US economy adds 172,000 jobs in May, crushing expectations of 85,000. The unemployment rate was 4.3%, in-line with expectations of 4.3%. April's jobs number was also revised UP by +64,000 jobs. This marks the second strongest US jobs report in 13 months.",
-        "views": "1.22M",
-        "time": "2d ago",
-        "honesty": "9/10",
-        "note": "Figures match BLS May Employment Situation report released June 5"
+        "url": "https://x.com/KobeissiLetter/status/2063743880504193510",
+        "text": "BREAKING: US stock market futures fall as markets reopen for the first time since Israel's attack on Beirut and Iran's retaliation: S&P 500 -0.3%, Nasdaq 100 -0.3%, Dow -0.3%, WTI Crude +4.0%, Brent +3.5%. The Iran War ceasefire appears to be falling apart.",
+        "views": "188K",
+        "time": "1h ago",
+        "honesty": "8/10",
+        "note": "Real-time futures data from widely followed markets account."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@PeterSchiff",
-          "url": "https://x.com/PeterSchiff/status/2062886466447966268",
-          "text": "The government claims the U.S. added 172K jobs in May, twice expectations. Unfortunately, all of those jobs were either in leisure and hospitality, or in government or government-related services. That drives demand for imported goods, increasing trade deficits and goods prices.",
-          "views": "40K",
-          "time": "2d ago",
-          "honesty": "6/10",
-          "note": "Perma-bear economist; sector breakdown is directionally right but inflation linkage is speculative"
+          "handle": "@cryptorover",
+          "url": "https://x.com/cryptorover/status/2063115289345298497",
+          "text": "🚨 BIGGEST CRASH OF 2026 — $2,040,000,000,000 wiped out from the US stock market today as SPX dropped 2.6% and Nasdaq 100 dropped 4.8%.",
+          "views": "99K",
+          "time": "1d ago",
+          "honesty": "7/10",
+          "note": "Crypto-markets commentator; figures align with prior session sell-off but headline is sensationalized."
         },
         {
           "side": "Democrat",
-          "handle": "@byHeatherLong",
-          "url": "https://x.com/byHeatherLong/status/2062876141669486872",
-          "text": "JUST IN: Another strong jobs report. The US economy added 172,000 jobs in May (way better than the 88k expected) and the revisions for April and March were 93k higher. Hospitality was the top job gainer (+70k) followed by local gov't (+55k). Unemployment rate in May: 4.3% (same as April). The bad news = wages grew 3.4% in past year. -->The lowest rate in 4 years and well below ~4% inflation.",
-          "views": "147K",
-          "time": "2d ago",
-          "honesty": "9/10",
-          "note": "Nonpartisan economist noting hiring strength alongside stagnant real wage growth"
+          "handle": "@MeidasTouch",
+          "url": "https://x.com/MeidasTouch/status/2063661459675185172",
+          "text": "Trump called Kristen Welker \"crooked and stupid,\" ripped off his mic, and ran off the set of Meet the Press. Meanwhile Israel just struck Beirut and Iran is threatening full-scale war.",
+          "views": "41K",
+          "time": "5h ago",
+          "honesty": "7/10",
+          "note": "Ties Sunday geopolitical escalation to risk-off market conditions."
         }
       ]
     },
     {
-      "headline": "Cathie Wood Says Markets Misread Strong Jobs Data",
+      "headline": "Oil Prices Jump 4% on Iran Missile Retaliation",
       "main": {
-        "handle": "@CathieDWood",
-        "url": "https://x.com/CathieDWood/status/2063084859799564501",
-        "text": "The jobs report was a barnburner. Nonfarm payrolls increased by 172,000 versus expectations for 88,000, while prior months were revised higher by 93,000. Wage growth came in at roughly 0.3%. Yet the market sold off. In our view, the market is misreading the signal. It is assuming that stronger than expected employment and growth will cause an acceleration in inflation. History would suggest otherwise.",
-        "views": "1.07M",
-        "time": "1d ago",
-        "honesty": "7/10",
-        "note": "ARK Invest CIO opinion; payroll numbers accurate but Fed-path forecast is speculative"
+        "handle": "@KobeissiLetter",
+        "url": "https://x.com/KobeissiLetter/status/2063743061704814742",
+        "text": "BREAKING: US oil prices surge over +4% to $94/barrel after Israel attacks Beirut and Iran retaliates with ballistic missiles.",
+        "views": "144K",
+        "time": "1h ago",
+        "honesty": "8/10",
+        "note": "Timely commodity-price alert from established markets publisher."
       },
       "perspectives": [
         {
           "side": "Conservative",
-          "handle": "@zerohedge",
-          "url": "https://x.com/zerohedge/status/2062874717007040991",
-          "text": "US nonfarm payrolls 172K, Exp. 88K, above highest estimate",
-          "views": "236K",
-          "time": "2d ago",
-          "honesty": "8/10",
-          "note": "Concise jobs headline; widely followed macro account, data verified against BLS"
+          "handle": "@unusual_whales",
+          "url": "https://x.com/unusual_whales/status/2063105670438883396",
+          "text": "Iran: US responsible for consequences of full Strait of Hormuz closure to oil, gas exports if mischief persists",
+          "views": "197K",
+          "time": "1d ago",
+          "honesty": "7/10",
+          "note": "Markets-flow account relaying Iranian supply-threat messaging relevant to oil pricing."
         },
         {
           "side": "Democrat",
-          "handle": "@KobeissiLetter",
-          "url": "https://x.com/KobeissiLetter/status/2062988354199712216",
-          "text": "In fact, even President Trump commented on the decline after the jobs report. Trump said \"stocks should go up, not down\" after today's jobs report. However, when you look beneath the surface, it's fairly clear that stock do NOT want a strong labor market over the near-term.",
-          "views": "384K",
-          "time": "2d ago",
+          "handle": "@SenDuckworth",
+          "url": "https://x.com/SenDuckworth/status/2063622003454820859",
+          "text": "It's day 100 of Trump's illegal war in Iran. 100 days spent putting our troops' lives in danger. 100 days without an end game. 100 days too many. It's past time for this war of choice to come to an end.",
+          "views": "7.8K",
+          "time": "8h ago",
           "honesty": "8/10",
-          "note": "Explains bond-yield-driven selloff contradicting Trump's public expectation"
+          "note": "Senator arguing open-ended conflict is the root driver of energy-market instability."
         }
       ]
     }
@@ -644,6 +644,58 @@
       "views": "eXpressO pin",
       "honesty": "9.5/10",
       "note": "Andreessen unpacking Timur Kuran's \"Private Truths, Public Lies\" + Václav Havel's greengrocer parable. No speculation — maps directly onto modern forced public compliance."
+    },
+    {
+      "headline": "Boycott debate highlights free speech double standards on race",
+      "main": {
+        "handle": "@ClownWorld",
+        "url": "https://x.com/ClownWorld/status/2063730246705123726",
+        "text": "They’re out here boycotting Chinese restaurants and Asian nail salons over one incident that the owners had absolutely nothing to do with. Imagine if white people or any other race organized a boycott against black owned businesses after a crime made the news. It would be called a hate crime and lead every single news channel in the country.",
+        "views": "32K",
+        "time": "2h ago",
+        "honesty": "7/10",
+        "note": "Commentary on selective application of hate crime labels."
+      },
+      "perspectives": []
+    },
+    {
+      "headline": "Boycott debate highlights free speech double standards on race",
+      "main": {
+        "handle": "@ClownWorld",
+        "url": "https://x.com/ClownWorld/status/2063730246705123726",
+        "text": "They’re out here boycotting Chinese restaurants and Asian nail salons over one incident that the owners had absolutely nothing to do with. Imagine if white people or any other race organized a boycott against black owned businesses after a crime made the news. It would be called a hate crime and lead every single news channel in the country.",
+        "views": "32K",
+        "time": "2h ago",
+        "honesty": "7/10",
+        "note": "Commentary on selective application of hate crime labels."
+      },
+      "perspectives": []
+    },
+    {
+      "headline": "Boycott debate highlights free speech double standards on race",
+      "main": {
+        "handle": "@ClownWorld",
+        "url": "https://x.com/ClownWorld/status/2063730246705123726",
+        "text": "They’re out here boycotting Chinese restaurants and Asian nail salons over one incident that the owners had absolutely nothing to do with. Imagine if white people or any other race organized a boycott against black owned businesses after a crime made the news. It would be called a hate crime and lead every single news channel in the country.",
+        "views": "32K",
+        "time": "2h ago",
+        "honesty": "7/10",
+        "note": "Commentary on selective application of hate crime labels."
+      },
+      "perspectives": []
+    },
+    {
+      "headline": "Boycott debate highlights free speech double standards on race",
+      "main": {
+        "handle": "@ClownWorld",
+        "url": "https://x.com/ClownWorld/status/2063730246705123726",
+        "text": "They’re out here boycotting Chinese restaurants and Asian nail salons over one incident that the owners had absolutely nothing to do with. Imagine if white people or any other race organized a boycott against black owned businesses after a crime made the news. It would be called a hate crime and lead every single news channel in the country.",
+        "views": "32K",
+        "time": "2h ago",
+        "honesty": "7/10",
+        "note": "Commentary on selective application of hate crime labels."
+      },
+      "perspectives": []
     },
     {
       "headline": "Boycott debate highlights free speech double standards on race",
