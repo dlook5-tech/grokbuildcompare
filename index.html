@@ -853,13 +853,14 @@ function selectMainPerspective(pid, panelId) {
     return;
   }
   // Build the panel content for the clicked perspective. The teaser
-  // above already conveys side (color) + views + age; the panel skips
-  // those and starts with the body so nothing is duplicated.
+  // above already conveys side (color) + views + age; the panel jumps
+  // straight to the X embed.
+  //
+  // David 2026-06-07: drop the pd-body text snippet. The same post text
+  // was rendering THREE TIMES — teaser snippet, pd-body, and the X embed
+  // itself. Pure redundancy. The X embed IS the post; the teaser is the
+  // hook. No middle plain-text duplicate.
   var html = '';
-  html += '<div class="pd-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>';
-  // Embed slot — Twitter widget loads inline. The widget itself carries
-  // the native "view on X" affordance, so we don't add a separate link
-  // (eXpressO pattern: embed only).
   html += renderEmbedSlot(p.url);
   var v = honestyParse(p.honesty);
   if (v != null) {
