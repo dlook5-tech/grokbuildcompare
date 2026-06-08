@@ -1,0 +1,173 @@
+================================================================================
+EASIEST ROUTE TO SWITCH TO LATEST MODEL: grok-composer-2.5-fast (Composer 2.5)
+================================================================================
+
+CONFIGS ARE ALREADY UPDATED FOR YOU (I did this via tools):
+- ~/.grok/config.toml now has:
+  [models]
+  default = "grok-composer-2.5-fast"
+  fork_secondary_model = "grok-composer-2.5-fast"
+
+- ~/.grok/pager.toml created with alt_screen = "always" (fixes bottom UI bugs)
+
+- Confirmed with `grok models`:
+  Default model: grok-composer-2.5-fast
+  Available: * grok-composer-2.5-fast (default), grok-build
+
+This means:
+- New launches of `grok` will use Composer 2.5 by default.
+- Subagents/forks will too.
+- Your previous long project work (grokbuildcompare curation, files, todos, backups) is 100% safe on disk. Model switch doesn't touch files or session history.
+
+================================================================================
+COPY-PASTE OPTIONS (NO NEED TO TYPE EVERYTHING YOURSELF)
+================================================================================
+
+--- OPTION 1: EASIEST - JUST RESTART WITH NEW DEFAULT (RECOMMENDED) ---
+Copy and paste this entire block into your terminal (outside the grok TUI if possible):
+
+exit
+# This exits current grok session if you're at prompt
+grok
+
+# Or if you want to force it explicitly even if config glitch:
+# grok -m grok-composer-2.5-fast
+
+After restart:
+- The TUI will start with Composer 2.5 fast as default.
+- To confirm inside: type /model   or press Ctrl+M
+- It should show grok-composer-2.5-fast selected.
+
+--- OPTION 2: SWITCH IN CURRENT RUNNING TUI SESSION (if you can type) ---
+If you can get the prompt visible (see bottom fix below), copy-paste these one by one and press Enter after each:
+
+# 1. Toggle the annoying bottom queue bar (this often reveals the input)
+Ctrl + ;
+
+# 2. Run diagnostics for your terminal (helps the "fucked up bottom" issue)
+ /terminal-setup
+
+# 3. Compact history to free space
+ /compact
+
+# 4. SWITCH THE MODEL (this is the key one for "convert everything")
+ /model grok-composer-2.5-fast
+
+# Or shorter alias:
+ /m grok-composer-2.5-fast
+
+# Alternative visual picker:
+# Press: Ctrl + M
+
+Then continue your work. The agent will now use Composer 2.5 for all future responses/tool calls in this session.
+
+--- OPTION 3: LAUNCH A FRESH SESSION WITH EXPLICIT MODEL (SAFEST FOR VISIBILITY) ---
+Copy-paste this block:
+
+# First, make sure configs are good (already are, but re-apply if paranoid)
+cat > ~/.grok/config.toml << 'CONFIGEOF'
+[cli]
+installer = "internal"
+
+[ui]
+max_thoughts_width = 120
+fork_secondary_model = "grok-composer-2.5-fast"
+yolo = false
+compact_mode = false
+permission_mode = "always-approve"
+
+[models]
+default = "grok-composer-2.5-fast"
+CONFIGEOF
+
+cat > ~/.grok/pager.toml << 'PAGERE OF'
+[terminal]
+alt_screen = "always"
+PAGERE OF
+
+# Now launch with the new model explicitly (this bypasses any cached default)
+grok -m grok-composer-2.5-fast
+
+# To also continue the most recent session with the new model:
+# grok -m grok-composer-2.5-fast -c
+
+================================================================================
+FIX THE BOTTOM SCREEN / CAN'T SEE TYPING (COPY-PASTE STEPS)
+================================================================================
+
+The bottom is the queue bar + MCP status + input prompt fighting for space.
+
+Copy and paste these actions (do in order):
+
+1. Make window taller + hide Dock (do this in macOS UI):
+   - Drag terminal window bottom edge way up.
+   - Right-click Dock (in menu bar area) > Turn Hiding On.
+   - Or: System Settings > Desktop & Dock > Automatically hide and show the Dock = On.
+
+2. Inside TUI (if prompt is semi-visible, type blindly - keys still work):
+   Ctrl + ;                 <--- paste or type this to toggle queue bar OFF
+
+3. Then type these and Enter:
+ /terminal-setup
+ /compact
+ /terminal-check
+
+4. Full screen toggle:
+   Control + Command + F   (or green maximize button)
+
+After these, the input line at bottom should be visible and you can type the /model command above.
+
+If still bad, exit and relaunch with the block in OPTION 3.
+
+================================================================================
+COPY-PASTE TO VERIFY EVERYTHING IS ON NEW MODEL
+================================================================================
+
+Once switched:
+
+ /session-info
+
+Look for "Model" line - it should say grok-composer-2.5-fast
+
+Or run outside:
+grok models
+
+Should show:
+Default model: grok-composer-2.5-fast
+* grok-composer-2.5-fast (default)
+
+================================================================================
+ALL YOUR WORK IS SAFE - NO RISK
+================================================================================
+
+- All stories.json , prototype HTML, handoff files, docs with your 3 points, elon tab, backups in ~/Desktop/grok-switch-backup/ , STATE_CHECKPOINT.md etc. are untouched on disk.
+- Session history and todos persist across model switch.
+- You can always switch back with: /model grok-build   or   grok -m grok-build
+
+If you want me (the agent) to operate under the new model for the rest of the grokbuildcompare project, use the steps above then say "continue with the project" or give next task.
+
+================================================================================
+QUICK ONE-LINER TO FORCE EVERYTHING (COPY PASTE THIS)
+================================================================================
+
+cat > ~/.grok/config.toml << 'EOT'
+[cli]
+installer = "internal"
+
+[ui]
+max_thoughts_width = 120
+fork_secondary_model = "grok-composer-2.5-fast"
+yolo = false
+compact_mode = false
+permission_mode = "always-approve"
+
+[models]
+default = "grok-composer-2.5-fast"
+EOT
+
+cat > ~/.grok/pager.toml << 'EOT'
+[terminal]
+alt_screen = "always"
+EOT
+
+grok -m grok-composer-2.5-fast

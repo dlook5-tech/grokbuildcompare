@@ -1197,13 +1197,12 @@ function renderStoryBlock(s) {
   var blindspotHtml = (activeTab === 'msm')
     ? '<div class="blindspot-badge">⚠ Blindspot</div>'
     : '';
-  // Inline meta row matching Main: handle · views · age · 8/10 · □
-  // The 8/10 is the link to the note. Used by MSM tab.
+  // Inline meta row — UNIFIED FOOTER: views · age · honesty · □
+  // No handle prefix. Same exact format on every card on every tab.
   var blockNid = honestyNid();
   var blockNote = mp.note || s.note;
   var blockHonestyBit = honestyMetaPiece(mp.honesty || s.honesty, blockNote, blockNid);
   var meta = '<span class="post-meta">' +
-    (mp.handle ? esc(mp.handle) + ' · ' : '') +
     (mp.views ? '<span class="views">' + esc(mp.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     (blockHonestyBit ? ' · ' + blockHonestyBit : '') +
@@ -1239,14 +1238,12 @@ function renderElonBlock(item) {
   var headline = esc(String(rawHeadline).replace(/^Elon:\s*/i, ''));
   var hdrAgo = timeAgo(item.time, item.url);
   // Single inline meta row matching Main exactly:
-  //   @elonmusk · 330K views · 1h ago · 8/10 · □
-  // The 8/10 is itself the link to the note (blue underlined) when a
-  // note exists. No green/yellow pill, no separate ▼ notes line.
+  //   330K views · 1h ago · 8/10 · □
+  // UNIFIED FOOTER: views · age · honesty · □ — no handle prefix.
   var elonNid = honestyNid();
   var elonHonestyBit = honestyMetaPiece(item.honesty, item.note, elonNid);
   var meta = '<span class="post-meta">' +
-    '@elonmusk' +
-    (item.views ? ' · <span class="views">' + esc(item.views) + ' views</span>' : '') +
+    (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
     (elonHonestyBit ? ' · ' + elonHonestyBit : '') +
     ' · ' + metaExpandToggle() +
@@ -1304,9 +1301,14 @@ function renderSportsBlock(item) {
   var headline = esc(item.headline || '(no headline)');
   var url = item.url || '';
   var hdrAgo = timeAgo(item.time, url);
+  // UNIFIED FOOTER: views · age · honesty · □ — same as every other tab.
+  var sportsNid = honestyNid();
+  var sportsHonestyBit = honestyMetaPiece(item.honesty, item.note, sportsNid);
   var meta = '<span class="post-meta">' +
     (item.views ? '<span class="views">' + esc(item.views) + ' views</span>' : '') +
     (hdrAgo ? ' · ' + hdrAgo : '') +
+    (sportsHonestyBit ? ' · ' + sportsHonestyBit : '') +
+    ' · ' + metaExpandToggle() +
     '</span>';
   // Parent post first (when the sports post is a reply — e.g. SAS reacting
   // to a Knicks thread, Cowherd reacting to a Germany goal). Without the

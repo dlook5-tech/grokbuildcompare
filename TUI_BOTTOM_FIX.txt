@@ -1,0 +1,29 @@
+Quick fixes for the messed up bottom / invisible typing in Grok Build TUI:
+
+1. Press Ctrl + ;   (this toggles the QUEUE / background tasks shortcut bar you see at the very bottom with "Ctrl+; queue" labels. Hiding the bar usually reveals the input prompt.)
+
+2. Drag the bottom of your terminal window UP to make it MUCH taller. The TUI needs vertical space for scrollback + thinking area + bottom status + prompt. The macOS Dock is eating rows — right-click the Dock in the system bar → "Turn Hiding On".
+
+3. Try full screen: Control + Command + F (or the green button).
+
+4. Type this (characters are sent even if you don't see them echo yet) and press Enter:
+   /terminal-setup
+
+   This runs a diagnostic and will print exact recommendations for your terminal + setup.
+
+5. Also try:
+   /compact
+
+6. After the above, to switch models (as you asked before):
+   /model grok-composer-2.5-fast
+   or press Ctrl + M for the picker.
+
+I've already:
+- Created ~/.grok/pager.toml with alt_screen = "always" (forces proper fullscreen buffer, which fixes many bottom clipping/input problems on macOS).
+- Updated your config so new sessions default to grok-composer-2.5-fast.
+
+Restart `grok` after changing pager.toml for the alt_screen change to take full effect.
+
+The long "58h19m" and "Connecting MCPs" status at the bottom is likely a stuck or very verbose background connection status that's rendering in the status/prompt area when layout space is tight. /terminal-setup should help identify it.
+
+All your previous project work (the stories curation, JSONs, HTML prototype updates, handoff, todos) remains 100% safe on disk.

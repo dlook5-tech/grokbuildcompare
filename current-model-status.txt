@@ -1,0 +1,31 @@
+Current status from tools:
+- Config default is grok-composer-2.5-fast
+- grok models shows it as default
+- But the *current active session* summary still lists "current_model_id": "grok-build"
+- UI shows "Grok Build Always Approved" because:
+  - "Grok Build" is the product/agent label (tied to how it was launched or agent_name "grok-build-plan")
+  - "Always Approved" from permission_mode = "always-approve" in config
+
+You are NOT yet using Composer in this running TUI session.
+
+To switch NOW (in current session):
+1. Press Ctrl + ;   <--- this toggles/hides the bottom queue bar that is probably covering your input line
+2. In the prompt area (now should be visible at bottom), type exactly:
+   /model grok-composer-2.5-fast
+   and press Enter.
+
+After that:
+- The right side label should update to reflect Composer (or "Grok Composer" etc.)
+- Run /session-info to confirm "current_model_id": "grok-composer-2.5-fast"
+
+If the bottom is still messed:
+- Drag window taller
+- The alt_screen we set will help more on next full restart.
+
+To start a fresh TUI on Composer (easiest for seeing model):
+bash ~/Desktop/switch-to-composer-and-launch.sh -c
+
+This will launch with explicit -m and continue recent session.
+
+The window/tab title should now show the model because we added "model" to title.items .
+

@@ -1,0 +1,35 @@
+Since you asked about order: No, the order in the script is correct.
+
+Correct sequence for safe switch:
+1. (We did earlier) Backups of sessions and project files.
+2. Update the persistent configs (~/.grok/config.toml and pager.toml) -- this is what the script does first.
+3. Launch the TUI with the model flag (-m grok-composer-2.5-fast) so the new session uses it immediately.
+   The "$@" allows passing -c or --resume <id> to continue previous context.
+
+You can safely re-run the script anytime; the updated version now auto-backups the configs first.
+
+To continue your exact previous work (the curation, todos, etc.) under Composer 2.5:
+
+# Easiest: use the script with -c (continues most recent session)
+bash ~/Desktop/switch-to-composer-and-launch.sh -c
+
+# Or for the specific recent session we saw:
+grok -m grok-composer-2.5-fast --resume 019e7fd8-04ab-7851-9c52-689315596188
+
+# Since default is now composer, this also works:
+grok --resume 019e7fd8-04ab-7851-9c52-689315596188
+
+Inside the TUI, if you want to switch the *current* running session's model mid-conversation:
+ /model grok-composer-2.5-fast
+(or Ctrl+M picker)
+
+This does NOT lose your prior file edits or history.
+
+The script order (config then launch) is right. Running the short one-liner first then the script is also fine (idempotent).
+
+After launch, if bottom is still messy:
+- Make terminal window taller
+- Ctrl+; to toggle the queue bar
+- The alt_screen=always helps on the next full restart.
+
+All set for Composer 2.5.
