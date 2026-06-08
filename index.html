@@ -520,16 +520,21 @@
      Hover lifts the saturation; spark glyph mirrors X's native Grok UI
      so 65-year-old eyes recognize it from screenshots they've seen. */
   .grok-ask-row { margin: 8px 0 2px; display: flex; justify-content: flex-end; }
+  /* X-native Grok button — black oval with the sparkle icon in white,
+     same visual language as the "Ask Grok" button on X itself. No
+     cream/mocha background; reads as a recognized X affordance. */
   .grok-ask-link {
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 0.74rem; font-weight: 700; letter-spacing: 0.3px;
-    color: #6b5d4f; background: #f3e9d2; border: 1px solid #d4b896;
+    color: #ffffff; background: #000000; border: 1px solid #000000;
     padding: 4px 10px 4px 8px; border-radius: 999px;
-    text-decoration: none; transition: background 0.15s, color 0.15s, border-color 0.15s;
+    text-decoration: none; cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s, transform 0.12s;
   }
-  .grok-ask-link:hover { background: #e8d9b3; color: #1f1a12; border-color: #b8860b; }
-  .grok-ask-link { font-family: inherit; }
-  .grok-glyph { font-size: 0.9rem; line-height: 1; color: #b8860b; }
+  .grok-ask-link:hover  { background: #1a1a1a; border-color: #333; transform: translateY(-1px); }
+  .grok-ask-link:active { transform: translateY(0); }
+  .grok-glyph { font-size: 0.95rem; line-height: 1; color: #ffffff; }
   .grok-ask-label { white-space: nowrap; }
 
   /* In-site "Ask Grok" side panel — mirrors X's native right-rail Grok
