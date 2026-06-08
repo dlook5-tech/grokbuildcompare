@@ -413,11 +413,19 @@
   .more-item .views { color: #b8860b; font-weight: 700; }
 
   /* iFollow card list */
-  .ifollow-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 8px 10px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); transition: transform 0.18s, box-shadow 0.18s; font-size: 13px; }
+  .ifollow-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; align-items: stretch; }
+  /* Flex column so the meta line pins to the bottom of every card. With
+     grid align-items: stretch above, every card in a row is the same
+     height; flex-column + margin-top: auto on the meta makes the
+     headline take the breathing room and the stats sit at the floor.
+     David 2026-06-07: 'expand/contract box needs to be the same height
+     and size, further down in the box, allowing more room for the
+     actual print within the box.' */
+  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 10px 12px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); transition: transform 0.18s, box-shadow 0.18s; font-size: 13px; display: flex; flex-direction: column; min-height: 140px; }
   .ifollow-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(80,50,20,0.18); }
   .ifollow-card.story.open { transform: none; }
-  .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; }
+  .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; flex: 1; }
+  .ifollow-card .story-header > span[style*="flex:1"] { display: flex; flex-direction: column; }
   /* Typography inverted 2026-06-07 per user: 'Smaller font for twitter
      handle name, larger font for story summary, smaller font for stats
      on the bottom line. What does the reader really want? They want
@@ -430,7 +438,10 @@
   .ifollow-name a { color: #6b5d4f; text-decoration: none; }
   .ifollow-name a:hover { color: #b8860b; }
   .ifollow-just { font-size: 1rem; color: #1a1a1a; line-height: 1.28; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.15px; }
-  .ifollow-meta { font-size: 0.66rem; color: #8a7e72; font-weight: 600; margin-bottom: 4px; }
+  /* margin-top: auto pushes the meta row to the bottom of the flex column,
+     so the headline takes the empty space above and every card's stats
+     line sits at the same vertical position regardless of headline length. */
+  .ifollow-meta { font-size: 0.66rem; color: #8a7e72; font-weight: 600; margin-top: auto; padding-top: 8px; }
   .ifollow-meta .views { color: #b8860b; font-weight: 800; }
   .ifollow-meta .ifollow-honesty-num { color: #2a2218; font-weight: 800; }
   /* Note fold — ▼ arrow + click-to-expand. Only renders when entry has a note. */
