@@ -1129,7 +1129,12 @@ function renderSourceTile(mp) {
         (mp.views ? ' · <span class="views">' + esc(mp.views) + ' views</span>' : '') +
         (ago ? ' · ' + ago : '') +
       '</div>' +
-      '<div class="post-body">' + esc(mp.text || mp.body || '').replace(/\n/g, '<br/>') + '</div>' +
+      // Drop the plain-text body when an X embed will load — the embed
+      // shows the post natively, so prose duplicate above it is just
+      // repetition. Fallback to text only when there's no embed-able URL.
+      (isXStatusUrl(url)
+        ? ''
+        : '<div class="post-body">' + esc(mp.text || mp.body || '').replace(/\n/g, '<br/>') + '</div>') +
       renderEmbedSlot(url) +
     '</div>'
   );
@@ -1152,7 +1157,9 @@ function renderPerspectiveTile(p) {
         (p.views ? ' · <span class="views">' + esc(p.views) + ' views</span>' : '') +
         (ago ? ' · ' + ago : '') +
       '</div>' +
-      '<div class="post-body">' + esc(p.text || '').replace(/\n/g, '<br/>') + '</div>' +
+      // Embed shows the post natively — no duplicate prose body.
+      // (Tile is dropped above if there's no real X URL, so we always
+      // have an embed here.)
       renderEmbedSlot(url) +
       renderHonestyFold(p.honesty, p.note) +
     '</div>'
