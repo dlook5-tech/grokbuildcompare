@@ -126,16 +126,6 @@
           "time": "21h ago",
           "honesty": "7/10",
           "note": "Conservative commentator linking foreign-influence fears to US-Israel policy fights."
-        },
-        {
-          "side": "Democrat",
-          "handle": "@HunterBiden",
-          "url": "https://x.com/HunterBiden/status/2062667009062580511",
-          "text": "The MAGA Whisperer Strikes Again!",
-          "views": "1.69M",
-          "time": "3d ago",
-          "honesty": "8/10",
-          "note": "Hunter Biden own viral clap-back post fueling the social media storm covered June 6-7."
         }
       ]
     },
@@ -194,16 +184,6 @@
           "time": "21h ago",
           "honesty": "8/10",
           "note": "Conservative account quoting statutory SHALL NOT BE SUSPENDED language on Israel intel."
-        },
-        {
-          "side": "Democrat",
-          "handle": "@BarbMcQuade",
-          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
-          "text": "Seems like a bait and switch. After predictable outcry, Trump DOJ pulls back slush fund for insurrectionists, but retains tax immunity for Trump. Was that the plan all along? It’s all corrupt. \n https://www.nytimes.com/2026/06/05/us/politics/trump-immunity-tax-audit.html?smid=nytcore-ios-share",
-          "views": "133K",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "Former US Attorney and MSNBC legal analyst criticizing Trump-era DOJ maneuvers in same congressional news cycle."
         }
       ]
     }
@@ -254,16 +234,6 @@
           "time": "2d ago",
           "honesty": "8/10",
           "note": "Treasury Secretary framing continued economic pressure on Iran amid negotiations."
-        },
-        {
-          "side": "Democrat",
-          "handle": "@naval",
-          "url": "https://x.com/naval/status/2063292550388298025",
-          "text": "The product is the mission.",
-          "views": "1.37M",
-          "time": "1d ago",
-          "honesty": "7/10",
-          "note": "Tech investor posting amid macro volatility as energy markets react to Iran headlines."
         }
       ]
     },
@@ -278,28 +248,7 @@
         "honesty": "8/10",
         "note": "Widely shared markets account comparing tech rout to emergency AI lab rescues."
       },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "handle": "@DineshDSouza",
-          "url": "https://x.com/DineshDSouza/status/2063082195242127698",
-          "text": ".@PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft’s digital cloud system for allegedly being used by Chinese nationals to hack Government systems in Aug. 2025.",
-          "views": "563K",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "Conservative commentator on Pentagon Microsoft cloud audit amid tech-security fears."
-        },
-        {
-          "side": "Democrat",
-          "handle": "@chamath",
-          "url": "https://x.com/chamath/status/2063293668245864934",
-          "text": "He foretold it…",
-          "views": "549K",
-          "time": "1d ago",
-          "honesty": "7/10",
-          "note": "Tech investor reacting to prior warnings about AI-market volatility playing out."
-        }
-      ]
+      "perspectives": []
     }
   ],
   "elon": [
