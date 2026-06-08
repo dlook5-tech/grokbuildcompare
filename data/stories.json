@@ -1,601 +1,10 @@
 {
   "last_updated": "2026-06-08T19:00:00Z",
-  "world": [
-    {
-      "headline": "Pentagon confirms Israel bugged US peace negotiators' phones",
-      "main": {
-        "url": "https://x.com/MarioNawfal/status/2063421429115244613",
-        "text": "🚨🇺🇸🇮🇱 The Pentagon espionage bombshell just got worse... Israel has been eavesdropping on the American peace negotiators themselves (Witkoff, Colby, DiMino). Threat level higher than any other ally.",
-        "views": "90K",
-        "time": "2h ago",
-        "honesty": "8/10",
-        "note": "Primary reporting citing NYT/Pentagon on specific bugs against named US officials."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Israel is scrambling to complete their takeover of the U.S. before the American people have time to organize nationwide pogroms.",
-          "url": "https://x.com/realstewpeters/status/2063440248869179889",
-          "views": "11K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Opinion framing espionage as takeover; conservative foreign influence concern.",
-          "parentPost": {
-            "handle": "MarioNawfal",
-            "url": "https://x.com/MarioNawfal/status/2063421429115244613",
-            "text": "🚨🇺🇸🇮🇱 The Pentagon espionage bombshell just got worse... Israel has been eavesdropping on the American peace negotiators themselves (Witkoff, Colby, D...",
-            "time": "2h ago",
-            "views": "90K"
-          }
-        },
-        {
-          "side": "Independent",
-          "text": "Thomas Massie just called Section 224 of the 2027 NDAA a treasonous merger of the Israeli and American militaries. Finally.",
-          "url": "https://x.com/GoUncensored/status/2063437612782645303",
-          "views": "7.5K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Direct attribution to Rep. Massie on the NDAA linking provision.",
-          "parentPost": {
-            "handle": "MarioNawfal",
-            "url": "https://x.com/MarioNawfal/status/2063421429115244613",
-            "text": "🚨🇺🇸🇮🇱 The Pentagon espionage bombshell just got worse... Israel has been eavesdropping on the American peace negotiators themselves (Witkoff, Colby, D...",
-            "time": "2h ago",
-            "views": "90K"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "US-Israel intel sharing locked in by law, critics call it treason",
-      "main": {
-        "url": "https://x.com/realstewpeters/status/2063434071124898072",
-        "text": "TITLE XI SEC. 622: “Intelligence sharing ... with Israel SHALL NOT be suspended, reduced, or otherwise materially limited.” This is TREASON.",
-        "views": "11K",
-        "time": "2h ago",
-        "honesty": "8/10",
-        "note": "Exact statutory language from the bill."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "American soldiers deployed to defend Israel had their phones bugged and wiretapped by Mossad – New York Times",
-          "url": "https://x.com/MonitorX99800/status/2063438209321755107",
-          "views": "5.6K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Cites NYT on Mossad actions vs US troops.",
-          "parentPost": {
-            "handle": "realstewpeters",
-            "url": "https://x.com/realstewpeters/status/2063434071124898072",
-            "text": "TITLE XI SEC. 622: “Intelligence sharing ... with Israel SHALL NOT be suspended, reduced, or otherwise materially limited.” This is TREASON....",
-            "time": "2h ago",
-            "views": "11K"
-          }
-        },
-        {
-          "side": "Democrat",
-          "text": "The US-Israel merger JUST GOT WORSE! The bill makes permanent intelligence sharing that can't be limited even by future presidents.",
-          "url": "https://x.com/KimIversenShow/status/2063398853332656524",
-          "views": "22K",
-          "time": "3h ago",
-          "honesty": "7/10",
-          "note": "Highlights the 'shall not be suspended' clause.",
-          "parentPost": {
-            "handle": "realstewpeters",
-            "url": "https://x.com/realstewpeters/status/2063434071124898072",
-            "text": "TITLE XI SEC. 622: “Intelligence sharing ... with Israel SHALL NOT be suspended, reduced, or otherwise materially limited.” This is TREASON....",
-            "time": "2h ago",
-            "views": "11K"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "Dave Matthews calls for end to violence in Gaza, West Bank, Lebanon and beyond",
-      "main": {
-        "url": "https://x.com/MarcoFoster_/status/2063426311356387653",
-        "text": "Dave Matthews: “I will never stop calling for an end to the violence in Gaza and the West Bank and Lebanon and for that matter the Congo and Sudan and Ukraine or the horrific violence against immigrants and their neighbors in our country”",
-        "views": "65K",
-        "time": "2h ago",
-        "honesty": "8/10",
-        "note": "Direct multi-conflict quote from the artist."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "We need to RALLY and DEMAND 622 of S 4615 AND Section 224 of NDAA FY 27 be STRIPPED out of legislation!",
-          "url": "https://x.com/DiligentDenizen/status/2063441505541316814",
-          "views": "17K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Citizen call to strip the specific intel merger sections.",
-          "parentPost": {
-            "handle": "MarcoFoster_",
-            "url": "https://x.com/MarcoFoster_/status/2063426311356387653",
-            "text": "Dave Matthews: “I will never stop calling for an end to the violence in Gaza and the West Bank and Lebanon and for that matter the Congo and Sudan and...",
-            "time": "2h ago",
-            "views": "65K"
-          }
-        },
-        {
-          "side": "Independent",
-          "text": "someone should ask hunter biden about israel",
-          "url": "https://x.com/queersocialism/status/2063428259056902204",
-          "views": "16K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Sarcastic call for accountability on foreign business ties.",
-          "parentPost": {
-            "handle": "MarcoFoster_",
-            "url": "https://x.com/MarcoFoster_/status/2063426311356387653",
-            "text": "Dave Matthews: “I will never stop calling for an end to the violence in Gaza and the West Bank and Lebanon and for that matter the Congo and Sudan and...",
-            "time": "2h ago",
-            "views": "65K"
-          }
-        }
-      ]
-    }
-  ],
-  "nation": [
-    {
-      "headline": "Elon: only way to save democracy is to pass the SAVE America Act",
-      "main": {
-        "url": "https://x.com/MAGAVoice/status/2063391981632618996",
-        "text": "BREAKING: Elon Musk just told his 240 MILLIONS Followers that the only way to Save Democracy is to pass the Save America Act.",
-        "views": "228K",
-        "time": "3h ago",
-        "honesty": "8/10",
-        "note": "Elon's statement on the voter integrity bill."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "California’s blatant election fraud is what’s coming for the rest of the country if we don’t pass the SAVE America Act.",
-          "url": "https://x.com/WallStreetMav/status/2063452065788031245",
-          "views": "10K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Links CA ballot issues to national need for the Act.",
-          "parentPost": {
-            "handle": "MAGAVoice",
-            "url": "https://x.com/MAGAVoice/status/2063391981632618996",
-            "text": "BREAKING: Elon Musk just told his 240 MILLIONS Followers that the only way to Save Democracy is to pass the Save America Act....",
-            "time": "3h ago",
-            "views": "228K"
-          }
-        },
-        {
-          "side": "Democrat",
-          "text": "If @LeaderJohnThune would have passed the SAVE America Act months ago… Spencer Pratt wins the LA Mayor race by a landslide.",
-          "url": "https://x.com/GuntherEagleman/status/2063440963112952179",
-          "views": "23K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Claims the bill would have altered a specific local race.",
-          "parentPost": {
-            "handle": "MAGAVoice",
-            "url": "https://x.com/MAGAVoice/status/2063391981632618996",
-            "text": "BREAKING: Elon Musk just told his 240 MILLIONS Followers that the only way to Save Democracy is to pass the Save America Act....",
-            "time": "3h ago",
-            "views": "228K"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "ICE agents use pepper balls on anti-ICE rioters to clear path",
-      "main": {
-        "url": "https://x.com/MAGAVoice/status/2063372175034503386",
-        "text": "JUST IN: ICE Agents have started to sh**t pepper balls at Anti ICE Rioters so vehicles can go through I COULD WATCH THIS ALL DAY LONG",
-        "views": "33K",
-        "time": "3h ago",
-        "honesty": "7/10",
-        "note": "Video of enforcement during clashes."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "ICE Agent: “What you say? You gonna k*ll me? You gonna K*LL me?”. Now this Rioter is in a Jail cell PROTECT ICE AT ALL COSTS",
-          "url": "https://x.com/MAGAVoice/status/2063361585276711253",
-          "views": "31K",
-          "time": "3h ago",
-          "honesty": "7/10",
-          "note": "Additional clip emphasizing agent protection.",
-          "parentPost": {
-            "handle": "MAGAVoice",
-            "url": "https://x.com/MAGAVoice/status/2063372175034503386",
-            "text": "JUST IN: ICE Agents have started to sh**t pepper balls at Anti ICE Rioters so vehicles can go through I COULD WATCH THIS ALL DAY LONG...",
-            "time": "3h ago",
-            "views": "33K"
-          }
-        },
-        {
-          "side": "Democrat",
-          "text": "Provision risks overreach and family separations.",
-          "url": "https://x.com/BarbMcQuade/status/2063248837410484639",
-          "views": "42K",
-          "time": "10h ago",
-          "honesty": "7/10",
-          "note": "Legal analyst on enforcement risks (used once only in entire grid).",
-          "parentPost": {
-            "handle": "MAGAVoice",
-            "url": "https://x.com/MAGAVoice/status/2063372175034503386",
-            "text": "JUST IN: ICE Agents have started to sh**t pepper balls at Anti ICE Rioters so vehicles can go through I COULD WATCH THIS ALL DAY LONG...",
-            "time": "3h ago",
-            "views": "33K"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "Trump pardons former GOP congressman convicted of insider trading",
-      "main": {
-        "url": "https://x.com/allenanalysis/status/2063278248872620260",
-        "text": "🚨 🔥 MAJOR BREAKING: Trump Just Pardoned A Former Congressman Convicted Of Insider Trading. Stephen Buyer... convicted in 2023 for trading stocks using nonpublic information.",
-        "views": "12K",
-        "time": "8h ago",
-        "honesty": "8/10",
-        "note": "Report on 2023 conviction + recent pardon."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Pass the SAVE America Act now!",
-          "url": "https://x.com/LangmanVince/status/2063439767971213765",
-          "views": "7.5K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Ties the pardon debate to election integrity legislation.",
-          "parentPost": {
-            "handle": "allenanalysis",
-            "url": "https://x.com/allenanalysis/status/2063278248872620260",
-            "text": "🚨 🔥 MAJOR BREAKING: Trump Just Pardoned A Former Congressman Convicted Of Insider Trading. Stephen Buyer... convicted in 2023 for trading stocks using...",
-            "time": "8h ago",
-            "views": "12K"
-          }
-        },
-        {
-          "side": "Democrat",
-          "text": "Pardon for insider trading reignites debate on congressional stock trading.",
-          "url": "https://x.com/Asmongold/status/2063440834171658356",
-          "views": "42K",
-          "time": "10h ago",
-          "honesty": "8/10",
-          "note": "Notes the pardon spotlights the stock-trading issue (used once only).",
-          "parentPost": {
-            "handle": "allenanalysis",
-            "url": "https://x.com/allenanalysis/status/2063278248872620260",
-            "text": "🚨 🔥 MAJOR BREAKING: Trump Just Pardoned A Former Congressman Convicted Of Insider Trading. Stephen Buyer... convicted in 2023 for trading stocks using...",
-            "time": "8h ago",
-            "views": "12K"
-          }
-        }
-      ]
-    }
-  ],
-  "business": [
-    {
-      "headline": "Trump to meet AI leaders on possible US government investment",
-      "main": {
-        "url": "https://x.com/Polymarket/status/2062975005592330425",
-        "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies.",
-        "views": "828K",
-        "time": "1d ago",
-        "honesty": "8/10",
-        "note": "Announcement corroborated across sources."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "We need to RALLY and DEMAND 622 of S 4615 AND Section 224 of NDAA FY 27 be STRIPPED out of legislation!",
-          "url": "https://x.com/Eric_Schmitt/status/2063337625486782844",
-          "views": "17K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Investment meeting framed with call to strip merger sections.",
-          "parentPost": {
-            "handle": "Polymarket",
-            "url": "https://x.com/Polymarket/status/2062975005592330425",
-            "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies....",
-            "time": "1d ago",
-            "views": "828K"
-          }
-        },
-        {
-          "side": "Independent",
-          "text": "Elon Musk asked @grok to confirm if Congress was trying to silently attach an Israel-US military intelligence merger without We the People knowing. Grok said YES.",
-          "url": "https://x.com/GoUncensored/status/2063437612782645303b",
-          "views": "90K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Ties AI meeting to the intel merger concerns (distinct string).",
-          "parentPost": {
-            "handle": "Polymarket",
-            "url": "https://x.com/Polymarket/status/2062975005592330425",
-            "text": "JUST IN: Trump announces he will meet with AI leaders next week to discuss possible U.S. government investment in their companies....",
-            "time": "1d ago",
-            "views": "828K"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "Sacks warns Bernie 50% AI stake proposal risks CCP-style social credit",
-      "main": {
-        "url": "https://x.com/DavidSacks/status/2063256205343052286",
-        "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in AI companies) resonates... Nationalization of AI will accelerate the corporate-government fusion...",
-        "views": "1.46M",
-        "time": "10h ago",
-        "honesty": "8/10",
-        "note": "Primary Sacks analysis on the 50% stake and fusion risks (confined to this one story's three slots only)."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Stupidity tax on labs that hyped job loss and safety risks.",
-          "url": "https://x.com/WallStreetMav/status/2063452065788031245b",
-          "views": "10K",
-          "time": "1h ago",
-          "honesty": "7/10",
-          "note": "Sarcastic on labs' prior hype vs the stake proposal (distinct string).",
-          "parentPost": {
-            "handle": "DavidSacks",
-            "url": "https://x.com/DavidSacks/status/2063256205343052286",
-            "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in ...",
-            "time": "10h ago",
-            "views": "1.46M"
-          }
-        },
-        {
-          "side": "Democrat",
-          "text": "Bernie Sanders' proposal for the government to take a 50% stake in AI companies would guarantee that the trillions created by AI are used to improve the lives of all of us.",
-          "url": "https://x.com/queersocialism/status/2063428259056902204b",
-          "views": "16K",
-          "time": "2h ago",
-          "honesty": "7/10",
-          "note": "Supports public stake for broad benefits (distinct string).",
-          "parentPost": {
-            "handle": "DavidSacks",
-            "url": "https://x.com/DavidSacks/status/2063256205343052286",
-            "text": "While I’m no fan of socialism or arbitrary confiscations of wealth, I can see why Bernie Sanders’ proposal (for the government to take a 50% stake in ...",
-            "time": "10h ago",
-            "views": "1.46M"
-          }
-        }
-      ]
-    },
-    {
-      "headline": "Thomas Massie calls NDAA Israel military merger 'treasonous'",
-      "main": {
-        "url": "https://x.com/GoUncensored/status/2063437612782645303c",
-        "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally.",
-        "views": "7.5K",
-        "time": "2h ago",
-        "honesty": "8/10",
-        "note": "Massie's characterization of the NDAA section (distinct string)."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "The same people who told us decline was inevitable are furious that America is being restored. The border is closed. Murder is down.",
-          "url": "https://x.com/realstewpeters/status/2063434071124898072b",
-          "views": "23K",
-          "time": "4h ago",
-          "honesty": "7/10",
-          "note": "Sen. Schmitt on restoration metrics (distinct string).",
-          "parentPost": {
-            "handle": "GoUncensored",
-            "url": "https://x.com/GoUncensored/status/2063437612782645303c",
-            "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally....",
-            "time": "2h ago",
-            "views": "7.5K"
-          }
-        },
-        {
-          "side": "Independent",
-          "text": "Please provide the data you're referencing",
-          "url": "https://x.com/MonitorX99800/status/2063438209321755107b",
-          "views": "25K",
-          "time": "2h ago",
-          "honesty": "8/10",
-          "note": "Demand for evidence in the policy debate (distinct string).",
-          "parentPost": {
-            "handle": "GoUncensored",
-            "url": "https://x.com/GoUncensored/status/2063437612782645303c",
-            "text": "Thomas Massie just called Section 224 of the 2027 NDAA what it is: A treasonous merger of the Israeli and American militaries. Finally....",
-            "time": "2h ago",
-            "views": "7.5K"
-          }
-        }
-      ]
-    }
-  ],
-  "elon": [
-    {
-      "headline": "SpaceX started with under 10 people and no office furniture",
-      "url": "https://x.com/elonmusk/status/2063270313933091097",
-      "text": "SpaceX was less than 10 people back then. We didn’t even have office furniture.",
-      "views": "11.2M",
-      "time": "5h ago",
-      "parentPost": {
-        "url": "https://x.com/cb_doge/status/2063228406289117662",
-        "text": "SpaceX started with a mariachi band party in 2002.",
-        "handle": "@cb_doge",
-        "views": "11.3M",
-        "time": "8h ago"
-      },
-      "honesty": "9/10",
-      "note": "Primary source confirmation of SpaceX founding conditions in 2002; tiny team, no furniture, mariachi party origins. Matches historical photos and public record. Direct from founder on the humble start of the reusable rocket company."
-    },
-    {
-      "headline": "Antonio's support for SpaceX: loan in 2008 when it looked like failure",
-      "url": "https://x.com/elonmusk/status/2063336033995866249",
-      "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. Antonio’s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. One could not ask for a better friend. He is a great man.",
-      "views": "387K",
-      "time": "4h ago",
-      "parentPost": {
-        "url": "https://x.com/SMB_Attorney/status/2063297889242059071",
-        "text": "Antonio Gracias lent Elon Musk $1 million in ‘08 to save SpaceX from bankruptcy for 7.2% of the company. It’s now worth $90 billion, making it the single greatest investment in the history of the world.",
-        "handle": "@SMB_Attorney",
-        "views": "214K",
-        "time": "5h ago"
-      },
-      "honesty": "9/10",
-      "note": "Primary source from Elon on SpaceX 2008 financing details and long-term friendship-based ownership. Directly addresses and corrects equity claims with facts. Excellent verifiability and accuracy from the principal; neutral on the personal support that enabled the tech development."
-    },
-    {
-      "headline": "No university degree teaches how to build an orbital rocket",
-      "url": "https://x.com/elonmusk/status/2063320495047553401",
-      "text": "There is obviously no “degree” you can get from a university that actually teaches you how to make an orbital rocket, as none of the professors know how to do it!",
-      "views": "364K",
-      "time": "5h ago",
-      "honesty": "9/10",
-      "note": "Direct explanation from founder on why practical, hands-on engineering (not academic credentials) was required for SpaceX. Highlights the gap in formal education for frontier rocket tech and the first-principles approach that drove reusable launch vehicles."
-    },
-    {
-      "headline": "ASML should be treasured — arguably the greatest company in Europe",
-      "url": "https://x.com/elonmusk/status/2063335081385644403",
-      "text": "ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-      "views": "288K",
-      "time": "4h ago",
-      "honesty": "8/10",
-      "note": "Elon's assessment of ASML's critical role in EUV lithography for advanced semiconductors (key enabler for AI training chips, Tesla FSD hardware, and compute generally). Subjective 'greatest' framing but grounded in ASML's unique tech monopoly position; primary view from a major tech customer/peer."
-    },
-    {
-      "headline": "I didn’t think I was qualified — no one good would join a failing rocket startup",
-      "url": "https://x.com/elonmusk/status/2063319907849093544",
-      "text": "I didn’t “think I was qualified”. There was no other choice. No one good would join a rocket startup as chief engineer that they thought was destined for failure.",
-      "views": "223K",
-      "time": "5h ago",
-      "honesty": "8/10",
-      "note": "Primary account of stepping into chief engineer role at early SpaceX despite self-doubt. Illustrates the talent acquisition challenge for high-risk deep-tech hardware ventures and the personal commitment required to advance rocket reusability."
-    },
-    {
-      "headline": "Hardware is hard",
-      "url": "https://x.com/elonmusk/status/2063296591717421070",
-      "text": "Hardware is hard",
-      "views": "153K",
-      "time": "5h ago",
-      "parentPost": {
-        "url": "https://x.com/aaditsh/status/2063153391153602789",
-        "text": "Wait. Google is paying SpaceX $920 million per month for GPUs? ... 110,000 NVIDIA GPUs... I'm honestly not sure what to make of this. Either Google's AI compute needs have gotten so massive... Or SpaceX has built something in AI infrastructure that nobody was paying attention to.",
-        "handle": "@aaditsh",
-        "views": "908K",
-        "time": "10h ago"
-      },
-      "honesty": "8/10",
-      "note": "Iconic short observation in context of SpaceX landing a massive $920M/mo compute supply deal with Google (110k H100-class GPUs). Highlights the real-world difficulty of scaling physical AI infrastructure at the same time as rockets — primary from the builder."
-    },
-    {
-      "headline": "Read books, talk to people & iterate rapidly with hardware & software",
-      "url": "https://x.com/elonmusk/status/2063333242820853969",
-      "text": "Read books, talk to people & iterate rapidly with hardware & software",
-      "views": "128K",
-      "time": "4h ago",
-      "honesty": "8/10",
-      "note": "Concise statement of Elon's core development philosophy — continuous learning plus fast physical + digital iteration. Repeatedly demonstrated in Tesla Autopilot/FSD and SpaceX Starship/raptor engine cycles; transparent personal operating principle behind the tech progress.",
-      "parentPost": {
-        "handle": "@AJamesMcCarthy",
-        "url": "https://x.com/AJamesMcCarthy/status/2063330000000000000",
-        "text": "What's the best way to learn and build in tech and engineering? Books or talking to people?",
-        "time": "5h ago",
-        "views": "45K"
-      }
-    },
-    {
-      "headline": "SpaceX origin: $50M from PayPal for philanthropic Mars mission, not commercial",
-      "url": "https://x.com/elonmusk/status/2063339026812129733",
-      "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space, but didn’t think there was anything private individuals could do. The origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars, so that NASA’s budget could be increased... The $50M was from the proceeds of the sale of PayPal to eBay. After learning more... the issue was a lack of advancement in rocket technology, in particular the failure to develop a fully reusable rocket...",
-      "views": "86K",
-      "time": "4h ago",
-      "parentPost": {
-        "url": "https://x.com/adeoressi/status/2063327234929447277",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
-        "handle": "@adeoressi",
-        "views": "186K",
-        "time": "5h ago"
-      },
-      "honesty": "9/10",
-      "note": "Detailed first-hand account of SpaceX founding intent (philanthropic Mars excitement to boost NASA, $50M PayPal exit capital, pivot to reusable rocket as the core technical blocker). Corroborated by Adeo Ressi parent post. High accuracy and primary-source proximity on the non-commercial origins."
-    },
-    {
-      "headline": "Hiding in plain sight",
-      "url": "https://x.com/elonmusk/status/2063331842510537017",
-      "text": "Hiding in plain sight 🤷‍♂️",
-      "views": "62K",
-      "time": "4h ago",
-      "parentPost": {
-        "url": "https://x.com/beffjezos/status/2063195922910400602",
-        "text": "The xAI master plan was right under our nose all along... (quoting old Elon 2019: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
-        "handle": "@beffjezos",
-        "views": "142K",
-        "time": "9h ago"
-      },
-      "honesty": "7/10",
-      "note": "Brief reply acknowledging that the xAI strategy (massive GPU clusters for training) was visible in a 2019 tweet. Context supplied entirely by the quoted parent post; verifiability high once thread is seen. Minimal standalone text so honesty tempered, but no inaccuracy."
-    },
-    {
-      "headline": "True",
-      "url": "https://x.com/elonmusk/status/2063336918255813069",
-      "text": "True",
-      "views": "30K",
-      "time": "4h ago",
-      "parentPost": {
-        "url": "https://x.com/adeoressi/status/2063237987295760550",
-        "text": "I organized an intervention to stop Elon from starting SpaceX. Here is the story... Twenty five years ago, Elon and I sat in a car on a dark stretch of Long Island highway... Life to Mars plan... The intervention failed. Elon was committed. The rest is history.",
-        "handle": "@adeoressi",
-        "views": "186K",
-        "time": "5h ago"
-      },
-      "honesty": "8/10",
-      "note": "One-word affirmation of Adeo Ressi's account of the pre-SpaceX intervention attempt. The parent post supplies the full context of the original Life to Mars philanthropic vision and Elon's early determination. Verifiable via the referenced conversation; the brevity is typical but the embedded parent makes the exchange meaningful."
-    }
-  ],
-  "sports": [
-    {
-      "headline": "USMNT Jedi scores incredible 'worldy' goal in pre-World Cup friendly",
-      "url": "https://x.com/USMNT/status/2063339587486072911",
-      "text": "RIP IT AND FLIP IT! A WORLDY FROM JEDI! #USMNT x @VW",
-      "views": "2.6M",
-      "time": "3h ago"
-    },
-    {
-      "headline": "Knicks get huge defensive stop to win NBA Finals Game 2, lead 2-0",
-      "url": "https://x.com/NBA/status/2063100710573527098",
-      "text": "KNICKS GET THE HUGE DEFENSIVE STOP TO WIN GAME 2 🚨 THEY'VE WON 13 STRAIGHT AND LEAD THE NBA FINALS, 2-0 🚨",
-      "views": "1.8M",
-      "time": "20h ago"
-    },
-    {
-      "headline": "Mikal Bridges: '0-0. Stay desperate at all times' after Knicks take 2-0 lead",
-      "url": "https://x.com/ohnohedidnt24/status/2063103574091939882",
-      "text": "Mikal after going up 2-0 in the finals: \"0-0. Stay desperate at all times\"",
-      "views": "4.5M",
-      "time": "20h ago"
-    },
-    {
-      "headline": "SAS: ORANGE AND BLUE SKIES 🧡💙😤",
-      "url": "https://x.com/stephenasmith/status/2063308244203057510",
-      "text": "ORANGE AND BLUE SKIES 🧡💙😤",
-      "views": "96K",
-      "time": "6h ago"
-    },
-    {
-      "headline": "Cowherd: Two minutes in. Germany scores. Stay positive. Stay positive...",
-      "url": "https://x.com/colincowherd/status/2063331538553450849",
-      "text": "Two minutes in. Germany scores. Stay positive. Stay positive. Stay positive. Stay positive. That goal didn’t count. No reason to get cynical. This is just a friendly. We are barely taking it seriously. Still just 1-0 Germany.",
-      "views": "37K",
-      "time": "4h ago"
-    },
-    {
-      "headline": "Next: Wemby in clutch: backboard 3, airball, 2 turnovers, missed game winner",
-      "url": "https://x.com/pilgeousx/status/2063101963470782572",
-      "text": "Wemby in the clutch in the first 2 finals games: Hit the backboard on a 3, Airballed a 3, 2 clutch turnovers, 1 game winner missed",
-      "views": "113K",
-      "time": "20h ago"
-    }
-  ],
+  "world": [],
+  "nation": [],
+  "business": [],
+  "elon": [],
+  "sports": [],
   "ifollow": [
     {
       "handle": "@AOC",
@@ -607,180 +16,90 @@
       "handle": "@billmaher",
       "justification": "Bill Maher: Trump blasts 'Low Ratings Bill Maher'",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/billmaher/status/2063093840580633048",
-        "views": "478K",
-        "time": "16h ago",
-        "text": "Trump “truthed” at me again. He called me “Low Ratings Bill Maher and his Fake Laughing Machine.” Speaking of low ratings, yours is 35%."
-      },
       "note": "Direct quote from Maher; verifiable primary source, minor opinion framing."
     },
     {
       "handle": "@Tesla",
       "justification": "Tesla: FSD does the rest – just look at the road",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/Tesla/status/2063116454661431761",
-        "views": "387K",
-        "time": "15h ago",
-        "text": "All you have to do is look at the road – your Tesla does all the rest"
-      },
       "note": "Tesla corporate post; clear promo but factual on product feature."
     },
     {
       "handle": "@SawyerMerritt",
       "justification": "Sawyer Merritt: Tesla seeks Nevada robotaxi permit",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/SawyerMerritt/status/2063052465231057272",
-        "views": "352K",
-        "time": "19h ago",
-        "text": "Tesla has officially applied for an Autonomous Vehicle Network Company permit in Nevada."
-      },
       "note": "Insider report on Tesla filing; high verifiability from regulatory notice."
     },
     {
       "handle": "@elonmusk",
       "justification": "Elon Musk: Humanity is disappearing 😔",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/elonmusk/status/2063333492449009867",
-        "views": "330K",
-        "time": "0h ago",
-        "text": "Humanity is disappearing 😔 https://www.wsj.com/health/wellness/us-fertility-rate-impact-f8024b33?st=j9Tbii"
-      },
       "note": "Elon personal post linking WSJ; high velocity, opinion on fertility data."
     },
     {
       "handle": "@DineshDSouza",
       "justification": "Dinesh D'Souza: Hegseth audits Microsoft cloud for China hacks",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/DineshDSouza/status/2063082195242127698",
-        "views": "317K",
-        "time": "17h ago",
-        "text": ".@PeteHegseth has announced an internal audit of Bill Gates-connected company Microsoft’s digital cloud system for allegedly being used by Chinese nationals to hack Government systems in Aug. 2025."
-      },
       "note": "Dinesh post on audit; primary claim with specifics, good sourcing."
     },
     {
       "handle": "@MattWalshBlog",
       "justification": "Matt Walsh: Facts point to Karmelo Anthony as cold-blooded killer",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/MattWalshBlog/status/2062986972503621936",
-        "views": "255K",
-        "time": "23h ago",
-        "text": "I’m making judgments about the Karmelo Anthony case based on all of the established facts which all point overwhelmingly to Anthony being a cold blooded killer. It’s got nothing to do with emotion."
-      },
       "note": "Opinionated analysis from Walsh; strong framing but facts on case align with reports."
     },
     {
       "handle": "@JackPosobiec",
       "justification": "Jack Posobiec: CNN on 'cultural' ballot counting in California",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/JackPosobiec/status/2062912964735234501",
-        "views": "242K",
-        "time": "4h ago",
-        "text": "BREAKING: CNN tells their audience to not worry about fraud in California it’s just like 2020 where Republican ballots are ‘counted culturally’ first before Democrat ballots come in"
-      },
       "note": "Breaking claim from Posobiec; video evidence in thread supports core allegation."
     },
     {
       "handle": "@chamath",
       "justification": "Chamath: He foretold it… (open-source AI)",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/chamath/status/2063293668245864934",
-        "views": "196K",
-        "time": "3h ago",
-        "text": "He foretold it…"
-      },
       "note": "Chamath quote-tweet; short but ties to open-source AI discussion."
     },
     {
       "handle": "@nickshirleyy",
       "justification": "Nick Shirley: Vowing to expose all of California",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/nickshirleyy/status/2063126739560054792",
-        "views": "188K",
-        "time": "14h ago",
-        "text": "I will expose all of California if I have to"
-      },
       "note": "Personal vow from Nick; high engagement, primary but anecdotal."
     },
     {
       "handle": "@catturd2",
       "justification": "Catturd: Every life is precious",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/catturd2/status/2063010297946816953",
-        "views": "146K",
-        "time": "22h ago",
-        "text": "Every life is precious"
-      },
       "note": "Catturd quote; emotional but aligns with pro-life primary sources."
     },
     {
       "handle": "@PBDsPodcast",
       "justification": "PBD Podcast: Mehdi Hasan pressed on UK crime crisis",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/PBDsPodcast/status/2062897233897619733",
-        "views": "117K",
-        "time": "5h ago",
-        "text": "“No OUTRAGE For Henry Nowak?” - @mehdirhasan PRESSED On U.K.'s Crime CRISIS"
-      },
       "note": "PBD episode clip; factual title but self-promo for podcast."
     },
     {
       "handle": "@naval",
       "justification": "Naval: The product is the mission",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/naval/status/2063292550388298025",
-        "views": "105K",
-        "time": "3h ago",
-        "text": "The product is the mission."
-      },
       "note": "Naval philosophical; consistent with his body of work, high primary."
     },
     {
       "handle": "@DavidSacks",
       "justification": "David Sacks: Thanks to @sriramk for AI work",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/DavidSacks/status/2063313189497131425",
-        "views": "78K",
-        "time": "2h ago",
-        "text": "Thank you @sriramk for this generous post. It has been one of the great privileges of my time in the Administration to work so closely with you over the past 18 months."
-      },
       "note": "Sacks reply; primary from key figure, generous tone."
     },
     {
       "handle": "@IanCarrollShow",
       "justification": "Ian Carroll: Soft launching AI Charlie Kirk?",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/IanCarrollShow/status/2063322181036318847",
-        "views": "51K",
-        "time": "1h ago",
-        "text": "Now they’re soft launching AI Charlie Kirk to see if anyone notices."
-      },
       "note": "Ian Carroll opinion; high velocity, ties to verifiable Kirk footage."
     },
     {
       "handle": "@MTSlive",
       "justification": "MTS: At the foothills of the singularity",
       "honesty": "8/10",
-      "topPost": {
-        "url": "https://x.com/MTSlive/status/2062903104266485911",
-        "views": "12K",
-        "time": "5h ago",
-        "text": "At the foothills of the singularity if you need anything"
-      },
       "note": "MTS recap; aggregate of news, useful signal but secondary synthesis."
     }
   ],
@@ -794,204 +113,8 @@
       "views": "eXpressO pin",
       "honesty": "9.5/10",
       "note": "Andreessen unpacking Timur Kuran's \"Private Truths, Public Lies\" + Václav Havel's greengrocer parable. No speculation — maps directly onto modern forced public compliance."
-    },
-    {
-      "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
-      "text": "Question…\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
-      "url": "https://x.com/C_3C_3/status/2062853128467136697",
-      "views": "5.7M",
-      "time": "13h ago",
-      "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
-    },
-    {
-      "headline": "Open-source notes beat censorship for truth",
-      "text": "Elon Musk on Community Notes: open source software and data, everyone including him gets checked, no note removal, 'better information checked in real time' beats censorship.",
-      "url": "https://x.com/elonmusk/status/2062953758313644460",
-      "views": "2.0M",
-      "time": "6h ago",
-      "honesty": "9/10",
-      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features."
-    },
-    {
-      "headline": "Hiding in plain sight",
-      "url": "https://x.com/elonmusk/status/2063331842510537017",
-      "text": "Hiding in plain sight 🤷‍♂️",
-      "views": "62K",
-      "time": "5h ago",
-      "honesty": "7/10",
-      "note": "Brief reply acknowledging xAI strategy visible in old tweet.",
-      "parentPost": {
-        "handle": "@beffjezos",
-        "url": "https://x.com/beffjezos/status/2063195922910400602",
-        "text": "The xAI master plan was right under our nose all along... (quoting old Elon 2019: Step 1: Buy a sh*tload of GPUs Step 2: ? Step 3: Profit)",
-        "time": "9h ago",
-        "views": "142K"
-      }
     }
   ],
-  "msm": [
-    {
-      "headline": "UK police drag dying Henry Nowak, ignore 'I can't breathe' - two-tier policing exposed",
-      "main": {
-        "url": "https://x.com/JDVance/status/2062938286977421755",
-        "text": "Henry Nowak died the same way a civilization dies: abandoned, handcuffed by authorities who neither trusted nor cared for him, and accused of hate crimes he did not commit. ... It is because we love the West that we want to preserve it. ... stopping the flow of mass migration and defending national sovereignty is a matter of political will and leadership.",
-        "views": "10.7M",
-        "time": "1d ago",
-        "honesty": "9/10",
-        "note": "JD Vance post quoting primary video evidence of police dragging handcuffed Henry Nowak as he said 'I can't breathe' nine times before dying from stab wounds. Corroborated by doctor statements and footage; legacy media largely ignores the two-tier policing and anti-white bias angle tied to Race Action Plan training."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Justice for Henry Nowak requires sacking officers, banning Kirpan, remigration, death penalty for killer, and ending anti-white police training.",
-          "url": "https://x.com/NickTenconi/status/2062935543864762435",
-          "views": "17K",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "UKIP leader lists specific demands backed by incident details and policy critique; primary on the bias training link to the death."
-        },
-        {
-          "side": "Independent",
-          "text": "Doctor says police actions 'caused or contributed' to Henry Nowak's death; coroner investigates.",
-          "url": "https://x.com/britishpoles/status/2062833896547311743",
-          "views": "786K",
-          "time": "1d ago",
-          "honesty": "9/10",
-          "note": "Polish media/doctor primary quote on survival if not dragged/handcuffed; video and official coroner order provide high verifiability on medical causation ignored in mainstream coverage."
-        }
-      ]
-    },
-    {
-      "headline": "Canada criminalizes Bible quotes on marriage as 'hate speech' under new Bill C-9",
-      "main": {
-        "url": "https://x.com/DavidJHarrisJr/status/2063293996697366900",
-        "text": "🚨JUST IN: Canada just criminalized the Bible. Bill C-9 has passed the Senate, removing key religious protections and opening the door for Scripture to be treated as “hate speech.” Quoting the Bible on marriage, sin, or God’s design for sexuality can now lead to prosecution for “willful promotion of hatred.” This is a direct attack on Christianity and religious freedom in Canada.",
-        "views": "72K",
-        "time": "7h ago",
-        "honesty": "8/10",
-        "note": "Direct report on Senate passage of Bill C-9 with specific impacts on Bible quotes; primary legislative fact, high accuracy on the removal of protections. Legacy media downplays as 'hate speech' law while X highlights religious liberty erosion under ideological policies."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Sikhs and others must face accountability for community actions; no special treatment under law.",
-          "url": "https://x.com/AnmolMD/status/2062944613061832712",
-          "views": "60K",
-          "time": "1d ago",
-          "honesty": "7/10",
-          "note": "Commentary tying to recent UK Sikh-related incident; calls for equal accountability, grounded in observed patterns but interpretive on 'whole community'."
-        },
-        {
-          "side": "Democrat",
-          "text": "Laws against hate speech protect vulnerable groups from bigotry in religious texts.",
-          "url": "https://x.com/hippyygoat/status/2062872077166645426",
-          "views": "26K",
-          "time": "1d ago",
-          "honesty": "6/10",
-          "note": "Opposing view on similar 'hate' framing in UK context; accurate on intent of such laws but lacks primary on the specific Canadian bill details."
-        }
-      ]
-    },
-    {
-      "headline": "Hundreds rally in Australia to honor UK teen Henry Nowak as West unites against two-tier injustice",
-      "main": {
-        "url": "https://x.com/britishpoles/status/2063133227657932813",
-        "text": "Hundreds gather in Perth, Australia, to honour murdered British teen Henry Nowak. The West is uniting against two-tiered anti-white injustice!",
-        "views": "31K",
-        "time": "18h ago",
-        "honesty": "8/10",
-        "note": "Photo evidence of Perth rally; primary on global reaction to the UK case. X amplifies international solidarity while legacy media in UK/Australia minimizes the 'anti-white' and immigration-linked aspects of the murder and protests."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Global protests show rejection of mass migration and anti-white policies that led to Henry Nowak's death.",
-          "url": "https://x.com/angloid0/status/2062963924635447365",
-          "views": "112K",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "Direct call for remigration and death penalty tied to specific case details and policy failures; high primary alignment with evidence."
-        },
-        {
-          "side": "Independent",
-          "text": "Police treated Henry Nowak with brutality while lenient on other groups - two-tier policing is real.",
-          "url": "https://x.com/TheJadeWarwick/status/2062985603852234781",
-          "views": "7K",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "Video of police response contrasted with other protests; factual on differential treatment per public records and footage."
-        }
-      ]
-    },
-    {
-      "headline": "UK minister condemns Henry Nowak protests but attended violent pro-Palestine demo - two-tier hypocrisy",
-      "main": {
-        "url": "https://x.com/ScaryEurope/status/2063133227657932813",
-        "text": "Shabana Mahmood has CONDEMNED the Henry Nowak protests but she ATTENDED a Pro-Palestine protest in Birmingham which ended in violence and disorder. She has since deleted this video. Our Home Secretary is #TwoTier",
-        "views": "31K",
-        "time": "18h ago",
-        "honesty": "8/10",
-        "note": "Side-by-side evidence of minister's attendance at violent event vs condemnation of Nowak protests; primary video and photo proof. Legacy media avoids highlighting the inconsistency in 'two-tier' enforcement tied to ideological priorities."
-      },
-      "perspectives": [
-        {
-          "side": "Conservative",
-          "text": "Two-tier policing and politics exposed: harsh on white British victims, soft on others.",
-          "url": "https://x.com/rdales442/status/2063270942558568693",
-          "views": "74K",
-          "time": "9h ago",
-          "honesty": "8/10",
-          "note": "Video of police refusing to kneel for Nowak contrasted with other responses; factual differential treatment."
-        },
-        {
-          "side": "Democrat",
-          "text": "Protests for Henry Nowak are being exploited by far-right to stoke division.",
-          "url": "https://x.com/TPointUK/status/2063294534948122634",
-          "views": "14K",
-          "time": "7h ago",
-          "honesty": "6/10",
-          "note": "Counter-narrative on protests; acknowledges events but frames as exploitation without engaging primary evidence of the murder and policing."
-        }
-      ]
-    },
-    {
-      "headline": "Pentagon confirms Israel bugged US peace negotiators' phones",
-      "url": "https://x.com/MarioNawfal/status/2063421429115244613",
-      "text": "The Pentagon espionage bombshell just got worse... Israel has been eavesdropping on the American peace negotiators themselves (Witkoff, Colby, DiMino). Threat level higher than any other ally.",
-      "views": "90K",
-      "time": "5h ago",
-      "honesty": "8/10",
-      "note": "Primary reporting citing NYT/Pentagon on specific bugs against named US officials."
-    },
-    {
-      "headline": "US-Israel intel sharing locked in by law, critics call it treason",
-      "url": "https://x.com/realstewpeters/status/2063434071124898072",
-      "text": "TITLE XI SEC. 622: “Intelligence sharing ... with Israel SHALL NOT be suspended, reduced, or otherwise materially limited.” This is TREASON.",
-      "views": "11K",
-      "time": "5h ago",
-      "honesty": "8/10",
-      "note": "Exact statutory language from the bill."
-    }
-  ],
-  "earlier": [
-    {
-      "headline": "Late ballot drops: have any gone overwhelmingly GOP?",
-      "text": "Question…\n\nHave you ever seen a late night ballot drop go overwhelmingly Republican?\n\nLike ever.",
-      "url": "https://x.com/C_3C_3/status/2062853128467136697",
-      "views": "5.7M",
-      "time": "13h ago",
-      "honesty": "7/10",
-      "note": "Rhetorical question about partisan skew of late counted ballots — core election-integrity discourse. No data cited in the post; invites scrutiny of counting patterns. Accurate as a question, not a factual claim; high relevance to free debate on election transparency."
-    },
-    {
-      "headline": "Open-source notes beat censorship for truth",
-      "text": "Elon Musk on Community Notes: open source software and data, everyone including him gets checked, no note removal, 'better information checked in real time' beats censorship.",
-      "url": "https://x.com/elonmusk/status/2062953758313644460",
-      "views": "2.0M",
-      "time": "6h ago",
-      "honesty": "9/10",
-      "note": "Accurately describes Community Notes transparency mechanics per public system design. Strong verifiability on how the product works. Opinion that this beats censorship is normative but grounded in stated features."
-    }
-  ]
+  "msm": [],
+  "earlier": []
 }
