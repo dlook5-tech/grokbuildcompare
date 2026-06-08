@@ -1191,12 +1191,10 @@ function renderStoryBlock(s) {
   var mp = s.main || s.main_post || {};
   var headline = esc(s.headline || mp.text || '(no headline)');
   var hdrAgo = timeAgo(mp.time, mp.url);
-  // BLINDSPOT badge — only renders on MSM tab. Tells the reader at a
-  // glance that this story IS the editorial wedge: legacy media isn't
-  // covering it. Same urgency vocabulary as the empty-MSM banner.
-  var blindspotHtml = (activeTab === 'msm')
-    ? '<div class="blindspot-badge">⚠ Blindspot</div>'
-    : '';
+  // BLINDSPOT badge killed 2026-06-08 per David — "don't need to have
+  // the red blind spot on there." The MSM tab subtitle + hero already
+  // tell the reader these are stories MSM is underreporting.
+  var blindspotHtml = '';
   // Inline meta row — UNIFIED FOOTER: views · age · honesty · □
   // No handle prefix. Same exact format on every card on every tab.
   var blockNid = honestyNid();
