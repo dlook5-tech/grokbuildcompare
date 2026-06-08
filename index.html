@@ -421,7 +421,7 @@
      David 2026-06-07: 'expand/contract box needs to be the same height
      and size, further down in the box, allowing more room for the
      actual print within the box.' */
-  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 10px 12px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); transition: transform 0.18s, box-shadow 0.18s; font-size: 13px; display: flex; flex-direction: column; min-height: 140px; }
+  .ifollow-card { background: #faf6f0; border: 1px solid #d4b896; border-radius: 6px; padding: 8px 10px; box-shadow: 0 2px 6px rgba(80,50,20,0.1); transition: transform 0.18s, box-shadow 0.18s; font-size: 13px; display: flex; flex-direction: column; min-height: 96px; }
   .ifollow-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(80,50,20,0.18); }
   .ifollow-card.story.open { transform: none; }
   .ifollow-card .story-header { cursor: pointer; display: flex; align-items: flex-start; gap: 8px; flex: 1; }
@@ -434,14 +434,14 @@
        name (eyebrow):  small uppercase label — just attribution
        just (headline): largest, bold — the hook the reader scans
        meta (stats):    smallest — utility info */
-  .ifollow-name { font-weight: 600; color: #6b5d4f; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 4px; }
+  .ifollow-name { font-weight: 600; color: #6b5d4f; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 2px; }
   .ifollow-name a { color: #6b5d4f; text-decoration: none; }
   .ifollow-name a:hover { color: #b8860b; }
-  .ifollow-just { font-size: 1rem; color: #1a1a1a; line-height: 1.28; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.15px; }
+  .ifollow-just { font-size: 0.95rem; color: #1a1a1a; line-height: 1.25; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.15px; }
   /* margin-top: auto pushes the meta row to the bottom of the flex column,
      so the headline takes the empty space above and every card's stats
      line sits at the same vertical position regardless of headline length. */
-  .ifollow-meta { font-size: 0.66rem; color: #8a7e72; font-weight: 600; margin-top: auto; padding-top: 8px; }
+  .ifollow-meta { font-size: 0.66rem; color: #8a7e72; font-weight: 600; margin-top: auto; padding-top: 4px; }
   .ifollow-meta .views { color: #b8860b; font-weight: 800; }
   .ifollow-meta .ifollow-honesty-num { color: #2a2218; font-weight: 800; }
   /* Note fold — ▼ arrow + click-to-expand. Only renders when entry has a note. */
