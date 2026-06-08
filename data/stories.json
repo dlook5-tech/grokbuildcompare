@@ -222,16 +222,6 @@
       },
       "perspectives": [
         {
-          "side": "Conservative",
-          "handle": "@elonmusk",
-          "url": "https://x.com/elonmusk/status/2063335081385644403",
-          "text": "@NUnl ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-          "views": "1.24M",
-          "time": "1d ago",
-          "honesty": "8/10",
-          "note": "Elon Musk praising ASML as private-sector counterexample to government equity plans."
-        },
-        {
           "side": "Democrat",
           "handle": "@krassenstein",
           "url": "https://x.com/krassenstein/status/2063256205343052286",
@@ -314,26 +304,6 @@
   ],
   "elon": [
     {
-      "headline": "I didn’t think I was qualified — no one good would join a failing rocket startup",
-      "text": "@jawwwn_ @60Minutes I didn’t “think I was qualified”. There was no other choice. No one good would join a rocket startup as chief engineer that they thought was destined for failure.",
-      "url": "https://x.com/elonmusk/status/2063319907849093544",
-      "views": "481K",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "8/10",
-      "note": "Primary account of stepping into chief engineer role at early SpaceX despite self-doubt. Illustrates the talent acquisition challenge for high-risk deep-tech hardware ventures and the personal commitment required to advance rocket reusability."
-    },
-    {
-      "headline": "Hardware is hard",
-      "text": "@aaditsh Hardware is hard",
-      "url": "https://x.com/elonmusk/status/2063296591717421070",
-      "views": "372K",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "8/10",
-      "note": "Iconic short observation in context of SpaceX landing a massive $920M/mo compute supply deal with Google (110k H100-class GPUs). Highlights the real-world difficulty of scaling physical AI infrastructure at the same time as rockets — primary from the builder."
-    },
-    {
       "headline": "SpaceX started with under 10 people and no office furniture",
       "text": "SpaceX was less than 10 people back then. We didn’t even have office furniture.",
       "url": "https://x.com/elonmusk/status/2063270313933091097",
@@ -349,76 +319,6 @@
         "views": "35.4M",
         "time": "1d ago"
       }
-    },
-    {
-      "headline": "SpaceX origin: $50M from PayPal for philanthropic Mars mission, not commercial",
-      "text": "True, when we were stuck in traffic on the way back to NYC, Adeo asked me what I was going to do after PayPal/X and I said I always wanted to do something to advance space, but didn’t think there was anything private individuals could do. \n\nThe origin of SpaceX was doing a philanthropic mission to get the public excited about life on Mars, so that NASA’s budget could be increased to achieve that goal. There was no commercial ambition at the time.\n\nThe $50M was from the proceeds of the sale of PayPal to eBay.\n\nAfter learning more about the limiting factors for humanity in space, it became obvious that the issue was a lack of advancement in rocket technology, in particular the failure to develop a fully reusable rocket, without which expanding consciousness beyond Earth is impossible.",
-      "url": "https://x.com/elonmusk/status/2063339026812129733",
-      "views": "287K",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "9/10",
-      "note": "Detailed first-hand account of SpaceX founding intent (philanthropic Mars excitement to boost NASA, $50M PayPal exit capital, pivot to reusable rocket as the core technical blocker). Corroborated by Adeo Ressi parent post. High accuracy and primary-source proximity on the non-commercial origins."
-    },
-    {
-      "headline": "Hiding in plain sight",
-      "text": "@beffjezos Hiding in plain sight 🤷‍♂️",
-      "url": "https://x.com/elonmusk/status/2063331842510537017",
-      "views": "192K",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "7/10",
-      "note": "Brief reply acknowledging that the xAI strategy (massive GPU clusters for training) was visible in a 2019 tweet. Context supplied entirely by the quoted parent post; verifiability high once thread is seen. Minimal standalone text so honesty tempered, but no inaccuracy."
-    },
-    {
-      "headline": "True",
-      "text": "@jaynitx True",
-      "url": "https://x.com/elonmusk/status/2063336918255813069",
-      "views": "149K",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "8/10",
-      "note": "One-word affirmation of Adeo Ressi's account of the pre-SpaceX intervention attempt. The parent post supplies the full context of the original Life to Mars philanthropic vision and Elon's early determination. Verifiable via the referenced conversation; the brevity is typical but the embedded parent makes the exchange meaningful."
-    },
-    {
-      "headline": "Read books, talk to people & iterate rapidly with hardware & software",
-      "text": "@AJamesMcCarthy Read books, talk to people & iterate rapidly with hardware & software",
-      "url": "https://x.com/elonmusk/status/2063333242820853969",
-      "views": "1.3M",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "8/10",
-      "note": "Concise statement of Elon's core development philosophy — continuous learning plus fast physical + digital iteration. Repeatedly demonstrated in Tesla Autopilot/FSD and SpaceX Starship/raptor engine cycles; transparent personal operating principle behind the tech progress."
-    },
-    {
-      "headline": "ASML should be treasured — arguably the greatest company in Europe",
-      "text": "@NUnl ASML should be treasured and supported. It is arguably the greatest company in Europe.",
-      "url": "https://x.com/elonmusk/status/2063335081385644403",
-      "views": "1.2M",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "8/10",
-      "note": "Elon's assessment of ASML's critical role in EUV lithography for advanced semiconductors (key enabler for AI training chips, Tesla FSD hardware, and compute generally). Subjective 'greatest' framing but grounded in ASML's unique tech monopoly position; primary view from a major tech customer/peer."
-    },
-    {
-      "headline": "Antonio's support for SpaceX: loan in 2008 when it looked like failure",
-      "text": "That was a short-term loan when I ran out of money in 2008. He did not receive any equity for it. \n\nAntonio’s ownership stems from absolute support, even when it looked like SpaceX would fail, and many investments over 2 decades. \n\nOne could not ask for a better friend. He is a great man.",
-      "url": "https://x.com/elonmusk/status/2063336033995866249",
-      "views": "1.1M",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "9/10",
-      "note": "Primary source from Elon on SpaceX 2008 financing details and long-term friendship-based ownership. Directly addresses and corrects equity claims with facts. Excellent verifiability and accuracy from the principal; neutral on the personal support that enabled the tech development."
-    },
-    {
-      "headline": "No university degree teaches how to build an orbital rocket",
-      "text": "@jawwwn_ @60Minutes There is obviously no “degree” you can get from a university that actually teaches you how to make an orbital rocket, as none of the professors know how to do it!",
-      "url": "https://x.com/elonmusk/status/2063320495047553401",
-      "views": "1M",
-      "time": "1d ago",
-      "type": "reply",
-      "honesty": "9/10",
-      "note": "Direct explanation from founder on why practical, hands-on engineering (not academic credentials) was required for SpaceX. Highlights the gap in formal education for frontier rocket tech and the first-principles approach that drove reusable launch vehicles."
     }
   ],
   "sports": [
@@ -601,25 +501,13 @@
       "handle": "@nickshirleyy",
       "justification": "Nick shirley: @MAGACharlie2024 I will expose all of California if ...",
       "honesty": "8/10",
-      "note": "Truth score on verifiability and framing of this single post.",
-      "topPost": {
-        "url": "https://x.com/nickshirleyy/status/2063126739560054792",
-        "views": "289K",
-        "time": "1d ago",
-        "text": "@MAGACharlie2024 I will expose all of California if I have to"
-      }
+      "note": "Truth score on verifiability and framing of this single post."
     },
     {
       "handle": "@AOC",
       "justification": "Alexandria Ocasio-Cortez: 😭😭😭 💙🧡💙🧡",
       "honesty": "8/10",
-      "note": "Truth score on verifiability and framing of this single post.",
-      "topPost": {
-        "url": "https://x.com/AOC/status/2063100590457012589",
-        "views": "1.8M",
-        "time": "1d ago",
-        "text": "😭😭😭 💙🧡💙🧡"
-      }
+      "note": "Truth score on verifiability and framing of this single post."
     },
     {
       "handle": "@naval",
