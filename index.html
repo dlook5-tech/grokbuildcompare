@@ -1738,8 +1738,13 @@ function renderTabIFollow() {
               '<span class="arrow" style="margin-top:4px;">▶</span>' +
               '<span style="flex:1;">'
         : '<div class="ifollow-card">';
+      // Parent post embed for iFollow — when the handle's topPost is a
+      // reply or quote-tweet, render the original post above the embed
+      // so the reader knows what's being responded to. David's universal
+      // rule: "We must always know what we're responding to."
+      var ifParentHtml = tp ? renderParentPost(tp.parentPost || tp.parent_post) : '';
       var wrapEnd = topEmbed
-        ? '</span></div><div class="story-body" style="padding-top:10px;border-top:1px solid #ede4cf;">' + topEmbed + '</div></div>'
+        ? '</span></div><div class="story-body" style="padding-top:10px;border-top:1px solid #ede4cf;">' + ifParentHtml + topEmbed + '</div></div>'
         : '</div>';
       h += wrapStart +
              '<div class="ifollow-name"><a href="' + esc(profileUrl) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">' + esc(displayName) + '</a></div>' +
