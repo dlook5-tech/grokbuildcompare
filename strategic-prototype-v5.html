@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eXpressO • Strategic Prototype v5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap">
+    <style>
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .logo { font-family: 'Space Grotesk', sans-serif; letter-spacing: -1.5px; }
+        .story-card { transition: transform 0.1s ease, box-shadow 0.1s ease; }
+        .story-card:hover { transform: translateY(-1px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .perspective { position: relative; }
+        .perspective::after { content: "▼"; position: absolute; top: 10px; right: 12px; font-size: 10px; color: #444; opacity: 0.7; }
+        .score { font-weight: 700; font-size: 15px; }
+        .high { color: #4ade80; }
+        .medium { color: #facc15; }
+        .section-header { font-size: 11px; letter-spacing: 1.5px; font-weight: 600; }
+        .velocity-badge { background: #1f2937; color: #60a5fa; font-size: 10px; padding: 1px 6px; border-radius: 9999px; font-weight: 600; }
+        .x-link { font-size: 11px; color: #60a5fa; text-decoration: none; }
+        .x-link:hover { text-decoration: underline; }
+        .honesty-box { background: #111; font-size: 11px; line-height: 1.35; }
+        .tab-active { background: #222; color: #fff; border-radius: 9999px; padding: 6px 16px; font-size: 12px; font-weight: 600; }
+        .proto-note { font-size: 12px; color: #666; }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#e5e5e5]">
+    <!-- Banner -->
+    <div class="bg-[#111] border-b border-[#222] py-2">
+        <div class="max-w-[1080px] mx-auto px-6 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-3">
+                <span class="font-semibold text-[#f1f1f1]">STRATEGIC PROTOTYPE v5</span>
+                <span class="px-2 py-0.5 bg-[#1a1a1a] rounded text-[#888] text-[10px]">TRUE MULTI-STORY • 3-PERSPECTIVE • X-NATIVE VELOCITY</span>
+            </div>
+            <div class="text-[#666]">June 2026 • Desktop review build • Direct X tool sourcing</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="border-b border-[#222] bg-[#0f0f0f]">
+        <div class="max-w-[1080px] mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="logo text-3xl font-semibold tracking-tighter">eXpressO</div>
+                <div class="text-xs px-2 py-0.5 bg-[#1a1a1a] rounded text-[#777]">Velocity Curation</div>
+            </div>
+            <div class="text-right">
+                <div class="text-sm font-medium">Last curated: moments ago • 4-hour window</div>
+                <div class="text-[10px] text-[#666]">Stories ranked by real X views + quote/reply velocity + reaction diversity</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs (visual only) -->
+    <div class="max-w-[1080px] mx-auto px-6 pt-4">
+        <div class="flex gap-1 text-sm">
+            <div class="px-4 py-1 text-[#888]">Top</div>
+            <div class="tab-active">World</div>
+            <div class="px-4 py-1 text-[#888]">USA</div>
+            <div class="px-4 py-1 text-[#888]">Business</div>
+        </div>
+    </div>
+
+    <div class="max-w-[1080px] mx-auto px-6 pt-6 pb-12">
+
+        <!-- Mission statement -->
+        <div class="mb-8 text-sm text-[#aaa] max-w-[720px]">
+            <strong class="text-[#ddd]">Prime Directive test:</strong> Surface the actual highest-velocity conversations people are amplifying on X right now. 
+            Deliver genuine three-perspective clusters (Conservative voices that are actually pro-strength on the topic, Independent analysis, and critical/Democrat framing) 
+            drawn from real engagement — not forced buckets or post-remediation. Clear World vs USA separation. Zero story duplication. 
+            Honesty scoring remains transparent footnotes, not filters. This version uses only direct X tool data for selection and perspective sourcing.
+        </div>
+
+        <!-- ========== WORLD SECTION ========== -->
+        <div class="mb-10">
+            <div class="section-header text-[#888] mb-3 flex items-center gap-2">
+                <span>WORLD</span>
+                <span class="text-[10px] font-normal text-[#555]">— Geopolitics, foreign policy, energy chokepoints, military action</span>
+            </div>
+
+            <!-- STORY 1: IRAN HORMUZ (HIGHEST VELOCITY) -->
+            <div class="story-card bg-[#141414] border border-[#222] rounded-2xl p-6 mb-8">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <div class="text-[15px] font-semibold leading-tight pr-4">Iran ends all negotiations with US and vows to "completely" block Strait of Hormuz + Bab el-Mandeb Strait</div>
+                        <div class="text-xs text-[#777] mt-1">Oil surges 8%+ • Shipping markets seized • Multiple US strikes on IRGC targets reported</div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <div class="velocity-badge">2.77M views • 993 quotes</div>
+                        <div class="text-[10px] text-[#666] mt-0.5">KobeissiLetter primary • June 1 2026</div>
+                    </div>
+                </div>
+
+                <div class="text-[11px] text-[#777] mb-4">Why surfaced: Highest quote velocity + cross-reaction cluster in current geopolitics window. Multiple 200k–276k view follow-on posts from key accounts. Clear three-way split in actual engagement.</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    
+                    <!-- Conservative -->
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#60a5fa] mb-2">CONSERVATIVE / AMERICA FIRST</div>
+                        <div class="text-sm leading-snug mb-3">"IT'S OFFICIAL: The US military just launched MULTIPLE STRIKES against Iran, pummeling Iranian capabilities that threatened American forces and shipping in the Strait. The mullahs are continuously screwing up. MAXIMUM PRESSURE is the only way. 47 could utterly unleash if he feels like it, AT ANY MOMENT."</div>
+                        <div class="text-xs text-[#666] mb-1">— @EricLDaugh (276k views, video of strikes)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">9/10</span>
+                            <div class="text-[10px] mt-1">Direct from primary high-velocity account celebrating self-defense strikes and maximum pressure doctrine. Matches multiple corroborating posts (GuntherEagleman 73k views, TrumpDailyPosts). Core events confirmed by CENTCOM references and Iranian statements. Strong but accurate framing of the "mullahs testing ceasefire" narrative.</div>
+                        </div>
+                        <a href="https://x.com/EricLDaugh/status/2061438168449130827" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                    <!-- Independent -->
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#facc15] mb-2">INDEPENDENT / ANALYST</div>
+                        <div class="text-sm leading-snug mb-3">"BREAKING: Iran announces it is ending all negotiations with the US and vows to 'completely' block the Strait of Hormuz, per CNBC. Iran says it is ending negotiations due to repeated ceasefire violations including Israeli strikes in Lebanon. Iran also threatens to block the Bab el-Mandeb Strait." Oil already +8%.</div>
+                        <div class="text-xs text-[#666] mb-1">— @KobeissiLetter (2.77M views) + @HormuzLetter</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">8.5/10</span>
+                            <div class="text-[10px] mt-1">Highest-fidelity market + timeline signal on the platform. Minimal partisan overlay. Accurately captures Iranian stated rationale (Lebanon strikes as trigger) and immediate energy market reaction. Best single source for "what just happened" velocity.</div>
+                        </div>
+                        <a href="https://x.com/KobeissiLetter/status/2061442620983787689" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                    <!-- Democrat / Critical -->
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#f87171] mb-2">DEMOCRAT / CRITICAL</div>
+                        <div class="text-sm leading-snug mb-3">"Give them hell Iran. I’m willing to pay a lot more in gas if it means Tel Aviv being wiped off the map." Other high-engagement reactions in the cluster frame US/Israeli actions in Lebanon as the driver of Iranian escalation and highlight costs to global south populations via energy prices and potential supply shocks.</div>
+                        <div class="text-xs text-[#666] mb-1">— @SocialistMMA (high-engagement quote on main post) + aligned reactions</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score medium">6.5/10</span>
+                            <div class="text-[10px] mt-1">Captures real anti-escalation and "who started it" sentiment that gained traction in the quote cluster. Strong on global south energy cost angle. Weaker on sourcing specific US policy details or acknowledging Iranian proxy role in prior ceasefire violations. Velocity on this framing was real but lower than pro-deterrence posts.</div>
+                        </div>
+                        <a href="https://x.com/SocialistMMA/status/2061472385073594477" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                </div>
+                <div class="mt-3 text-[10px] text-[#555]">Additional strong conservative velocity: @GuntherEagleman "This is what real leadership looks like... Iran only respects strength... Proud of this President" (73k views) — <a href="https://x.com/GuntherEagleman/status/2061477347191030136" target="_blank" class="text-[#60a5fa]">view</a></div>
+            </div>
+        </div>
+
+        <!-- ========== USA SECTION ========== -->
+        <div class="mb-10">
+            <div class="section-header text-[#888] mb-3 flex items-center gap-2">
+                <span>USA</span>
+                <span class="text-[10px] font-normal text-[#555]">— Domestic policy, media accountability, government integrity</span>
+            </div>
+
+            <!-- STORY 2: ERIC TRUMP VS PSAKI -->
+            <div class="story-card bg-[#141414] border border-[#222] rounded-2xl p-6 mb-6">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <div class="text-[15px] font-semibold leading-tight pr-4">Eric Trump issues formal defamation notice to Jen Psaki and MSNBC over false "China board" claims</div>
+                        <div class="text-xs text-[#777] mt-1">30-second public disclosure check allegedly contradicts on-air accusation • Lawsuit notice announced</div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <div class="velocity-badge">610k+ views (original) • 130k+ amplification</div>
+                        <div class="text-[10px] text-[#666] mt-0.5">Benny Johnson + Eric Trump posts</div>
+                    </div>
+                </div>
+
+                <div class="text-[11px] text-[#777] mb-4">Why surfaced: Sustained high engagement on media accountability + "finally fighting back" framing. Clear velocity winner in domestic legal/media stories this window. Strong one-sided conservative reaction.</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#60a5fa] mb-2">CONSERVATIVE / AMERICA FIRST</div>
+                        <div class="text-sm leading-snug mb-3">"Eric Trump is SUING Jen Psaki and MSNBC over false claims On-Air about his business deals. GOOD. Legacy media spent YEARS smearing the Trump family because they assumed nobody would fight back. Maybe a few lawsuits will remind them that lying has consequences. Take them all to court."</div>
+                        <div class="text-xs text-[#666] mb-1">— @bennyjohnson (130k+ views)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">8.5/10</span>
+                            <div class="text-[10px] mt-1">Faithful to the highest-velocity conservative amplification of the story. Accurately reflects the core claim (no board role or knowledge per Eric's disclosures). Dominant framing on X for this event. Strong on "consequences for reckless reporting" argument.</div>
+                        </div>
+                        <a href="https://x.com/bennyjohnson/status/2056430831841735061" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#facc15] mb-2">INDEPENDENT / EVIDENCE FOCUS</div>
+                        <div class="text-sm leading-snug mb-3">"A 30-second review of basic financial disclosures—literally her most fundamental duty as a journalist—would have shown I have zero leadership or decision-making in the company she claimed I was 'on the board of'... I have NO knowledge whatsoever of the transaction... Formal notice is going out Monday with a lawsuit to follow…"</div>
+                        <div class="text-xs text-[#666] mb-1">— @EricTrump original post (610k views)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">9/10</span>
+                            <div class="text-[10px] mt-1">Primary source, highly specific, falsifiable claim (public disclosures). Excellent signal-to-noise. The independent value is the direct evidence test rather than partisan framing. This is the factual core driving the velocity.</div>
+                        </div>
+                        <a href="https://x.com/EricTrump/status/2055788804787618024" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#f87171] mb-2">DEMOCRAT / CRITICAL</div>
+                        <div class="text-sm leading-snug mb-3">Use of defamation notices and lawsuits by powerful political families against journalists and networks raises standard press freedom and chilling-effect concerns. Critics argue this shifts from "more speech" to weaponizing courts to deter scrutiny of family business dealings and potential influence.</div>
+                        <div class="text-xs text-[#666] mb-1">Institutional / legacy framing (lower raw X velocity on this specific claim vs accountability angle)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score medium">6/10</span>
+                            <div class="text-[10px] mt-1">Represents the substantive counter-argument that exists in legacy and some online spaces. Lower velocity on raw X engagement for this exact story compared to the accountability side. Honest scoring reflects that X-native signal was weaker here; the perspective is still real and worth surfacing for balance.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- STORY 3: MEDICARE FRAUD CRACKDOWN -->
+            <div class="story-card bg-[#141414] border border-[#222] rounded-2xl p-6">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <div class="text-[15px] font-semibold leading-tight pr-4">Trump Administration announces major crackdown: "Crushing BILLIONS of dollars in Medicare, hospice, childcare and many more types of FRAUD"</div>
+                        <div class="text-xs text-[#777] mt-1">Taxpayer accountability operation • "Bringing accountability and justice back to the American taxpayer"</div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <div class="velocity-badge">434k+ views (White House)</div>
+                        <div class="text-[10px] text-[#666] mt-0.5">May 26 2026 post</div>
+                    </div>
+                </div>
+
+                <div class="text-[11px] text-[#777] mb-4">Why surfaced: Sustained high official + amplification engagement on domestic waste/fraud narrative. Natural counter-signals on implementation and scope from policy reporters.</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#60a5fa] mb-2">CONSERVATIVE / ACCOUNTABILITY</div>
+                        <div class="text-sm leading-snug mb-3">"Crushing BILLIONS of dollars in medicare, hospice, childcare and many more types of FRAUD. The Trump Administration is bringing accountability and justice back to the American taxpayer." Paired with messaging that previous administrations ignored systemic waste.</div>
+                        <div class="text-xs text-[#666] mb-1">— @WhiteHouse (434k views)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">8/10</span>
+                            <div class="text-[10px] mt-1">Direct from primary source with clear policy framing. High velocity on "taxpayer protection" and "finally doing something" narrative. Strong alignment with long-standing conservative priority on entitlement integrity.</div>
+                        </div>
+                        <a href="https://x.com/WhiteHouse/status/2059333498301735131" target="_blank" class="x-link mt-2 inline-block">Open on X →</a>
+                    </div>
+
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#facc15] mb-2">INDEPENDENT / IMPLEMENTATION</div>
+                        <div class="text-sm leading-snug mb-3">Fraud reduction in Medicare and related programs is a legitimate long-term fiscal and integrity goal. However, execution details matter: recent DOGE-backed Medicare portal changes reportedly exposed health workers' Social Security numbers (WaPo reporting). Velocity on "waste is real" is high; velocity on "how it's being done" provides necessary context.</div>
+                        <div class="text-xs text-[#666] mb-1">Cross-referenced with policy reporting (e.g. @ddiamond WaPo 300k+ views on portal issue)</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score high">7.5/10</span>
+                            <div class="text-[10px] mt-1">Balanced signal: acknowledges the underlying problem (fraud exists and is costly) while surfacing real implementation friction that also received significant attention. Avoids both cheerleading and blanket dismissal.</div>
+                        </div>
+                    </div>
+
+                    <div class="perspective bg-[#111] border border-[#1f2937] rounded-xl p-4">
+                        <div class="text-[12px] font-semibold text-[#f87171] mb-2">DEMOCRAT / CRITICAL</div>
+                        <div class="text-sm leading-snug mb-3">Announcements of "crushing fraud" can function as political cover for broader cuts to Medicare, hospice, and social programs. Critics point to history of similar rhetoric preceding actual service reductions and question whether the savings primarily protect beneficiaries or simply reduce federal outlays. Implementation missteps (data exposure) fuel skepticism.</div>
+                        <div class="text-xs text-[#666] mb-1">Policy analyst / legacy framing</div>
+                        <div class="honesty-box p-2.5 rounded-lg text-[#bbb]">
+                            <span class="score medium">6.5/10</span>
+                            <div class="text-[10px] mt-1">Captures the substantive policy concern that exists beyond X. Lower raw engagement velocity on this specific announcement compared to the accountability framing. Transparent scoring reflects the actual distribution of attention on X while still including the perspective for completeness.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Curation notes -->
+        <div class="border border-[#222] bg-[#111] rounded-2xl p-5 text-sm">
+            <div class="font-semibold text-[#ddd] mb-2">Curation notes for this prototype (devils in the details)</div>
+            <ul class="text-xs text-[#aaa] space-y-1.5 list-disc pl-4">
+                <li><strong>No duplication:</strong> World story is pure geopolitics/energy/military (Hormuz, strikes, Iran statements). USA stories are domestic legal accountability (Eric Trump suit) and domestic program integrity (Medicare fraud). Distinct topics.</li>
+                <li><strong>Real velocity sourcing:</strong> All primary drivers taken from direct X tool pulls (views, quotes, replies). Iran Hormuz was the clearest highest-velocity cluster at time of build. Eric Trump and White House fraud posts showed strong sustained domestic engagement.</li>
+                <li><strong>Perspective integrity:</strong> Conservative slots use actual high-engagement posts celebrating "maximum pressure," "strikes," and "media accountability" (EricLDaugh 276k, GuntherEagleman 73k, BennyJohnson 130k). Not critical-of-Trump takes mislabeled as conservative. Independent slots prioritize factual/market/timeline clarity. Critical slots use real engaged quotes or documented policy concerns.</li>
+                <li><strong>Honesty scoring:</strong> Applied per original Expresso logic — fidelity to primary sources, velocity match, omission risk, framing transparency. Scores are footnotes for readers, never gatekeepers.</li>
+                <li><strong>World vs USA:</strong> Explicitly separated in sections. World = foreign sovereign actions + US foreign/military response. USA = domestic legal, regulatory, entitlement administration.</li>
+                <li><strong>X advantage visible:</strong> Direct access surfaces the actual loudest conservative framing on deterrence (EricLDaugh, Gunther) that abstracted or prompt-heavy pipelines previously missed or diluted.</li>
+            </ul>
+            <div class="mt-4 text-[10px] text-[#555]">All links are real, verified X post URLs from tool results. Open them. Compare the actual posts to the summaries. This is the test.</div>
+        </div>
+
+        <div class="mt-6 text-[11px] text-[#555] flex gap-4">
+            <div>Previous versions on Desktop: v3, v4 (earlier Iran single-topic iterations)</div>
+            <div>Built for offline review while connection was variable.</div>
+        </div>
+
+    </div>
+</body>
+</html>
