@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>eXpressO • v5 + Prediction-Market Map (Prototype)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#ece6da; --card:#fffdf8; --ink:#1c1410; --muted:#6b5f4f;
+    --line:#ddd2bf; --gold:#b8894d;
+    --cons:#c0392b; --indep:#8a6d3b; --dem:#2563eb;
+    --poly:#7c3aed; --kalshi:#0d9488; --suggest:#b8894d;
+    --good:#1f9d55;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.45}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px}
+  /* masthead */
+  header{padding:26px 0 16px;border-bottom:2px solid var(--ink);margin-bottom:8px}
+  .logo{font-family:'Playfair Display',serif;font-weight:800;font-size:42px;letter-spacing:-1px;line-height:1}
+  .logo .x{color:var(--gold)}
+  .tag{color:var(--muted);font-size:14px;margin-top:6px;font-weight:500}
+  .proto-flag{display:inline-block;margin-top:10px;background:#fff8e6;border:1px solid var(--gold);color:#7a5a1e;
+    font-size:12px;font-weight:600;border-radius:6px;padding:4px 10px}
+  /* section heads */
+  .sec{font-family:'Playfair Display',serif;font-weight:700;font-size:24px;margin:34px 0 4px;display:flex;align-items:center;gap:10px}
+  .sec small{font-family:'Inter';font-weight:600;font-size:12px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  hr.rule{border:0;border-top:1px solid var(--line);margin:6px 0 18px}
+  /* story cards */
+  .story{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+  .kicker{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--gold)}
+  .head{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;margin:3px 0 6px;line-height:1.2}
+  .meta{font-size:12px;color:var(--muted);font-weight:500;margin-bottom:12px}
+  .meta b{color:var(--ink)}
+  .hon{display:inline-block;background:#eaf7ee;color:var(--good);border:1px solid #bfe6cb;border-radius:20px;
+    padding:1px 9px;font-size:12px;font-weight:700;margin-left:6px}
+  .persp{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:4px}
+  .p{border-radius:9px;padding:10px 12px;font-size:13px;background:#faf7f0;border:1px solid var(--line)}
+  .p .lbl{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px}
+  .p.c{border-left:3px solid var(--cons)} .p.c .lbl{color:var(--cons)}
+  .p.i{border-left:3px solid var(--indep)} .p.i .lbl{color:var(--indep)}
+  .p.d{border-left:3px solid var(--dem)} .p.d .lbl{color:var(--dem)}
+  /* market map */
+  .mkt-intro{background:#fffdf8;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;font-size:13.5px;color:#4a3f30;margin-bottom:18px}
+  .mrow{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start}
+  .mrow .tabchip{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#fff;border-radius:5px;padding:2px 7px;display:inline-block}
+  .t-world{background:#2563eb}.t-nation{background:#c0392b}.t-business{background:#1f9d55}.t-elon{background:#7c3aed}
+  .mstory{font-weight:600;font-size:14.5px;margin:6px 0 0;line-height:1.3}
+  .mkt{border-radius:9px;padding:9px 11px;font-size:12.5px;margin-bottom:7px}
+  .mkt:last-child{margin-bottom:0}
+  .mkt .src{font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border-radius:4px;padding:1px 6px;color:#fff;display:inline-block;margin-bottom:4px}
+  .src.poly{background:var(--poly)} .src.kalshi{background:var(--kalshi)} .src.sug{background:var(--suggest)}
+  .mkt.live{background:#f3effb;border:1px solid #e2d6f7}
+  .mkt.livek{background:#e9f6f4;border:1px solid #c7e8e2}
+  .mkt.sugg{background:#fff8e6;border:1px dashed var(--gold)}
+  .q{font-weight:500;color:var(--ink)}
+  .legend{font-size:12px;color:var(--muted);margin:2px 0 20px;display:flex;gap:16px;flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+  footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}
+  @media(max-width:720px){.persp{grid-template-columns:1fr}.mrow{grid-template-columns:1fr}.logo{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">e<span class="x">X</span>pressO</div>
+    <div class="tag">Grok-curated X news · honesty-scored 1–10 · <b>mapped to the markets betting on it</b></div>
+    <div class="proto-flag">🧪 Prototype v5 + Prediction-Market Map — internal review build, not the live site</div>
+  </header>
+
+  <!-- ============ TOP: NEWS (v5 perspective format) ============ -->
+  <div class="sec">Today’s biggest conversations <small>real X velocity · 3 perspectives · honesty footnotes</small></div>
+  <hr class="rule">
+
+  <div class="story">
+    <div class="kicker">World · Top Story</div>
+    <div class="head">Iran ends negotiations and moves to block the Strait of Hormuz; US strikes reported<span class="hon">9/10</span></div>
+    <div class="meta"><b>2.77M views</b> · 993 quotes · ~1h ago · oil +8% · primary: @KobeissiLetter</div>
+    <div class="persp">
+      <div class="p c"><div class="lbl">Conservative</div>Maximum-pressure strikes were overdue; deterrence working. <i>(@EricLDaugh 276k, @GuntherEagleman 73k)</i></div>
+      <div class="p i"><div class="lbl">Independent</div>Watch oil + shipping insurance; transit-fee deal is the real swing factor.</div>
+      <div class="p d"><div class="lbl">Critical</div>Escalation risk and one-sided framing; questions the legal basis. <i>(@SocialistMMA)</i></div>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="kicker">Nation · Top Story</div>
+    <div class="head">Senate moves on the SAVE America Act as Trump pressures GOP holdouts<span class="hon">8/10</span></div>
+    <div class="meta"><b>434K views</b> · ~3h ago · both-sides cluster present</div>
+    <div class="persp">
+      <div class="p c"><div class="lbl">Conservative</div>Election-integrity win; long-overdue accountability on voter rolls.</div>
+      <div class="p i"><div class="lbl">Independent</div>Hinges on implementation + court challenges; timeline uncertain.</div>
+      <div class="p d"><div class="lbl">Critical</div>Access concerns for eligible voters; portal/rollout issues flagged. <i>(@ddiamond)</i></div>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="kicker">Business · Top Story</div>
+    <div class="head">$1 trillion wiped from US equities in a single session<span class="hon">9/10</span></div>
+    <div class="meta"><b>538K views</b> · ~2h ago · crypto + megacaps lead the slide</div>
+    <div class="persp">
+      <div class="p c"><div class="lbl">Conservative</div>Overdue correction after policy-driven froth; healthy reset.</div>
+      <div class="p i"><div class="lbl">Independent</div>Breadth matters — is this rotation or the start of a recessionary signal?</div>
+      <div class="p d"><div class="lbl">Critical</div>Volatility tied to tariff/uncertainty whiplash hitting retirement accounts.</div>
+    </div>
+  </div>
+
+  <!-- ============ LOWER DOWN: PREDICTION-MARKET MAP ============ -->
+  <div class="sec">📊 Prediction-Market Map <small>the offramp — every story, the market betting on it</small></div>
+  <div class="mkt-intro">
+    The core idea: for each curated story we surface the <b>live prediction market</b> already trading on it (Kalshi / Polymarket) — or, when none exists yet, a <b>suggested market</b>: a clean, bettable proposition the story implies. News you can read <i>and</i> price.
+  </div>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--poly)"></span> Live · Polymarket</span>
+    <span><span class="dot" style="background:var(--kalshi)"></span> Live · Kalshi</span>
+    <span><span class="dot" style="background:var(--suggest)"></span> Suggested market (none exists yet)</span>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-world">World</span><div class="mstory">Oil tankers resume Iranian crude as Hormuz reopens</div></div>
+    <div>
+      <div class="mkt live"><span class="src poly">Polymarket</span><div class="q">Will Trump agree to Iranian transit fees in the Strait of Hormuz by June 30?</div></div>
+      <div class="mkt live"><span class="src poly">Polymarket</span><div class="q">Will crude oil (CL) fall to $70 by end of June?</div></div>
+      <div class="mkt live"><span class="src poly">Polymarket</span><div class="q">Will crude oil (CL) hit $200 by end of June?</div></div>
+    </div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-world">World</span><div class="mstory">Senate passes Iran War Powers resolution, rebuking Trump</div></div>
+    <div><div class="mkt sugg"><span class="src sug">Suggested</span><div class="q">The War Powers vote actually limits Trump’s options on Iran (resolves by year-end).</div></div></div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-nation">Nation</span><div class="mstory">Trump pressures Senate GOP on the SAVE America Act</div></div>
+    <div>
+      <div class="mkt livek"><span class="src kalshi">Kalshi</span><div class="q">Will Trump invoke the Taft-Hartley Act during his presidency?</div></div>
+      <div class="mkt livek"><span class="src kalshi">Kalshi</span><div class="q">Will Trump invoke the Insurrection Act?</div></div>
+    </div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-nation">Nation</span><div class="mstory">Senate bill blocks Wall Street from buying single-family homes</div></div>
+    <div><div class="mkt sugg"><span class="src sug">Suggested</span><div class="q">Wall Street is barred from buying single-family homes in 2026.</div></div></div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-business">Business</span><div class="mstory">$1 trillion wiped from the US stock market today</div></div>
+    <div><div class="mkt sugg"><span class="src sug">Suggested</span><div class="q">The US enters a recession in 2027.</div></div></div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-business">Business</span><div class="mstory">Senate to release crypto tax legislation by fall</div></div>
+    <div><div class="mkt sugg"><span class="src sug">Suggested</span><div class="q">A crypto tax bill clears Congress in 2026.</div></div></div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-elon">Elon</span><div class="mstory">Starlink comes to American Airlines next year</div></div>
+    <div><div class="mkt sugg"><span class="src sug">Suggested</span><div class="q">American Airlines has Starlink wi-fi fleetwide by end of 2026.</div></div></div>
+  </div>
+
+  <div class="mrow">
+    <div><span class="tabchip t-elon">Elon</span><div class="mstory">Trump to attend the World Cup final</div></div>
+    <div>
+      <div class="mkt live"><span class="src poly">Polymarket</span><div class="q">Will the USA win the 2026 FIFA World Cup?</div></div>
+      <div class="mkt live"><span class="src poly">Polymarket</span><div class="q">Will Uruguay win the 2026 FIFA World Cup?</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <b>eXpressO — Prediction-Market Map prototype.</b> News stories sourced via Grok/X velocity; market mappings from the curation bet-map. Suggested markets are illustrative propositions, not live contracts. Honesty scores are reader footnotes, never filters. Internal review build — verify all figures before any external use.
+  </footer>
+
+</div>
+</body>
+</html>
